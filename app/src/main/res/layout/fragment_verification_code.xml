@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_linear"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fifteen_dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/onehundred_seventy_dp"
+            android:background="@drawable/gradient_linear">
+
+            <RelativeLayout
+                android:id="@+id/relTopBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.devotted.utils.views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:padding="@dimen/ten_dp"
+                    android:text="@string/verification_code"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/twentytwo_sp" />
+
+            </RelativeLayout>
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/half_circle"
+                android:gravity="center"
+                android:padding="@dimen/twentyfive_dp" />
+
+            <com.devotted.utils.views.CircleImageView
+                android:layout_width="@dimen/eighty_dp"
+                android:layout_height="@dimen/eighty_dp"
+                android:layout_below="@id/relTopBar"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:background="@color/colorLightGrey"
+                android:src="@drawable/ic_religious" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:padding="@dimen/ten_dp"
+                android:text="@string/app_name"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/twentyfive_sp"
+                app:txt_font_type="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/twenty_dp"
+                android:layout_marginRight="@dimen/twenty_dp"
+                android:layout_marginTop="@dimen/five_dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/five_dp">
+
+                <com.devotted.utils.views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:gravity="center"
+                    android:padding="@dimen/ten_dp"
+                    android:text="@string/waiting_to_automatically_detect_an_sms_sent_to_mobile_number_n_n_enter_the_otp_below_in_case_if_we_fail_to_detect_the_sms_automatically"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/eighteen_sp"
+                    app:txt_font_type="regular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/seven_dp"
+                        app:srcCompat="@drawable/ic_password" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/otp_here"
+                        app:hintTextAppearance="@style/HintText"
+                        app:passwordToggleEnabled="true">
+
+                        <com.devotted.utils.views.CustomEditText
+                            android:id="@+id/edtOTP"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberPassword"
+                            app:txt_font_type="regular" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fifteen_dp"
+                    android:layout_marginTop="@dimen/fifteen_dp"
+                    android:gravity="end"
+                    android:orientation="horizontal">
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:id="@+id/txtResendOtp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/seven_dp"
+                        android:text="@string/resend_otp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/twenty_sp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:id="@+id/txtBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/seven_dp"
+                        android:text="@string/back"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/twenty_sp" />
+
+                </LinearLayout>
+
+                <com.devotted.utils.views.CustomTextView
+                    android:id="@+id/txtConfirmOtp"
+                    style="@style/AppButtonStyleBorder"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/gradient_horizontal"
+                    android:text="@string/confirm_otp"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/twenty_sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/twenty_dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

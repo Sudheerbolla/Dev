@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_linear"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/five_dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha="0.45"
+            android:padding="@dimen/twentyfive_dp"
+            android:src="@drawable/ic_flower" />
+
+        <LinearLayout
+            android:id="@+id/linHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/twentyfive_dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/five_dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_spirtitual" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fifteen_dp"
+                android:text="@string/spiritual"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twenty_sp"
+                app:txt_font_type="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linHeading"
+            android:layout_marginLeft="@dimen/twentyfive_dp"
+            android:layout_marginRight="@dimen/twentyfive_dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fifteen_dp"
+                android:drawableLeft="@drawable/ic_hand"
+                android:drawablePadding="@dimen/fifteen_dp"
+                android:gravity="center_vertical"
+                android:text="Connecting you with your spiritual gurus"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/seventeen_sp"
+                app:txt_font_type="regular" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fifteen_dp"
+                android:drawableLeft="@drawable/ic_instant_update"
+                android:drawablePadding="@dimen/fifteen_dp"
+                android:gravity="center_vertical"
+                android:text="Daily instant updates from your Spiritual gurus"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/seventeen_sp"
+                app:txt_font_type="regular" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fifteen_dp"
+                android:drawableLeft="@drawable/ic_motivated"
+                android:drawablePadding="@dimen/fifteen_dp"
+                android:gravity="center_vertical"
+                android:text="Highly motivated content directly delivered to you"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/seventeen_sp"
+                app:txt_font_type="regular" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fifteen_dp"
+                android:drawableLeft="@drawable/ic_discussion"
+                android:drawablePadding="@dimen/fifteen_dp"
+                android:gravity="center_vertical"
+                android:text="Involve you in the interesting discussions."
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/seventeen_sp"
+                app:txt_font_type="regular" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

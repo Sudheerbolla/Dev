@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_linear"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:padding="@dimen/twentyfive_dp"
+        android:src="@drawable/ic_flower" />
+
+    <View
+        android:id="@+id/dummyView"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/one_twenty_dp" />
+
+    <com.devotted.utils.views.CircleImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="@dimen/one_twenty_dp"
+        android:layout_height="@dimen/one_twenty_dp"
+        android:layout_below="@+id/dummyView"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="LOGO"
+        android:padding="@dimen/ten_dp"
+        android:src="@drawable/ic_religious" />
+
+    <com.devotted.utils.views.CustomTextView
+        android:id="@+id/txtLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgLogo"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/five_dp"
+        android:text="@string/app_name"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/twentyfive_sp"
+        app:txt_font_type="bold" />
+
+    <LinearLayout
+        android:id="@+id/linInnerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtLogo"
+        android:layout_marginTop="@dimen/twentyfive_dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/seven_dp"
+            android:drawablePadding="@dimen/seven_dp"
+            android:drawableTop="@drawable/ic_spirtitual"
+            android:gravity="center"
+            android:padding="@dimen/seven_dp"
+            android:text="@string/spiritual"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/twenty_sp"
+            android:visibility="gone"
+            app:txt_font_type="regular" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/img2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/seven_dp"
+            android:drawablePadding="@dimen/seven_dp"
+            android:drawableTop="@drawable/ic_religious"
+            android:gravity="center"
+            android:padding="@dimen/seven_dp"
+            android:text="@string/religious"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/twenty_sp"
+            android:visibility="gone" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/img3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/seven_dp"
+            android:drawablePadding="@dimen/seven_dp"
+            android:drawableTop="@drawable/ic_wellness"
+            android:gravity="center"
+            android:padding="@dimen/seven_dp"
+            android:text="@string/wellness"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/twenty_sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</RelativeLayout>

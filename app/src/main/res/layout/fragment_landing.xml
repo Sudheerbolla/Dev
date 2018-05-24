@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_linear">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:alpha="0.7"
+            android:padding="@dimen/twenty_dp"
+            android:src="@drawable/ic_flower" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txtBottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.devotted.utils.views.CircleImageView
+                    android:layout_width="@dimen/eighty_dp"
+                    android:layout_height="@dimen/eighty_dp"
+                    android:layout_marginTop="@dimen/twentyfive_dp"
+                    android:src="@drawable/ic_religious" />
+
+                <com.devotted.utils.views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/ten_dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/twentyfive_sp"
+                    app:txt_font_type="bold" />
+
+                <LinearLayout
+                    android:id="@+id/linInnerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/five_dp"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:id="@+id/img1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five_dp"
+                        android:drawablePadding="@dimen/five_dp"
+                        android:drawableTop="@drawable/ic_spirtitual"
+                        android:gravity="center"
+                        android:padding="@dimen/five_dp"
+                        android:text="@string/spiritual"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:id="@+id/img2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five_dp"
+                        android:drawablePadding="@dimen/five_dp"
+                        android:drawableTop="@drawable/ic_religious"
+                        android:gravity="center"
+                        android:padding="@dimen/five_dp"
+                        android:text="@string/religious"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:id="@+id/img3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/five_dp"
+                        android:drawablePadding="@dimen/five_dp"
+                        android:drawableTop="@drawable/ic_wellness"
+                        android:gravity="center"
+                        android:padding="@dimen/five_dp"
+                        android:text="@string/wellness"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/thirty_dp"
+                    android:layout_marginStart="@dimen/thirty_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/five_dp"
+                    android:visibility="visible">
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:id="@+id/txtLogin"
+                        style="@style/AppButtonStyleBorder"
+                        android:singleLine="true"
+                        android:text="@string/login_with_email"
+                        android:textSize="@dimen/twenty_sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/five_dp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:id="@+id/txtRegister"
+                        style="@style/AppButtonStyleBorder"
+                        android:singleLine="true"
+                        android:text="@string/register"
+                        android:textSize="@dimen/twenty_sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.devotted.utils.views.CustomTextView
+                            android:id="@+id/txtGuestUser"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="start"
+                            android:layout_margin="@dimen/two_dp"
+                            android:gravity="start"
+                            android:padding="@dimen/ten_dp"
+                            android:text="@string/guest_user"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/twenty_sp"
+                            app:txt_font_type="regular" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="@dimen/five_dp"
+                            android:layout_toEndOf="@id/txtGuestUser"
+                            android:gravity="end"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:id="@+id/imgFb"
+                                android:layout_width="@dimen/fourty_four_dp"
+                                android:layout_height="@dimen/fourty_four_dp"
+                                android:layout_margin="@dimen/two_dp"
+                                android:background="@drawable/white_curved"
+                                app:srcCompat="@drawable/ic_fb" />
+
+                            <ImageView
+                                android:id="@+id/imgGoogle"
+                                android:layout_width="@dimen/fourty_four_dp"
+                                android:layout_height="@dimen/fourty_four_dp"
+                                android:layout_margin="@dimen/two_dp"
+                                android:background="@drawable/white_curved"
+                                app:srcCompat="@drawable/ic_gplus" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:background="@drawable/half_circle"
+            android:gravity="center"
+            android:padding="@dimen/twentyfive_dp"
+            android:text="@string/by_signing_up_i_agree_to_the_terms_and_condition_privacy_policies"
+            android:textColor="@color/color_vvvDarkGrey"
+            android:textSize="@dimen/fifteen_sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

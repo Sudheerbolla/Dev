@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/five_dp"
+    android:background="@color/colorWhite"
+    android:paddingLeft="@dimen/ten_dp"
+    android:paddingRight="@dimen/ten_dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/fifty_dp"
+        android:background="@drawable/grey_small_border"
+        android:fillViewport="true"
+        android:paddingTop="@dimen/fifty_five_dp">
+
+        <RelativeLayout
+            android:id="@+id/cardBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtDescription1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/ten_dp"
+                android:layout_marginRight="@dimen/ten_dp"
+                android:layout_marginTop="@dimen/five_dp"
+                android:gravity="center"
+                android:padding="@dimen/ten_dp"
+                android:textSize="@dimen/sixteen_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtDescription2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDescription1"
+                android:layout_marginBottom="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/ten_dp"
+                android:layout_marginRight="@dimen/ten_dp"
+                android:layout_marginTop="@dimen/five_dp"
+                android:gravity="center"
+                android:padding="@dimen/ten_dp"
+                android:textSize="@dimen/sixteen_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtDescription3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtDescription2"
+                android:layout_marginBottom="@dimen/five_dp"
+                android:layout_marginLeft="@dimen/ten_dp"
+                android:layout_marginRight="@dimen/ten_dp"
+                android:layout_marginTop="@dimen/five_dp"
+                android:gravity="center"
+                android:padding="@dimen/ten_dp"
+                android:textSize="@dimen/sixteen_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtSelect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/gradient_horizontal_plane"
+                android:drawableLeft="@drawable/ic_tick_mark"
+                android:drawablePadding="@dimen/fifteen_dp"
+                android:gravity="center"
+                android:paddingBottom="@dimen/fifteen_dp"
+                android:paddingLeft="@dimen/twenty_dp"
+                android:paddingRight="@dimen/twenty_dp"
+                android:paddingTop="@dimen/fifteen_dp"
+                android:singleLine="true"
+                android:text="I Choose Spiritual"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twenty_sp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imgType"
+        android:layout_width="@dimen/eighty_five_dp"
+        android:layout_height="@dimen/eighty_five_dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/orange_circle"
+        android:scaleType="center"
+        android:src="@drawable/ic_spirtitual" />
+
+</RelativeLayout>
+

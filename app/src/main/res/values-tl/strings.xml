@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">DevotTED</string>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyDqUkWbZiLaCDoG3Em4rpVD-pqNlnInivA</string>
+
+    <string name="yes">అవును</string>
+    <string name="no">కాదు</string>
+    <string name="ok">అలాగే</string>
+    <string name="close">ముగింపు</string>
+    <string name="spiritual">ఆధ్యాత్మికం</string>
+    <string name="religious">మతం</string>
+    <string name="wellness">వెల్నెస్</string>
+    <string name="skip">Skip</string>
+    <string name="next">తరువాత</string>
+    <string name="start">ప్రారంభం</string>
+    <string name="email_address">ఇమెయిల్ చిరునామా</string>
+    <string name="password">పాస్వర్డ్</string>
+    <string name="remember_me">నన్ను గుర్తు పెట్టుకో</string>
+    <string name="forgot_password"><u>పాస్వర్డ్ను మర్చిపోయారు ?</u></string>
+    <string name="forgot_password_g">పాస్వర్డ్ను మర్చిపోయారు</string>
+    <string name="login">లాగిన్</string>
+    <string name="new_user">కొత్త వాడుకరి ?</string>
+    <string name="register">నమోదు</string>
+    <string name="send_password_to_my_email">నా ఇమెయిల్ పాస్వర్డ్ను పంపండి</string>
+    <string name="please_provide_your_registered_email_id_here">మీ నమోదు ఇమెయిల్ ఐడిని ఇక్కడ ఇవ్వండి</string>
+    <string name="guest_user"><u>అతిథి వాడుకరి</u></string>
+    <string name="full_name">పూర్తి పేరు</string>
+    <string name="mobile_number">మొబైల్ నంబరు</string>
+    <string name="otp_will_be_sent_to_this_mobile_number_for_verification">ధృవీకరణ కోసం ఈ మొబైల్ నంబర్కు OTP పంపబడుతుంది</string>
+    <string name="existing_user">ఇప్పటికే వాడుకరి? ?</string>
+    <string name="previous">మునుపటి</string>
+    <string name="please_select_language">దయచేసి భాషను ఎంచుకోండి</string>
+    <string name="you_can_change_your_language_choice_in_settings_at_any_time">మీరు ఎప్పుడైనా మీ భాష ఎంపికను సెట్టింగ్ల్లో మార్చవచ్చు.</string>
+    <string name="retry">మళ్ళీ ప్రయత్నించండి</string>
+    <string name="no_internet_connection">ఇంటర్నెట్ కనెక్షన్ అందుబాటులో లేదు. \n\nదయచేసి ముందుకు సాగడానికి మీ మొబైల్ డేటా లేదా Wifi ని ఆన్ చేయండి</string>
+    <string name="proceed">ముందుకు</string>
+    <string name="login_with_email">Login with Email / Mobile</string>
+    <string name="module_under_development">Module Under Development</string>
+    <string name="login_with">Login with :</string>
+    <string name="email">Email</string>
+    <string name="please_enter_a_valid_password">Password should have minimum 6 characters</string>
+    <string name="please_enter_password">Please enter password</string>
+    <string name="please_enter_a_valid_mobile_number">Please enter a valid mobile number</string>
+    <string name="please_enter_mobile_number">Please enter mobile number</string>
+    <string name="please_enter_a_valid_email_address">Please enter a valid email address</string>
+    <string name="please_enter_email_address">Please enter email address</string>
+    <string name="please_enter_fullname">Please enter fullname</string>
+    <string name="registration_successfull">Registration Successfull</string>
+    <string name="login_successful">Login Successful</string>
+    <string name="confirm_your_mobile_number">Confirm your mobile number.</string>
+    <string name="edit">Edit</string>
+    <string name="confirm">Confirm</string>
+    <string name="by_signing_up_i_agree_to_the_terms_and_condition_privacy_policies">By Signing up, I agree to the \n Terms and condition, Privacy Policies</string>
+    <string name="sign_in">Sign in</string>
+    <string name="otp_sent_to_that_mobile_number_for_verification">OTP has been sent to the Mobile Number for verification</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="resend_otp"><u>Resend OTP</u></string>
+    <string name="otp_here">OTP here</string>
+    <string name="waiting_to_automatically_detect_an_sms_sent_to_mobile_number_n_n_enter_the_otp_below_in_case_if_we_fail_to_detect_the_sms_automatically">Waiting to automatically detect an sms sent to mobile number \n\n (Enter the OTP below in case if we fail to detect the sms automatically)</string>
+    <string name="confirm_otp">Confirm OTP</string>
+    <string name="back">Back</string>
+    <string name="please_enter_otp_sent_to_your_registered_mobile_number">Please enter OTP sent to your registered mobile number</string>
+    <string name="please_enter_a_valid_otp">OTP should have 4 characters</string>
+    <string name="otp_resent_successfully">OTP resent successfully</string>
+    <string name="otp_verification_successfull">OTP verification successfull</string>
+    <string name="you_just_got_verified">You just got Verified !</string>
+</resources>

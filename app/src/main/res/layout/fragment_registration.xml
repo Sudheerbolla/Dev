@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/onehundred_seventy_dp"
+            android:background="@drawable/gradient_linear">
+
+            <RelativeLayout
+                android:id="@+id/relTopBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fifteen_dp"
+                android:padding="@dimen/five_dp">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_margin="@dimen/five_dp"
+                    android:padding="@dimen/seven_dp"
+                    app:srcCompat="@drawable/ic_back" />
+
+                <com.devotted.utils.views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:padding="@dimen/ten_dp"
+                    android:text="@string/register"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/twentytwo_sp" />
+
+            </RelativeLayout>
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/half_circle"
+                android:gravity="center"
+                android:padding="@dimen/twentyfive_dp" />
+
+            <com.devotted.utils.views.CircleImageView
+                android:layout_width="@dimen/eighty_dp"
+                android:layout_height="@dimen/eighty_dp"
+                android:layout_below="@id/relTopBar"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/five_dp"
+                android:background="@color/colorLightGrey"
+                android:src="@drawable/ic_religious" />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/twenty_dp"
+            android:layout_marginRight="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            app:cardBackgroundColor="@color/colorWhite"
+            card_view:cardCornerRadius="@dimen/eight_dp"
+            card_view:cardElevation="@dimen/five_dp"
+            card_view:cardPreventCornerOverlap="true"
+            card_view:cardUseCompatPadding="true"
+            card_view:contentPadding="@dimen/five_dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/five_dp">
+
+                <RelativeLayout
+                    android:id="@+id/cardProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/ten_dp"
+                    android:padding="@dimen/three_dp">
+
+                    <ImageView
+                        android:id="@+id/imgAddProfileIcon"
+                        android:layout_width="@dimen/hundred_dp"
+                        android:layout_height="@dimen/hundred_dp"
+                        app:srcCompat="@drawable/ic_placeholder" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imgAddProfileIcon"
+                        android:layout_alignEnd="@+id/imgAddProfileIcon"
+                        android:padding="@dimen/five_dp"
+                        app:srcCompat="@drawable/ic_add_photo" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/seven_dp"
+                        app:srcCompat="@drawable/ic_profile" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/full_name"
+                        app:hintTextAppearance="@style/HintText">
+
+                        <com.devotted.utils.views.CustomEditText
+                            android:id="@+id/edtName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            app:txt_font_type="regular" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/seven_dp"
+                        app:srcCompat="@drawable/ic_email" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/email_address"
+                        app:hintTextAppearance="@style/HintText">
+
+                        <com.devotted.utils.views.CustomEditText
+                            android:id="@+id/edtEmailAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_manditory"
+                            android:drawablePadding="@dimen/seven_dp"
+                            android:inputType="textEmailAddress"
+                            app:txt_font_type="regular" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <com.devotted.utils.views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/ten_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/three_dp"
+                    android:text="@string/otp_will_be_sent_to_this_mobile_number_for_verification"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/twelve_sp"
+                    app:txt_font_type="light" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/seven_dp"
+                        app:srcCompat="@drawable/ic_mobile" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/two_dp"
+                        android:layout_marginRight="@dimen/two_dp"
+                        android:background="@drawable/grey_small_border"
+                        android:padding="@dimen/three_dp">
+
+                        <Spinner
+                            android:id="@+id/spinnerCountry"
+                            android:layout_width="@dimen/fourty_four_dp"
+                            android:layout_height="@dimen/thirty_dp"
+                            android:background="@null"
+                            android:gravity="end" />
+
+                    </RelativeLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mobile_number"
+                        app:hintTextAppearance="@style/HintText">
+
+                        <com.devotted.utils.views.CustomEditText
+                            android:id="@+id/edtMobileNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/ic_manditory"
+                            android:drawablePadding="@dimen/seven_dp"
+                            android:inputType="phone"
+                            android:maxLength="13"
+                            app:txt_font_type="regular" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fifteen_dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/seven_dp"
+                        app:srcCompat="@drawable/ic_password" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password"
+                        app:hintTextAppearance="@style/HintText"
+                        app:passwordToggleEnabled="true">
+
+                        <com.devotted.utils.views.CustomEditText
+                            android:id="@+id/edtPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            app:txt_font_type="regular" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <com.devotted.utils.views.CustomTextView
+                    android:id="@+id/txtRegister"
+                    style="@style/AppButtonStyleBorder"
+                    android:background="@drawable/gradient_horizontal"
+                    android:text="@string/register"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/twenty_sp" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/twenty_dp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/twenty_dp" />
+
+    </LinearLayout>
+
+</ScrollView>

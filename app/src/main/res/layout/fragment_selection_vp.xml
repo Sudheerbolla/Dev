@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_linear"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fifteen_dp"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_inside_curve_orange"
+            android:orientation="vertical"
+            android:padding="@dimen/thirty_dp">
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/twenty_dp"
+                android:text="Namaste Sudheer"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/seventeen_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/twenty_dp"
+                android:paddingTop="@dimen/five_dp"
+                android:text="You just got Verified !"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twentyone_sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite">
+
+            <com.devotted.utils.carousels.coverflow.core.PagerContainer
+                android:id="@+id/pager_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/txtProceed">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/overlap_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/ten_dp"
+                    android:padding="@dimen/ten_dp" />
+
+            </com.devotted.utils.carousels.coverflow.core.PagerContainer>
+
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtProceed"
+                style="@style/AppButtonStyleBorder"
+                android:layout_width="wrap_content"
+                android:layout_above="@+id/bottomView"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/ten_dp"
+                android:background="@drawable/gradient_horizontal"
+                android:text="@string/proceed"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twenty_sp" />
+
+            <View
+                android:id="@+id/bottomView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/twenty_dp"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

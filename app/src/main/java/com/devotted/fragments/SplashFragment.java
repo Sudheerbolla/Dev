@@ -76,7 +76,7 @@ public class SplashFragment extends BaseFragment {
                     public void run() {
                         navigateToLogin();
                     }
-                }, 1200);
+                }, 1800);
             }
         };
         final Runnable img2Runnable = new Runnable() {

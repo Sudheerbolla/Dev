@@ -23,7 +23,7 @@
             android:id="@+id/linHeading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_marginTop="@dimen/fourty_dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="@dimen/five_dp">

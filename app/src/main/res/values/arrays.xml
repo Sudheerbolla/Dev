@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="cardsBackgroundColors">
+        <item>@color/colorDarkBlue</item>
+        <item>@color/colorGreen</item>
+        <item>@color/colorDarkOrange</item>
+        <item>@color/colorDarkRed</item>
+        <item>@color/colorPurple</item>
+        <item>@color/color_vvvDarkGrey</item>
+        <item>@color/colorWhite</item>
+    </array>
+</resources>

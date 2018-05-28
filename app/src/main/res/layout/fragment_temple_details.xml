@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.devotted.utils.views.StickyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twohundred_dp">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPagerImages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/imgPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/five_dp"
+                android:background="@color/colorGrey"
+                app:srcCompat="@drawable/ic_back" />
+
+            <ImageView
+                android:id="@+id/imgNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/five_dp"
+                android:background="@color/colorGrey"
+                android:padding="@dimen/five_dp"
+                app:srcCompat="@drawable/ic_right" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:paddingBottom="@dimen/two_dp"
+            android:paddingEnd="@dimen/ten_dp"
+            android:paddingStart="@dimen/ten_dp"
+            android:paddingTop="@dimen/two_dp"
+            android:tag="sticky-nonconstant-hastransparancy">
+
+            <LinearLayout
+                android:id="@+id/linDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_toStartOf="@+id/txtMarker"
+                android:orientation="vertical">
+
+                <com.devotted.utils.views.CustomTextView
+                    android:id="@+id/txtLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/five_dp"
+                    android:text="Varanasi"
+                    android:textColor="@color/color_vDarkGrey"
+                    android:textSize="@dimen/fifteen_sp" />
+
+                <com.devotted.utils.views.CustomTextView
+                    android:id="@+id/txtTempleName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:padding="@dimen/five_dp"
+                    android:singleLine="true"
+                    android:text="Sri Krishna Swamy Temple"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/seventeen_sp" />
+
+                <LinearLayout
+                    android:id="@+id/linReviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/five_dp">
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:id="@+id/txtRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/green_curved"
+                        android:drawableEnd="@drawable/star_icon_white"
+                        android:drawablePadding="@dimen/six_dp"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/three_dp"
+                        android:paddingLeft="@dimen/five_dp"
+                        android:paddingRight="@dimen/four_dp"
+                        android:paddingTop="@dimen/three_dp"
+                        android:text="4.4"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/thirteen_sp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:id="@+id/txtReviews"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/six_dp"
+                        android:drawableEnd="@drawable/ic_right"
+                        android:drawablePadding="@dimen/six_dp"
+                        android:gravity="center"
+                        android:padding="@dimen/five_dp"
+                        android:text="224 Reviews"
+                        android:textColor="@color/color_vDarkGrey"
+                        android:textSize="@dimen/thirteen_sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtMarker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:drawablePadding="@dimen/five_dp"
+                android:drawableTop="@drawable/ic_marker"
+                android:padding="@dimen/seven_dp"
+                android:text="Location" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ten_dp"
+            android:background="@color/colorGrey" />
+
+        <RelativeLayout
+            android:id="@+id/relInviteVolunteer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:padding="@dimen/seven_dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/txtInviteVolunteer"
+                android:orientation="vertical">
+
+                <com.devotted.utils.views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:padding="@dimen/five_dp"
+                    android:singleLine="true"
+                    android:text="Invite a Volunteer to your temple"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/seventeen_sp" />
+
+                <com.devotted.utils.views.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:padding="@dimen/five_dp"
+                    android:singleLine="true"
+                    android:text="Know More"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/fifteen_sp" />
+
+            </LinearLayout>
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtInviteVolunteer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/five_dp"
+                android:drawableTop="@drawable/ic_invite_volunteer"
+                android:padding="@dimen/ten_dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ten_dp"
+            android:background="@color/colorGrey" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/eight_dp">
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/txtViewAllVolunteers"
+                android:drawablePadding="@dimen/ten_dp"
+                android:drawableStart="@drawable/ic_group_orange"
+                android:gravity="center_vertical"
+                android:padding="@dimen/five_dp"
+                android:text="Volunteer"
+                android:textAllCaps="true"
+                android:textColor="@color/color_vvDarkGrey"
+                android:textSize="@dimen/sixteen_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtViewAllVolunteers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/five_dp"
+                android:text="View All"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/sixteen_sp" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/layout_volunteer" />
+
+        <include layout="@layout/layout_volunteer" />
+
+        <include layout="@layout/layout_volunteer" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ten_dp"
+            android:background="@color/colorGrey" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/eight_dp">
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/txtEditTimings"
+                android:drawablePadding="@dimen/ten_dp"
+                android:drawableStart="@drawable/ic_clock"
+                android:gravity="center_vertical"
+                android:padding="@dimen/five_dp"
+                android:text="Timings"
+                android:textAllCaps="true"
+                android:textColor="@color/color_vvDarkGrey"
+                android:textSize="@dimen/sixteen_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtEditTimings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/five_dp"
+                android:text="Edit"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/sixteen_sp" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/layout_timings" />
+
+        <include layout="@layout/layout_timings" />
+
+        <include layout="@layout/layout_timings" />
+
+        <include layout="@layout/layout_timings" />
+
+        <include layout="@layout/layout_timings" />
+
+        <include layout="@layout/layout_timings" />
+
+        <include layout="@layout/layout_timings" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ten_dp"
+            android:background="@color/colorGrey" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/eight_dp">
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/txtEditAboutTemple"
+                android:drawablePadding="@dimen/ten_dp"
+                android:drawableStart="@drawable/ic_temple"
+                android:gravity="center_vertical"
+                android:padding="@dimen/five_dp"
+                android:text="About Temple"
+                android:textAllCaps="true"
+                android:textColor="@color/color_vvDarkGrey"
+                android:textSize="@dimen/sixteen_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtEditAboutTemple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:gravity="center_vertical"
+                android:padding="@dimen/five_dp"
+                android:text="Edit"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/sixteen_sp" />
+
+        </RelativeLayout>
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtAboutTemple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/five_dp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/ten_dp"
+            android:text="Temple is very good and peaceful. Prime and decent Location. Priest is very well behaving and good. \n\n   This is having good number of volunteers and devotees. All are co-operative and friendly. Volunteers are very active and updating very preciously."
+            android:textColor="@color/color_vvvDarkGrey"
+            android:textSize="@dimen/fifteen_sp" />
+
+    </LinearLayout>
+
+</com.devotted.utils.views.StickyScrollView>

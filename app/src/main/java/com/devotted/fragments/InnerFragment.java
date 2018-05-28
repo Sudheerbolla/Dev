@@ -16,8 +16,8 @@ public class InnerFragment extends BaseFragment {
 
     public static InnerFragment newInstance(String text) {
         InnerFragment categoryDetailsFragment = new InnerFragment();
-        Bundle bundle=new Bundle();
-        bundle.putString("text",text);
+        Bundle bundle = new Bundle();
+        bundle.putString("text", text);
         categoryDetailsFragment.setArguments(bundle);
         return categoryDetailsFragment;
     }
@@ -29,8 +29,8 @@ public class InnerFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView=inflater.inflate(R.layout.fragment_inner, container, false);
-        ((CustomTextView)rootView.findViewById(R.id.txtText)).setText(getArguments().getString("text"));
+        View rootView = inflater.inflate(R.layout.fragment_inner, container, false);
+        ((CustomTextView) rootView.findViewById(R.id.txtText)).setText(getArguments().getString("text"));
 
         return rootView;
     }

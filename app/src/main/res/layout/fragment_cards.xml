@@ -1,0 +1,53 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/twelve_dp">
+
+        <RelativeLayout
+            android:id="@+id/relReload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/five_dp">
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/seven_dp"
+                android:text="Today"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/twentytwo_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtReload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:drawablePadding="@dimen/five_dp"
+                android:drawableStart="@drawable/ic_reload"
+                android:padding="@dimen/seven_dp"
+                android:text="12 Updates"
+                android:textColor="@color/colorDarkGrey"
+                android:textSize="@dimen/seventeen_sp" />
+
+        </RelativeLayout>
+
+        <com.stone.card.library.CardSlidePanel
+            android:id="@+id/image_slide_panel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/threehundredfifty_dp"
+            android:layout_below="@id/relReload"
+            android:paddingEnd="@dimen/twentytwo_dp"
+            android:paddingStart="@dimen/twentytwo_dp"
+            card:bottomMarginTop="@dimen/thirtyfive_dp"
+            card:itemMarginTop="@dimen/ten_dp"
+            card:yOffsetStep="@dimen/thirteen_dp" />
+
+    </RelativeLayout>
+
+</ScrollView>

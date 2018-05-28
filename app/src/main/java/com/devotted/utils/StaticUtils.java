@@ -9,6 +9,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.drawable.Drawable;
+import android.location.Address;
+import android.location.Geocoder;
 import android.media.ExifInterface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -35,6 +37,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -275,5 +278,32 @@ public class StaticUtils {
 
     public static int pxFromDp(final Context context, final float dp) {
         return (int) (dp * context.getResources().getDisplayMetrics().density);
+    }
+
+    public static String getAddress(Context context, double lat, double lng) {
+        Geocoder geocoder = new Geocoder(context, Locale.getDefault());
+        try {
+            List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
+            Address obj = addresses.get(0);
+            String add = obj.getAddressLine(0);
+            String add0 = obj.getAddressLine(0);
+            Log.e("add 0 ", "Address 0" + add0);
+            add = add + "\n" + obj.getFeatureName();
+            add = add + "\n" + obj.getPostalCode();
+            add = add + "\n" + obj.getCountryName();
+            add = add + "\n" + obj.getAdminArea();
+            add = add + "\n" + obj.getPremises();
+            add = add + "\n" + obj.getSubLocality();
+            add = add + "\n" + obj.getSubAdminArea();
+            add = add + "\n" + obj.getLocality();
+            add = add + "\n" + obj.getSubThoroughfare();
+            Log.e("adddress tot :  ", "Address Total : " + add);
+//            StaticUtils.showToast(context, add0);
+            return obj.getFeatureName() + ", " + obj.getSubLocality() + ", " + obj.getLocality();
+        } catch (IOException e) {
+            e.printStackTrace();
+            StaticUtils.showToast(context, e.getMessage());
+        }
+        return "";
     }
 }

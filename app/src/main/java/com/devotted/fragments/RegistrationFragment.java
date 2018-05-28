@@ -168,13 +168,16 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
             return getString(R.string.please_enter_fullname);
         }
         String emailId = edtEmailAddress.getText().toString().trim();
-        if (TextUtils.isEmpty(emailId)) {
-            edtEmailAddress.requestFocus();
-            return getString(R.string.please_enter_email_address);
-        }
-        if (!StaticUtils.isValidEmail(emailId)) {
-            edtEmailAddress.requestFocus();
-            return getString(R.string.please_enter_a_valid_email_address);
+//        if (TextUtils.isEmpty(emailId)) {
+//            edtEmailAddress.requestFocus();
+//            return getString(R.string.please_enter_email_address);
+//        }
+        if (!TextUtils.isEmpty(emailId)) {
+            if (!StaticUtils.isValidEmail(emailId)) {
+                edtEmailAddress.requestFocus();
+                return getString(R.string.please_enter_a_valid_email_address);
+            }
+            return "";
         }
         String mobileNumber = edtMobileNumber.getText().toString().trim();
         if (TextUtils.isEmpty(mobileNumber)) {
@@ -355,7 +358,7 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
     }
 
     private void navigateToMapScreen() {
-//        startActivity(new Intent(splashActivity, MapsActivity.class));
+//        startActivity(new Intent(splashActivity, SearchActivity.class));
 //        splashActivity.finishAffinity();
     }
 

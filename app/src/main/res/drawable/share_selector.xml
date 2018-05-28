@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_topbar_share" android:state_activated="true" />
+    <item android:drawable="@drawable/ic_topbar_share" android:state_selected="true" />
+    <item android:drawable="@drawable/ic_topbar_share" android:state_pressed="true" />
+    <item android:drawable="@drawable/ic_topbar_share" android:state_focused="true" />
+
+    <item>
+        <bitmap android:src="@drawable/ic_topbar_share" android:tint="@color/colorBlack" />
+    </item>
+
+</selector><!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+        &lt;!&ndash;<item android:drawable="@drawable/ic_topbar_menu" android:state_pressed="true" />&ndash;&gt;
+        &lt;!&ndash;<item android:drawable="@drawable/ic_topbar_menu" android:state_selected="true" />&ndash;&gt;
+        &lt;!&ndash;<item android:drawable="@drawable/ic_topbar_menu" android:state_activated="true" />&ndash;&gt;
+        <item android:state_pressed="true">
+
+            <bitmap android:src="@drawable/ic_topbar_share" android:tint="@color/colorPrimaryDark" />
+
+        </item>
+        <item android:state_selected="true">
+            <bitmap android:src="@drawable/ic_topbar_share" android:tint="@color/colorPrimaryDark" />
+
+        </item>
+        <item android:state_activated="true">
+            <bitmap android:src="@drawable/ic_topbar_share" android:tint="@color/colorPrimaryDark" />
+
+        </item>
+        <item android:drawable="@drawable/ic_topbar_share" />
+
+    </selector>
+    -->

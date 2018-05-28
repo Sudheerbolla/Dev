@@ -18,6 +18,7 @@
 
     <color name="colorLightGreen">#176DDC7D</color>
     <color name="colorDarkGreen">#FF6DDC7D</color>
+    <color name="colorGreen">#3CB371</color>
 
     <color name="colorLightOrange">#1CFF8F67</color>
     <color name="colorDarkOrange">#FFFF8F67</color>
@@ -26,6 +27,8 @@
 
     <color name="colorLightRed">#18D23B20</color>
     <color name="colorDarkRed">#FED23B20</color>
+
+    <color name="colorPurple">#8B008B</color>
 
     <color name="color_vvvl_gray">#FAFAFC</color>
     <color name="colorLightGrey">#f2f2f2</color>

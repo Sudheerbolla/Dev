@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGrey"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/gradient_horizontal_plane"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/five_dp"
+                app:srcCompat="@drawable/ic_back" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtTempleDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/imgBack"
+                android:layout_toStartOf="@+id/imgSearch"
+                android:alpha="0.7"
+                android:gravity="center_vertical"
+                android:hint="Select Gods"
+                android:padding="@dimen/ten_dp"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/five_dp"
+                android:padding="@dimen/ten_dp"
+                app:srcCompat="@drawable/ic_topbar_search" />
+
+        </RelativeLayout>
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:drawableEnd="@drawable/ic_get_location"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/eight_dp"
+            android:paddingEnd="@dimen/fifteen_dp"
+            android:paddingStart="@dimen/fifteen_dp"
+            android:paddingTop="@dimen/eight_dp"
+            android:text="45 Gods Available nearby"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/seventeen_sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewGods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGrey" />
+
+    </LinearLayout>
+
+</ScrollView>

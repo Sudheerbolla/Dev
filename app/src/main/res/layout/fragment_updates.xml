@@ -1,0 +1,81 @@
+<com.devotted.utils.views.StickyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/twelve_dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.devotted.utils.views.CircleImageView
+                android:layout_width="@dimen/sixty_dp"
+                android:layout_height="@dimen/sixty_dp"
+                android:layout_margin="@dimen/five_dp"
+                android:src="@drawable/temple2"
+                app:civ_border_color="@color/colorPrimaryDark"
+                app:civ_border_width="@dimen/one_dp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtWriteAnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:background="@drawable/grey_border_curved"
+                android:drawableEnd="@drawable/ic_gallery"
+                android:gravity="center_vertical"
+                android:padding="@dimen/twelve_dp"
+                android:text="Write an update"
+                android:textColor="@color/color_vvDarkGrey"
+                android:textSize="@dimen/seventeen_sp" />
+
+        </LinearLayout>
+
+        <com.devotted.utils.views.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/fifteen_dp"
+            android:layout_marginStart="@dimen/fifteen_dp"
+            android:text="Temples you may know"
+            android:textAllCaps="true"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="@dimen/fifteen_sp"
+            app:txt_font_type="bold" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewTemples"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/ten_dp" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorLightGrey"
+            android:padding="@dimen/twelve_dp"
+            android:tag="sticky-nonconstant-hastransparancy"
+            android:text="sree hanuman temple updates"
+            android:textAllCaps="true"
+            android:textColor="@color/color_vvDarkGrey"
+            android:textSize="@dimen/seventeen_sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewUpdates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/ten_dp" />
+
+    </LinearLayout>
+
+</com.devotted.utils.views.StickyScrollView>

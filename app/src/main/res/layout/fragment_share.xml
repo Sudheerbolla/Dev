@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.devotted.utils.views.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/twentyfive_dp"
+        android:text="@string/you_have_decided_to_spread_the_app_to_your_friends_amp_family"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/twentytwo_sp" />
+
+    <com.devotted.utils.views.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/twentyfive_dp"
+        android:text="@string/thanks_for_your_trust_in_us_and_we_will_ensure_better_services_in_coming_furture"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/twenty_sp" />
+
+    <com.devotted.utils.views.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/ten_dp"
+        android:text="Share it Via"
+        android:textColor="@color/color_vvvDarkGrey"
+        android:textSize="@dimen/twenty_sp"
+        app:txt_font_type="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/ten_dp">
+
+        <ImageView
+            android:id="@+id/imgWhatsapp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/five_dp"
+            app:srcCompat="@drawable/ic_whatsapp" />
+
+        <ImageView
+            android:id="@+id/imgEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/five_dp"
+            app:srcCompat="@drawable/ic_email" />
+
+        <ImageView
+            android:id="@+id/imgTwitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/five_dp"
+            app:srcCompat="@drawable/ic_twitter" />
+
+        <ImageView
+            android:id="@+id/imgFb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/five_dp"
+            app:srcCompat="@drawable/ic_fb" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtOthers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_share"
+            android:drawablePadding="@dimen/seven_dp"
+            android:gravity="center"
+            android:padding="@dimen/five_dp"
+            android:text="Others"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/eighteen_sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

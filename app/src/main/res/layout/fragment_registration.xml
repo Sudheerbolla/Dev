@@ -160,8 +160,6 @@
                             android:id="@+id/edtEmailAddress"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:drawableEnd="@drawable/ic_manditory"
-                            android:drawablePadding="@dimen/seven_dp"
                             android:inputType="textEmailAddress"
                             app:txt_font_type="regular" />
 

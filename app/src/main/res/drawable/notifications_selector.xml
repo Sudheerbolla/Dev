@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_topbar_notifications" android:state_activated="true" />
+    <item android:drawable="@drawable/ic_topbar_notifications" android:state_selected="true" />
+    <item android:drawable="@drawable/ic_topbar_notifications" android:state_pressed="true" />
+    <item android:drawable="@drawable/ic_topbar_notifications" android:state_focused="true" />
+
+    <item>
+        <bitmap android:src="@drawable/ic_topbar_notifications" android:tint="@color/colorBlack" />
+    </item>
+
+    <!--<item android:drawable="@drawable/ic_topbar_menu" />-->
+
+</selector>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <bitmap android:src="@drawable/ic_topbar_notifications" android:tint="@color/colorPrimaryDark" />
+    </item>
+    <item android:state_selected="true">
+        <bitmap android:src="@drawable/ic_topbar_notifications" android:tint="@color/colorPrimaryDark" />
+
+    </item>
+    <item android:state_activated="true">
+        <bitmap android:src="@drawable/ic_topbar_notifications" android:tint="@color/colorPrimaryDark" />
+    </item>
+    <item android:drawable="@drawable/ic_topbar_notifications" />
+
+</selector>
+-->

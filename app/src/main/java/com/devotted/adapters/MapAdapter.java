@@ -7,16 +7,16 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.view.LayoutInflater;
 
 import com.devotted.fragments.MapFragment;
-import com.devotted.models.AddressModelStatic;
+import com.devotted.models.TempleModel;
 
 import java.util.List;
 
 public class MapAdapter extends FragmentPagerAdapter {
     LayoutInflater layoutInflater;
-    List<AddressModelStatic> deals;
+    List<TempleModel> deals;
     Context mContext;
 
-    public MapAdapter(FragmentManager fm, List<AddressModelStatic> deals, Context context) {
+    public MapAdapter(FragmentManager fm, List<TempleModel> deals, Context context) {
         super(fm);
         layoutInflater = LayoutInflater.from(context);
         this.deals = deals;
@@ -35,7 +35,7 @@ public class MapAdapter extends FragmentPagerAdapter {
 
     @Override
     public float getPageWidth(int position) {
-        return 0.95f;
+        return 0.85f;
     }
 }
 

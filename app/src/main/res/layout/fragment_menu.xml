@@ -1,0 +1,121 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/twentyfive_dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.devotted.utils.views.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="@dimen/one_twenty_dp"
+            android:layout_height="@dimen/one_twenty_dp"
+            android:src="@drawable/ic_placeholder"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="@dimen/one_dp" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ten_dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:padding="@dimen/ten_dp"
+            android:singleLine="true"
+            android:text="Sudheer Bolla"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/twenty_sp" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="Active since 26 May, 2018"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="@dimen/sixteen_sp" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:drawablePadding="@dimen/twenty_dp"
+            android:drawableStart="@drawable/ic_profile"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:padding="@dimen/ten_dp"
+            android:singleLine="true"
+            android:text="Profile"
+            android:textColor="@color/color_vvvDarkGrey"
+            android:textSize="@dimen/twenty_sp" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:drawablePadding="@dimen/twenty_dp"
+            android:drawableStart="@drawable/ic_help_center"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:padding="@dimen/ten_dp"
+            android:singleLine="true"
+            android:text="Help Center"
+            android:textColor="@color/color_vvvDarkGrey"
+            android:textSize="@dimen/twenty_sp" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtWriteToUs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:drawablePadding="@dimen/twenty_dp"
+            android:drawableStart="@drawable/ic_write_to_us"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:padding="@dimen/ten_dp"
+            android:singleLine="true"
+            android:text="Write to us"
+            android:textColor="@color/color_vvvDarkGrey"
+            android:textSize="@dimen/twenty_sp" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:drawablePadding="@dimen/twenty_dp"
+            android:drawableStart="@drawable/ic_settings"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:padding="@dimen/ten_dp"
+            android:singleLine="true"
+            android:text="Settings"
+            android:textColor="@color/color_vvvDarkGrey"
+            android:textSize="@dimen/twenty_sp" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fifteen_dp"
+            android:layout_marginTop="@dimen/twentyfive_dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingStart="@dimen/fifteen_dp"
+            android:singleLine="true"
+            android:text="Version 0.1.1"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="@dimen/fifteen_sp" />
+
+    </LinearLayout>
+
+</ScrollView>

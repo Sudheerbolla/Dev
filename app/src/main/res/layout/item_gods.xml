@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginEnd="@dimen/eight_dp"
+    android:layout_marginStart="@dimen/eight_dp"
+    android:padding="@dimen/eight_dp">
+
+    <com.devotted.utils.views.CircleImageView
+        android:id="@+id/imgGodProfilePic"
+        android:layout_width="@dimen/fourty_dp"
+        android:layout_height="@dimen/fourty_dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/krishna_icon" />
+
+    <com.devotted.utils.views.CustomTextView
+        android:id="@+id/txtGodName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toEndOf="@id/imgGodProfilePic"
+        android:layout_toStartOf="@+id/checkBox"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="@dimen/ten_dp"
+        android:singleLine="true"
+        android:text="Lord Krishna"
+        android:textColor="@color/color_vvvDarkGrey"
+        android:textSize="@dimen/fifteen_sp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:checked="true"
+        android:padding="@dimen/three_dp" />
+
+</RelativeLayout>

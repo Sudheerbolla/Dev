@@ -19,19 +19,23 @@
     <dimen name="fourteen_dp">14dp</dimen>
     <dimen name="fifteen_dp">15dp</dimen>
     <dimen name="twenty_dp">20dp</dimen>
+    <dimen name="twentytwo_dp">22dp</dimen>
     <dimen name="twentyfive_dp">25dp</dimen>
     <dimen name="thirty_dp">30dp</dimen>
     <dimen name="thirtyfive_dp">35dp</dimen>
     <dimen name="fourty_dp">40dp</dimen>
     <dimen name="fourty_two_dp">42dp</dimen>
     <dimen name="fourty_four_dp">44dp</dimen>
+    <dimen name="fourty_seven_dp">47dp</dimen>
     <dimen name="fifty_dp">50dp</dimen>
     <dimen name="fifty_five_dp">55dp</dimen>
     <dimen name="sixty_dp">60dp</dimen>
+    <dimen name="seventy_dp">70dp</dimen>
     <dimen name="seventy_five_dp">75dp</dimen>
     <dimen name="eighty_dp">80dp</dimen>
     <dimen name="eighty_five_dp">85dp</dimen>
     <dimen name="eighty_seven_dp">87dp</dimen>
+    <dimen name="ninety_dp">90dp</dimen>
     <dimen name="hundred_dp">100dp</dimen>
     <dimen name="onefifty_dp">150dp</dimen>
     <dimen name="one_ten_dp">110dp</dimen>
@@ -82,5 +86,7 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
 
 </resources>

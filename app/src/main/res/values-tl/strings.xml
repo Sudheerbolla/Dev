@@ -64,4 +64,8 @@
     <string name="otp_resent_successfully">OTP resent successfully</string>
     <string name="otp_verification_successfull">OTP verification successfull</string>
     <string name="you_just_got_verified">You just got Verified !</string>
+    <string name="change">Change</string>
+    <string name="your_location">Your Location</string>
+    <string name="you_have_decided_to_spread_the_app_to_your_friends_amp_family"><![CDATA[You have decided to spread the app to your Friends & Family.!]]></string>
+    <string name="thanks_for_your_trust_in_us_and_we_will_ensure_better_services_in_coming_furture">Thanks for your trust in us and we will ensure better services in coming furture</string>
 </resources>

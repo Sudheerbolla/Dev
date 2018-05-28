@@ -175,7 +175,7 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener,
     }
 
     private void navigateToMapScreen() {
-//        startActivity(new Intent(splashActivity, MapsActivity.class));
+//        startActivity(new Intent(splashActivity, SearchActivity.class));
 //        splashActivity.finishAffinity();
     }
 

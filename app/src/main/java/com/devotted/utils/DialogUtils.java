@@ -216,6 +216,70 @@ public class DialogUtils {
         }
     }
 
+    public static void showInviteVolunteerDialog(final Context mContext, final View.OnClickListener positiveClick) {
+        try {
+            final CustomTextView txtHeading, txtSend;
+            final CustomEditText edtMobileNumber;
+            final Dialog alertDialog = new Dialog(mContext, R.style.AlertDialogCustom);
+            alertDialog.setCancelable(false);
+            alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            alertDialog.setContentView(R.layout.layout_invite_volunteer);
+            txtHeading = alertDialog.findViewById(R.id.txtHeading);
+            txtSend = alertDialog.findViewById(R.id.txtSend);
+            edtMobileNumber = alertDialog.findViewById(R.id.edtMobileNumber);
+
+            alertDialog.getWindow().getAttributes().windowAnimations = R.style.AlertDialogCustom;
+
+            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+            Window window = alertDialog.getWindow();
+            lp.copyFrom(window.getAttributes());
+            lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+            lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+            window.setAttributes(lp);
+
+            txtSend.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String emailId = edtMobileNumber.getText().toString().trim();
+                    if (TextUtils.isEmpty(emailId)) {
+                        edtMobileNumber.requestFocus();
+                        showSimpleDialog(mContext, mContext.getString(R.string.please_enter_mobile_number), null, null, true);
+                        return;
+                    }
+                    if (emailId.length() < 9) {
+                        edtMobileNumber.requestFocus();
+                        showSimpleDialog(mContext, mContext.getString(R.string.please_enter_a_valid_mobile_number), null, null, true);
+                        return;
+                    }
+
+                    alertDialog.dismiss();
+                    v.setTag(emailId);
+                    if (positiveClick != null) {
+                        positiveClick.onClick(v);
+                    }
+                }
+            });
+
+            txtHeading.setOnTouchListener(new View.OnTouchListener() {
+                @Override
+                public boolean onTouch(View v, MotionEvent event) {
+                    final int DRAWABLE_RIGHT = 2;
+                    if (event.getRawX() >= (txtHeading.getRight() - txtHeading.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
+                        alertDialog.dismiss();
+                        return true;
+                    }
+                    return false;
+                }
+            });
+
+            alertDialog.setCancelable(false);
+            alertDialog.setCanceledOnTouchOutside(false);
+            alertDialog.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void imagePickerDialog(final Context mContext, final View.OnClickListener cameraClick, final View.OnClickListener galleryClick) {
         try {
             TextView txtCamera, txtGallery, txtCancel;
@@ -269,6 +333,54 @@ public class DialogUtils {
     }
 
     private static String language = "";
+
+    public static void showConfirmMobileNumberDialog(final Context mContext, final String message, final View.OnClickListener positiveClick) {
+        try {
+            final CustomTextView txtMobileNumber, txtEdit, txtConfirm;
+            final Dialog alertDialog = new Dialog(mContext, R.style.AlertDialogCustom);
+            alertDialog.setCancelable(false);
+            alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            alertDialog.setContentView(R.layout.layout_confirm_mobile_number);
+
+            txtMobileNumber = alertDialog.findViewById(R.id.txtMobileNumber);
+            txtEdit = alertDialog.findViewById(R.id.txtEdit);
+            txtConfirm = alertDialog.findViewById(R.id.txtConfirm);
+
+            txtMobileNumber.setText(message);
+
+            alertDialog.getWindow().getAttributes().windowAnimations = R.style.AlertDialogCustom;
+
+            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+            Window window = alertDialog.getWindow();
+            lp.copyFrom(window.getAttributes());
+            lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+            lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+            window.setAttributes(lp);
+
+            txtConfirm.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    alertDialog.dismiss();
+                    if (positiveClick != null) {
+                        positiveClick.onClick(v);
+                    }
+                }
+            });
+
+            txtEdit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    alertDialog.dismiss();
+                }
+            });
+
+            alertDialog.setCancelable(false);
+            alertDialog.setCanceledOnTouchOutside(false);
+            alertDialog.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void showLanguagePickerDialog(final Context mContext, final View.OnClickListener cameraClick) {
         language = "en";
@@ -339,19 +451,21 @@ public class DialogUtils {
         }
     }
 
-    public static void showConfirmMobileNumberDialog(final Context mContext, final String message, final View.OnClickListener positiveClick) {
+    public static void showIBelongHereDialog(final Context mContext, final View.OnClickListener positiveClick) {
         try {
-            final CustomTextView txtMobileNumber, txtEdit, txtConfirm;
+            final String[] spinnerIBelongHereArray = new String[]{"Pedda Pujari", "Devotee", "Volunteer", "Owner"};
+
+            final CustomTextView txtConfirm, txtReport2, txtReport1;
+            Spinner spinnerIBelongHere;
             final Dialog alertDialog = new Dialog(mContext, R.style.AlertDialogCustom);
             alertDialog.setCancelable(false);
             alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-            alertDialog.setContentView(R.layout.layout_confirm_mobile_number);
+            alertDialog.setContentView(R.layout.layout_i_belong_here);
 
-            txtMobileNumber = alertDialog.findViewById(R.id.txtMobileNumber);
-            txtEdit = alertDialog.findViewById(R.id.txtEdit);
+            spinnerIBelongHere = alertDialog.findViewById(R.id.spinnerIBelongHere);
             txtConfirm = alertDialog.findViewById(R.id.txtConfirm);
-
-            txtMobileNumber.setText(message);
+            txtReport1 = alertDialog.findViewById(R.id.txtReport1);
+            txtReport2 = alertDialog.findViewById(R.id.txtReport2);
 
             alertDialog.getWindow().getAttributes().windowAnimations = R.style.AlertDialogCustom;
 
@@ -361,6 +475,24 @@ public class DialogUtils {
             lp.width = WindowManager.LayoutParams.MATCH_PARENT;
             lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
             window.setAttributes(lp);
+
+            ArrayAdapter spinnerAdapter = new ArrayAdapter(mContext, android.R.layout.simple_spinner_item, spinnerIBelongHereArray);
+            spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinnerIBelongHere.setAdapter(spinnerAdapter);
+
+            spinnerIBelongHere.setSelection(0, true);
+            spinnerIBelongHere.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                    StaticUtils.showToast(mContext, "Selected " + spinnerIBelongHereArray[i]);
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                }
+            });
+
 
             txtConfirm.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -372,10 +504,18 @@ public class DialogUtils {
                 }
             });
 
-            txtEdit.setOnClickListener(new View.OnClickListener() {
+            txtReport2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    alertDialog.dismiss();
+                    StaticUtils.showToast(mContext, "Reported Successfully");
+//                    alertDialog.dismiss();
+                }
+            });
+            txtReport1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    StaticUtils.showToast(mContext, "Reported Successfully");
+//                    alertDialog.dismiss();
                 }
             });
 

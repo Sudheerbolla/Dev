@@ -1,66 +1,91 @@
 package com.devotted.fragments;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.devotted.R;
-import com.devotted.models.AddressModelStatic;
+import com.devotted.activities.SearchActivity;
+import com.devotted.activities.TempleDetailsActivity;
+import com.devotted.models.TempleModel;
+import com.devotted.utils.views.CustomTextView;
 
-public class MapFragment extends Fragment {
+public class MapFragment extends BaseFragment implements View.OnClickListener {
 
+    private ImageView imageViewTemple, imgFavourite;
+    private CustomTextView txtTempleName, txtTempleAddress, txtRating, txtTempleDistance;
     int page_position;
-    TextView tvTitle, tvLocation, tvCategory, tvRating, tvOffer, tvDistanceInKm, tvDescription, tvPhone;
-    Button btnNavigate, btnBook;
-    LinearLayout layoutItem;
-    ImageView ivMain;
-    private AddressModelStatic dealModel;
+    private LinearLayout ll_map_item;
+    private TempleModel dealModel;
+    private CardView cardViewTemple;
+    private SearchActivity searchActivity;
 
     public MapFragment() {
 
     }
 
-    //    @SuppressLint("ValidFragment")
-//    public MapFragment(int position, AddressModel placemodel) {
-//        this.page_position = position;
-//        this.dealModel = placemodel;
-//    }
     @SuppressLint("ValidFragment")
-    public MapFragment(int position, AddressModelStatic placemodel) {
+    public MapFragment(int position, TempleModel placemodel) {
         this.page_position = position;
         this.dealModel = placemodel;
     }
 
-    public AddressModelStatic getDealModel() {
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        searchActivity = (SearchActivity) getActivity();
+    }
+
+    public TempleModel getDealModel() {
         return dealModel;
     }
 
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.map_view_item, container, false);
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.item_map_view_slider, container, false);
         try {
-            tvTitle = (TextView) rootView.findViewById(R.id.tv_title);
-            tvDescription = (TextView) rootView.findViewById(R.id.tv_categories);
-            tvLocation = (TextView) rootView.findViewById(R.id.tv_offers);
-            tvRating = (TextView) rootView.findViewById(R.id.tv_rating);
-            tvDistanceInKm = (TextView) rootView.findViewById(R.id.tv_distanceinkm);
+            txtTempleName = rootView.findViewById(R.id.txtTempleName);
+            txtTempleAddress = rootView.findViewById(R.id.txtTempleAddress);
+            cardViewTemple = rootView.findViewById(R.id.cardViewTemple);
+            txtRating = rootView.findViewById(R.id.txtRating);
+            imgFavourite = rootView.findViewById(R.id.imgFavourite);
+            ll_map_item = rootView.findViewById(R.id.ll_map_item);
+            txtTempleDistance = rootView.findViewById(R.id.txtTempleDistance);
+            imageViewTemple = rootView.findViewById(R.id.imageViewTemple);
 
-            tvTitle.setText(getDealModel().line1);
-            tvDescription.setText(getDealModel().line2);
-            tvLocation.setText(getDealModel().city);
-            tvDistanceInKm.setText(getDealModel().distance);
-            tvRating.setText(getDealModel().rating);
+            ll_map_item.setOnClickListener(this);
 
+            txtTempleName.setText(getDealModel().templeName);
+            txtTempleAddress.setText(getDealModel().line1 + ", " + getDealModel().line2 + ", " + getDealModel().city);
+            txtRating.setText(getDealModel().rating);
+            txtTempleDistance.setText(getDealModel().distance);
+            RequestOptions options = new RequestOptions()
+                    .placeholder(R.drawable.temple)
+                    .fitCenter()
+                    .error(R.drawable.temple);
+
+            Glide.with(this)
+                    .load(getDealModel().image)
+                    .apply(options)
+                    .into(imageViewTemple);
+            imgFavourite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    imgFavourite.setSelected(!imgFavourite.isSelected());
+                }
+            });
+            cardViewTemple.setOnClickListener(this);
             return rootView;
-
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("PlacesMapFragment:" + e.getStackTrace());
@@ -68,4 +93,8 @@ public class MapFragment extends Fragment {
 
     }
 
+    @Override
+    public void onClick(View view) {
+        startActivity(new Intent(searchActivity, TempleDetailsActivity.class));
+    }
 }

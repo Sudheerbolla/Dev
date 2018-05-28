@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginEnd="@dimen/eight_dp"
+    android:layout_marginStart="@dimen/eight_dp"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/five_dp">
+
+    <com.devotted.utils.views.CustomTextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_toStartOf="@+id/txtRemove"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="@dimen/seven_dp"
+        android:singleLine="true"
+        android:text="Monday"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/sixteen_sp" />
+
+    <com.devotted.utils.views.CustomTextView
+        android:id="@+id/txtRemove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/five_dp"
+        android:text="2:00 p.m to 5:00 p.m "
+        android:textColor="@color/color_vvDarkGrey"
+        android:textSize="@dimen/fourteen_sp" />
+
+</RelativeLayout>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relTopBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/gradient_horizontal_plane"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/five_dp"
+                app:srcCompat="@drawable/ic_back" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtTempleDetails"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@id/imgBack"
+                android:layout_toStartOf="@+id/imgSearch"
+                android:alpha="0.7"
+                android:gravity="center_vertical"
+                android:hint="Post an Update"
+                android:padding="@dimen/ten_dp"
+                android:singleLine="true"
+                android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhite"
+                android:textSize="@dimen/eighteen_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtPost"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/five_dp"
+                android:gravity="center"
+                android:padding="@dimen/ten_dp"
+                android:text="post"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sixteen_sp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten_dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.devotted.utils.views.CircleImageView
+                android:layout_width="@dimen/seventy_five_dp"
+                android:layout_height="@dimen/seventy_five_dp"
+                android:src="@drawable/temple2"
+                app:civ_border_color="@color/colorPrimaryDark"
+                app:civ_border_width="@dimen/one_dp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:padding="@dimen/twelve_dp"
+                android:text="Sree venkateshwara Temple"
+                android:textColor="@color/color_vvDarkGrey"
+                android:textSize="@dimen/sixteen_sp" />
+
+        </LinearLayout>
+
+        <com.devotted.utils.views.CustomEditText
+            android:id="@+id/edtPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/five_dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/ten_dp"
+            android:text="Temple is very good and peaceful. Prime and decent Location. Priest is very well behaving and good. \n\n   This is having good number of volunteers and devotees. All are co-operative and friendly. Volunteers are very active and updating very preciously."
+            android:textColor="@color/color_vvvDarkGrey"
+            android:textSize="@dimen/fifteen_sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/seven_dp"
+            android:layout_marginStart="@dimen/seven_dp"
+            android:orientation="horizontal"
+            android:padding="@dimen/three_dp">
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:drawablePadding="@dimen/ten_dp"
+                android:drawableStart="@drawable/ic_calender"
+                android:gravity="center"
+                android:padding="@dimen/seven_dp"
+                android:text="Set Pooja Timing"
+                android:textColor="@color/color_vDarkGrey"
+                android:textSize="@dimen/fifteen_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtAddPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:drawablePadding="@dimen/ten_dp"
+                android:drawableStart="@drawable/ic_add_photo"
+                android:gravity="center"
+                android:padding="@dimen/seven_dp"
+                android:text="Add Photo"
+                android:textColor="@color/color_vDarkGrey"
+                android:textSize="@dimen/fifteen_sp" />
+
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ten_dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/three_dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/seventy_dp"
+                    android:layout_height="@dimen/seventy_dp"
+                    android:layout_margin="@dimen/five_dp"
+                    android:padding="@dimen/five_dp"
+                    app:cardCornerRadius="@dimen/ten_dp"
+                    app:cardElevation="@dimen/five_dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/temple1" />
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/seventy_dp"
+                    android:layout_height="@dimen/seventy_dp"
+                    android:layout_margin="@dimen/five_dp"
+                    android:padding="@dimen/five_dp"
+                    app:cardCornerRadius="@dimen/ten_dp"
+                    app:cardElevation="@dimen/five_dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/temple2" />
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/seventy_dp"
+                    android:layout_height="@dimen/seventy_dp"
+                    android:layout_margin="@dimen/five_dp"
+                    android:padding="@dimen/five_dp"
+                    app:cardCornerRadius="@dimen/ten_dp"
+                    app:cardElevation="@dimen/five_dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/temple3" />
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/seventy_dp"
+                    android:layout_height="@dimen/seventy_dp"
+                    android:layout_margin="@dimen/five_dp"
+                    android:padding="@dimen/five_dp"
+                    app:cardCornerRadius="@dimen/ten_dp"
+                    app:cardElevation="@dimen/five_dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/temple4" />
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/seventy_dp"
+                    android:layout_height="@dimen/seventy_dp"
+                    android:layout_margin="@dimen/five_dp"
+                    android:padding="@dimen/five_dp"
+                    app:cardCornerRadius="@dimen/ten_dp"
+                    app:cardElevation="@dimen/five_dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/temple_icon_home" />
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="@dimen/seventy_dp"
+                    android:layout_height="@dimen/seventy_dp"
+                    android:layout_margin="@dimen/five_dp"
+                    android:padding="@dimen/five_dp"
+                    app:cardCornerRadius="@dimen/ten_dp"
+                    app:cardElevation="@dimen/five_dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/temple" />
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</ScrollView>

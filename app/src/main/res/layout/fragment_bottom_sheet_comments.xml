@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/fifteen_dp"
+    android:background="@color/colorWhite"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <RelativeLayout
+        android:id="@+id/relTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:padding="@dimen/four_dp">
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/ten_dp"
+            app:srcCompat="@drawable/ic_close_white" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:drawablePadding="@dimen/ten_dp"
+            android:gravity="center"
+            android:padding="@dimen/ten_dp"
+            android:text="Comments (10)"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/eighteen_sp"
+            app:txt_font_type="bold" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/relSendComment"
+        android:layout_below="@id/relTopBar"
+        android:background="@color/colorWhite"
+        android:overScrollMode="never"
+        android:padding="@dimen/five_dp"
+        android:scrollbars="none" />
+
+    <RelativeLayout
+        android:id="@+id/relSendComment"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/five_dp"
+        android:layout_marginStart="@dimen/five_dp">
+
+        <com.devotted.utils.views.CustomEditText
+            android:id="@+id/edtComment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@+id/txtSend"
+            android:background="@null"
+            android:hint="Type your comment here"
+            android:inputType="text"
+            android:padding="@dimen/seven_dp"
+            android:textColor="@color/color_vvvDarkGrey"
+            android:textColorHint="@color/color_vvvDarkGrey" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/twelve_dp"
+            android:text="Send"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/eighteen_sp"
+            app:txt_font_type="bold" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

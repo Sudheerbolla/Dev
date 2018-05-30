@@ -28,7 +28,7 @@
         android:marqueeRepeatLimit="marquee_forever"
         android:padding="@dimen/ten_dp"
         android:singleLine="true"
-        android:text="Vivek Verma"
+        android:text="@string/shivaji_reddy"
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/fifteen_sp" />
 
@@ -39,7 +39,7 @@
         android:layout_alignParentEnd="true"
         android:layout_centerInParent="true"
         android:padding="@dimen/ten_dp"
-        android:text="remove"
+        android:text="@string/remove"
         android:textAllCaps="true"
         android:textColor="@color/textColorDark"
         android:textSize="@dimen/thirteen_sp" />

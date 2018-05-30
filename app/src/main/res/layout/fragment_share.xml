@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="@dimen/ten_dp"
-        android:text="Share it Via"
+        android:text="@string/share_it_via"
         android:textColor="@color/color_vvvDarkGrey"
         android:textSize="@dimen/twenty_sp"
         app:txt_font_type="bold" />
@@ -76,7 +76,7 @@
             android:drawablePadding="@dimen/seven_dp"
             android:gravity="center"
             android:padding="@dimen/five_dp"
-            android:text="Others"
+            android:text="@string/others"
             android:textColor="@color/colorBlack"
             android:textSize="@dimen/eighteen_sp" />
 

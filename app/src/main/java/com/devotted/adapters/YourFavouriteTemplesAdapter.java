@@ -1,10 +1,14 @@
 package com.devotted.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -17,28 +21,31 @@ import com.devotted.utils.views.CustomTextView;
 
 import java.util.ArrayList;
 
-public class TemplesYouMayKnowAdapter extends RecyclerView.Adapter<TemplesYouMayKnowAdapter.ViewHolder> {
+public class YourFavouriteTemplesAdapter extends RecyclerView.Adapter<YourFavouriteTemplesAdapter.ViewHolder> {
 
     private ArrayList<TempleModel> itemsData;
     private Context context;
     private IClickListener iClickListener;
 
-    public TemplesYouMayKnowAdapter(Context context, ArrayList<TempleModel> itemsData, IClickListener iClickListener) {
+    public YourFavouriteTemplesAdapter(Context context, ArrayList<TempleModel> itemsData, IClickListener iClickListener) {
         this.itemsData = itemsData;
         this.iClickListener = iClickListener;
         this.context = context;
     }
 
+    @SuppressLint("InflateParams")
+    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_temples_you_may_know, null));
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, @SuppressLint("RecyclerView") final int position) {
+
         TempleModel templeModel = itemsData.get(position);
         viewHolder.txtTempleName.setText(templeModel.templeName);
-        viewHolder.txtUpdates.setText(templeModel.distance + " Updates");
+        viewHolder.txtUpdates.setText(String.format("%s Updates", templeModel.distance));
         viewHolder.txtTempleName.setSelected(true);
 
         viewHolder.relBody.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +54,7 @@ public class TemplesYouMayKnowAdapter extends RecyclerView.Adapter<TemplesYouMay
                 if (iClickListener != null) iClickListener.onClick(v, position);
             }
         });
+
         viewHolder.relBody.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
@@ -54,6 +62,17 @@ public class TemplesYouMayKnowAdapter extends RecyclerView.Adapter<TemplesYouMay
                 return false;
             }
         });
+
+        if (templeModel.isFocused) {
+            Animation anim = AnimationUtils.loadAnimation(context, R.anim.scale_in_tv);
+            viewHolder.relBody.startAnimation(anim);
+            anim.setFillAfter(true);
+        } else {
+            Animation anim = AnimationUtils.loadAnimation(context, R.anim.scale_out_tv);
+            viewHolder.relBody.startAnimation(anim);
+            anim.setFillAfter(true);
+        }
+
         RequestOptions options = new RequestOptions()
                 .placeholder(R.drawable.temple)
                 .fitCenter()
@@ -70,19 +89,21 @@ public class TemplesYouMayKnowAdapter extends RecyclerView.Adapter<TemplesYouMay
         return itemsData.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         public CustomTextView txtUpdates, txtTempleName;
         public ImageView imageViewTemple;
         private LinearLayout relBody;
 
-        public ViewHolder(View itemLayoutView) {
+        ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
             txtTempleName = itemLayoutView.findViewById(R.id.txtTempleName);
             txtUpdates = itemLayoutView.findViewById(R.id.txtUpdates);
             imageViewTemple = itemLayoutView.findViewById(R.id.imageViewTemple);
             relBody = itemLayoutView.findViewById(R.id.relBody);
+
         }
+
     }
 
 }

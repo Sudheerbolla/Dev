@@ -30,7 +30,7 @@
             android:layout_toStartOf="@+id/imgShare"
             android:alpha="0.7"
             android:gravity="center_vertical"
-            android:hint="Temple Details"
+            android:hint="@string/temple_details"
             android:padding="@dimen/ten_dp"
             android:singleLine="true"
             android:textColor="@color/colorWhite"

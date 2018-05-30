@@ -13,7 +13,6 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.devotted.R;
-import com.devotted.activities.SearchActivity;
 import com.devotted.adapters.CommentsAdapter;
 import com.devotted.listeners.IClickListener;
 import com.devotted.models.ReviewsItem;
@@ -25,7 +24,6 @@ import java.util.ArrayList;
 
 public class CommentsBottomSheetFragment extends BottomSheetDialogFragment implements View.OnClickListener, IClickListener {
 
-    private SearchActivity searchActivity;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     BottomSheetDialog dialog;
@@ -64,7 +62,6 @@ public class CommentsBottomSheetFragment extends BottomSheetDialogFragment imple
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         commentsArrayList = new ArrayList<>();
-        searchActivity = (SearchActivity) getActivity();
     }
 
     @NonNull
@@ -103,8 +100,8 @@ public class CommentsBottomSheetFragment extends BottomSheetDialogFragment imple
     }
 
     private void setAdapter() {
-        recyclerViewComments.setLayoutManager(new LinearLayoutManager(searchActivity));
-        commentsAdapter = new CommentsAdapter(searchActivity, commentsArrayList, this);
+        recyclerViewComments.setLayoutManager(new LinearLayoutManager(getActivity()));
+        commentsAdapter = new CommentsAdapter(getActivity(), commentsArrayList, this);
         recyclerViewComments.setAdapter(commentsAdapter);
     }
 
@@ -137,7 +134,7 @@ public class CommentsBottomSheetFragment extends BottomSheetDialogFragment imple
                 dismiss();
                 break;
             case R.id.txtSend:
-                StaticUtils.showToast(searchActivity, "Sent Comment Successfully");
+                StaticUtils.showToast(getActivity(), "Sent Comment Successfully");
                 dismiss();
                 break;
             default:

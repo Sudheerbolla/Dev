@@ -81,9 +81,6 @@ public class SearchActivity extends BaseActivity implements View.OnClickListener
         setListeners();
     }
 
-    /**
-     * This is for setting click listeners
-     */
     private void setListeners() {
         imgBack.setOnClickListener(this);
         txtFavourites.setOnClickListener(this);
@@ -135,7 +132,7 @@ public class SearchActivity extends BaseActivity implements View.OnClickListener
         boolean isGPSEnabled = mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
         boolean isNetworkEnabled = mLocationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
         if (!(isGPSEnabled || isNetworkEnabled))
-            StaticUtils.showToast(SearchActivity.this, "Error Fetching Location from the Provider");
+            StaticUtils.showToast(SearchActivity.this, getString(R.string.error_fetching_location_from_the_provider));
         else {
             if (isNetworkEnabled) {
                 mLocationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 60000, 10, this);
@@ -158,7 +155,7 @@ public class SearchActivity extends BaseActivity implements View.OnClickListener
         if (StaticUtils.isAllPermissionsGranted(grantResults)) {
             getCurrentLocation();
         } else {
-            StaticUtils.showToast(this, "Location Permission Mandatory to access your location");
+            StaticUtils.showToast(this, getString(R.string.location_permission_mandatory_to_access_your_location));
             checkPermissions();
         }
     }
@@ -219,16 +216,16 @@ public class SearchActivity extends BaseActivity implements View.OnClickListener
         if (sortBySortBottomSheetFragment != null) {
             switch (checkedId) {
                 case R.id.rbPopularity:
-                    StaticUtils.showToast(this, "You Selected Popularity");
+                    StaticUtils.showToast(this, getString(R.string.you_selected_popularity));
                     break;
                 case R.id.rbAlphabetical:
-                    StaticUtils.showToast(this, "You Selected Alphabetical");
+                    StaticUtils.showToast(this, getString(R.string.you_selected_alphabetical));
                     break;
                 case R.id.rbDistance:
-                    StaticUtils.showToast(this, "You Selected Distance");
+                    StaticUtils.showToast(this, getString(R.string.you_selected_distance));
                     break;
                 case R.id.rbRatings:
-                    StaticUtils.showToast(this, "You Selected Ratings");
+                    StaticUtils.showToast(this, getString(R.string.you_selected_ratings));
                     break;
                 default:
                     break;

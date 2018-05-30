@@ -1,8 +1,12 @@
 package com.devotted.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.v7.widget.PopupMenu;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -11,6 +15,7 @@ import android.widget.LinearLayout;
 import com.devotted.R;
 import com.devotted.listeners.IClickListener;
 import com.devotted.models.TempleModel;
+import com.devotted.utils.StaticUtils;
 import com.devotted.utils.views.CircleImageView;
 import com.devotted.utils.views.CustomTextView;
 
@@ -28,13 +33,15 @@ public class TemplePostsAdapter extends RecyclerView.Adapter<TemplePostsAdapter.
         this.context = context;
     }
 
+    @SuppressLint("InflateParams")
+    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_temples_posts, null));
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, @SuppressLint("RecyclerView") final int position) {
         viewHolder.txtLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,6 +74,22 @@ public class TemplePostsAdapter extends RecyclerView.Adapter<TemplePostsAdapter.
                 }
             }
         });
+
+        viewHolder.imgMore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                PopupMenu popup = new PopupMenu(context, viewHolder.imgMore);
+                popup.getMenuInflater().inflate(R.menu.posts_menu, popup.getMenu());
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    public boolean onMenuItemClick(MenuItem item) {
+                        StaticUtils.showToast(context, "You Clicked : " + item.getTitle());
+                        return true;
+                    }
+                });
+
+                popup.show();
+            }
+        });
     }
 
     @Override
@@ -81,7 +104,7 @@ public class TemplePostsAdapter extends RecyclerView.Adapter<TemplePostsAdapter.
         public ImageView imgMore;
         public LinearLayout relBody;
 
-        public ViewHolder(View itemLayoutView) {
+        ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
 
             txtTempleName = itemLayoutView.findViewById(R.id.txtTempleName);

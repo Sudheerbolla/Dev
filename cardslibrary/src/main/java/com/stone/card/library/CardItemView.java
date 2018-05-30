@@ -1,7 +1,6 @@
 package com.stone.card.library;
 
 import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
@@ -64,18 +63,12 @@ public class CardItemView extends FrameLayout {
         });
     }
 
-    /**
-     * 动画移动到某个位置
-     */
     public void animTo(int xPos, int yPos) {
         setCurrentSpringPos(getLeft(), getTop());
         springX.setEndValue(xPos);
         springY.setEndValue(yPos);
     }
 
-    /**
-     * 设置当前spring位置
-     */
     private void setCurrentSpringPos(int xPos, int yPos) {
         springX.setCurrentValue(xPos);
         springY.setCurrentValue(yPos);
@@ -112,11 +105,11 @@ public class CardItemView extends FrameLayout {
             if (null != alphaAnimator) {
                 alphaAnimator.cancel();
             }
-            alphaAnimator = ObjectAnimator.ofFloat(this, "alpha",
-                    0.0f, 1.0f);
+            alphaAnimator = ObjectAnimator.ofFloat(this, "alpha", 0.0f, 1.0f);
             alphaAnimator.setDuration(360);
             alphaAnimator.setStartDelay(delayIndex * 200);
             alphaAnimator.start();
         }
     }
+
 }

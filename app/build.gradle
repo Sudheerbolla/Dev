@@ -59,7 +59,7 @@ dependencies {
     implementation 'com.google.maps.android:android-maps-utils:0.4'
 
 //    implementation project(':ResideMenu')
-//    implementation project(':rossdeckview')
+    implementation project(':rossdeckview')
     implementation project(':cardslibrary')
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     testImplementation rootProject.ext.junit

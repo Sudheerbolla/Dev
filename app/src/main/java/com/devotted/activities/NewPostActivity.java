@@ -43,7 +43,7 @@ public class NewPostActivity extends BaseActivity implements View.OnClickListene
                 onBackPressed();
                 break;
             case R.id.txtPost:
-                StaticUtils.showToast(this, "Posted Successfully");
+                StaticUtils.showToast(this, getString(R.string.posted_successfully));
                 finish();
                 break;
             default:

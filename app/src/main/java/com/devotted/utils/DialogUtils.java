@@ -11,6 +11,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -526,4 +527,78 @@ public class DialogUtils {
             e.printStackTrace();
         }
     }
+
+    public static void showLanguageSelectionDialog(final Context mContext, final View.OnClickListener cameraClick) {
+        language = "en";
+        try {
+            final CustomTextView txtLanguageChangeHint, txtProceed, txtSelectLanguage;
+            RadioGroup rgLanguages;
+            final Dialog alertDialog = new Dialog(mContext, R.style.AlertDialogCustom);
+            alertDialog.setCancelable(false);
+            alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            alertDialog.setContentView(R.layout.layout_language_selection);
+
+            txtLanguageChangeHint = alertDialog.findViewById(R.id.txtLanguageChangeHint);
+            txtProceed = alertDialog.findViewById(R.id.txtProceed);
+            txtSelectLanguage = alertDialog.findViewById(R.id.txtSelectLanguage);
+            rgLanguages = alertDialog.findViewById(R.id.rgLanguages);
+            rgLanguages.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                    switch (i) {
+                        case R.id.rbEnglish:
+                            language = "en";
+                            txtLanguageChangeHint.setText("You can change your language choice in Menu/Settings at any time.");
+                            txtProceed.setText("Proceed");
+                            txtSelectLanguage.setText("Please Select Language");
+                            break;
+                        case R.id.rbTelugu:
+                            language = "tl";
+                            txtLanguageChangeHint.setText("మీరు ఎప్పుడైనా మెను / సెట్టింగులలో మీ భాష ఎంపికను మార్చుకోవచ్చు.");
+                            txtProceed.setText("ముందుకు");
+                            txtSelectLanguage.setText("దయచేసి భాషను ఎంచుకోండి");
+                            break;
+                        case R.id.rbHindi:
+                            language = "hi";
+                            txtLanguageChangeHint.setText("आप किसी भी समय मेनू / सेटिंग्स में अपनी भाषा पसंद बदल सकते हैं.");
+                            txtProceed.setText("बढ़ना");
+                            txtSelectLanguage.setText("कृपया भाषा का चयन करें.");
+                            break;
+                        default:
+                            language = "en";
+                            txtLanguageChangeHint.setText("You can change your language choice in Menu/Settings at any time.");
+                            txtProceed.setText("Proceed");
+                            txtSelectLanguage.setText("Please Select Language");
+                            break;
+                    }
+                }
+            });
+            alertDialog.getWindow().getAttributes().windowAnimations = R.style.AlertDialogCustom;
+
+            WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+            Window window = alertDialog.getWindow();
+            lp.copyFrom(window.getAttributes());
+            lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+            lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+            window.setAttributes(lp);
+
+            txtProceed.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    LocalStorage.getInstance(mContext).putString(LocalStorage.PREF_LANGUAGE, language);
+                    alertDialog.dismiss();
+                    if (cameraClick != null) {
+                        cameraClick.onClick(v);
+                    }
+                }
+            });
+
+            alertDialog.setCancelable(false);
+            alertDialog.setCanceledOnTouchOutside(false);
+            alertDialog.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

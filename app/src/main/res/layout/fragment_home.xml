@@ -1,9 +1,10 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.devotted.utils.views.StickyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
     android:fillViewport="true"
+    android:fitsSystemWindows="true"
     android:scrollbars="none">
 
     <LinearLayout
@@ -26,29 +27,32 @@
                 android:drawablePadding="@dimen/ten_dp"
                 android:drawableStart="@drawable/ic_topbar_search"
                 android:gravity="center_vertical"
-                android:hint="Search For Temples, Events and Posts"
+                android:hint="@string/search_temple_posts_events"
                 android:padding="@dimen/eight_dp"
                 android:textColorHint="@color/color_vvvDarkGrey"
                 android:textSize="@dimen/sixteen_sp" />
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
+            <RelativeLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/twentyfive_dp">
+                android:layout_marginEnd="@dimen/ten_dp"
+                android:layout_marginStart="@dimen/ten_dp">
 
-                <RelativeLayout
+                <HorizontalScrollView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/orange_curved"
+                    android:overScrollMode="never"
+                    android:padding="@dimen/ten_dp"
+                    android:paddingStart="@dimen/fifty_dp"
+                    android:scrollbars="none">
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="@dimen/fourty_four_dp"
-                        android:background="@drawable/orange_curved"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/seven_dp"
-                        android:paddingStart="@dimen/fourty_four_dp">
+                        android:layout_marginStart="@dimen/fourty_dp"
+                        android:orientation="horizontal">
 
                         <com.devotted.utils.views.CustomTextView
                             android:id="@+id/txtGroups"
@@ -56,10 +60,10 @@
                             android:layout_height="wrap_content"
                             android:drawablePadding="@dimen/seven_dp"
                             android:drawableTop="@drawable/ic_group"
-                            android:padding="@dimen/seven_dp"
-                            android:text="Groups"
+                            android:padding="@dimen/five_dp"
+                            android:text="@string/groups"
                             android:textColor="@color/colorWhite"
-                            android:textSize="@dimen/fifteen_dp" />
+                            android:textSize="@dimen/fifteen_sp" />
 
                         <com.devotted.utils.views.CustomTextView
                             android:id="@+id/txtPanchang"
@@ -67,37 +71,69 @@
                             android:layout_height="wrap_content"
                             android:drawablePadding="@dimen/seven_dp"
                             android:drawableTop="@drawable/ic_panchang"
-                            android:padding="@dimen/seven_dp"
-                            android:text="Panchang"
+                            android:padding="@dimen/five_dp"
+                            android:text="@string/panchang"
                             android:textColor="@color/colorWhite"
-                            android:textSize="@dimen/fifteen_dp" />
+                            android:textSize="@dimen/fifteen_sp" />
 
                         <com.devotted.utils.views.CustomTextView
                             android:id="@+id/txtFavourites"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/five_dp"
                             android:drawablePadding="@dimen/seven_dp"
                             android:drawableTop="@drawable/ic_heart"
-                            android:padding="@dimen/seven_dp"
-                            android:text="Favourites"
+                            android:padding="@dimen/five_dp"
+                            android:text="@string/favourites"
                             android:textColor="@color/colorWhite"
-                            android:textSize="@dimen/fifteen_dp" />
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <com.devotted.utils.views.CustomTextView
+                            android:id="@+id/txtExtras"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/five_dp"
+                            android:drawablePadding="@dimen/seven_dp"
+                            android:drawableTop="@drawable/ic_like"
+                            android:padding="@dimen/five_dp"
+                            android:text="@string/extras"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <com.devotted.utils.views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/seven_dp"
+                            android:drawableTop="@drawable/ic_heart"
+                            android:padding="@dimen/five_dp"
+                            android:text="@string/favourites"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/fifteen_sp" />
+
+                        <com.devotted.utils.views.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/seven_dp"
+                            android:drawableTop="@drawable/ic_heart"
+                            android:padding="@dimen/five_dp"
+                            android:text="@string/favourites"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/fifteen_sp"
+                            android:visibility="invisible" />
 
                     </LinearLayout>
 
-                    <com.devotted.utils.views.CircleImageView
-                        android:id="@+id/imgTemple"
-                        android:layout_width="@dimen/ninety_dp"
-                        android:layout_height="@dimen/ninety_dp"
-                        android:padding="@dimen/five_dp"
-                        android:src="@drawable/temple_icon_home"
-                        app:civ_border_color="@color/colorPrimaryDark"
-                        app:civ_border_width="@dimen/two_dp" />
+                </HorizontalScrollView>
 
-                </RelativeLayout>
+                <com.devotted.utils.views.CircleImageView
+                    android:id="@+id/imgTemple"
+                    android:layout_width="@dimen/ninety_dp"
+                    android:layout_height="@dimen/ninety_dp"
+                    android:padding="@dimen/five_dp"
+                    android:src="@drawable/temple_icon_home"
+                    app:civ_border_color="@color/colorPrimaryDark"
+                    app:civ_border_width="@dimen/two_dp" />
 
-            </HorizontalScrollView>
+            </RelativeLayout>
 
         </LinearLayout>
 
@@ -106,6 +142,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorWhite"
+            android:tag="sticky"
             app:tabGravity="fill"
             app:tabIndicatorColor="@color/colorPrimaryDark"
             app:tabMode="scrollable"
@@ -115,9 +152,8 @@
         <com.devotted.utils.views.CustomViewPager
             android:id="@+id/viewpager"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="750dp" />
 
     </LinearLayout>
 
-<!--android:tag="sticky-nonconstant-hastransparancy"-->
-</ScrollView>
+</com.devotted.utils.views.StickyScrollView>

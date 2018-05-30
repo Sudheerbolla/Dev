@@ -38,7 +38,7 @@
             android:drawablePadding="@dimen/ten_dp"
             android:gravity="center"
             android:padding="@dimen/ten_dp"
-            android:text="Comments (10)"
+            android:text="@string/comments_10"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/eighteen_sp"
             app:txt_font_type="bold" />
@@ -72,7 +72,7 @@
             android:layout_centerInParent="true"
             android:layout_toStartOf="@+id/txtSend"
             android:background="@null"
-            android:hint="Type your comment here"
+            android:hint="@string/type_your_comment_here"
             android:inputType="text"
             android:padding="@dimen/seven_dp"
             android:textColor="@color/color_vvvDarkGrey"
@@ -85,7 +85,8 @@
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
             android:padding="@dimen/twelve_dp"
-            android:text="Send"
+            android:text="@string/send"
+            android:textAllCaps="true"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/eighteen_sp"
             app:txt_font_type="bold" />

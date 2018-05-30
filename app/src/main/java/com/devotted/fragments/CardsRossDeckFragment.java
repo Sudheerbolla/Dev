@@ -1,8 +1,10 @@
-/*
 package com.devotted.fragments;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.view.ViewCompat;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,24 +16,28 @@ import com.db.rossdeckview.RossDeckView;
 import com.devotted.R;
 import com.devotted.activities.MainActivity;
 import com.devotted.adapters.CardsDeckAdapter;
+import com.devotted.adapters.TemplePostsAdapter;
+import com.devotted.listeners.IClickListener;
+import com.devotted.models.CardDataItem;
+import com.devotted.models.TempleModel;
 import com.devotted.utils.StaticUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class CardsRossDeckFragment extends BaseFragment implements FlingChiefListener.Actions*/
-/*, FlingChiefListener.Proximity *//*
-{
+public class CardsRossDeckFragment extends BaseFragment implements FlingChiefListener.Actions, IClickListener {
 
     private View rootView;
     private MainActivity mainActivity;
 
     private final static int DELAY = 1000;
-    private List<Pair<String, Integer>> mItems;
     private CardsDeckAdapter mAdapter;
-    private int[] mColors;
-    private int mCount = 0;
+    private List<Pair<String, CardDataItem>> dataList, originalData;
+
+    private RecyclerView recyclerViewPastUpdates;
+    private TemplePostsAdapter templePostsAdapter;
+    private ArrayList<TempleModel> templePostsArrayList;
 
     public CardsRossDeckFragment() {
     }
@@ -48,57 +54,74 @@ public class CardsRossDeckFragment extends BaseFragment implements FlingChiefLis
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mainActivity = (MainActivity) getActivity();
+        dataList = new ArrayList<>();
+        originalData = new ArrayList<>();
+        templePostsArrayList = new ArrayList<>();
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_cards_rossdeck, container, false);
         initComponents();
         return rootView;
     }
 
     private void initComponents() {
-        mColors = getResources().getIntArray(R.array.cardsBackgroundColors);
-        mItems = new ArrayList<>();
+        for (int i = 0; i < 6; i++) {
+            dataList.add(newItem(i));
+        }
+        originalData.addAll(dataList);
 
-        mItems.add(newItem());
-        mItems.add(newItem());
-        mItems.add(newItem());
-        mItems.add(newItem());
-        mItems.add(newItem());
-        mAdapter = new CardsDeckAdapter(mainActivity, mItems);
+        mAdapter = new CardsDeckAdapter(mainActivity, dataList);
 
         RossDeckView mDeckLayout = rootView.findViewById(R.id.decklayout);
         mDeckLayout.setAdapter(mAdapter);
         mDeckLayout.setActionsListener(this);
-//        mDeckLayout.setProximityListener(this);
-        mDeckLayout.setDirections(new FlingChief.Direction[]{FlingChief.Direction.BOTTOM, FlingChief.Direction.TOP});
+
+        recyclerViewPastUpdates = rootView.findViewById(R.id.recyclerViewPastUpdates);
+        setDummyData();
+        setTemplePostsAdapter();
+
+        ViewCompat.setNestedScrollingEnabled(recyclerViewPastUpdates, false);
+
     }
 
-    private Pair<String, Integer> newItem() {
-        Pair<String, Integer> res = new Pair<>("Card" + Integer.toString(mCount), mColors[mCount]);
-        mCount = (mCount >= mColors.length - 1) ? 0 : mCount + 1;
-        return res;
+    private void setDummyData() {
+        for (int i = 0; i < 10; i++) {
+            templePostsArrayList.add(new TempleModel(1));
+        }
+    }
+
+    private void setTemplePostsAdapter() {
+        recyclerViewPastUpdates.setLayoutManager(new LinearLayoutManager(mainActivity));
+        templePostsAdapter = new TemplePostsAdapter(mainActivity, templePostsArrayList, this);
+        recyclerViewPastUpdates.setAdapter(templePostsAdapter);
+    }
+
+    private Pair<String, CardDataItem> newItem(int position) {
+        return new Pair<>("Card At " + position, new CardDataItem());
     }
 
     @Override
     public boolean onDismiss(@NonNull FlingChief.Direction direction, @NonNull View view) {
-//        StaticUtils.showToast(mainActivity, "Swiped to direction" + direction);
         return true;
-//        return false;
     }
 
     @Override
     public boolean onDismissed(@NonNull View view) {
-        if (mItems.size() > 1) {
-            mItems.remove(0);
+        Pair<String, CardDataItem> cardDataItem = dataList.get(0);
+
+        if (dataList.size() > 1) {
+            dataList.remove(0);
+            cardDataItem.second.isRead = true;
+            dataList.add(dataList.size() - 1, cardDataItem);
+            //            mItems.get(0)
             mAdapter.notifyDataSetChanged();
         } else {
 //            navigate to next tab
             StaticUtils.showToast(mainActivity, "reached last and will move to next tab");
         }
         return true;
-        //        return false;
     }
 
     @Override
@@ -123,9 +146,13 @@ public class CardsRossDeckFragment extends BaseFragment implements FlingChiefLis
         return true;
     }
 
-//    @Override
-//    public void onProximityUpdate(@NonNull float[] proximities, @NonNull View view) {
-//
-//    }
+    @Override
+    public void onClick(View view, int position) {
+
+    }
+
+    @Override
+    public void onLongClick(View view, int position) {
+
+    }
 }
-*/

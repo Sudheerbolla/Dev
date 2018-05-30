@@ -4,7 +4,7 @@ import com.devotted.R;
 
 public class TempleModel {
 
-    public boolean isFavourite;
+    public boolean isFavourite, isFocused;
     public Integer addressId, image;
     public String templeName, mPincode, city, line1, line2, longitude, latitude, rating, distance;
 

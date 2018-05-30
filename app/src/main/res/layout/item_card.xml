@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:fillViewport="true"
     android:fitsSystemWindows="true">
 
@@ -27,41 +27,65 @@
                 android:background="@drawable/gradient_horizontal"
                 android:orientation="vertical">
 
-                <LinearLayout
-                    android:id="@+id/linTop"
+                <RelativeLayout
+                    android:id="@+id/relColoredBackground"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="@dimen/twenty_dp">
+                    android:layout_height="wrap_content">
 
                     <com.devotted.utils.views.CustomTextView
-                        android:id="@+id/txtHeading"
+                        android:id="@+id/txtReadLogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_margin="@dimen/seven_dp"
+                        android:drawablePadding="@dimen/three_dp"
+                        android:drawableStart="@drawable/ic_read"
+                        android:gravity="center"
+                        android:padding="@dimen/ten_dp"
+                        android:rotation="45"
+                        android:text="@string/read"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/fifteen_sp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/linTop"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ellipsize="marquee"
-                        android:gravity="center|start"
-                        android:marqueeRepeatLimit="marquee_forever"
-                        android:maxLines="2"
-                        android:padding="@dimen/three_dp"
-                        android:text="Mantras"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/twenty_sp"
-                        card_view:txt_font_type="bold" />
+                        android:orientation="vertical"
+                        android:padding="@dimen/twenty_dp">
 
-                    <com.devotted.utils.views.CustomTextView
-                        android:id="@+id/txtDescription"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ellipsize="marquee"
-                        android:gravity="center_vertical"
-                        android:marqueeRepeatLimit="marquee_forever"
-                        android:maxLines="2"
-                        android:padding="@dimen/three_dp"
-                        android:text="Daily dose of updated mantras"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="@dimen/fourteen_sp" />
+                        <com.devotted.utils.views.CustomTextView
+                            android:id="@+id/txtHeading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:gravity="center|start"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxLines="2"
+                            android:padding="@dimen/three_dp"
+                            android:text="@string/mantras"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/twenty_sp"
+                            card_view:txt_font_type="bold" />
 
-                </LinearLayout>
+                        <com.devotted.utils.views.CustomTextView
+                            android:id="@+id/txtDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:gravity="center_vertical"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:maxLines="2"
+                            android:padding="@dimen/three_dp"
+                            android:text="@string/daily_dose_of_updated_mantras"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/fourteen_sp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
 
                 <LinearLayout
                     android:id="@+id/linBottom"
@@ -81,7 +105,7 @@
                         android:marqueeRepeatLimit="marquee_forever"
                         android:maxLines="2"
                         android:padding="@dimen/three_dp"
-                        android:text="It is better to live your own."
+                        android:text="@string/it_is_better_to_live_your_own"
                         android:textColor="@color/color_vvvDarkGrey"
                         android:textSize="@dimen/eighteen_sp"
                         card_view:txt_font_type="bold" />
@@ -93,7 +117,7 @@
                         android:layout_margin="@dimen/three_dp"
                         android:gravity="center_vertical"
                         android:padding="@dimen/three_dp"
-                        android:text="Meaning: Imitation of somebody else's life with perfection"
+                        android:text="@string/meaning_imitation_of_somebody_else_s_life_with_perfection"
                         android:textColor="@color/color_vvDarkGrey"
                         android:textSize="@dimen/sixteen_sp" />
 

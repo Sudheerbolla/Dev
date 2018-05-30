@@ -147,7 +147,7 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener,
                 edtMobileNumber.requestFocus();
                 return getString(R.string.please_enter_mobile_number);
             }
-            if (mobileNumber.length() < 9) {
+            if (mobileNumber.length() < 10) {
                 edtMobileNumber.requestFocus();
                 return getString(R.string.please_enter_a_valid_mobile_number);
             }

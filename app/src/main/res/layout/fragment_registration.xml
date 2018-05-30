@@ -249,6 +249,7 @@
                         <com.devotted.utils.views.CustomEditText
                             android:id="@+id/edtPassword"
                             android:layout_width="match_parent"
+                            android:enabled="false"
                             android:layout_height="wrap_content"
                             android:inputType="textPassword"
                             app:txt_font_type="regular" />

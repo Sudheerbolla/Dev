@@ -21,7 +21,7 @@
                 android:layout_width="@dimen/sixty_dp"
                 android:layout_height="@dimen/sixty_dp"
                 android:layout_margin="@dimen/five_dp"
-                android:src="@drawable/temple2"
+                android:src="@drawable/temple1"
                 app:civ_border_color="@color/colorPrimaryDark"
                 app:civ_border_width="@dimen/one_dp" />
 
@@ -34,8 +34,11 @@
                 android:background="@drawable/grey_border_curved"
                 android:drawableEnd="@drawable/ic_gallery"
                 android:gravity="center_vertical"
-                android:padding="@dimen/twelve_dp"
-                android:text="Write an update"
+                android:paddingBottom="@dimen/seven_dp"
+                android:paddingEnd="@dimen/thirteen_dp"
+                android:paddingStart="@dimen/thirteen_dp"
+                android:paddingTop="@dimen/seven_dp"
+                android:text="@string/write_an_update"
                 android:textColor="@color/color_vvDarkGrey"
                 android:textSize="@dimen/seventeen_sp" />
 
@@ -46,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/fifteen_dp"
             android:layout_marginStart="@dimen/fifteen_dp"
-            android:text="Temples you may know"
+            android:text="@string/my_favorite_temples"
             android:textAllCaps="true"
             android:textColor="@color/colorDarkGrey"
             android:textSize="@dimen/fifteen_sp"
@@ -65,7 +68,7 @@
             android:background="@color/colorLightGrey"
             android:padding="@dimen/twelve_dp"
             android:tag="sticky-nonconstant-hastransparancy"
-            android:text="sree hanuman temple updates"
+            android:text="@string/sree_hanuman_temple_updates"
             android:textAllCaps="true"
             android:textColor="@color/color_vvDarkGrey"
             android:textSize="@dimen/seventeen_sp" />

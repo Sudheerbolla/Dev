@@ -34,7 +34,7 @@ public class MapListFragment extends BaseFragment implements GoogleMap.OnMarkerC
 
 
     private static boolean flag = true;
-    public ArrayList<Marker> mMarkerList = new ArrayList<>();
+    public ArrayList<Marker> mMarkerList;
     Marker prevMarker;
     String prevVendorName;
     private Map<String, TempleModel> mDealMap = new HashMap<>();
@@ -58,7 +58,6 @@ public class MapListFragment extends BaseFragment implements GoogleMap.OnMarkerC
         mMarkerList = new ArrayList<>();
         myDealsList = new ArrayList<>();
         mDealMap = new HashMap<>();
-
     }
 
     @Override

@@ -1,6 +1,8 @@
 package com.devotted.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,14 +29,15 @@ public class GodsListAdapter extends RecyclerView.Adapter<GodsListAdapter.ViewHo
         this.context = context;
     }
 
+    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View rootView = LayoutInflater.from(context).inflate(R.layout.item_gods, null);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        @SuppressLint("InflateParams") View rootView = LayoutInflater.from(context).inflate(R.layout.item_gods, null);
         return new ViewHolder(rootView);
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, @SuppressLint("RecyclerView") final int position) {
         GodModel selectionModel = itemsData.get(position);
         viewHolder.imgGodProfilePic.setImageResource(selectionModel.icon);
         viewHolder.checkBox.setChecked(selectionModel.isSelected);
@@ -59,7 +62,7 @@ public class GodsListAdapter extends RecyclerView.Adapter<GodsListAdapter.ViewHo
         public ImageView imgGodProfilePic;
         public CheckBox checkBox;
 
-        public ViewHolder(View itemLayoutView) {
+        ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
             txtGodName = itemLayoutView.findViewById(R.id.txtGodName);
             imgGodProfilePic = itemLayoutView.findViewById(R.id.imgGodProfilePic);

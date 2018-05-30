@@ -10,7 +10,9 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -113,6 +115,23 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
         imgAddProfileIcon.setOnClickListener(this);
         imgBack.setOnClickListener(this);
         spinnerCountry.setSelection(0, true);
+        edtEmailAddress.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (charSequence.length() > 0) edtPassword.setEnabled(true);
+                else edtPassword.setEnabled(false);
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
     }
 
     private void setAdapter() {
@@ -157,7 +176,6 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
     }
 
     private void navigateToVerificationScreen() {
-        StaticUtils.showToast(splashActivity, getString(R.string.registration_successfull));
         splashActivity.replaceFragment(VerificationCodeFragment.newInstance());
     }
 
@@ -184,7 +202,7 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
             edtMobileNumber.requestFocus();
             return getString(R.string.please_enter_mobile_number);
         }
-        if (mobileNumber.length() < 9) {
+        if (mobileNumber.length() < 10) {
             edtMobileNumber.requestFocus();
             return getString(R.string.please_enter_a_valid_mobile_number);
         }
@@ -355,11 +373,6 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
 //        imgBanner.setImageURI(cameraFile);
 //        Glide.with(this).load(cameraFile).apply(optionsStretch).into(imgBanner);
 
-    }
-
-    private void navigateToMapScreen() {
-//        startActivity(new Intent(splashActivity, SearchActivity.class));
-//        splashActivity.finishAffinity();
     }
 
 }

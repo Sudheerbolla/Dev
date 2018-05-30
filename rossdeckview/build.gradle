@@ -22,4 +22,6 @@ android {
 dependencies {
     implementation rootProject.ext.supportAppCompat
     implementation rootProject.ext.supportAnnotations
+
+    implementation rootProject.ext.recyclerview
 }

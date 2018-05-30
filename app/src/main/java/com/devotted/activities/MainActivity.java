@@ -9,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 
 import com.devotted.R;
+import com.devotted.fragments.CommentsBottomSheetFragment;
 import com.devotted.fragments.HomeFragment;
 import com.devotted.fragments.MenuFragment;
 import com.devotted.fragments.ShareFragment;
@@ -18,7 +19,7 @@ import com.devotted.utils.views.CustomTextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements CommentsBottomSheetFragment.OnComments {
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -61,14 +62,20 @@ public class MainActivity extends BaseActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new HomeFragment(), "Home");
-        adapter.addFrag(new UpdatesFragment(), "Updates");
-        adapter.addFrag(new ShareFragment(), "Share");
-        adapter.addFrag(new MenuFragment(), "Menu");
+        adapter.addFrag(new HomeFragment(), getString(R.string.home));
+        adapter.addFrag(new UpdatesFragment(), getString(R.string.updates));
+        adapter.addFrag(new ShareFragment(), getString(R.string.share));
+        adapter.addFrag(new MenuFragment(), getString(R.string.menu));
         viewPager.setAdapter(adapter);
     }
 
+    @Override
+    public void onComments() {
+
+    }
+
     class ViewPagerAdapter extends FragmentStatePagerAdapter {
+
         private final List<Fragment> mFragmentList = new ArrayList<>();
         private final List<String> mFragmentTitleList = new ArrayList<>();
 
@@ -93,10 +100,9 @@ public class MainActivity extends BaseActivity {
 
         @Override
         public CharSequence getPageTitle(int position) {
-
-            // return null to display only the icon
             return null;
         }
+
     }
 
 

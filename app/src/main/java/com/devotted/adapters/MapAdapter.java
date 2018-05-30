@@ -12,25 +12,26 @@ import com.devotted.models.TempleModel;
 import java.util.List;
 
 public class MapAdapter extends FragmentPagerAdapter {
-    LayoutInflater layoutInflater;
-    List<TempleModel> deals;
-    Context mContext;
 
-    public MapAdapter(FragmentManager fm, List<TempleModel> deals, Context context) {
+    private LayoutInflater layoutInflater;
+    private List<TempleModel> templeModelList;
+    private Context mContext;
+
+    public MapAdapter(FragmentManager fm, List<TempleModel> templeModelList, Context context) {
         super(fm);
         layoutInflater = LayoutInflater.from(context);
-        this.deals = deals;
+        this.templeModelList = templeModelList;
         this.mContext = context;
     }
 
     @Override
     public Fragment getItem(int position) {
-        return new MapFragment(position, deals.get(position));
+        return new MapFragment(position, templeModelList.get(position));
     }
 
     @Override
     public int getCount() {
-        return this.deals.size();
+        return this.templeModelList.size();
     }
 
     @Override

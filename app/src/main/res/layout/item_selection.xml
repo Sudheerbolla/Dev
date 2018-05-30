@@ -64,7 +64,6 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/gradient_horizontal_plane"
-                android:drawableLeft="@drawable/ic_tick_mark"
                 android:drawablePadding="@dimen/fifteen_dp"
                 android:gravity="center"
                 android:paddingBottom="@dimen/fifteen_dp"
@@ -72,7 +71,6 @@
                 android:paddingRight="@dimen/twenty_dp"
                 android:paddingTop="@dimen/fifteen_dp"
                 android:singleLine="true"
-                android:text="I Choose Spiritual"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/twenty_sp" />
 

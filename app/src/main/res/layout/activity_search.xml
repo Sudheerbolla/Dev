@@ -39,7 +39,8 @@
                     android:layout_toStartOf="@+id/imgSwitch"
                     android:alpha="0.7"
                     android:background="@null"
-                    android:hint="Search Temple, Posts, events"
+                    android:gravity="center"
+                    android:hint="@string/search_temple_posts_events"
                     android:inputType="text"
                     android:padding="@dimen/ten_dp"
                     android:textColor="@color/colorWhite"
@@ -101,7 +102,8 @@
                     android:gravity="center"
                     android:paddingLeft="@dimen/fifteen_dp"
                     android:paddingRight="@dimen/fifteen_dp"
-                    android:text="SORT"
+                    android:text="@string/sort"
+                    android:textAllCaps="true"
                     android:textSize="@dimen/sixteen_sp" />
 
                 <View
@@ -120,7 +122,8 @@
                     android:gravity="center"
                     android:paddingLeft="@dimen/fifteen_dp"
                     android:paddingRight="@dimen/fifteen_dp"
-                    android:text="FILTER"
+                    android:text="@string/filter"
+                    android:textAllCaps="true"
                     android:textSize="@dimen/sixteen_sp" />
 
                 <View
@@ -135,7 +138,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
-                    android:drawableLeft="@drawable/ic_heart_gray"
+                    android:drawableLeft="@drawable/ic_heart_black"
                     android:gravity="center"
                     android:paddingLeft="@dimen/fifteen_dp"
                     android:paddingRight="@dimen/fifteen_dp"
@@ -144,10 +147,7 @@
             </LinearLayout>
 
         </LinearLayout>
+
     </RelativeLayout>
-
-    <!--<include layout="@layout/fragment_bottom_sheet_filter" />-->
-
-    <!--<include layout="@layout/fragment_bottom_sheet_sort" />-->
 
 </android.support.design.widget.CoordinatorLayout>

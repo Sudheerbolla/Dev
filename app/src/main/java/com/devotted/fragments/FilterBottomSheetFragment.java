@@ -9,6 +9,7 @@ import android.support.design.widget.BottomSheetDialog;
 import android.support.design.widget.BottomSheetDialogFragment;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.SeekBar;
 
 import com.devotted.BaseApplication;
 import com.devotted.R;
@@ -26,7 +27,8 @@ public class FilterBottomSheetFragment extends BottomSheetDialogFragment impleme
     private View rootView;
     private int checkedId;
     private RelativeLayout relByGod;
-    private CustomTextView txtReset, txtSearch;
+    private CustomTextView txtReset, txtSearch, txtDistance;
+    private SeekBar seekBarDistance;
 
     private OnFilterOptionSelected mListener;
 
@@ -80,10 +82,28 @@ public class FilterBottomSheetFragment extends BottomSheetDialogFragment impleme
     private void initComponents() {
         txtReset = rootView.findViewById(R.id.txtReset);
         txtSearch = rootView.findViewById(R.id.txtSearch);
+        txtDistance = rootView.findViewById(R.id.txtDistance);
         relByGod = rootView.findViewById(R.id.relByGod);
+        seekBarDistance = rootView.findViewById(R.id.seekBarDistance);
         relByGod.setOnClickListener(this);
         txtSearch.setOnClickListener(this);
         txtReset.setOnClickListener(this);
+        seekBarDistance.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                txtDistance.setText(getString(R.string.distance) + " " + i + " Km");
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
     }
 
     public void onButtonPressed(int position) {

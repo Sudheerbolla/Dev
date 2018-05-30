@@ -12,20 +12,20 @@
         style="@style/AppButtonStyle"
         android:minWidth="220dp"
         android:padding="12dp"
-        android:text="Camera" />
+        android:text="@string/camera" />
 
     <com.devotted.utils.views.CustomTextView
         android:id="@+id/txtGallery"
         style="@style/AppButtonStyle"
         android:minWidth="220dp"
         android:padding="12dp"
-        android:text="Gallery" />
+        android:text="@string/gallery" />
 
     <com.devotted.utils.views.CustomTextView
         android:id="@+id/txtCancel"
         style="@style/AppButtonStyle"
         android:minWidth="220dp"
         android:padding="12dp"
-        android:text="Cancel" />
+        android:text="@string/cancel" />
 
 </LinearLayout>

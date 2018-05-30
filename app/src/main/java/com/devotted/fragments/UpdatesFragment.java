@@ -2,6 +2,7 @@ package com.devotted.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -13,7 +14,7 @@ import com.devotted.R;
 import com.devotted.activities.MainActivity;
 import com.devotted.activities.NewPostActivity;
 import com.devotted.adapters.TemplePostsAdapter;
-import com.devotted.adapters.TemplesYouMayKnowAdapter;
+import com.devotted.adapters.YourFavouriteTemplesAdapter;
 import com.devotted.listeners.IClickListener;
 import com.devotted.models.TempleModel;
 import com.devotted.utils.views.CustomTextView;
@@ -22,7 +23,8 @@ import java.util.ArrayList;
 
 
 public class UpdatesFragment extends BaseFragment implements IClickListener, View.OnClickListener {
-    private TemplesYouMayKnowAdapter templesYouMayKnowAdapter;
+
+    private YourFavouriteTemplesAdapter yourFavouriteTemplesAdapter;
     private TemplePostsAdapter templePostsAdapter;
     private RecyclerView recyclerViewTemples, recyclerViewUpdates;
     private View rootView;
@@ -30,6 +32,7 @@ public class UpdatesFragment extends BaseFragment implements IClickListener, Vie
     private CustomTextView txtWriteAnUpdate;
     private ArrayList<TempleModel> templeModelArrayList;
     private ArrayList<TempleModel> templePostsArrayList;
+    private CommentsBottomSheetFragment commentsBottomSheetFragment;
 
     public UpdatesFragment() {
         // Required empty public constructor
@@ -51,7 +54,7 @@ public class UpdatesFragment extends BaseFragment implements IClickListener, Vie
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_updates, container, false);
         initComponents();
         return rootView;
@@ -77,13 +80,30 @@ public class UpdatesFragment extends BaseFragment implements IClickListener, Vie
 
     private void setTemplesYouMayKnowAdapter() {
         recyclerViewTemples.setLayoutManager(new LinearLayoutManager(mainActivity, LinearLayoutManager.HORIZONTAL, false));
-        templesYouMayKnowAdapter = new TemplesYouMayKnowAdapter(mainActivity, templeModelArrayList, this);
-        recyclerViewTemples.setAdapter(templesYouMayKnowAdapter);
+        yourFavouriteTemplesAdapter = new YourFavouriteTemplesAdapter(mainActivity, templeModelArrayList, this);
+        recyclerViewTemples.setAdapter(yourFavouriteTemplesAdapter);
     }
 
     @Override
     public void onClick(View view, int position) {
-
+        switch (view.getId()) {
+            case R.id.txtComment:
+            case R.id.txtComments:
+                showCommentsScreen();
+                break;
+            case R.id.txtLike:
+            case R.id.txtLikes:
+                break;
+            case R.id.relBody:
+                for (int i = 0; i < templeModelArrayList.size(); i++) {
+                    templeModelArrayList.get(i).isFocused = false;
+                }
+                templeModelArrayList.get(position).isFocused = true;
+                yourFavouriteTemplesAdapter.notifyDataSetChanged();
+                break;
+            default:
+                break;
+        }
     }
 
     @Override
@@ -101,4 +121,10 @@ public class UpdatesFragment extends BaseFragment implements IClickListener, Vie
                 break;
         }
     }
+
+    private void showCommentsScreen() {
+        commentsBottomSheetFragment = new CommentsBottomSheetFragment();
+        commentsBottomSheetFragment.show(mainActivity.getSupportFragmentManager(), commentsBottomSheetFragment.getTag());
+    }
+
 }

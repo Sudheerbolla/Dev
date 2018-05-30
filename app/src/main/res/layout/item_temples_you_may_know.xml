@@ -11,8 +11,8 @@
 
     <com.devotted.utils.views.CircleImageView
         android:id="@+id/imageViewTemple"
-        android:layout_width="@dimen/eighty_dp"
-        android:layout_height="@dimen/eighty_dp"
+        android:layout_width="@dimen/seventy_five_dp"
+        android:layout_height="@dimen/seventy_five_dp"
         android:scaleType="centerCrop"
         android:src="@drawable/temple1" />
 
@@ -20,12 +20,12 @@
         android:id="@+id/txtUpdates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-12dp"
+        android:layout_marginTop="-11dp"
         android:background="@drawable/gradient_horizontal"
         android:ellipsize="marquee"
         android:marqueeRepeatLimit="marquee_forever"
         android:padding="@dimen/five_dp"
-        android:text="12 Updates"
+        android:text="@string/_12_updates"
         android:textColor="@color/colorWhite"
         android:textSize="@dimen/thirteen_sp" />
 
@@ -38,7 +38,6 @@
         android:marqueeRepeatLimit="marquee_forever"
         android:maxLines="2"
         android:padding="@dimen/five_dp"
-        android:text="Sree Krishna Swamy Temple"
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/sixteen_sp" />
 

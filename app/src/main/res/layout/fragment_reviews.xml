@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:padding="@dimen/five_dp"
-            android:text="Reviews (5)"
+            android:text="@string/reviews_5"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/seventeen_sp" />
 
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:padding="@dimen/five_dp"
-            android:text="Add New"
+            android:text="@string/add_new"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/seventeen_sp" />
 

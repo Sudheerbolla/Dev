@@ -33,10 +33,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_toEndOf="@id/imgBack"
-                android:layout_toStartOf="@+id/imgSearch"
+                android:layout_toStartOf="@+id/txtPost"
                 android:alpha="0.7"
                 android:gravity="center_vertical"
-                android:hint="Post an Update"
+                android:hint="@string/post_an_update"
                 android:padding="@dimen/ten_dp"
                 android:singleLine="true"
                 android:textColor="@color/colorWhite"
@@ -52,7 +52,7 @@
                 android:layout_marginEnd="@dimen/five_dp"
                 android:gravity="center"
                 android:padding="@dimen/ten_dp"
-                android:text="post"
+                android:text="@string/post"
                 android:textAllCaps="true"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/sixteen_sp" />
@@ -79,7 +79,7 @@
                 android:layout_marginEnd="@dimen/fifteen_dp"
                 android:layout_marginStart="@dimen/fifteen_dp"
                 android:padding="@dimen/twelve_dp"
-                android:text="Sree venkateshwara Temple"
+                android:text="@string/sree_venkateshwara_temple"
                 android:textColor="@color/color_vvDarkGrey"
                 android:textSize="@dimen/sixteen_sp" />
 
@@ -94,7 +94,7 @@
             android:gravity="center_vertical"
             android:inputType="textMultiLine"
             android:padding="@dimen/ten_dp"
-            android:text="Temple is very good and peaceful. Prime and decent Location. Priest is very well behaving and good. \n\n   This is having good number of volunteers and devotees. All are co-operative and friendly. Volunteers are very active and updating very preciously."
+            android:text="@string/temple_is_very_good_and_peaceful_prime_and_decent_location_priest_is_very_well_behaving_and_good_n_n_this_is_having_good_number_of_volunteers_and_devotees_all_are_co_operative_and_friendly_volunteers_are_very_active_and_updating_very_preciously"
             android:textColor="@color/color_vvvDarkGrey"
             android:textSize="@dimen/fifteen_sp" />
 
@@ -106,28 +106,28 @@
             android:orientation="horizontal"
             android:padding="@dimen/three_dp">
 
-            <com.devotted.utils.views.CustomTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:drawablePadding="@dimen/ten_dp"
-                android:drawableStart="@drawable/ic_calender"
-                android:gravity="center"
-                android:padding="@dimen/seven_dp"
-                android:text="Set Pooja Timing"
-                android:textColor="@color/color_vDarkGrey"
-                android:textSize="@dimen/fifteen_sp" />
+            <!--<com.devotted.utils.views.CustomTextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:drawablePadding="@dimen/ten_dp"-->
+            <!--android:drawableStart="@drawable/ic_calender"-->
+            <!--android:gravity="center"-->
+            <!--android:padding="@dimen/seven_dp"-->
+            <!--android:text="Set Pooja Timing"-->
+            <!--android:textColor="@color/color_vDarkGrey"-->
+            <!--android:textSize="@dimen/fifteen_sp" />-->
 
             <com.devotted.utils.views.CustomTextView
                 android:id="@+id/txtAddPhoto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
                 android:drawablePadding="@dimen/ten_dp"
                 android:drawableStart="@drawable/ic_add_photo"
                 android:gravity="center"
                 android:padding="@dimen/seven_dp"
-                android:text="Add Photo"
+                android:text="@string/add_photo"
                 android:textColor="@color/color_vDarkGrey"
                 android:textSize="@dimen/fifteen_sp" />
 

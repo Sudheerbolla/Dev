@@ -43,7 +43,7 @@
                 android:marqueeRepeatLimit="marquee_forever"
                 android:padding="@dimen/five_dp"
                 android:singleLine="true"
-                android:text="User Name"
+                android:text="@string/user_name"
                 android:textColor="@color/color_vvvDarkGrey"
                 android:textSize="@dimen/seventeen_sp" />
 
@@ -56,7 +56,7 @@
                 android:layout_marginEnd="@dimen/ten_dp"
                 android:layout_marginStart="@dimen/ten_dp"
                 android:layout_marginTop="@dimen/five_dp"
-                android:text="Lorem ipusum vyudb bhsd vyfgbhcdsj uvgwfg gywh Lorem ipusum vyudb bhsd vyfgbhcdsj uvgwfg gywh Lorem ipusum vyudb bhsd vyfgbhcdsj uvgwfg gywh Lorem ipusum vyudb bhsd vyfgbhcdsj uvgwfg gywh Lorem ipusum vyudb bhsd vyfgbhcdsj uvgwfg gywh "
+                android:text="@string/lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh"
                 android:textColor="@color/color_vvvDarkGrey"
                 android:textSize="@dimen/fifteen_sp" />
 
@@ -69,7 +69,7 @@
                 android:ellipsize="marquee"
                 android:marqueeRepeatLimit="marquee_forever"
                 android:padding="@dimen/six_dp"
-                android:text="23 May, 2018"
+                android:text="@string/_29_may_2018"
                 android:textColor="@color/color_vDarkGrey" />
 
         </RelativeLayout>

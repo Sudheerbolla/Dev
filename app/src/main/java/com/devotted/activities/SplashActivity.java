@@ -45,7 +45,7 @@ public class SplashActivity extends BaseActivity {
 
     private void proceedWithFlow() {
         if (TextUtils.isEmpty(LocalStorage.getInstance(this).getString(LocalStorage.PREF_LANGUAGE, ""))) {
-            DialogUtils.showLanguagePickerDialog(this, new View.OnClickListener() {
+            DialogUtils.showLanguageSelectionDialog(this, new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     BaseApplication.getInstance().changeLanguage(SplashActivity.this, LocalStorage.getInstance(SplashActivity.this).getString(LocalStorage.PREF_LANGUAGE, "en"));

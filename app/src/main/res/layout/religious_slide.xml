@@ -60,7 +60,7 @@
                 android:drawableLeft="@drawable/ic_hand"
                 android:drawablePadding="@dimen/fifteen_dp"
                 android:gravity="center_vertical"
-                android:text="Connecting you with your spiritual gurus"
+                android:text="@string/connecting_you_with_your_spiritual_gurus"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/seventeen_sp"
                 app:txt_font_type="regular" />
@@ -72,7 +72,7 @@
                 android:drawableLeft="@drawable/ic_instant_update"
                 android:drawablePadding="@dimen/fifteen_dp"
                 android:gravity="center_vertical"
-                android:text="Daily instant updates from your Spiritual gurus"
+                android:text="@string/daily_instant_updates_from_your_spiritual_gurus"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/seventeen_sp" />
 
@@ -83,7 +83,7 @@
                 android:drawableLeft="@drawable/ic_motivated"
                 android:drawablePadding="@dimen/fifteen_dp"
                 android:gravity="center_vertical"
-                android:text="Highly motivated content directly delivered to you"
+                android:text="@string/highly_motivated_content_directly_delivered_to_you"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/seventeen_sp" />
 
@@ -94,7 +94,7 @@
                 android:drawableLeft="@drawable/ic_discussion"
                 android:drawablePadding="@dimen/fifteen_dp"
                 android:gravity="center_vertical"
-                android:text="Involve you in the interesting discussions."
+                android:text="@string/involve_you_in_the_interesting_discussions"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/seventeen_sp" />
 

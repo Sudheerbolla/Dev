@@ -32,7 +32,7 @@ public class SelectGodsActivity extends BaseActivity implements View.OnClickList
     private void initComponents() {
         godModelArrayList = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            godModelArrayList.add(new GodModel("Lord Krishna"));
+            godModelArrayList.add(new GodModel(getString(R.string.lord_krishna)));
         }
         setReferences();
     }
@@ -61,7 +61,7 @@ public class SelectGodsActivity extends BaseActivity implements View.OnClickList
                 onBackPressed();
                 break;
             case R.id.imgShare:
-                StaticUtils.showToast(SelectGodsActivity.this, "Module Under Development");
+                StaticUtils.showToast(SelectGodsActivity.this, getString(R.string.module_under_development));
                 break;
             default:
                 break;

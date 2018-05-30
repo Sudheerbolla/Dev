@@ -31,7 +31,7 @@
                 android:drawablePadding="@dimen/ten_dp"
                 android:gravity="center"
                 android:padding="@dimen/ten_dp"
-                android:text="Reset"
+                android:text="@string/reset"
                 android:textAllCaps="true"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/sixteen_sp" />
@@ -46,7 +46,8 @@
                 android:drawablePadding="@dimen/ten_dp"
                 android:gravity="center"
                 android:padding="@dimen/ten_dp"
-                android:text="Filter"
+                android:text="@string/filter"
+                android:textAllCaps="true"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/nineteen_sp" />
 
@@ -67,23 +68,25 @@
                 android:paddingBottom="@dimen/ten_dp">
 
                 <com.devotted.utils.views.CustomTextView
+                    android:id="@+id/txtDistance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:drawablePadding="@dimen/twelve_dp"
                     android:drawableStart="@drawable/ic_marker"
                     android:gravity="center_vertical"
                     android:padding="@dimen/ten_dp"
-                    android:text="Distance"
+                    android:text="@string/distance"
                     android:textColor="@color/colorBlack"
                     android:textSize="@dimen/sixteen_sp" />
 
                 <SeekBar
+                    android:id="@+id/seekBarDistance"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/eight_dp"
-                    android:max="10"
+                    android:max="30"
                     android:min="0"
-                    android:progress="2" />
+                    android:progress="5" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -136,7 +139,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:padding="@dimen/ten_dp"
-                        android:text="By God"
+                        android:text="@string/by_god"
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/sixteen_sp" />
 
@@ -171,85 +174,91 @@
                     android:drawableStart="@drawable/ic_star"
                     android:gravity="center_vertical"
                     android:padding="@dimen/ten_dp"
-                    android:text="Ratings"
+                    android:text="@string/ratings"
                     android:textColor="@color/colorBlack"
                     android:textSize="@dimen/fifteen_sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/fifteen_dp"
-                    android:layout_marginStart="@dimen/fifteen_dp"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/three_dp">
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/five_dp"
-                        android:background="@drawable/btn_background_light_selector"
+                        android:layout_marginEnd="@dimen/fifteen_dp"
+                        android:layout_marginStart="@dimen/fifteen_dp"
                         android:orientation="horizontal"
-                        android:padding="@dimen/five_dp">
+                        android:padding="@dimen/three_dp">
 
-                        <ImageView
-                            android:layout_width="@dimen/thirty_dp"
-                            android:layout_height="@dimen/thirty_dp"
-                            android:padding="@dimen/five_dp"
-                            android:src="@drawable/star_gray_icon" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/five_dp"
+                            android:background="@drawable/btn_bg_light_selector"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/five_dp">
+
+                            <ImageView
+                                android:layout_width="@dimen/thirty_dp"
+                                android:layout_height="@dimen/thirty_dp"
+                                android:padding="@dimen/five_dp"
+                                android:src="@drawable/star_gray_icon" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/five_dp"
+                            android:background="@drawable/btn_bg_light_selector"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/five_dp">
+
+                            <ImageView
+                                android:layout_width="@dimen/thirty_dp"
+                                android:layout_height="@dimen/thirty_dp"
+                                android:padding="@dimen/five_dp"
+                                android:src="@drawable/star_gray_icon" />
+
+                            <ImageView
+                                android:layout_width="@dimen/thirty_dp"
+                                android:layout_height="@dimen/thirty_dp"
+                                android:padding="@dimen/five_dp"
+                                android:src="@drawable/star_gray_icon" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/five_dp"
+                            android:background="@drawable/btn_background_light_selector"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/five_dp">
+
+                            <ImageView
+                                android:layout_width="@dimen/thirty_dp"
+                                android:layout_height="@dimen/thirty_dp"
+                                android:padding="@dimen/five_dp"
+                                android:src="@drawable/ic_star" />
+
+                            <ImageView
+                                android:layout_width="@dimen/thirty_dp"
+                                android:layout_height="@dimen/thirty_dp"
+                                android:padding="@dimen/five_dp"
+                                android:src="@drawable/ic_star" />
+
+                            <ImageView
+                                android:layout_width="@dimen/thirty_dp"
+                                android:layout_height="@dimen/thirty_dp"
+                                android:padding="@dimen/five_dp"
+                                android:src="@drawable/ic_star" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/five_dp"
-                        android:background="@drawable/btn_background_light_selector"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/five_dp">
-
-                        <ImageView
-                            android:layout_width="@dimen/thirty_dp"
-                            android:layout_height="@dimen/thirty_dp"
-                            android:padding="@dimen/five_dp"
-                            android:src="@drawable/star_gray_icon" />
-
-                        <ImageView
-                            android:layout_width="@dimen/thirty_dp"
-                            android:layout_height="@dimen/thirty_dp"
-                            android:padding="@dimen/five_dp"
-                            android:src="@drawable/star_gray_icon" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/five_dp"
-                        android:background="@drawable/btn_background_light_selector"
-                        android:orientation="horizontal"
-                        android:padding="@dimen/five_dp">
-
-                        <ImageView
-                            android:layout_width="@dimen/thirty_dp"
-                            android:layout_height="@dimen/thirty_dp"
-                            android:padding="@dimen/five_dp"
-                            android:src="@drawable/ic_star" />
-
-                        <ImageView
-                            android:layout_width="@dimen/thirty_dp"
-                            android:layout_height="@dimen/thirty_dp"
-                            android:padding="@dimen/five_dp"
-                            android:src="@drawable/ic_star" />
-
-                        <ImageView
-                            android:layout_width="@dimen/thirty_dp"
-                            android:layout_height="@dimen/thirty_dp"
-                            android:padding="@dimen/five_dp"
-                            android:src="@drawable/ic_star" />
-
-                    </LinearLayout>
-
-                </LinearLayout>
+                </HorizontalScrollView>
 
                 <com.devotted.utils.views.CustomTextView
                     android:layout_width="match_parent"
@@ -259,8 +268,8 @@
                     android:drawablePadding="@dimen/fifteen_dp"
                     android:drawableStart="@drawable/ic_trending"
                     android:gravity="center_vertical"
-                    android:padding="@dimen/ten_dp"
-                    android:text="Popular"
+                    android:padding="@dimen/eight_dp"
+                    android:text="@string/popular"
                     android:textColor="@color/colorBlack"
                     android:textSize="@dimen/fifteen_sp" />
 
@@ -276,20 +285,20 @@
                     <com.devotted.utils.views.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/ten_dp"
-                        android:background="@drawable/btn_background_light_selector"
-                        android:padding="@dimen/eleven_dp"
-                        android:text="Low to High"
+                        android:layout_marginEnd="@dimen/five_dp"
+                        android:background="@drawable/btn_bg_light_selector"
+                        android:padding="@dimen/eight_dp"
+                        android:text="@string/low_to_high"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/seventeen_sp" />
 
                     <com.devotted.utils.views.CustomTextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/ten_dp"
+                        android:layout_marginStart="@dimen/five_dp"
                         android:background="@drawable/btn_background_light_selector"
-                        android:padding="@dimen/eleven_dp"
-                        android:text="High to Low"
+                        android:padding="@dimen/eight_dp"
+                        android:text="@string/high_to_low"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/seventeen_sp" />
 
@@ -308,7 +317,7 @@
                     android:drawablePadding="@dimen/ten_dp"
                     android:gravity="center"
                     android:padding="@dimen/twelve_dp"
-                    android:text="Search"
+                    android:text="@string/search"
                     android:textColor="@color/colorWhite"
                     android:textSize="@dimen/sixteen_sp" />
 

@@ -27,7 +27,7 @@
         android:marqueeRepeatLimit="marquee_forever"
         android:padding="@dimen/ten_dp"
         android:singleLine="true"
-        android:text="Lord Krishna"
+        android:text="@string/lord_krishna"
         android:textColor="@color/color_vvvDarkGrey"
         android:textSize="@dimen/fifteen_sp" />
 

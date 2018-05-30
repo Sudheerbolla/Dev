@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import com.devotted.R;
 import com.devotted.fragments.TempleDetailsFragment;
 import com.devotted.utils.DialogUtils;
+import com.devotted.utils.LocalStorage;
 import com.devotted.utils.ShareUtils;
 
 public class TempleDetailsActivity extends BaseActivity implements View.OnClickListener {
@@ -24,12 +25,14 @@ public class TempleDetailsActivity extends BaseActivity implements View.OnClickL
     private void initComponents() {
         setReferences();
         replaceFragment(TempleDetailsFragment.newInstance(), false, R.id.templeDetailsFrame);
-        DialogUtils.showIBelongHereDialog(this, new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+        if (!LocalStorage.getInstance(this).getBoolean(LocalStorage.PREF_IS_I_BELONG_HERE_DONE, true)) {
+            DialogUtils.showIBelongHereDialog(this, new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    LocalStorage.getInstance(TempleDetailsActivity.this).putBoolean(LocalStorage.PREF_IS_I_BELONG_HERE_DONE, true);
+                }
+            });
+        }
     }
 
     private void setReferences() {
@@ -50,7 +53,7 @@ public class TempleDetailsActivity extends BaseActivity implements View.OnClickL
                 onBackPressed();
                 break;
             case R.id.imgShare:
-                ShareUtils.shareViaIntent(this, "Temple Details", "Sharing Temple Details");
+                ShareUtils.shareViaIntent(this, getString(R.string.temple_details), getString(R.string.sharing_temple_details));
                 break;
             default:
                 break;

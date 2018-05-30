@@ -1,6 +1,7 @@
 package com.devotted.adapters;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,8 +22,9 @@ public class CustomPagerAdapter extends PagerAdapter {
         this.resArrayList = resArrayList;
     }
 
+    @NonNull
     @Override
-    public Object instantiateItem(ViewGroup collection, int position) {
+    public Object instantiateItem(@NonNull ViewGroup collection, int position) {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         ImageView imageView = (ImageView) inflater.inflate(R.layout.layout_image, collection, false);
         imageView.setImageResource(resArrayList.get(position));
@@ -31,7 +33,7 @@ public class CustomPagerAdapter extends PagerAdapter {
     }
 
     @Override
-    public void destroyItem(ViewGroup collection, int position, Object view) {
+    public void destroyItem(@NonNull ViewGroup collection, int position, @NonNull Object view) {
         collection.removeView((View) view);
     }
 
@@ -41,7 +43,7 @@ public class CustomPagerAdapter extends PagerAdapter {
     }
 
     @Override
-    public boolean isViewFromObject(View view, Object object) {
+    public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
         return view == object;
     }
 

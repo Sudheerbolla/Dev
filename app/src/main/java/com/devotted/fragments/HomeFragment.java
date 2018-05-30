@@ -56,15 +56,16 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.addFrag(CardsFragment.newInstance("Panchang"), "Panchang");
-        adapter.addFrag(CardsFragment.newInstance("Mantras"), "Mantras");
-        adapter.addFrag(CardsFragment.newInstance("Dharma"), "Dharma");
-        adapter.addFrag(CardsFragment.newInstance("Questions"), "Questions");
-        adapter.addFrag(InnerFragment.newInstance("Five"), "five");
-        adapter.addFrag(InnerFragment.newInstance("Six"), "six");
-        adapter.addFrag(InnerFragment.newInstance("Seven"), "seven");
-        adapter.addFrag(InnerFragment.newInstance("Eight"), "eight");
+//        adapter.addFrag(CardsFragment.newInstance("Mantras"), "Mantras");
+//        adapter.addFrag(CardsFragment.newInstance("Dharma"), "Dharma");
+//        adapter.addFrag(CardsFragment.newInstance("Questions"), "Questions");
+        adapter.addFrag(CardsRossDeckFragment.newInstance("Mantras"), "Mantras");
+        adapter.addFrag(CardsRossDeckFragment.newInstance("Dharma"), "Dharma");
+        adapter.addFrag(CardsRossDeckFragment.newInstance("Questions"), "Questions");
+        adapter.addFrag(CardsRossDeckFragment.newInstance("Five"), "five");
         viewPager.setAdapter(adapter);
+
+//        ViewCompat.setNestedScrollingEnabled(viewPager, true);
     }
 
     @Override

@@ -20,7 +20,7 @@
         android:marqueeRepeatLimit="marquee_forever"
         android:padding="@dimen/seven_dp"
         android:singleLine="true"
-        android:text="Monday"
+        android:text="@string/monday"
         android:textColor="@color/colorBlack"
         android:textSize="@dimen/sixteen_sp" />
 

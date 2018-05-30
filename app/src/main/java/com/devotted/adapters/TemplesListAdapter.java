@@ -1,6 +1,8 @@
 package com.devotted.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -29,16 +31,18 @@ public class TemplesListAdapter extends RecyclerView.Adapter<TemplesListAdapter.
         this.context = context;
     }
 
+    @SuppressLint("InflateParams")
+    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_simple_list_temple, null));
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, @SuppressLint("RecyclerView") final int position) {
         TempleModel templeModel = itemsData.get(position);
         viewHolder.txtTempleName.setText(templeModel.templeName);
-        viewHolder.txtTempleAddress.setText(templeModel.line1 + ", " + templeModel.line2 + ", " + templeModel.city);
+        viewHolder.txtTempleAddress.setText(String.format("%s, %s, %s", templeModel.line1, templeModel.line2, templeModel.city));
         viewHolder.txtRating.setText(templeModel.rating);
         viewHolder.txtTempleDistance.setText(templeModel.distance);
         viewHolder.imgFavourite.setSelected(templeModel.isFavourite);
@@ -84,7 +88,7 @@ public class TemplesListAdapter extends RecyclerView.Adapter<TemplesListAdapter.
         public ImageView imageViewTemple, imgFavourite;
         public CardView cardViewTemple;
 
-        public ViewHolder(View itemLayoutView) {
+        ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
             txtTempleName = itemLayoutView.findViewById(R.id.txtTempleName);
             txtTempleAddress = itemLayoutView.findViewById(R.id.txtTempleAddress);

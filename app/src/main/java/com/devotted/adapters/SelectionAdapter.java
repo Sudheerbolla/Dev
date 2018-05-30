@@ -1,6 +1,8 @@
 package com.devotted.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,22 +32,24 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
         this.isUserType = isUserType;
     }
 
+    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View rootView = LayoutInflater.from(context).inflate(R.layout.item_selection, null);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        @SuppressLint("InflateParams") View rootView = LayoutInflater.from(context).inflate(R.layout.item_selection, null);
         RelativeLayout.LayoutParams rlp = new RelativeLayout.LayoutParams(StaticUtils.screen_width - 250, RelativeLayout.LayoutParams.MATCH_PARENT);
         rootView.setLayoutParams(rlp);
         return new ViewHolder(rootView);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, @SuppressLint("RecyclerView") final int position) {
         SelectionModel selectionModel = itemsData.get(position);
         viewHolder.imgType.setImageResource(selectionModel.icon);
         if (isUserType) {
-            viewHolder.txtSelect.setText("I AM " + selectionModel.type);
+            viewHolder.txtSelect.setText(String.format("%s%s", context.getString(R.string.i_am_a), selectionModel.type));
         } else {
-            viewHolder.txtSelect.setText("I Choose " + selectionModel.type);
+            viewHolder.txtSelect.setText(context.getString(R.string.i_choose) + selectionModel.type);
         }
         viewHolder.txtDescription1.setText(selectionModel.description[0]);
         viewHolder.txtDescription2.setText(selectionModel.description[1]);
@@ -82,7 +86,7 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
         public ImageView imgType;
         public RelativeLayout cardBody;
 
-        public ViewHolder(View itemLayoutView) {
+        ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
             txtSelect = itemLayoutView.findViewById(R.id.txtSelect);
             txtDescription1 = itemLayoutView.findViewById(R.id.txtDescription1);

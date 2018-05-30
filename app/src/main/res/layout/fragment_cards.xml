@@ -1,8 +1,9 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.devotted.utils.views.StickyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:fillViewport="true">
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,13 +14,13 @@
             android:id="@+id/relReload"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/five_dp">
+            android:padding="@dimen/three_dp">
 
             <com.devotted.utils.views.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/seven_dp"
-                android:text="Today"
+                android:text="@string/today"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/twentytwo_sp" />
 
@@ -28,10 +29,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:drawablePadding="@dimen/five_dp"
-                android:drawableStart="@drawable/ic_reload"
                 android:padding="@dimen/seven_dp"
-                android:text="12 Updates"
+                android:text="@string/_12_updates"
                 android:textColor="@color/colorDarkGrey"
                 android:textSize="@dimen/seventeen_sp" />
 
@@ -48,6 +47,14 @@
             card:itemMarginTop="@dimen/ten_dp"
             card:yOffsetStep="@dimen/thirteen_dp" />
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewPastUpdates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_slide_panel"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
     </RelativeLayout>
 
-</ScrollView>
+</com.devotted.utils.views.StickyScrollView>

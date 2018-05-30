@@ -34,10 +34,9 @@
                 <com.devotted.utils.views.CustomTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
                     android:layout_gravity="center"
                     android:padding="@dimen/twenty_dp"
-                    android:text="Sort Temples By"
+                    android:text="@string/sort_temples_by"
                     android:textAllCaps="true"
                     android:textColor="@color/color_vDarkGrey"
                     android:textSize="@dimen/eighteen_sp"
@@ -63,7 +62,7 @@
                         android:gravity="start|center"
                         android:layoutDirection="rtl"
                         android:padding="@dimen/ten_dp"
-                        android:text="Popularity"
+                        android:text="@string/popularity"
                         android:textColor="@color/color_vvvDarkGrey"
                         android:textSize="@dimen/sixteen_sp" />
 
@@ -77,7 +76,7 @@
                         android:gravity="start|center"
                         android:layoutDirection="rtl"
                         android:padding="@dimen/ten_dp"
-                        android:text="Ratings"
+                        android:text="@string/ratings"
                         android:textColor="@color/color_vvvDarkGrey"
                         android:textSize="@dimen/sixteen_sp" />
 
@@ -91,7 +90,7 @@
                         android:gravity="start|center"
                         android:layoutDirection="rtl"
                         android:padding="@dimen/ten_dp"
-                        android:text="Distance"
+                        android:text="@string/distance"
                         android:textColor="@color/color_vvvDarkGrey"
                         android:textSize="@dimen/sixteen_sp" />
 
@@ -105,7 +104,7 @@
                         android:gravity="start|center"
                         android:layoutDirection="rtl"
                         android:padding="@dimen/ten_dp"
-                        android:text="Alphabetical"
+                        android:text="@string/alphabetical"
                         android:textColor="@color/color_vvvDarkGrey"
                         android:textSize="@dimen/sixteen_sp" />
 

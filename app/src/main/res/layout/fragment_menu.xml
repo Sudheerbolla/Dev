@@ -29,7 +29,7 @@
             android:gravity="center"
             android:padding="@dimen/ten_dp"
             android:singleLine="true"
-            android:text="Sudheer Bolla"
+            android:text="User Name"
             android:textColor="@color/colorBlack"
             android:textSize="@dimen/twenty_sp" />
 
@@ -39,7 +39,7 @@
             android:ellipsize="end"
             android:gravity="center"
             android:singleLine="true"
-            android:text="Active since 26 May, 2018"
+            android:text="@string/active_since_29_may_2018"
             android:textColor="@color/colorDarkGrey"
             android:textSize="@dimen/sixteen_sp" />
 
@@ -54,7 +54,7 @@
             android:gravity="center_vertical"
             android:padding="@dimen/ten_dp"
             android:singleLine="true"
-            android:text="Profile"
+            android:text="@string/profile"
             android:textColor="@color/color_vvvDarkGrey"
             android:textSize="@dimen/twenty_sp" />
 
@@ -69,7 +69,7 @@
             android:gravity="center_vertical"
             android:padding="@dimen/ten_dp"
             android:singleLine="true"
-            android:text="Help Center"
+            android:text="@string/help_center"
             android:textColor="@color/color_vvvDarkGrey"
             android:textSize="@dimen/twenty_sp" />
 
@@ -84,7 +84,7 @@
             android:gravity="center_vertical"
             android:padding="@dimen/ten_dp"
             android:singleLine="true"
-            android:text="Write to us"
+            android:text="@string/write_to_us"
             android:textColor="@color/color_vvvDarkGrey"
             android:textSize="@dimen/twenty_sp" />
 
@@ -99,7 +99,7 @@
             android:gravity="center_vertical"
             android:padding="@dimen/ten_dp"
             android:singleLine="true"
-            android:text="Settings"
+            android:text="@string/settings"
             android:textColor="@color/color_vvvDarkGrey"
             android:textSize="@dimen/twenty_sp" />
 
@@ -112,7 +112,7 @@
             android:gravity="center"
             android:paddingStart="@dimen/fifteen_dp"
             android:singleLine="true"
-            android:text="Version 0.1.1"
+            android:text="@string/version_0_1_1"
             android:textColor="@color/colorDarkGrey"
             android:textSize="@dimen/fifteen_sp" />
 

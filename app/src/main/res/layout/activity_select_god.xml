@@ -36,7 +36,7 @@
                 android:layout_toStartOf="@+id/imgSearch"
                 android:alpha="0.7"
                 android:gravity="center_vertical"
-                android:hint="Select Gods"
+                android:hint="@string/select_gods"
                 android:padding="@dimen/ten_dp"
                 android:singleLine="true"
                 android:textColor="@color/colorWhite"
@@ -66,7 +66,7 @@
             android:paddingEnd="@dimen/fifteen_dp"
             android:paddingStart="@dimen/fifteen_dp"
             android:paddingTop="@dimen/eight_dp"
-            android:text="45 Gods Available nearby"
+            android:text="@string/_45_gods_available_nearby"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="@dimen/seventeen_sp" />
 

@@ -21,7 +21,6 @@ import com.devotted.adapters.TemplePostsAdapter;
 import com.devotted.listeners.IClickListener;
 import com.devotted.models.CardDataItem;
 import com.devotted.models.TempleModel;
-import com.devotted.utils.StaticUtils;
 import com.devotted.utils.views.CustomTextView;
 import com.stone.card.library.CardAdapter;
 import com.stone.card.library.CardSlidePanel;
@@ -84,7 +83,7 @@ public class CardsFragment extends BaseFragment implements IClickListener {
 
             @Override
             public void onCardVanish(int index, int type) {
-                StaticUtils.showToast(mainActivity, "removed item at " + index + " New size " + dataList.size());
+//                StaticUtils.showToast(mainActivity, "removed item at " + index + " New size " + dataList.size());
 //                Log.d("Card", "正在消失-" + dataList.get(index).userName + " 消失type=" + type);
 //                CardItemView cardItemView=dataList.get(index);
                 if (index == dataList.size() - 1) {

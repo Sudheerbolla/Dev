@@ -134,7 +134,7 @@ public class CommentsBottomSheetFragment extends BottomSheetDialogFragment imple
                 dismiss();
                 break;
             case R.id.txtSend:
-                StaticUtils.showToast(getActivity(), "Sent Comment Successfully");
+                StaticUtils.showToast(getActivity(), getString(R.string.sent_comment_successfully));
                 dismiss();
                 break;
             default:

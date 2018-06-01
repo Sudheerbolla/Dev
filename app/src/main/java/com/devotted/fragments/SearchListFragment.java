@@ -1,5 +1,6 @@
 package com.devotted.fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -68,28 +69,29 @@ public class SearchListFragment extends BaseFragment implements View.OnClickList
 
     private void setupViewPager(CustomViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
-        adapter.addFrag(TemplesListFragment.newInstance(), "Temple");
-        adapter.addFrag(PostsFragment.newInstance("Post"), "Post");
-        adapter.addFrag(PostsFragment.newInstance("Event"), "Event");
+        adapter.addFrag(TemplesListFragment.newInstance(), getString(R.string.temple));
+        adapter.addFrag(PostsFragment.newInstance(getString(R.string.post)), getString(R.string.post));
+        adapter.addFrag(PostsFragment.newInstance(getString(R.string.event)), getString(R.string.event));
         viewPager.setAdapter(adapter);
 
         viewPager.setPagingEnabled(true);
         viewPager.setOffscreenPageLimit(3);
     }
 
+    @SuppressLint("InflateParams")
     private void setupTabIcons() {
         CustomTextView tabOne = (CustomTextView) LayoutInflater.from(searchActivity).inflate(R.layout.layout_home_tab, null);
-        tabOne.setText("Temple");
+        tabOne.setText(getString(R.string.temple));
         tabOne.setCompoundDrawablesWithIntrinsicBounds(R.drawable.temple_selector, 0, 0, 0);
         tabLayout.getTabAt(0).setCustomView(tabOne);
 
         CustomTextView tabTwo = (CustomTextView) LayoutInflater.from(searchActivity).inflate(R.layout.layout_home_tab, null);
-        tabTwo.setText("Post");
+        tabTwo.setText(getString(R.string.post));
         tabTwo.setCompoundDrawablesWithIntrinsicBounds(R.drawable.post_selector, 0, 0, 0);
         tabLayout.getTabAt(1).setCustomView(tabTwo);
 
         CustomTextView tabThree = (CustomTextView) LayoutInflater.from(searchActivity).inflate(R.layout.layout_home_tab, null);
-        tabThree.setText("Event");
+        tabThree.setText(getString(R.string.event));
         tabThree.setCompoundDrawablesWithIntrinsicBounds(R.drawable.event_selector, 0, 0, 0);
         tabLayout.getTabAt(2).setCustomView(tabThree);
     }
@@ -132,7 +134,7 @@ public class SearchListFragment extends BaseFragment implements View.OnClickList
                 case SearchActivity.RESULT_OK:
                     Place place = PlaceAutocomplete.getPlace(searchActivity, data);
                     Log.e("Place: ", place.getName().toString());
-                    setTextToAddress(place.getName().toString()+", "+place.getAddress()+", "+place.getLatLng());
+                    setTextToAddress(place.getName().toString() + ", " + place.getAddress() + ", " + place.getLatLng());
                     break;
                 case PlaceAutocomplete.RESULT_ERROR:
                     Status status = PlaceAutocomplete.getStatus(searchActivity, data);

@@ -61,7 +61,7 @@ public class MapListFragment extends BaseFragment implements GoogleMap.OnMarkerC
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_maps_list, container, false);
         initComponents(savedInstanceState);
         return rootView;

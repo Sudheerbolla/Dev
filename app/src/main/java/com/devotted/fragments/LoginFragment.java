@@ -169,7 +169,7 @@ public class LoginFragment extends BaseFragment implements View.OnClickListener,
             @Override
             public void onClick(View view) {
                 String emailAddress = (String) view.getTag();
-                StaticUtils.showToast(splashActivity, "Entered email address is : " + emailAddress);
+//                StaticUtils.showToast(splashActivity, "Entered email address is : " + emailAddress);
             }
         });
     }

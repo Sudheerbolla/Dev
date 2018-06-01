@@ -117,7 +117,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:drawableLeft="@drawable/ic_heart_gray"
+                android:drawableLeft="@drawable/fav_selector"
                 android:gravity="center"
                 android:paddingLeft="@dimen/fifteen_dp"
                 android:paddingRight="@dimen/fifteen_dp"

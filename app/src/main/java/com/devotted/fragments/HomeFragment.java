@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import com.devotted.R;
 import com.devotted.activities.MainActivity;
 import com.devotted.activities.SearchActivity;
+import com.devotted.activities.TempleGroupsActivity;
 import com.devotted.adapters.ViewPagerAdapter;
 import com.devotted.utils.views.CustomTextView;
 import com.devotted.utils.views.CustomViewPager;
@@ -20,7 +21,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
     private TabLayout tabLayout;
     private CustomViewPager viewPager;
-    private CustomTextView txtSearch;
+    private CustomTextView txtSearch, txtGroups;
     private View rootView;
     private MainActivity mainActivity;
 
@@ -42,7 +43,9 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
     private void initComponents() {
         txtSearch = rootView.findViewById(R.id.txtSearch);
+        txtGroups = rootView.findViewById(R.id.txtGroups);
         viewPager = rootView.findViewById(R.id.viewpager);
+
         setupViewPager(viewPager);
         viewPager.setPagingEnabled(true);
         viewPager.setOffscreenPageLimit(2);
@@ -51,7 +54,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         tabLayout.setupWithViewPager(viewPager, true);
 
         txtSearch.setOnClickListener(this);
-
+        txtGroups.setOnClickListener(this);
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -59,10 +62,10 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 //        adapter.addFrag(CardsFragment.newInstance("Mantras"), "Mantras");
 //        adapter.addFrag(CardsFragment.newInstance("Dharma"), "Dharma");
 //        adapter.addFrag(CardsFragment.newInstance("Questions"), "Questions");
-        adapter.addFrag(CardsRossDeckFragment.newInstance("Mantras"), "Mantras");
-        adapter.addFrag(CardsRossDeckFragment.newInstance("Dharma"), "Dharma");
-        adapter.addFrag(CardsRossDeckFragment.newInstance("Questions"), "Questions");
-        adapter.addFrag(CardsRossDeckFragment.newInstance("Five"), "five");
+        adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.mantras)), getString(R.string.mantras));
+        adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.dharma)), getString(R.string.dharma));
+        adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.questions)), getString(R.string.questions));
+//        adapter.addFrag(CardsRossDeckFragment.newInstance("Five"), "five");
         viewPager.setAdapter(adapter);
 
 //        ViewCompat.setNestedScrollingEnabled(viewPager, true);
@@ -74,9 +77,16 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             case R.id.txtSearch:
                 openSearchScreen();
                 break;
+            case R.id.txtGroups:
+                openGroupsScreen();
+                break;
             default:
                 break;
         }
+    }
+
+    private void openGroupsScreen() {
+        startActivity(new Intent(mainActivity, TempleGroupsActivity.class));
     }
 
     private void openSearchScreen() {

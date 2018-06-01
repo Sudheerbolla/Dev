@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relBody"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/ten_dp">
+
+    <RelativeLayout
+        android:id="@+id/relInComing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/fifty_five_dp"
+        android:background="@drawable/grey_small_border"
+        android:orientation="horizontal"
+        android:padding="@dimen/ten_dp"
+        android:visibility="visible">
+
+        <com.devotted.utils.views.CircleImageView
+            android:id="@+id/imageViewUserInComing"
+            android:layout_width="@dimen/fourty_dp"
+            android:layout_height="@dimen/fourty_dp"
+            android:layout_marginBottom="@dimen/five_dp"
+            android:padding="@dimen/five_dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/temple1" />
+
+        <RelativeLayout
+            android:id="@+id/relUserDetailsInComing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_toEndOf="@id/imageViewUserInComing"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtUserNameInComing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/txtTimeInComing"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="@dimen/five_dp"
+                android:singleLine="true"
+                android:text="@string/user_name"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sixteen_sp"
+                app:txt_font_type="bold" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtMessageInComing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtUserNameInComing"
+                android:layout_margin="@dimen/five_dp"
+                android:text="@string/lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh"
+                android:textColor="@color/color_vvvDarkGrey"
+                android:textSize="@dimen/fifteen_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtTimeInComing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="@dimen/six_dp"
+                android:text="@string/_1_hr_ago"
+                android:textColor="@color/color_vDarkGrey" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relOutGoing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fifty_five_dp"
+        android:background="@drawable/grey_small_border"
+        android:orientation="horizontal"
+        android:padding="@dimen/ten_dp"
+        android:visibility="gone">
+
+        <com.devotted.utils.views.CircleImageView
+            android:id="@+id/imageViewUserOutGoing"
+            android:layout_width="@dimen/fourty_dp"
+            android:layout_height="@dimen/fourty_dp"
+            android:layout_marginBottom="@dimen/five_dp"
+            android:padding="@dimen/five_dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/temple1" />
+
+        <RelativeLayout
+            android:id="@+id/relUserDetailsOutGoing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:layout_toEndOf="@id/imageViewUserOutGoing"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtUserNameOutGoing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/txtTimeOutGoing"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="@dimen/five_dp"
+                android:singleLine="true"
+                android:text="@string/user_name"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/sixteen_sp"
+                app:txt_font_type="bold" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtMessageOutGoing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtUserNameOutGoing"
+                android:layout_margin="@dimen/five_dp"
+                android:text="@string/lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh"
+                android:textColor="@color/color_vvvDarkGrey"
+                android:textSize="@dimen/fifteen_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtTimeOutGoing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="@dimen/six_dp"
+                android:text="@string/_1_hr_ago"
+                android:textColor="@color/color_vDarkGrey" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

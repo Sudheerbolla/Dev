@@ -1,6 +1,7 @@
 package com.devotted.fragments;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -51,7 +52,7 @@ public class PostsFragment extends BaseFragment implements IClickListener {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_posts, container, false);
         initComponents();
         return rootView;

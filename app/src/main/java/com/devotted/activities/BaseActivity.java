@@ -13,7 +13,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import com.devotted.R;
 import com.devotted.utils.FragmentUtils;
@@ -160,9 +159,11 @@ public class BaseActivity extends AppCompatActivity {
 //        setContentView(R.layout.main);
 // Checks the active language
         if (newConfig.locale == Locale.ENGLISH) {
-            Toast.makeText(this, "English", Toast.LENGTH_SHORT).show();
+            StaticUtils.showToast(this, getString(R.string.english));
         } else if (newConfig.locale == new Locale("tl")) {
-            Toast.makeText(this, "Telugu", Toast.LENGTH_SHORT).show();
+            StaticUtils.showToast(this, getString(R.string.telugu));
+        } else if (newConfig.locale == new Locale("hi")) {
+            StaticUtils.showToast(this, getString(R.string.hindi));
         }
     }
 }

@@ -1,6 +1,8 @@
 package com.devotted.adapters;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,13 +29,15 @@ public class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.ViewHo
         this.context = context;
     }
 
+    @SuppressLint("InflateParams")
+    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_comments, null));
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder viewHolder, final int position) {
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, final int position) {
     }
 
     @Override
@@ -43,7 +47,7 @@ public class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.ViewHo
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public CustomTextView txtTime, txtUserName, txtDescription, txtRemoveReview, txtDisLikes, txtLikes;
+        public CustomTextView txtTime, txtUserName, txtDescription;
         public ImageView imageViewUser;
         public LinearLayout relBody;
 
@@ -52,9 +56,6 @@ public class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.ViewHo
             txtUserName = itemLayoutView.findViewById(R.id.txtUserName);
             txtTime = itemLayoutView.findViewById(R.id.txtTime);
             txtDescription = itemLayoutView.findViewById(R.id.txtDescription);
-            txtRemoveReview = itemLayoutView.findViewById(R.id.txtRemoveReview);
-            txtDisLikes = itemLayoutView.findViewById(R.id.txtDisLikes);
-            txtLikes = itemLayoutView.findViewById(R.id.txtLikes);
 
             imageViewUser = itemLayoutView.findViewById(R.id.imageViewUser);
             relBody = itemLayoutView.findViewById(R.id.relBody);

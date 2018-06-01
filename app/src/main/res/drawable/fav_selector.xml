@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/ic_heart_black" android:state_pressed="true" />
-    <item android:drawable="@drawable/ic_heart_black" android:state_selected="true" />
-    <item android:drawable="@drawable/ic_heart_black" android:state_activated="true" />
-    <item android:drawable="@drawable/ic_heart_gray" />
+    <item android:drawable="@drawable/ic_fav_orange" android:state_pressed="true" />
+    <item android:drawable="@drawable/ic_fav_orange" android:state_selected="true" />
+    <item android:drawable="@drawable/ic_fav_orange" android:state_activated="true" />
+    <item android:drawable="@drawable/ic_fav_black" />
 </selector>

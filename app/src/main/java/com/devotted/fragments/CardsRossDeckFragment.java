@@ -20,7 +20,6 @@ import com.devotted.adapters.TemplePostsAdapter;
 import com.devotted.listeners.IClickListener;
 import com.devotted.models.CardDataItem;
 import com.devotted.models.TempleModel;
-import com.devotted.utils.StaticUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -117,9 +116,9 @@ public class CardsRossDeckFragment extends BaseFragment implements FlingChiefLis
             dataList.add(dataList.size() - 1, cardDataItem);
             //            mItems.get(0)
             mAdapter.notifyDataSetChanged();
-        } else {
+//        } else {
 //            navigate to next tab
-            StaticUtils.showToast(mainActivity, "reached last and will move to next tab");
+//            StaticUtils.showToast(mainActivity, "reached last and will move to next tab");
         }
         return true;
     }
@@ -136,13 +135,13 @@ public class CardsRossDeckFragment extends BaseFragment implements FlingChiefLis
 
     @Override
     public boolean onTapped() {
-        StaticUtils.showToast(mainActivity, "Tapped ");
+//        StaticUtils.showToast(mainActivity, "Tapped ");
         return true;
     }
 
     @Override
     public boolean onDoubleTapped() {
-        StaticUtils.showToast(mainActivity, "Tapped ");
+//        StaticUtils.showToast(mainActivity, "Tapped ");
         return true;
     }
 

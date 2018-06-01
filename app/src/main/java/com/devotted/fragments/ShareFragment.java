@@ -75,22 +75,22 @@ public class ShareFragment extends BaseFragment implements View.OnClickListener 
     private void shareText(int method) {
         switch (method) {
             case 0:
-                ShareUtils.shareWhatsapp(mainActivity, "I found an app which will be useful ", ShareUtils.getAppPlaystoreLink(mainActivity));
+                ShareUtils.shareWhatsapp(mainActivity, getString(R.string.social_share_text), ShareUtils.getAppPlaystoreLink(mainActivity));
                 break;
             case 1:
-                ShareUtils.shareViaEmail(mainActivity, "Share Devotted App", "I found an app which will be useful " + ShareUtils.getAppPlaystoreLink(mainActivity));
+                ShareUtils.shareViaEmail(mainActivity, getString(R.string.social_share_subject), getString(R.string.social_share_text) + ShareUtils.getAppPlaystoreLink(mainActivity));
                 break;
             case 2:
-                ShareUtils.shareTwitter(mainActivity, "I found an app which will be useful ", ShareUtils.getAppPlaystoreLink(mainActivity), "", "");
+                ShareUtils.shareTwitter(mainActivity, getString(R.string.social_share_text), ShareUtils.getAppPlaystoreLink(mainActivity), "", "");
                 break;
             case 3:
-                ShareUtils.shareFacebook(mainActivity, "I found an app which will be useful ", ShareUtils.getAppPlaystoreLink(mainActivity));
+                ShareUtils.shareFacebook(mainActivity, getString(R.string.social_share_text), ShareUtils.getAppPlaystoreLink(mainActivity));
                 break;
             case 4:
-                ShareUtils.shareViaIntent(mainActivity, "Share Devotted App", "I found an app which will be useful " + ShareUtils.getAppPlaystoreLink(mainActivity));
+                ShareUtils.shareViaIntent(mainActivity, getString(R.string.social_share_subject), getString(R.string.social_share_text) + ShareUtils.getAppPlaystoreLink(mainActivity));
                 break;
             default:
-                ShareUtils.shareWhatsapp(mainActivity, "I found an app which will be useful ", ShareUtils.getAppPlaystoreLink(mainActivity));
+                ShareUtils.shareWhatsapp(mainActivity, getString(R.string.social_share_text), ShareUtils.getAppPlaystoreLink(mainActivity));
                 break;
         }
     }

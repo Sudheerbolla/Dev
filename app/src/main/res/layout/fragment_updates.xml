@@ -31,7 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/fifteen_dp"
                 android:layout_marginStart="@dimen/fifteen_dp"
-                android:background="@drawable/grey_border_curved"
+                android:background="@drawable/btn_background_light"
                 android:drawableEnd="@drawable/ic_gallery"
                 android:gravity="center_vertical"
                 android:paddingBottom="@dimen/seven_dp"
@@ -39,7 +39,7 @@
                 android:paddingStart="@dimen/thirteen_dp"
                 android:paddingTop="@dimen/seven_dp"
                 android:text="@string/write_an_update"
-                android:textColor="@color/color_vvDarkGrey"
+                android:textColor="@color/color_vvvDarkGrey"
                 android:textSize="@dimen/seventeen_sp" />
 
         </LinearLayout>

@@ -70,6 +70,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentStart="true"
             android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/three_dp"
             android:layout_toStartOf="@+id/txtSend"
             android:background="@null"
             android:hint="@string/type_your_comment_here"

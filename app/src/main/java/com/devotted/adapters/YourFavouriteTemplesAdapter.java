@@ -45,7 +45,8 @@ public class YourFavouriteTemplesAdapter extends RecyclerView.Adapter<YourFavour
 
         TempleModel templeModel = itemsData.get(position);
         viewHolder.txtTempleName.setText(templeModel.templeName);
-        viewHolder.txtUpdates.setText(String.format("%s Updates", templeModel.distance));
+
+        viewHolder.txtUpdates.setText(String.format("%s %s", templeModel.distance, context.getString(R.string.updates)));
         viewHolder.txtTempleName.setSelected(true);
 
         viewHolder.relBody.setOnClickListener(new View.OnClickListener() {

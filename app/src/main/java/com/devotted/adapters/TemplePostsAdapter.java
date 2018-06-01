@@ -82,7 +82,7 @@ public class TemplePostsAdapter extends RecyclerView.Adapter<TemplePostsAdapter.
                 popup.getMenuInflater().inflate(R.menu.posts_menu, popup.getMenu());
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     public boolean onMenuItemClick(MenuItem item) {
-                        StaticUtils.showToast(context, "You Clicked : " + item.getTitle());
+                        StaticUtils.showToast(context, context.getString(R.string.you_clicked) + item.getTitle());
                         return true;
                     }
                 });

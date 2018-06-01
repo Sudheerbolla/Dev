@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.devotted.utils.views.StickyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twohundred_dp">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPagerImages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/imgPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/five_dp"
+                android:background="@color/colorLightGrey"
+                android:padding="@dimen/five_dp"
+                app:srcCompat="@drawable/ic_left" />
+
+            <ImageView
+                android:id="@+id/imgNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/five_dp"
+                android:background="@color/colorLightGrey"
+                android:padding="@dimen/five_dp"
+                app:srcCompat="@drawable/ic_right" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/three_dp"
+            android:background="@color/colorGrey" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtTempleName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="@dimen/seven_dp"
+            android:singleLine="true"
+            android:tag="sticky-nonconstant-hastransparancy"
+            android:text="@string/swami_jaganath_temple_volunteer_group"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/seventeen_sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ten_dp"
+            android:background="@color/colorGrey" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ten_dp"
+            android:layout_marginStart="@dimen/ten_dp"
+            android:padding="@dimen/five_dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/imgGroupOwner"
+                android:orientation="horizontal">
+
+                <com.devotted.utils.views.CustomTextView
+                    android:id="@+id/txtGroupOwnerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/txtDate"
+                    android:padding="@dimen/five_dp"
+                    android:text="@string/rama_chari_temple_owner"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/seventeen_sp" />
+
+                <com.devotted.utils.views.CustomTextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/five_dp"
+                    android:text="@string/_29_may_2018"
+                    android:textColor="@color/color_vvvDarkGrey" />
+
+            </RelativeLayout>
+
+            <com.devotted.utils.views.CircleImageView
+                android:id="@+id/imgGroupOwner"
+                android:layout_width="@dimen/sixty_dp"
+                android:layout_height="@dimen/sixty_dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/five_dp"
+                android:padding="@dimen/ten_dp"
+                android:src="@drawable/krishna_icon" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ten_dp"
+            android:background="@color/colorGrey" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/eight_dp">
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/txtViewAllVolunteers"
+                android:drawablePadding="@dimen/ten_dp"
+                android:drawableStart="@drawable/ic_group_orange"
+                android:gravity="center_vertical"
+                android:padding="@dimen/five_dp"
+                android:text="@string/volunteers"
+                android:textAllCaps="true"
+                android:textColor="@color/color_vvDarkGrey"
+                android:textSize="@dimen/sixteen_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtViewAllVolunteers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:drawablePadding="@dimen/five_dp"
+                android:drawableStart="@drawable/ic_add_persons"
+                android:gravity="center_vertical"
+                android:padding="@dimen/five_dp"
+                android:text="@string/add_new"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/sixteen_sp" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/layout_volunteer" />
+
+        <include layout="@layout/layout_volunteer" />
+
+        <include layout="@layout/layout_volunteer" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ten_dp"
+            android:background="@color/colorGrey" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtViewDiscussion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_right"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="@dimen/ten_dp"
+            android:singleLine="true"
+            android:text="@string/view_discussion"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/seventeen_sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifteen_dp"
+            android:background="@color/colorGrey" />
+
+    </LinearLayout>
+
+</com.devotted.utils.views.StickyScrollView>

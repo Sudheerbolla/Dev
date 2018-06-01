@@ -255,13 +255,13 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
                 if (StaticUtils.isAllPermissionsGranted(grantResults)) {
                     openImagePickerDialog();
                 } else {
-                    StaticUtils.showToast(splashActivity, "Permission is Mandatory");
+                    StaticUtils.showToast(splashActivity, getString(R.string.permission_is_mandatory));
                     isStoragePermissionAvailable();
                 }
                 break;
             case Constants.READ_SMS_CODE:
                 if (RuntimePermissionUtils.checkPermission(getActivity(), Manifest.permission.RECEIVE_SMS) != PackageManager.PERMISSION_GRANTED) {
-                    StaticUtils.showToast(splashActivity, "Please enter OTP manually, Since you have denied permission for reading SMS");
+                    StaticUtils.showToast(splashActivity, getString(R.string.please_enter_otp_manually_since_you_have_denied_permission_for_reading_sms));
                 }
                 navigateToVerificationScreen();
                 break;

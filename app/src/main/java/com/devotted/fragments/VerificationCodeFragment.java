@@ -86,7 +86,7 @@ public class VerificationCodeFragment extends BaseFragment implements View.OnCli
         if (!TextUtils.isEmpty(verificationCode)) {
             edtOTP.setText(verificationCode);
         } else {
-            StaticUtils.showToast(splashActivity, "Failed to fetch OTP please enter Manually");
+            StaticUtils.showToast(splashActivity, getString(R.string.failed_to_fetch_otp_please_enter_manually));
         }
     }
 
@@ -188,7 +188,7 @@ public class VerificationCodeFragment extends BaseFragment implements View.OnCli
                 if (StaticUtils.isAllPermissionsGranted(grantResults)) {
                     setSmSBindListener();
                 } else {
-                    StaticUtils.showToast(splashActivity, "Please enter OTP manually, Since you have denied permission for reading SMS");
+                    StaticUtils.showToast(splashActivity, getString(R.string.please_enter_otp_manually_since_you_have_denied_permission_for_reading_sms));
                 }
                 break;
             default:

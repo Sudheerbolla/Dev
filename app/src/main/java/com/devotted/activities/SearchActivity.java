@@ -59,12 +59,12 @@ public class SearchActivity extends BaseActivity implements View.OnClickListener
     }
 
     private void changeFragment(BaseFragment fragment) {
+        replaceFragment(fragment, false, R.id.searchContainer);
         if (currentFragment.equalsIgnoreCase(MapListFragment.class.getSimpleName())) {
             imgSwitch.setImageResource(R.drawable.ic_map);
         } else {
             imgSwitch.setImageResource(R.drawable.ic_topbar_menu);
         }
-        replaceFragment(fragment, false, R.id.searchContainer);
         currentFragment = fragment.getClass().getSimpleName();
     }
 
@@ -249,9 +249,9 @@ public class SearchActivity extends BaseActivity implements View.OnClickListener
         }
     }
 
-
     @Override
     public void onComments() {
 
     }
+
 }

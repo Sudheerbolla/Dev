@@ -66,7 +66,7 @@ public class MapFragment extends BaseFragment implements View.OnClickListener {
             ll_map_item.setOnClickListener(this);
 
             txtTempleName.setText(getDealModel().templeName);
-            txtTempleAddress.setText(getDealModel().line1 + ", " + getDealModel().line2 + ", " + getDealModel().city);
+            txtTempleAddress.setText(String.format("%s, %s, %s", getDealModel().line1, getDealModel().line2, getDealModel().city));
             txtRating.setText(getDealModel().rating);
             txtTempleDistance.setText(getDealModel().distance);
             RequestOptions options = new RequestOptions()

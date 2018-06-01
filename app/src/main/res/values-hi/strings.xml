@@ -206,4 +206,8 @@
     <string name="social_share_text">मुझे एक ऐप मिला जो उपयोगी होगा</string>
     <string name="social_share_subject">Share Devotted App</string>
     <string name="failed_to_fetch_otp_please_enter_manually">ओटीपी लाने में विफल कृपया मैन्युअल रूप से दर्ज करें</string>
+    <string name="change_language">भाषा बदलो</string>
+    <string name="change_password">पासवर्ड बदलें</string>
+    <string name="please_restart_the_application_for_the_new_language_to_be_reflected">कृपया प्रतिबिंबित होने वाली नई भाषा के लिए एप्लिकेशन को पुनरारंभ करें</string>
+    <string name="restart">पुनः आरंभ करें</string>
 </resources>

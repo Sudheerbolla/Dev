@@ -206,4 +206,8 @@
     <string name="social_share_text">I found an app which will be useful</string>
     <string name="social_share_subject">Share Devotted App</string>
     <string name="failed_to_fetch_otp_please_enter_manually">Failed to fetch OTP please enter Manually</string>
+    <string name="change_language">Change Language</string>
+    <string name="change_password">Change Password</string>
+    <string name="please_restart_the_application_for_the_new_language_to_be_reflected">Please restart the application for the new language to be reflected</string>
+    <string name="restart">Restart</string>
 </resources>

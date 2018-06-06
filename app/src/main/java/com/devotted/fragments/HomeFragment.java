@@ -7,12 +7,14 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 import com.devotted.R;
 import com.devotted.activities.MainActivity;
 import com.devotted.activities.SearchActivity;
 import com.devotted.activities.TempleGroupsActivity;
 import com.devotted.adapters.ViewPagerAdapter;
+import com.devotted.utils.LocalStorage;
 import com.devotted.utils.views.CustomTextView;
 import com.devotted.utils.views.CustomViewPager;
 
@@ -22,6 +24,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     private TabLayout tabLayout;
     private CustomViewPager viewPager;
     private CustomTextView txtSearch, txtGroups;
+    private RelativeLayout relTemple;
     private View rootView;
     private MainActivity mainActivity;
 
@@ -45,6 +48,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         txtSearch = rootView.findViewById(R.id.txtSearch);
         txtGroups = rootView.findViewById(R.id.txtGroups);
         viewPager = rootView.findViewById(R.id.viewpager);
+        relTemple = rootView.findViewById(R.id.relTemple);
 
         setupViewPager(viewPager);
         viewPager.setPagingEnabled(true);
@@ -55,6 +59,11 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
         txtSearch.setOnClickListener(this);
         txtGroups.setOnClickListener(this);
+        if (LocalStorage.getInstance(mainActivity).getBoolean(LocalStorage.IS_GUEST_USER, false)) {
+            relTemple.setVisibility(View.GONE);
+        } else {
+            relTemple.setVisibility(View.VISIBLE);
+        }
     }
 
     private void setupViewPager(ViewPager viewPager) {

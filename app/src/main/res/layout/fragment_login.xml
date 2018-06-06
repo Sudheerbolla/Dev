@@ -203,7 +203,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="phone"
-                            android:maxLength="13"
+                            android:maxLength="10"
                             app:txt_font_type="regular" />
 
                     </android.support.design.widget.TextInputLayout>

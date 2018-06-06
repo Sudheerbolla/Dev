@@ -47,13 +47,15 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
         SelectionModel selectionModel = itemsData.get(position);
         viewHolder.imgType.setImageResource(selectionModel.icon);
         if (isUserType) {
-            viewHolder.txtSelect.setText(String.format("%s%s", context.getString(R.string.i_am_a), selectionModel.type));
+            viewHolder.txtSelect.setText(context.getString(R.string.i_am_a) + " " + selectionModel.type);
         } else {
-            viewHolder.txtSelect.setText(context.getString(R.string.i_choose) + selectionModel.type);
+            viewHolder.txtSelect.setText(context.getString(R.string.i_choose) + " " + selectionModel.type);
         }
-        viewHolder.txtDescription1.setText(selectionModel.description[0]);
-        viewHolder.txtDescription2.setText(selectionModel.description[1]);
-        viewHolder.txtDescription3.setText(selectionModel.description[2]);
+        String description = "";
+        for (int i = 0; i < selectionModel.description.length; i++) {
+            description += "\n\n" + selectionModel.description[i];
+        }
+        viewHolder.txtDescription.setText(description);
 
         if (selectionModel.isSelected) {
             viewHolder.txtSelect.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_tick_mark, 0, 0, 0);
@@ -82,16 +84,14 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public CustomTextView txtSelect, txtDescription1, txtDescription2, txtDescription3;
+        public CustomTextView txtSelect, txtDescription;
         public ImageView imgType;
         public RelativeLayout cardBody;
 
         ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
             txtSelect = itemLayoutView.findViewById(R.id.txtSelect);
-            txtDescription1 = itemLayoutView.findViewById(R.id.txtDescription1);
-            txtDescription2 = itemLayoutView.findViewById(R.id.txtDescription2);
-            txtDescription3 = itemLayoutView.findViewById(R.id.txtDescription3);
+            txtDescription = itemLayoutView.findViewById(R.id.txtDescription);
             imgType = itemLayoutView.findViewById(R.id.imgType);
             cardBody = itemLayoutView.findViewById(R.id.cardBody);
         }

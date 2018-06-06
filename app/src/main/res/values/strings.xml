@@ -50,7 +50,7 @@
     <string name="confirm_your_mobile_number">Confirm your mobile number.</string>
     <string name="edit">Edit</string>
     <string name="confirm">Confirm</string>
-    <string name="by_signing_up_i_agree_to_the_terms_and_condition_privacy_policies">By Signing up, I agree to the \n Terms and condition, Privacy Policies</string>
+    <string name="by_signing_up_i_agree_to_the_terms_and_condition_privacy_policies">By Signing up, I agree to the \n Terms and conditions, Privacy Policies</string>
     <string name="sign_in">Sign in</string>
     <string name="otp_sent_to_that_mobile_number_for_verification">OTP has been sent to the Mobile Number for verification</string>
     <string name="verification_code">Verification Code</string>
@@ -159,10 +159,22 @@
     <string name="hindi">हिंदी</string>
     <string name="monday">Monday</string>
     <string name="remove">remove</string>
-    <string name="connecting_you_with_your_spiritual_gurus">Connecting you with your spiritual gurus</string>
-    <string name="daily_instant_updates_from_your_spiritual_gurus">Daily instant updates from your Spiritual gurus</string>
-    <string name="highly_motivated_content_directly_delivered_to_you">Highly motivated content directly delivered to you</string>
-    <string name="involve_you_in_the_interesting_discussions">Involve you in the interesting discussions.</string>
+
+    <string name="connecting_you_with_your_spiritual_gurus">Connects you with your spiritual gurus</string>
+    <string name="daily_instant_updates_from_your_spiritual_gurus">Daily instant updates from your favorite gurus</string>
+    <string name="highly_motivated_content_directly_delivered_to_you">Highly motivated, inspiring spiritual content delivered to you</string>
+    <string name="involve_you_in_the_interesting_discussions">Get involved in interesting discussions, share your views.</string>
+
+    <string name="dev_line1">Get updates from your favorite Temples, Events, Posts.</string>
+    <string name="dev_line2">Volunteer for God\'s Seva along with temple groups</string>
+    <string name="dev_line3">Get involved in religious discussions, share your views</string>
+    <string name="dev_line4">Daily updates on horoscope, Dharma, and other interesting topics</string>
+
+    <string name="well_line1">Get updates on Mind, Body health with holistic approach</string>
+    <string name="well_line2">Volunteer to help, improve others health and life</string>
+    <string name="well_line3">Discuss wellness related topics, share your views</string>
+    <string name="well_line4">Find ancient, latest content to keep your health optimum.</string>
+
     <string name="home">Home</string>
     <string name="updates">Updates</string>
     <string name="menu">Menu</string>
@@ -199,9 +211,28 @@
     <string name="event">Event</string>
     <string name="you_are">YOU ARE</string>
     <string name="temple_member">Temple Member</string>
-    <string name="provide_the_update_of_god_temple">Provide the update of God / Temple</string>
-    <string name="manage_temples_activities_events_online">Manage Temple\'s Activities, Events, etc… Online</string>
-    <string name="help_improving_temple_through_groups_devotees">Help improving temple through Groups devotees, etc…</string>
+
+    <string name="user_type1_line1">Receive Temple Services</string>
+    <string name="user_type1_line2">Receive Favorite temple updates</string>
+    <string name="user_type1_line3">Participate in temple posts</string>
+    <string name="user_type1_line4">Serve the God</string>
+
+    <string name="user_type2_line1">Temple Administration</string>
+    <string name="user_type2_line2">Provide Temple updates</string>
+    <string name="user_type2_line3">Volunteer Management</string>
+    <string name="user_type2_line4">Organize Religious Events</string>
+
+    <string name="interest_type1_line1">Spiritual Gurus</string>
+    <string name="interest_type1_line2">Favorite Gurus\' updates</string>
+    <string name="interest_type1_line3">Rich Spiritual Content</string>
+    <string name="interest_type1_line4">Spiritual Discussions</string>
+
+    <string name="interest_type2_line1">Find Hindu Temples</string>
+    <string name="interest_type2_line2">Favorite Temples\' updates</string>
+    <string name="interest_type2_line3">Volunteer Service</string>
+    <string name="interest_type2_line4">Religious discussions</string>
+    <string name="interest_type2_line5">Horoscope, Dharma, Etc.,</string>
+
     <string name="devotee">Devotee</string>
     <string name="social_share_text">I found an app which will be useful</string>
     <string name="social_share_subject">Share Devotted App</string>
@@ -210,4 +241,14 @@
     <string name="change_password">Change Password</string>
     <string name="please_restart_the_application_for_the_new_language_to_be_reflected">Please restart the application for the new language to be reflected</string>
     <string name="restart">Restart</string>
+    <string name="old_password">Old Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="new_password">New Password</string>
+    <string name="password_changed_successfully">Password Changed successfully</string>
+    <string name="please_enter_your_old_password">Please enter your old password</string>
+    <string name="old_password_is_wrong">Old password is wrong</string>
+    <string name="please_enter_new_password">Please enter new password</string>
+    <string name="please_enter_confirm_password">Please enter Confirm password</string>
+    <string name="new_password_and_confirm_password_should_match">Password and Confirm Password should match</string>
+    <string name="old_password_and_new_password_cannot_be_same">Old Password and New Password cannot be same</string>
 </resources>

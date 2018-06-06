@@ -80,13 +80,37 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
     private void setDummyData() {
         if (isUserType) {
             txtHeading.setText(R.string.you_are);
-            SelectionModel spiritualModel = new SelectionModel(getString(R.string.temple_member), new String[]{getString(R.string.provide_the_update_of_god_temple), getString(R.string.manage_temples_activities_events_online), getString(R.string.help_improving_temple_through_groups_devotees)}, R.drawable.ic_spirtitual);
-            SelectionModel religiousModel = new SelectionModel(getString(R.string.devotee), new String[]{getString(R.string.provide_the_update_of_god_temple), getString(R.string.manage_temples_activities_events_online), getString(R.string.help_improving_temple_through_groups_devotees)}, R.drawable.ic_religious);
+            SelectionModel spiritualModel = new SelectionModel(getString(R.string.temple_member),
+                    new String[]{
+                            getString(R.string.user_type1_line1),
+                            getString(R.string.user_type1_line2),
+                            getString(R.string.user_type1_line3),
+                            getString(R.string.user_type1_line4)
+                    },
+                    R.drawable.ic_spirtitual);
+            SelectionModel religiousModel = new SelectionModel(getString(R.string.devotee),
+                    new String[]{
+                            getString(R.string.user_type2_line1),
+                            getString(R.string.user_type2_line2),
+                            getString(R.string.user_type2_line3),
+                            getString(R.string.user_type2_line4)
+                    }, R.drawable.ic_religious);
             selectionModelArrayList.add(spiritualModel);
             selectionModelArrayList.add(religiousModel);
         } else {
-            SelectionModel spiritualModel = new SelectionModel(getString(R.string.spiritual), new String[]{getString(R.string.provide_the_update_of_god_temple), getString(R.string.manage_temples_activities_events_online), getString(R.string.help_improving_temple_through_groups_devotees)}, R.drawable.ic_spirtitual);
-            SelectionModel religiousModel = new SelectionModel(getString(R.string.religious), new String[]{getString(R.string.provide_the_update_of_god_temple), getString(R.string.manage_temples_activities_events_online), getString(R.string.help_improving_temple_through_groups_devotees)}, R.drawable.ic_religious);
+            SelectionModel spiritualModel = new SelectionModel(getString(R.string.spiritual), new String[]{
+                    getString(R.string.interest_type1_line1),
+                    getString(R.string.interest_type1_line1),
+                    getString(R.string.interest_type1_line1),
+                    getString(R.string.interest_type1_line1)
+            }, R.drawable.ic_spirtitual);
+            SelectionModel religiousModel = new SelectionModel(getString(R.string.religious), new String[]{
+                    getString(R.string.interest_type2_line1),
+                    getString(R.string.interest_type2_line2),
+                    getString(R.string.interest_type2_line3),
+                    getString(R.string.interest_type2_line4),
+                    getString(R.string.interest_type2_line5)
+            }, R.drawable.ic_religious);
             selectionModelArrayList.add(spiritualModel);
             selectionModelArrayList.add(religiousModel);
         }

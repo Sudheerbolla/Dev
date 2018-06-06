@@ -61,14 +61,14 @@
 
             <LinearLayout
                 android:id="@+id/linLanguage"
-                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/ten_dp"
                 android:background="@color/colorWhite"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="@dimen/seven_dp">
+                android:padding="@dimen/seven_dp"
+                android:visibility="gone">
 
                 <com.devotted.utils.views.CustomTextView
                     android:id="@+id/txtSelectLanguage"
@@ -173,6 +173,125 @@
                 android:text="@string/change_password"
                 android:textColor="@color/color_vvDarkGrey"
                 android:textSize="@dimen/sixteen_sp" />
+
+            <LinearLayout
+                android:id="@+id/linPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/ten_dp"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/seven_dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/five_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/seven_dp"
+                        app:srcCompat="@drawable/ic_password" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/old_password"
+                        app:hintTextAppearance="@style/HintText"
+                        app:passwordToggleEnabled="true">
+
+                        <com.devotted.utils.views.CustomEditText
+                            android:id="@+id/edtOldPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            app:txt_font_type="regular" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/five_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/seven_dp"
+                        app:srcCompat="@drawable/ic_password" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/new_password"
+                        app:hintTextAppearance="@style/HintText"
+                        app:passwordToggleEnabled="true">
+
+                        <com.devotted.utils.views.CustomEditText
+                            android:id="@+id/edtNewPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            app:txt_font_type="regular" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ten_dp"
+                    android:layout_marginTop="@dimen/ten_dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/seven_dp"
+                        app:srcCompat="@drawable/ic_password" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/confirm_password"
+                        app:hintTextAppearance="@style/HintText"
+                        app:passwordToggleEnabled="true">
+
+                        <com.devotted.utils.views.CustomEditText
+                            android:id="@+id/edtConfirmPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            app:txt_font_type="regular" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <com.devotted.utils.views.CustomTextView
+                    android:id="@+id/txtConfirmChangePassword"
+                    style="@style/AppButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="@string/proceed"
+                    app:txt_font_type="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/seperator_height_small"
+                android:background="@color/colorDarkGrey" />
 
         </LinearLayout>
 

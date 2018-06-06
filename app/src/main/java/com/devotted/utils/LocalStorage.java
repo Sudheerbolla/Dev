@@ -15,9 +15,12 @@ public class LocalStorage {
     public static final String IS_LOGGED_IN_ALREADY = "IS_LOGGED_IN_ALREADY";
     public static final String IS_AUTOLOGIN_ENABLED = "IS_AUTOLOGIN_ENABLED";
     public static final String IS_FIRST_TIME_LAUNCH = "IS_FIRST_TIME_LAUNCH";
-    public static final String IS_PREFERENCE_SELECTED= "IS_PREFERENCE_SELECTED";
+    public static final String IS_PREFERENCE_SELECTED = "IS_PREFERENCE_SELECTED";
     public static final String PREF_LANGUAGE = "PREF_LANGUAGE";
-    public static final String PREF_IS_I_BELONG_HERE_DONE= "PREF_IS_I_BELONG_HERE_DONE";
+    public static final String PREF_IS_I_BELONG_HERE_DONE = "PREF_IS_I_BELONG_HERE_DONE";
+
+    public static final String PREF_PASSWORD = "PREF_PASSWORD";
+//    public static final String PREF_LANGUAGE = "PREF_LANGUAGE";
 
     private LocalStorage(Context mContext) {
         preferences = mContext.getSharedPreferences(PREF_NAME, Activity.MODE_PRIVATE);

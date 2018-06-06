@@ -23,7 +23,7 @@ public class TempleGroupsActivity extends BaseActivity implements View.OnClickLi
 
     private void initComponents() {
         setReferences();
-        replaceFragment(GroupsListFragment.newInstance(), false, R.id.groupsContainer);
+        replaceFragmentWithOutAnimation(GroupsListFragment.newInstance(), false, R.id.groupsContainer);
     }
 
     private void setReferences() {

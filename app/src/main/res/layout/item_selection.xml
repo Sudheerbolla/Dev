@@ -21,39 +21,12 @@
             android:layout_height="wrap_content">
 
             <com.devotted.utils.views.CustomTextView
-                android:id="@+id/txtDescription1"
+                android:id="@+id/txtDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/five_dp"
                 android:layout_marginLeft="@dimen/ten_dp"
                 android:layout_marginRight="@dimen/ten_dp"
-                android:layout_marginTop="@dimen/five_dp"
-                android:gravity="center"
-                android:padding="@dimen/ten_dp"
-                android:textSize="@dimen/sixteen_sp" />
-
-            <com.devotted.utils.views.CustomTextView
-                android:id="@+id/txtDescription2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtDescription1"
-                android:layout_marginBottom="@dimen/five_dp"
-                android:layout_marginLeft="@dimen/ten_dp"
-                android:layout_marginRight="@dimen/ten_dp"
-                android:layout_marginTop="@dimen/five_dp"
-                android:gravity="center"
-                android:padding="@dimen/ten_dp"
-                android:textSize="@dimen/sixteen_sp" />
-
-            <com.devotted.utils.views.CustomTextView
-                android:id="@+id/txtDescription3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/txtDescription2"
-                android:layout_marginBottom="@dimen/five_dp"
-                android:layout_marginLeft="@dimen/ten_dp"
-                android:layout_marginRight="@dimen/ten_dp"
-                android:layout_marginTop="@dimen/five_dp"
                 android:gravity="center"
                 android:padding="@dimen/ten_dp"
                 android:textSize="@dimen/sixteen_sp" />

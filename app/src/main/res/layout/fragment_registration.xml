@@ -220,7 +220,7 @@
                             android:drawableEnd="@drawable/ic_manditory"
                             android:drawablePadding="@dimen/seven_dp"
                             android:inputType="phone"
-                            android:maxLength="13"
+                            android:maxLength="10"
                             app:txt_font_type="regular" />
 
                     </android.support.design.widget.TextInputLayout>
@@ -249,8 +249,39 @@
                         <com.devotted.utils.views.CustomEditText
                             android:id="@+id/edtPassword"
                             android:layout_width="match_parent"
-                            android:enabled="false"
                             android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="textPassword"
+                            app:txt_font_type="regular" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fifteen_dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/seven_dp"
+                        app:srcCompat="@drawable/ic_password" />
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/confirm_password"
+                        app:hintTextAppearance="@style/HintText"
+                        app:passwordToggleEnabled="true">
+
+                        <com.devotted.utils.views.CustomEditText
+                            android:id="@+id/edtConfirmPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
                             android:inputType="textPassword"
                             app:txt_font_type="regular" />
 

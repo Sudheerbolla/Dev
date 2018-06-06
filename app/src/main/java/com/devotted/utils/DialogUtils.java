@@ -550,19 +550,19 @@ public class DialogUtils {
                             language = "en";
                             txtLanguageChangeHint.setText("You can change your language choice in Menu/Settings at any time.");
                             txtProceed.setText("Proceed");
-                            txtSelectLanguage.setText("Please Select Language");
+                            txtSelectLanguage.setText("You have selected English");
                             break;
                         case R.id.rbTelugu:
                             language = "tl";
                             txtLanguageChangeHint.setText("మీరు ఎప్పుడైనా మెను / సెట్టింగులలో మీ భాష ఎంపికను మార్చుకోవచ్చు.");
                             txtProceed.setText("ముందుకు");
-                            txtSelectLanguage.setText("దయచేసి భాషను ఎంచుకోండి");
+                            txtSelectLanguage.setText("మీరు తెలుగు ఎంచుకున్నారు");
                             break;
                         case R.id.rbHindi:
                             language = "hi";
                             txtLanguageChangeHint.setText("आप किसी भी समय मेनू / सेटिंग्स में अपनी भाषा पसंद बदल सकते हैं.");
                             txtProceed.setText("बढ़ना");
-                            txtSelectLanguage.setText("कृपया भाषा का चयन करें.");
+                            txtSelectLanguage.setText("आपने हिंदी का चयन किया है.");
                             break;
                         default:
                             language = "en";

@@ -159,10 +159,22 @@
     <string name="hindi">हिंदी</string>
     <string name="monday">सोमवार</string>
     <string name="remove">हटाना</string>
-    <string name="connecting_you_with_your_spiritual_gurus">आपको अपने आध्यात्मिक गुरु से जोड़ना</string>
-    <string name="daily_instant_updates_from_your_spiritual_gurus">अपने आध्यात्मिक गुरुओं से दैनिक तत्काल अपडेट</string>
-    <string name="highly_motivated_content_directly_delivered_to_you">अत्यधिक प्रेरित सामग्री सीधे आपको पहुंचा दी गई है</string>
-    <string name="involve_you_in_the_interesting_discussions">दिलचस्प चर्चाओं में आपको शामिल करें.</string>
+
+    <string name="connecting_you_with_your_spiritual_gurus">आपको अपने आध्यात्मिक गुरु से जोड़ता है</string>
+    <string name="daily_instant_updates_from_your_spiritual_gurus">अपने पसंदीदा गुरुओं से दैनिक तत्काल जानकारी</string>
+    <string name="highly_motivated_content_directly_delivered_to_you">आपको अत्यधिक प्रेरित, प्रेरणादायक जानकारी दिया जयेगा</string>
+    <string name="involve_you_in_the_interesting_discussions">ददिलचस्प विचार-विमर्श में शामिल हों, अपने विचार साझा करें.</string>
+
+    <string name="dev_line1">अपने पसंदीदा मंदिरों और उनकी गतिविधियों के अपडेट सीधे प्राप्त करें</string>
+    <string name="dev_line2">मंदिर समूहों के साथ भगवान के सेवा के लिए स्वयंसेवक</string>
+    <string name="dev_line3">भक्तिपूर्ण चर्चाओं में भाग लें, अपनी राय साझा करें</string>
+    <string name="dev_line4">कुंडली, धर्म और अन्य दिलचस्प विषयों पर दैनिक जानकारी.</string>
+
+    <string name="well_line1">एक पूर्ण दृष्टिकोण के साथ मानसिक और शारीरिक स्वास्थ्य पर अपडेट प्राप्त करें</string>
+    <string name="well_line2">दूसरों के लिए स्वास्थ्य और जीवन में सुधार करने के लिए स्वयंसेवक की सहायता करना</string>
+    <string name="well_line3">स्वास्थ्य संबंधी विषयों पर चर्चा करें, अपनी राय साझा करें</string>
+    <string name="well_line4">अपने स्वास्थ्य को बेहतर रखने के लिए प्राचीन और आधुनिक जानकारी प्राप्त करें.</string>
+
     <string name="home">होम</string>
     <string name="updates">अपडेट</string>
     <string name="menu">मेन्यू</string>
@@ -199,9 +211,28 @@
     <string name="event">घटना</string>
     <string name="you_are">तुम हो</string>
     <string name="temple_member">मंदिर सदस्य</string>
-    <string name="provide_the_update_of_god_temple">भगवान / मंदिर के अद्यतन प्रदान करें</string>
-    <string name="manage_temples_activities_events_online">मंदिर की गतिविधियों, घटनाओं, आदि … ऑनलाइन प्रबंधित करें</string>
-    <string name="help_improving_temple_through_groups_devotees">समूह भक्तों, आदि के माध्यम से मंदिर में सुधार करने में मदद करें …</string>
+
+    <string name="user_type1_line1">मंदिर सेवाएं प्राप्त करें</string>
+    <string name="user_type1_line2">पसंदीदा मंदिर जानकारी प्राप्त करें</string>
+    <string name="user_type1_line3">मंदिर पदों में भाग लें</string>
+    <string name="user_type1_line4">भगवान की सेवा करो</string>
+
+    <string name="user_type2_line1">मंदिर प्रशासन</string>
+    <string name="user_type2_line2">मंदिर अद्यतन प्रदान करें</string>
+    <string name="user_type2_line3">स्वयंसेवी प्रबंधन</string>
+    <string name="user_type2_line4">धार्मिक कार्यक्रमों को व्यवस्थित करें</string>
+
+    <string name="interest_type1_line1">आध्यात्मिक गुरु</string>
+    <string name="interest_type1_line2">पसंदीदा गुरुवो से जानकारी</string>
+    <string name="interest_type1_line3">वुत्थम आध्यात्मिक सामग्री</string>
+    <string name="interest_type1_line4">आध्यात्मिक चर्चा</string>
+
+    <string name="interest_type2_line1">हिंदू मंदिर खोजें</string>
+    <string name="interest_type2_line2">पसंदीदा मंदिरों के जानकारी</string>
+    <string name="interest_type2_line3">स्वयंसेवी सेवा</string>
+    <string name="interest_type2_line4">धार्मिक चर्चाएं</string>
+    <string name="interest_type2_line5">राशिफल, धर्म, आदि</string>
+
     <string name="devotee">भक्त</string>
     <string name="social_share_text">मुझे एक ऐप मिला जो उपयोगी होगा</string>
     <string name="social_share_subject">Share Devotted App</string>
@@ -210,4 +241,14 @@
     <string name="change_password">पासवर्ड बदलें</string>
     <string name="please_restart_the_application_for_the_new_language_to_be_reflected">कृपया प्रतिबिंबित होने वाली नई भाषा के लिए एप्लिकेशन को पुनरारंभ करें</string>
     <string name="restart">पुनः आरंभ करें</string>
+    <string name="old_password">पुराना पासवर्ड</string>
+    <string name="confirm_password">पासवर्ड की पुष्टि कीजिये</string>
+    <string name="new_password">नया पासवर्ड</string>
+    <string name="password_changed_successfully">पासवर्ड सफलतापूर्वक बदला गया</string>
+    <string name="please_enter_your_old_password">कृपया अपना पुराना पासवर्ड दर्ज करें</string>
+    <string name="old_password_is_wrong">पुराना पासवर्ड गलत है</string>
+    <string name="please_enter_new_password">कृपया नया पासवर्ड दर्ज करें</string>
+    <string name="please_enter_confirm_password">पासवर्ड की पुष्टि दर्ज करें</string>
+    <string name="new_password_and_confirm_password_should_match">पासवर्ड और पासवर्ड की पुष्टि करना चाहिए</string>
+    <string name="old_password_and_new_password_cannot_be_same">पुराना पासवर्ड और नया पासवर्ड समान नहीं हो सकता है</string>
 </resources>

@@ -159,10 +159,22 @@
     <string name="hindi">हिंदी</string>
     <string name="monday">సోమవారం</string>
     <string name="remove">తొలగించడానికి</string>
-    <string name="connecting_you_with_your_spiritual_gurus">మీ ఆధ్యాత్మిక గురువులతో మిమ్మల్ని కలుపుతూ</string>
-    <string name="daily_instant_updates_from_your_spiritual_gurus">మీ ఆధ్యాత్మిక గురువుల నుండి రోజువారీ తక్షణ నవీకరణలు</string>
-    <string name="highly_motivated_content_directly_delivered_to_you">మీకు నేరుగా అందించిన అత్యంత ప్రేరేపిత కంటెంట్</string>
-    <string name="involve_you_in_the_interesting_discussions">ఆసక్తికరమైన చర్చల్లో పాల్గొనండి.</string>
+
+    <string name="connecting_you_with_your_spiritual_gurus">మీ ఆధ్యాత్మిక గురువులతో మిమ్మల్ని కలుపుతుంది</string>
+    <string name="daily_instant_updates_from_your_spiritual_gurus">మీ ఇష్టమైన గురువులు నుండి రోజువారీ తక్షణ నవీకరణలు</string>
+    <string name="highly_motivated_content_directly_delivered_to_you">అత్యంత ప్రేరణ, స్పూర్తినిస్తూ ఉండే సమాచారం  మీకు  నేరుగా అందజేయపడుతుంది</string>
+    <string name="involve_you_in_the_interesting_discussions">ఆసక్తికరమైన చర్చలలో పాల్గొనండి, మీ అభిప్రాయాలను పంచుకోండి.</string>
+
+    <string name="dev_line1">మీకు ఇష్టమైన దేవాలయాల, వాటి కార్యక్రమాల నవీకరణలను నేరుగా పొందండి</string>
+    <string name="dev_line2">ఆలయ సమూహాలతో కలిసి దేవుని సేవా కొరకు వాలంటీర్</string>
+    <string name="dev_line3">భక్తి చర్చలలో పాల్గొనండి, మీ అభిప్రాయాలను పంచుకొనడానికి</string>
+    <string name="dev_line4">జాతకం, ధర్మ మరియు ఇతర ఆసక్తికరమైన అంశాల మీద రోజువారీ సమాచారం.</string>
+
+    <string name="well_line1">సంపూర్ణ విధానంతో మానసిక , శారీరక ఆరోగ్యం మీద నవీకరణలను పొందండి</string>
+    <string name="well_line2">ఇతరులకు ఆరోగ్యాన్ని మరియు జీవితాన్ని మెరుగుపర్చడానికి వాలంటీర్ గా సహాయం చేయడానికి</string>
+    <string name="well_line3">ఆరోగ్య సంబంధిత అంశాల గురించి చర్చించండి, మీ అభిప్రాయాలను పంచుకోండి</string>
+    <string name="well_line4">మీ ఆరోగ్యాన్ని ఉత్తమంగా ఉంచడానికి ప్రాచీన , ఆధునిక తాజా సమాచారాన్ని పొందండి.</string>
+
     <string name="home">హోమ్</string>
     <string name="updates">నవీకరణలు</string>
     <string name="menu">మెనూ</string>
@@ -199,9 +211,28 @@
     <string name="event">ఈవెంట్</string>
     <string name="you_are">మీరు</string>
     <string name="temple_member">ఆలయం సభ్యుడు</string>
-    <string name="provide_the_update_of_god_temple">దేవుని / ఆలయం యొక్క నవీకరణను అందించండి</string>
-    <string name="manage_temples_activities_events_online">ఆలయ కార్యకలాపాలు, ఈవెంట్స్, మొదలైనవి నిర్వహించండి … ఆన్లైన్</string>
-    <string name="help_improving_temple_through_groups_devotees">గురువులు భక్తులు, etc ద్వారా ఆలయం అభివృద్ధి సహాయం …</string>
+
+    <string name="user_type1_line1">దేవాలయ సేవలను పొందండి</string>
+    <string name="user_type1_line2">ఇష్టమైన ఆలయ నవీకరణలను పొందండి</string>
+    <string name="user_type1_line3">ఆలయ విషయాల్లో పాల్గొనండి</string>
+    <string name="user_type1_line4">దేవుని సేవలో పాల్గొనండి</string>
+
+    <string name="user_type2_line1">ఆలయ పరిపాలన</string>
+    <string name="user_type2_line2">ఆలయ నవీకరణలను అందించండి</string>
+    <string name="user_type2_line3">స్వత్చంద సేవకుల నిర్వహణ</string>
+    <string name="user_type2_line4">ధార్మిక  కార్యక్రమాలు నిర్వహించండి</string>
+
+    <string name="interest_type1_line1">ఆధ్యాత్మిక గురువులు</string>
+    <string name="interest_type1_line2">ఇష్ట గురువుల నుండి నవీకరణలు</string>
+    <string name="interest_type1_line3">ఉత్తమ ఆధ్యాత్మిక సమాచారం</string>
+    <string name="interest_type1_line4">ఆధ్యాత్మిక చర్చలు</string>
+
+    <string name="interest_type2_line1">హిందూ ఆలయాలను కనుగొనండి</string>
+    <string name="interest_type2_line2">ఇష్టమైన దేవాలయాల నవీకరణలు</string>
+    <string name="interest_type2_line3">స్వత్చంద సేవా</string>
+    <string name="interest_type2_line4">మతపరమైన చర్చలు</string>
+    <string name="interest_type2_line5">రాశిఫలాలు, ధర్మం, ఇత్యాది</string>
+
     <string name="devotee">భక్తుడు</string>
     <string name="social_share_text">నేను ఉపయోగపడే ఒక అనువర్తనాన్ని కనుగొన్నాను</string>
     <string name="social_share_subject">Share Devotted App</string>
@@ -210,4 +241,14 @@
     <string name="change_password">పాస్వర్డ్ మార్చండి</string>
     <string name="please_restart_the_application_for_the_new_language_to_be_reflected">దయచేసి క్రొత్త భాషను ప్రతిబింబించేలా కోసం అనువర్తనాన్ని పునఃప్రారంభించండి</string>
     <string name="restart">పునఃప్రారంభించు</string>
+    <string name="old_password">పాత పాస్వర్డ్</string>
+    <string name="confirm_password">పాస్వర్డ్ని నిర్ధారించండి</string>
+    <string name="new_password">కొత్త పాస్వర్డ్</string>
+    <string name="password_changed_successfully">పాస్వర్డ్ విజయవంతంగా మార్చబడింది</string>
+    <string name="please_enter_your_old_password">దయచేసి మీ పాత పాస్వర్డ్ను నమోదు చేయండి</string>
+    <string name="old_password_is_wrong">పాత పాస్వర్డ్ తప్పు</string>
+    <string name="please_enter_new_password">దయచేసి క్రొత్త పాస్వర్డ్ను నమోదు చేయండి</string>
+    <string name="please_enter_confirm_password">దయచేసి పాస్వర్డ్ని నిర్ధారించండి నమోదు చేయండి</string>
+    <string name="new_password_and_confirm_password_should_match">పాస్ వర్డ్ మరియు పాస్వర్డ్ని ధృవీకరించాలి</string>
+    <string name="old_password_and_new_password_cannot_be_same">పాత పాస్వర్డ్ మరియు కొత్త పాస్వర్డ్ ఒకేలా ఉండకూడదు</string>
 </resources>

@@ -55,7 +55,7 @@ public class SearchActivity extends BaseActivity implements View.OnClickListener
         setReferences();
 
         currentFragment = MapListFragment.class.getSimpleName();
-        changeFragment(new SearchListFragment());
+        replaceFragmentWithOutAnimation(new SearchListFragment(), false, R.id.searchContainer);
     }
 
     private void changeFragment(BaseFragment fragment) {

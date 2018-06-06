@@ -19,19 +19,44 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorPrimaryDark"
-            android:padding="@dimen/four_dp">
+            android:padding="@dimen/ten_dp">
 
             <com.devotted.utils.views.CustomTextView
                 android:id="@+id/txtReset"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/five_dp"
+                android:background="@drawable/white_border_button"
+                android:drawablePadding="@dimen/ten_dp"
+                android:gravity="center"
+                android:paddingBottom="@dimen/six_dp"
+                android:paddingEnd="@dimen/fourteen_dp"
+                android:paddingStart="@dimen/fourteen_dp"
+                android:paddingTop="@dimen/six_dp"
+                android:text="@string/reset"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/sixteen_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/five_dp"
+                android:background="@drawable/white_border_button"
                 android:drawablePadding="@dimen/ten_dp"
                 android:gravity="center"
-                android:padding="@dimen/ten_dp"
-                android:text="@string/reset"
+                android:paddingBottom="@dimen/six_dp"
+                android:paddingEnd="@dimen/fourteen_dp"
+                android:paddingStart="@dimen/fourteen_dp"
+                android:paddingTop="@dimen/six_dp"
+                android:text="@string/search"
                 android:textAllCaps="true"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/sixteen_sp" />
@@ -39,13 +64,13 @@
             <com.devotted.utils.views.CustomTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
                 android:layout_marginStart="@dimen/ten_dp"
+                android:layout_toEndOf="@id/txtReset"
+                android:layout_toStartOf="@id/txtSearch"
                 android:drawablePadding="@dimen/ten_dp"
                 android:gravity="center"
-                android:padding="@dimen/ten_dp"
                 android:text="@string/filter"
                 android:textAllCaps="true"
                 android:textColor="@color/colorWhite"
@@ -304,22 +329,22 @@
 
                 </LinearLayout>
 
-                <com.devotted.utils.views.CustomTextView
-                    android:id="@+id/txtSearch"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="@dimen/fifteen_dp"
-                    android:layout_marginEnd="@dimen/fifteen_dp"
-                    android:layout_marginStart="@dimen/fifteen_dp"
-                    android:layout_marginTop="@dimen/thirty_dp"
-                    android:background="@drawable/gradient_horizontal"
-                    android:drawablePadding="@dimen/ten_dp"
-                    android:gravity="center"
-                    android:padding="@dimen/twelve_dp"
-                    android:text="@string/search"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/sixteen_sp" />
+                <!--<com.devotted.utils.views.CustomTextView-->
+                <!--android:id="@+id/txtSearch"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginBottom="@dimen/fifteen_dp"-->
+                <!--android:layout_marginEnd="@dimen/fifteen_dp"-->
+                <!--android:layout_marginStart="@dimen/fifteen_dp"-->
+                <!--android:layout_marginTop="@dimen/thirty_dp"-->
+                <!--android:background="@drawable/gradient_horizontal"-->
+                <!--android:drawablePadding="@dimen/ten_dp"-->
+                <!--android:gravity="center"-->
+                <!--android:padding="@dimen/twelve_dp"-->
+                <!--android:text="@string/search"-->
+                <!--android:textColor="@color/colorWhite"-->
+                <!--android:textSize="@dimen/sixteen_sp" />-->
 
             </LinearLayout>
 

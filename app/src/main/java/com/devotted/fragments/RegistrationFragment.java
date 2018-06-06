@@ -40,7 +40,7 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
     private View rootView;
     private SplashActivity splashActivity;
     private CustomTextView txtRegister;
-    private CustomEditText edtPassword, edtEmailAddress, edtName, edtMobileNumber;
+    private CustomEditText edtPassword, edtEmailAddress, edtName, edtMobileNumber, edtConfirmPassword;
     private ImageView imgAddProfileIcon;
     private RelativeLayout cardProfile;
     private Uri IMAGE_CAPTURE_URI;
@@ -103,6 +103,7 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
         edtName = rootView.findViewById(R.id.edtName);
         edtMobileNumber = rootView.findViewById(R.id.edtMobileNumber);
         edtPassword = rootView.findViewById(R.id.edtPassword);
+        edtConfirmPassword = rootView.findViewById(R.id.edtConfirmPassword);
         txtRegister = rootView.findViewById(R.id.txtRegister);
         imgAddProfileIcon = rootView.findViewById(R.id.imgAddProfileIcon);
         spinnerCountry = rootView.findViewById(R.id.spinnerCountry);
@@ -123,8 +124,13 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (charSequence.length() > 0) edtPassword.setEnabled(true);
-                else edtPassword.setEnabled(false);
+                if (charSequence.length() > 0) {
+                    edtPassword.setEnabled(true);
+                    edtConfirmPassword.setEnabled(true);
+                } else {
+                    edtPassword.setEnabled(false);
+                    edtConfirmPassword.setEnabled(false);
+                }
             }
 
             @Override
@@ -215,6 +221,21 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
             edtPassword.requestFocus();
             return getString(R.string.please_enter_a_valid_password);
         }
+
+        String confirmPassword = edtPassword.getText().toString().trim();
+        if (TextUtils.isEmpty(confirmPassword)) {
+            edtConfirmPassword.requestFocus();
+            return getString(R.string.please_enter_confirm_password);
+        }
+        if (confirmPassword.length() < 6) {
+            edtConfirmPassword.requestFocus();
+            return getString(R.string.please_enter_a_valid_password);
+        }
+        if (!password.equals(confirmPassword)) {
+            edtConfirmPassword.requestFocus();
+            return getString(R.string.please_enter_a_valid_password);
+        }
+
         return message;
     }
 

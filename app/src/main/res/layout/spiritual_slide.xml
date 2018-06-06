@@ -23,7 +23,7 @@
             android:id="@+id/linHeading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/fourty_dp"
+            android:layout_marginTop="@dimen/fifty_dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:padding="@dimen/five_dp">
@@ -31,6 +31,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:padding="@dimen/five_dp"
                 android:src="@drawable/ic_spirtitual" />
 
             <com.devotted.utils.views.CustomTextView
@@ -39,7 +40,7 @@
                 android:layout_marginLeft="@dimen/fifteen_dp"
                 android:text="@string/spiritual"
                 android:textColor="@color/colorWhite"
-                android:textSize="@dimen/twenty_sp"
+                android:textSize="@dimen/twentytwo_sp"
                 app:txt_font_type="bold" />
 
         </LinearLayout>
@@ -54,7 +55,7 @@
             android:orientation="vertical">
 
             <com.devotted.utils.views.CustomTextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/fifteen_dp"
                 android:drawableLeft="@drawable/ic_hand"
@@ -62,11 +63,11 @@
                 android:gravity="center_vertical"
                 android:text="@string/connecting_you_with_your_spiritual_gurus"
                 android:textColor="@color/colorWhite"
-                android:textSize="@dimen/seventeen_sp"
+                android:textSize="@dimen/sixteen_sp"
                 app:txt_font_type="regular" />
 
             <com.devotted.utils.views.CustomTextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/fifteen_dp"
                 android:drawableLeft="@drawable/ic_instant_update"
@@ -74,11 +75,11 @@
                 android:gravity="center_vertical"
                 android:text="@string/daily_instant_updates_from_your_spiritual_gurus"
                 android:textColor="@color/colorWhite"
-                android:textSize="@dimen/seventeen_sp"
+                android:textSize="@dimen/sixteen_sp"
                 app:txt_font_type="regular" />
 
             <com.devotted.utils.views.CustomTextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/fifteen_dp"
                 android:drawableLeft="@drawable/ic_motivated"
@@ -86,11 +87,11 @@
                 android:gravity="center_vertical"
                 android:text="@string/highly_motivated_content_directly_delivered_to_you"
                 android:textColor="@color/colorWhite"
-                android:textSize="@dimen/seventeen_sp"
+                android:textSize="@dimen/sixteen_sp"
                 app:txt_font_type="regular" />
 
             <com.devotted.utils.views.CustomTextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/fifteen_dp"
                 android:drawableLeft="@drawable/ic_discussion"
@@ -98,7 +99,7 @@
                 android:gravity="center_vertical"
                 android:text="@string/involve_you_in_the_interesting_discussions"
                 android:textColor="@color/colorWhite"
-                android:textSize="@dimen/seventeen_sp"
+                android:textSize="@dimen/sixteen_sp"
                 app:txt_font_type="regular" />
 
         </LinearLayout>

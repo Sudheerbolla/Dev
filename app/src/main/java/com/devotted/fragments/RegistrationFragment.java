@@ -222,7 +222,7 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
             return getString(R.string.please_enter_a_valid_password);
         }
 
-        String confirmPassword = edtPassword.getText().toString().trim();
+        String confirmPassword = edtConfirmPassword.getText().toString().trim();
         if (TextUtils.isEmpty(confirmPassword)) {
             edtConfirmPassword.requestFocus();
             return getString(R.string.please_enter_confirm_password);

@@ -47,14 +47,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtLogo"
         android:layout_marginTop="@dimen/twentyfive_dp"
-        android:gravity="center"
+        android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <com.devotted.utils.views.CustomTextView
             android:id="@+id/img1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/seven_dp"
+            android:layout_margin="@dimen/three_dp"
             android:drawablePadding="@dimen/seven_dp"
             android:drawableTop="@drawable/ic_spirtitual"
             android:gravity="center"
@@ -62,14 +62,14 @@
             android:text="@string/spiritual"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/twenty_sp"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:txt_font_type="regular" />
 
         <com.devotted.utils.views.CustomTextView
             android:id="@+id/img2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/seven_dp"
+            android:layout_margin="@dimen/three_dp"
             android:drawablePadding="@dimen/seven_dp"
             android:drawableTop="@drawable/ic_religious"
             android:gravity="center"
@@ -77,21 +77,20 @@
             android:text="@string/religious"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/twenty_sp"
-            android:visibility="invisible" />
+            android:visibility="visible" />
 
         <com.devotted.utils.views.CustomTextView
             android:id="@+id/img3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/seven_dp"
+            android:layout_margin="@dimen/three_dp"
             android:drawablePadding="@dimen/seven_dp"
             android:drawableTop="@drawable/ic_wellness"
             android:gravity="center"
-            android:padding="@dimen/seven_dp"
             android:text="@string/wellness"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/twenty_sp"
-            android:visibility="invisible" />
+            android:visibility="visible" />
 
     </LinearLayout>
 

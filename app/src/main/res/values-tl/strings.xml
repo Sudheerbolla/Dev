@@ -7,8 +7,8 @@
     <string name="no">కాదు</string>
     <string name="ok">అలాగే</string>
     <string name="spiritual">ఆధ్యాత్మికం</string>
-    <string name="religious">మతం</string>
-    <string name="wellness">వెల్నెస్</string>
+    <string name="religious">ధార్మిక</string>
+    <string name="wellness">ఆరోగ్యం</string>
     <string name="skip">దాటవేయి</string>
     <string name="next">తరువాత</string>
     <string name="start">దొరికింది</string>
@@ -74,7 +74,7 @@
     <string name="sree_venkateshwara_temple">శ్రీ వెంకటేశ్వర ఆలయం</string>
     <string name="temple_is_very_good_and_peaceful_prime_and_decent_location_priest_is_very_well_behaving_and_good_n_n_this_is_having_good_number_of_volunteers_and_devotees_all_are_co_operative_and_friendly_volunteers_are_very_active_and_updating_very_preciously">ఆలయం చాలా మంచిది మరియు ప్రశాంతమైనది. ప్రధాన మరియు మంచి స్థానం. ప్రీస్ట్ బాగా ప్రవర్తించడం మరియు మంచిది. \n\n ఇది చాలామంది స్వచ్ఛంద సేవకులు మరియు భక్తులు. అన్ని సహకార మరియు స్నేహపూర్వక ఉన్నాయి. వాలంటీర్లు చాలా చురుకుగా ఉన్నారు మరియు చాలా విలువైనదిగా నవీకరించబడుతున్నారు.</string>
     <string name="add_photo">ఫోటోను జోడించు</string>
-    <string name="search_temple_posts_events">టెంపుల్, పోస్ట్లు, ఈవెంట్స్</string>
+    <string name="search_temple_posts_events">దేవాలయాలు, వ్యక్తీకరణలు, కార్యక్రమాలు, మొదలైనవి</string>
     <string name="sort">విధమైన</string>
     <string name="filter">వడపోత</string>
     <string name="select_gods">దేవతల ఎంచుకోండి</string>
@@ -230,7 +230,7 @@
     <string name="interest_type2_line1">హిందూ ఆలయాలను కనుగొనండి</string>
     <string name="interest_type2_line2">ఇష్టమైన దేవాలయాల నవీకరణలు</string>
     <string name="interest_type2_line3">స్వత్చంద సేవా</string>
-    <string name="interest_type2_line4">మతపరమైన చర్చలు</string>
+    <string name="interest_type2_line4">ధార్మికపరమైన చర్చలు</string>
     <string name="interest_type2_line5">రాశిఫలాలు, ధర్మం, ఇత్యాది</string>
 
     <string name="devotee">భక్తుడు</string>

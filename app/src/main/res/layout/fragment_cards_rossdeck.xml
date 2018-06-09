@@ -14,6 +14,7 @@
             android:id="@+id/relReload"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
             android:padding="@dimen/three_dp">
 
             <com.devotted.utils.views.CustomTextView

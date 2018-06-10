@@ -37,6 +37,7 @@ public class CardsRossDeckFragment extends BaseFragment implements FlingChiefLis
     private RecyclerView recyclerViewPastUpdates;
     private TemplePostsAdapter templePostsAdapter;
     private ArrayList<TempleModel> templePostsArrayList;
+    private String type;
 
     public CardsRossDeckFragment() {
     }
@@ -56,6 +57,7 @@ public class CardsRossDeckFragment extends BaseFragment implements FlingChiefLis
         dataList = new ArrayList<>();
         originalData = new ArrayList<>();
         templePostsArrayList = new ArrayList<>();
+        type = getArguments().getString("type");
     }
 
     @Override
@@ -65,6 +67,8 @@ public class CardsRossDeckFragment extends BaseFragment implements FlingChiefLis
         return rootView;
     }
 
+    RossDeckView mDeckLayout;
+
     private void initComponents() {
         for (int i = 0; i < 6; i++) {
             dataList.add(newItem(i));
@@ -73,9 +77,10 @@ public class CardsRossDeckFragment extends BaseFragment implements FlingChiefLis
 
         mAdapter = new CardsDeckAdapter(mainActivity, dataList);
 
-        RossDeckView mDeckLayout = rootView.findViewById(R.id.decklayout);
+        mDeckLayout = rootView.findViewById(R.id.decklayout);
         mDeckLayout.setAdapter(mAdapter);
         mDeckLayout.setActionsListener(this);
+//        mDeckLayout.setDirections(new FlingChief.Direction[]{FlingChief.Direction.TOP, FlingChief.Direction.BOTTOM});
 
         recyclerViewPastUpdates = rootView.findViewById(R.id.recyclerViewPastUpdates);
         setDummyData();
@@ -135,7 +140,13 @@ public class CardsRossDeckFragment extends BaseFragment implements FlingChiefLis
 
     @Override
     public boolean onTapped() {
-//        StaticUtils.showToast(mainActivity, "Tapped ");
+        Pair<String, CardDataItem> cardDataItem = dataList.get(0);
+        if (dataList.size() > 1) {
+            dataList.remove(0);
+            cardDataItem.second.isRead = true;
+            dataList.add(dataList.size() - 1, cardDataItem);
+            mAdapter.notifyDataSetChanged();
+        }
         return true;
     }
 
@@ -154,4 +165,5 @@ public class CardsRossDeckFragment extends BaseFragment implements FlingChiefLis
     public void onLongClick(View view, int position) {
 
     }
+
 }

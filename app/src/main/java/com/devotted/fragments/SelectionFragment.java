@@ -100,9 +100,9 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
         } else {
             SelectionModel spiritualModel = new SelectionModel(getString(R.string.spiritual), new String[]{
                     getString(R.string.interest_type1_line1),
-                    getString(R.string.interest_type1_line1),
-                    getString(R.string.interest_type1_line1),
-                    getString(R.string.interest_type1_line1)
+                    getString(R.string.interest_type1_line2),
+                    getString(R.string.interest_type1_line3),
+                    getString(R.string.interest_type1_line4)
             }, R.drawable.ic_spirtitual);
             SelectionModel religiousModel = new SelectionModel(getString(R.string.religious), new String[]{
                     getString(R.string.interest_type2_line1),

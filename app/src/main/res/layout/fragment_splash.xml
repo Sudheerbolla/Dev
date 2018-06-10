@@ -62,7 +62,7 @@
             android:text="@string/spiritual"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/twenty_sp"
-            android:visibility="visible"
+            android:visibility="invisible"
             app:txt_font_type="regular" />
 
         <com.devotted.utils.views.CustomTextView
@@ -77,7 +77,7 @@
             android:text="@string/religious"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/twenty_sp"
-            android:visibility="visible" />
+            android:visibility="invisible" />
 
         <com.devotted.utils.views.CustomTextView
             android:id="@+id/img3"
@@ -90,7 +90,7 @@
             android:text="@string/wellness"
             android:textColor="@color/colorWhite"
             android:textSize="@dimen/twenty_sp"
-            android:visibility="visible" />
+            android:visibility="invisible" />
 
     </LinearLayout>
 

@@ -201,7 +201,6 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
                 edtEmailAddress.requestFocus();
                 return getString(R.string.please_enter_a_valid_email_address);
             }
-            return "";
         }
         String mobileNumber = edtMobileNumber.getText().toString().trim();
         if (TextUtils.isEmpty(mobileNumber)) {
@@ -233,7 +232,7 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
         }
         if (!password.equals(confirmPassword)) {
             edtConfirmPassword.requestFocus();
-            return getString(R.string.please_enter_a_valid_password);
+            return getString(R.string.new_password_and_confirm_password_should_match);
         }
 
         return message;

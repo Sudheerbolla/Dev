@@ -117,6 +117,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="numberPassword"
+                            android:maxLength="4"
                             app:txt_font_type="regular" />
 
                     </android.support.design.widget.TextInputLayout>

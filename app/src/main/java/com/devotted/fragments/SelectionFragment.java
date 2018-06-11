@@ -80,21 +80,21 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
     private void setDummyData() {
         if (isUserType) {
             txtHeading.setText(R.string.you_are);
-            SelectionModel spiritualModel = new SelectionModel(getString(R.string.temple_member),
+            SelectionModel spiritualModel = new SelectionModel(getString(R.string.devotee),
                     new String[]{
                             getString(R.string.user_type1_line1),
                             getString(R.string.user_type1_line2),
                             getString(R.string.user_type1_line3),
                             getString(R.string.user_type1_line4)
                     },
-                    R.drawable.ic_spirtitual);
-            SelectionModel religiousModel = new SelectionModel(getString(R.string.devotee),
+                    R.drawable.ic_group_orange);
+            SelectionModel religiousModel = new SelectionModel(getString(R.string.temple_member),
                     new String[]{
                             getString(R.string.user_type2_line1),
                             getString(R.string.user_type2_line2),
                             getString(R.string.user_type2_line3),
                             getString(R.string.user_type2_line4)
-                    }, R.drawable.ic_religious);
+                    }, R.drawable.ic_temple_icon);
             selectionModelArrayList.add(spiritualModel);
             selectionModelArrayList.add(religiousModel);
         } else {

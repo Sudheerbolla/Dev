@@ -53,35 +53,34 @@
                         android:id="@+id/linTop"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="@dimen/twenty_dp">
+                        android:orientation="vertical">
 
-                        <com.devotted.utils.views.CustomTextView
-                            android:id="@+id/txtHeading"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:ellipsize="marquee"
-                            android:gravity="center|start"
-                            android:marqueeRepeatLimit="marquee_forever"
-                            android:maxLines="2"
-                            android:padding="@dimen/three_dp"
-                            android:text="@string/mantras"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="@dimen/twenty_sp"
-                            card_view:txt_font_type="bold" />
+                        <!--<com.devotted.utils.views.CustomTextView-->
+                        <!--android:id="@+id/txtHeading"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:ellipsize="marquee"-->
+                        <!--android:gravity="center|start"-->
+                        <!--android:marqueeRepeatLimit="marquee_forever"-->
+                        <!--android:maxLines="2"-->
+                        <!--android:padding="@dimen/three_dp"-->
+                        <!--android:text="@string/mantras"-->
+                        <!--android:textColor="@color/colorWhite"-->
+                        <!--android:textSize="@dimen/twenty_sp"-->
+                        <!--card_view:txt_font_type="bold" />-->
 
                         <com.devotted.utils.views.CustomTextView
                             android:id="@+id/txtDescription"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:ellipsize="marquee"
-                            android:gravity="center_vertical"
+                            android:gravity="center"
                             android:marqueeRepeatLimit="marquee_forever"
                             android:maxLines="2"
-                            android:padding="@dimen/three_dp"
+                            android:padding="@dimen/fifteen_dp"
                             android:text="@string/daily_dose_of_updated_mantras"
                             android:textColor="@color/colorWhite"
-                            android:textSize="@dimen/fourteen_sp" />
+                            android:textSize="@dimen/eighteen_sp" />
 
                     </LinearLayout>
 
@@ -93,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:background="@color/colorWhite"
                     android:orientation="vertical"
-                    android:padding="@dimen/fifteen_dp">
+                    android:padding="@dimen/ten_dp">
 
                     <com.devotted.utils.views.CustomTextView
                         android:id="@+id/txtQuote"

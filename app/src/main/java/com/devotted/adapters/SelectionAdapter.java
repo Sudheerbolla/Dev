@@ -53,15 +53,11 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
         }
         String description = "";
         for (int i = 0; i < selectionModel.description.length; i++) {
-            description += "\n\n" + selectionModel.description[i];
+            description += "\n\n -> " + selectionModel.description[i];
         }
         viewHolder.txtDescription.setText(description);
 
-        if (selectionModel.isSelected) {
-            viewHolder.txtSelect.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_tick_mark, 0, 0, 0);
-        } else {
-            viewHolder.txtSelect.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-        }
+        viewHolder.txtSelect.setCompoundDrawablesWithIntrinsicBounds(selectionModel.isSelected ? R.drawable.ic_tick_mark : 0, 0, 0, 0);
         viewHolder.txtSelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

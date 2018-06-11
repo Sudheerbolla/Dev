@@ -27,7 +27,7 @@
                 android:layout_marginBottom="@dimen/five_dp"
                 android:layout_marginLeft="@dimen/ten_dp"
                 android:layout_marginRight="@dimen/ten_dp"
-                android:gravity="center"
+                android:gravity="center_vertical"
                 android:padding="@dimen/ten_dp"
                 android:textSize="@dimen/sixteen_sp" />
 
@@ -58,7 +58,7 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/orange_circle"
         android:scaleType="center"
-        android:src="@drawable/ic_spirtitual" />
+        android:src="@drawable/ic_group" />
 
 </RelativeLayout>
 

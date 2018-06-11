@@ -532,7 +532,7 @@ public class DialogUtils {
         language = "en";
         try {
             final CustomTextView txtLanguageChangeHint, txtProceed, txtSelectLanguage;
-            RadioGroup rgLanguages;
+            final RadioGroup rgLanguages;
             final Dialog alertDialog = new Dialog(mContext, R.style.AlertDialogCustom);
             alertDialog.setCancelable(false);
             alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -585,10 +585,14 @@ public class DialogUtils {
             txtProceed.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    LocalStorage.getInstance(mContext).putString(LocalStorage.PREF_LANGUAGE, language);
-                    alertDialog.dismiss();
-                    if (cameraClick != null) {
-                        cameraClick.onClick(v);
+                    if (rgLanguages.getCheckedRadioButtonId() == -1) {
+                        showSimpleDialog(mContext, "Please select language to continue", null, null, true);
+                    } else {
+                        LocalStorage.getInstance(mContext).putString(LocalStorage.PREF_LANGUAGE, language);
+                        alertDialog.dismiss();
+                        if (cameraClick != null) {
+                            cameraClick.onClick(v);
+                        }
                     }
                 }
             });

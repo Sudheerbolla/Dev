@@ -20,6 +20,7 @@
         android:layout_height="@dimen/one_twenty_dp" />
 
     <include
+        android:id="@+id/logo"
         layout="@layout/layout_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +31,7 @@
         android:id="@+id/linInnerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txtLogo"
+        android:layout_below="@+id/logo"
         android:layout_marginTop="@dimen/twentyfive_dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal">

@@ -13,7 +13,7 @@ import android.widget.RelativeLayout;
 
 import com.devotted.R;
 import com.devotted.activities.TempleDetailsActivity;
-import com.devotted.adapters.CustomPagerAdapter;
+import com.devotted.adapters.CustomImagesPagerAdapter;
 import com.devotted.utils.DialogUtils;
 
 import java.util.ArrayList;
@@ -25,7 +25,7 @@ public class TempleDetailsFragment extends BaseFragment implements View.OnClickL
 
     private ImageView imgPrevious, imgNext;
     private ViewPager viewPagerImages;
-    private CustomPagerAdapter customPagerAdapter;
+    private CustomImagesPagerAdapter customImagesPagerAdapter;
     private ArrayList<Integer> imagesArrayList;
     private RelativeLayout relInviteVolunteer;
     private LinearLayout linReviews;
@@ -72,8 +72,8 @@ public class TempleDetailsFragment extends BaseFragment implements View.OnClickL
         viewPagerImages = rootView.findViewById(R.id.viewPagerImages);
         linReviews = rootView.findViewById(R.id.linReviews);
 
-        customPagerAdapter = new CustomPagerAdapter(templeDetailsActivity, imagesArrayList);
-        viewPagerImages.setAdapter(customPagerAdapter);
+        customImagesPagerAdapter = new CustomImagesPagerAdapter(templeDetailsActivity, imagesArrayList);
+        viewPagerImages.setAdapter(customImagesPagerAdapter);
 
         imgNext.setVisibility(View.VISIBLE);
         imgPrevious.setVisibility(View.GONE);

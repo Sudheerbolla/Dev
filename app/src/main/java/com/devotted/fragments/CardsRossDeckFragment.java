@@ -3,41 +3,39 @@ package com.devotted.fragments;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.view.ViewCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
-import com.db.rossdeckview.FlingChief;
-import com.db.rossdeckview.FlingChiefListener;
-import com.db.rossdeckview.RossDeckView;
 import com.devotted.R;
 import com.devotted.activities.MainActivity;
-import com.devotted.adapters.CardsDeckAdapter;
-import com.devotted.adapters.TemplePostsAdapter;
+import com.devotted.adapters.CardsPagerAdapter;
+import com.devotted.adapters.CardsRecyclerViewAdapter;
 import com.devotted.listeners.IClickListener;
 import com.devotted.models.CardDataItem;
-import com.devotted.models.TempleModel;
+import com.devotted.utils.views.CustomViewPager;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
-public class CardsRossDeckFragment extends BaseFragment implements FlingChiefListener.Actions, IClickListener {
+public class CardsRossDeckFragment extends BaseFragment implements IClickListener, View.OnClickListener {
 
     private View rootView;
     private MainActivity mainActivity;
 
-    private final static int DELAY = 1000;
-    private CardsDeckAdapter mAdapter;
-    private List<Pair<String, CardDataItem>> dataList, originalData;
+    private CardsPagerAdapter cardsPagerAdapter;
+    private ArrayList<CardDataItem> dataList;
 
     private RecyclerView recyclerViewPastUpdates;
-    private TemplePostsAdapter templePostsAdapter;
-    private ArrayList<TempleModel> templePostsArrayList;
+    private CardsRecyclerViewAdapter cardsRecyclerViewAdapter;
+    private ArrayList<CardDataItem> cardDataItemArrayList;
     private String type;
+    private CustomViewPager cardsViewPager;
+    private ImageView imgNext, imgPrevious;
 
     public CardsRossDeckFragment() {
     }
@@ -55,9 +53,8 @@ public class CardsRossDeckFragment extends BaseFragment implements FlingChiefLis
         super.onCreate(savedInstanceState);
         mainActivity = (MainActivity) getActivity();
         dataList = new ArrayList<>();
-        originalData = new ArrayList<>();
-        templePostsArrayList = new ArrayList<>();
-        type = getArguments().getString("type");
+        cardDataItemArrayList = new ArrayList<>();
+        type = getArguments().getString("text");
     }
 
     @Override
@@ -67,103 +64,105 @@ public class CardsRossDeckFragment extends BaseFragment implements FlingChiefLis
         return rootView;
     }
 
-    RossDeckView mDeckLayout;
-
     private void initComponents() {
         for (int i = 0; i < 6; i++) {
-            dataList.add(newItem(i));
+            dataList.add(new CardDataItem());
         }
-        originalData.addAll(dataList);
+        cardsPagerAdapter = new CardsPagerAdapter(mainActivity, dataList, this);
 
-        mAdapter = new CardsDeckAdapter(mainActivity, dataList);
+        cardsViewPager = rootView.findViewById(R.id.cardsViewPager);
+        imgPrevious = rootView.findViewById(R.id.imgPrevious);
+        imgNext = rootView.findViewById(R.id.imgNext);
 
-        mDeckLayout = rootView.findViewById(R.id.decklayout);
-        mDeckLayout.setAdapter(mAdapter);
-        mDeckLayout.setActionsListener(this);
-//        mDeckLayout.setDirections(new FlingChief.Direction[]{FlingChief.Direction.TOP, FlingChief.Direction.BOTTOM});
+        cardsViewPager.setPagingEnabled(false);
 
+        cardsViewPager.setAdapter(cardsPagerAdapter);
         recyclerViewPastUpdates = rootView.findViewById(R.id.recyclerViewPastUpdates);
         setDummyData();
         setTemplePostsAdapter();
 
         ViewCompat.setNestedScrollingEnabled(recyclerViewPastUpdates, false);
+        imgNext.setOnClickListener(this);
+        imgPrevious.setOnClickListener(this);
+        cardsViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+//                if (position == dataList.size() - 1) {
+//                    cardsViewPager.setCurrentItem();
+//                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     private void setDummyData() {
-        for (int i = 0; i < 10; i++) {
-            templePostsArrayList.add(new TempleModel(1));
+        for (int i = 0; i < 12; i++) {
+            CardDataItem cardDataItem = new CardDataItem();
+            cardDataItem.isRead = true;
+            cardDataItemArrayList.add(cardDataItem);
         }
     }
 
     private void setTemplePostsAdapter() {
         recyclerViewPastUpdates.setLayoutManager(new LinearLayoutManager(mainActivity));
-        templePostsAdapter = new TemplePostsAdapter(mainActivity, templePostsArrayList, this);
-        recyclerViewPastUpdates.setAdapter(templePostsAdapter);
-    }
-
-    private Pair<String, CardDataItem> newItem(int position) {
-        return new Pair<>("Card At " + position, new CardDataItem());
-    }
-
-    @Override
-    public boolean onDismiss(@NonNull FlingChief.Direction direction, @NonNull View view) {
-        return true;
-    }
-
-    @Override
-    public boolean onDismissed(@NonNull View view) {
-        Pair<String, CardDataItem> cardDataItem = dataList.get(0);
-
-        if (dataList.size() > 1) {
-            dataList.remove(0);
-            cardDataItem.second.isRead = true;
-            dataList.add(dataList.size() - 1, cardDataItem);
-            //            mItems.get(0)
-            mAdapter.notifyDataSetChanged();
-//        } else {
-//            navigate to next tab
-//            StaticUtils.showToast(mainActivity, "reached last and will move to next tab");
-        }
-        return true;
-    }
-
-    @Override
-    public boolean onReturn(@NonNull View view) {
-        return true;
-    }
-
-    @Override
-    public boolean onReturned(@NonNull View view) {
-        return true;
-    }
-
-    @Override
-    public boolean onTapped() {
-        Pair<String, CardDataItem> cardDataItem = dataList.get(0);
-        if (dataList.size() > 1) {
-            dataList.remove(0);
-            cardDataItem.second.isRead = true;
-            dataList.add(dataList.size() - 1, cardDataItem);
-            mAdapter.notifyDataSetChanged();
-        }
-        return true;
-    }
-
-    @Override
-    public boolean onDoubleTapped() {
-//        StaticUtils.showToast(mainActivity, "Tapped ");
-        return true;
+        cardsRecyclerViewAdapter = new CardsRecyclerViewAdapter(mainActivity, cardDataItemArrayList, this);
+        recyclerViewPastUpdates.setAdapter(cardsRecyclerViewAdapter);
     }
 
     @Override
     public void onClick(View view, int position) {
+        switch (view.getId()) {
+            case R.id.scrollView:
+                imgNext.callOnClick();
+                break;
+        }
 
     }
 
     @Override
     public void onLongClick(View view, int position) {
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.imgNext:
+                if (dataList.size() > 0) {
+                    updateData();
+                    if (cardsViewPager.getCurrentItem() != dataList.size() - 1) {
+                        cardsViewPager.setCurrentItem(cardsViewPager.getCurrentItem() + 1, true);
+                    }
+                    else cardsViewPager.setCurrentItem(0, true);
+                }
+                break;
+            case R.id.imgPrevious:
+                if (dataList.size() > 0) {
+                    if (cardsViewPager.getCurrentItem() != 0)
+                        cardsViewPager.setCurrentItem(cardsViewPager.getCurrentItem() - 1, true);
+                    updateData();
+                }
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void updateData() {
+        if (dataList.size() > 1) {
+            CardDataItem cardDataItem = dataList.get(cardsViewPager.getCurrentItem());
+            cardDataItem.isRead = true;
+            cardsPagerAdapter.notifyDataSetChanged();
+        }
     }
 
 }

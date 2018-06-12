@@ -11,7 +11,7 @@ import android.widget.ImageView;
 
 import com.devotted.R;
 import com.devotted.activities.TempleGroupsActivity;
-import com.devotted.adapters.CustomPagerAdapter;
+import com.devotted.adapters.CustomImagesPagerAdapter;
 import com.devotted.utils.views.CustomTextView;
 
 import java.util.ArrayList;
@@ -23,7 +23,7 @@ public class GroupDetailsFragment extends BaseFragment implements View.OnClickLi
 
     private ImageView imgPrevious, imgNext;
     private ViewPager viewPagerImages;
-    private CustomPagerAdapter customPagerAdapter;
+    private CustomImagesPagerAdapter customImagesPagerAdapter;
     private ArrayList<Integer> imagesArrayList;
     private CustomTextView txtViewDiscussion;
 
@@ -75,8 +75,8 @@ public class GroupDetailsFragment extends BaseFragment implements View.OnClickLi
         txtViewDiscussion = rootView.findViewById(R.id.txtViewDiscussion);
         viewPagerImages = rootView.findViewById(R.id.viewPagerImages);
 
-        customPagerAdapter = new CustomPagerAdapter(templeGroupsActivity, imagesArrayList);
-        viewPagerImages.setAdapter(customPagerAdapter);
+        customImagesPagerAdapter = new CustomImagesPagerAdapter(templeGroupsActivity, imagesArrayList);
+        viewPagerImages.setAdapter(customImagesPagerAdapter);
 
         imgNext.setVisibility(View.VISIBLE);
         imgPrevious.setVisibility(View.GONE);

@@ -1,5 +1,5 @@
 <com.devotted.utils.views.StickyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:derdidaz="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
@@ -37,43 +37,21 @@
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/relCards"
+        <com.db.rossdeckview.RossDeckView
+            android:id="@+id/decklayout"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/twohundred_fifty_dp"
-            android:layout_below="@id/relReload">
-
-            <com.devotted.utils.views.CustomViewPager
-                android:id="@+id/cardsViewPager"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_centerInParent="true"
-                android:layout_toEndOf="@+id/imgPrevious"
-                android:layout_toStartOf="@+id/imgNext" />
-
-            <ImageView
-                android:id="@+id/imgNext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerInParent="true"
-                app:srcCompat="@drawable/ic_right" />
-
-            <ImageView
-                android:id="@+id/imgPrevious"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_centerInParent="true"
-                app:srcCompat="@drawable/ic_left" />
-
-        </RelativeLayout>
+            android:layout_height="@dimen/threehundred_dp"
+            android:layout_below="@id/relReload"
+            android:paddingEnd="@dimen/twentytwo_dp"
+            android:paddingStart="@dimen/twentytwo_dp"
+            derdidaz:stack_padding="@dimen/seven_dp"
+            derdidaz:stack_scale=".1" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerViewPastUpdates"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/relCards"
+            android:layout_below="@id/decklayout"
             android:overScrollMode="never"
             android:scrollbars="none" />
 

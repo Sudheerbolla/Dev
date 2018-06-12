@@ -12,12 +12,12 @@ import com.devotted.R;
 
 import java.util.ArrayList;
 
-public class CustomPagerAdapter extends PagerAdapter {
+public class CustomImagesPagerAdapter extends PagerAdapter {
 
     private Context mContext;
     private ArrayList<Integer> resArrayList;
 
-    public CustomPagerAdapter(Context context, ArrayList<Integer> resArrayList) {
+    public CustomImagesPagerAdapter(Context context, ArrayList<Integer> resArrayList) {
         mContext = context;
         this.resArrayList = resArrayList;
     }

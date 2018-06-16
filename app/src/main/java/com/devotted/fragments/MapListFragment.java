@@ -32,11 +32,10 @@ import java.util.Map;
 
 public class MapListFragment extends BaseFragment implements GoogleMap.OnMarkerClickListener, GoogleMap.OnInfoWindowClickListener, GoogleMap.OnMarkerDragListener, OnMapReadyCallback, GoogleMap.OnMapClickListener {
 
-
     private static boolean flag = true;
     public ArrayList<Marker> mMarkerList;
-    Marker prevMarker;
-    String prevVendorName;
+    private Marker prevMarker;
+    private String prevVendorName;
     private Map<String, TempleModel> mDealMap = new HashMap<>();
     private List<TempleModel> myDealsList = new ArrayList<>();
     private GoogleMap mMap;

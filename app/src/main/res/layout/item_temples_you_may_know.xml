@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/relBody"
     android:layout_width="@dimen/one_forty_dp"
     android:layout_height="@dimen/onehundred_seventy_dp"
@@ -13,8 +14,11 @@
         android:id="@+id/imageViewTemple"
         android:layout_width="@dimen/seventy_five_dp"
         android:layout_height="@dimen/seventy_five_dp"
+        android:padding="@dimen/two_dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/temple1" />
+        android:src="@drawable/temple1"
+        app:civ_border_color="@color/colorPrimaryDark"
+        app:civ_border_width="@dimen/one_dp" />
 
     <com.devotted.utils.views.CustomTextView
         android:id="@+id/txtUpdates"

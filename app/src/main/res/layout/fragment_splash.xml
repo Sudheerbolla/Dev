@@ -36,47 +36,87 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal">
 
-        <com.devotted.utils.views.CustomTextView
+        <LinearLayout
             android:id="@+id/img1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/three_dp"
-            android:drawablePadding="@dimen/seven_dp"
-            android:drawableTop="@drawable/ic_spirtitual"
             android:gravity="center"
-            android:padding="@dimen/seven_dp"
-            android:text="@string/spiritual"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/twenty_sp"
-            android:visibility="invisible"
-            app:txt_font_type="regular" />
+            android:orientation="vertical"
+            android:padding="@dimen/ten_dp"
+            android:visibility="invisible">
 
-        <com.devotted.utils.views.CustomTextView
+            <ImageView
+                android:layout_width="@dimen/sixty_dp"
+                android:layout_height="@dimen/sixty_dp"
+                android:src="@drawable/ic_spirtitual" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five_dp"
+                android:gravity="center"
+                android:text="@string/spiritual"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twenty_sp"
+                android:visibility="visible"
+                app:txt_font_type="regular" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/img2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/three_dp"
-            android:drawablePadding="@dimen/seven_dp"
-            android:drawableTop="@drawable/ic_religious"
             android:gravity="center"
-            android:padding="@dimen/seven_dp"
-            android:text="@string/religious"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/twenty_sp"
-            android:visibility="invisible" />
+            android:orientation="vertical"
+            android:padding="@dimen/ten_dp"
+            android:visibility="invisible">
 
-        <com.devotted.utils.views.CustomTextView
+            <ImageView
+                android:layout_width="@dimen/sixty_dp"
+                android:layout_height="@dimen/sixty_dp"
+                android:src="@drawable/ic_religious" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five_dp"
+                android:gravity="center"
+                android:text="@string/religious"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twenty_sp"
+                android:visibility="visible"
+                app:txt_font_type="regular" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/img3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/three_dp"
-            android:drawablePadding="@dimen/seven_dp"
-            android:drawableTop="@drawable/ic_wellness"
             android:gravity="center"
-            android:text="@string/wellness"
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/twenty_sp"
-            android:visibility="invisible" />
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/ten_dp"
+            android:paddingStart="@dimen/five_dp"
+            android:paddingTop="@dimen/ten_dp"
+            android:visibility="invisible">
+
+            <ImageView
+                android:layout_width="@dimen/sixty_dp"
+                android:layout_height="@dimen/sixty_dp"
+                android:src="@drawable/ic_wellness" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/five_dp"
+                android:gravity="center"
+                android:text="@string/wellness"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/twenty_sp"
+                app:txt_font_type="regular" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

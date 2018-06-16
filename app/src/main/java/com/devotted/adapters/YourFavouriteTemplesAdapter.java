@@ -3,13 +3,13 @@ package com.devotted.adapters;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
@@ -17,6 +17,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.devotted.R;
 import com.devotted.listeners.IClickListener;
 import com.devotted.models.TempleModel;
+import com.devotted.utils.views.CircleImageView;
 import com.devotted.utils.views.CustomTextView;
 
 import java.util.ArrayList;
@@ -68,10 +69,12 @@ public class YourFavouriteTemplesAdapter extends RecyclerView.Adapter<YourFavour
             Animation anim = AnimationUtils.loadAnimation(context, R.anim.scale_in_tv);
             viewHolder.relBody.startAnimation(anim);
             anim.setFillAfter(true);
+            viewHolder.imageViewTemple.setBorderColor(ContextCompat.getColor(context, R.color.colorPrimaryDark));
         } else {
             Animation anim = AnimationUtils.loadAnimation(context, R.anim.scale_out_tv);
             viewHolder.relBody.startAnimation(anim);
             anim.setFillAfter(true);
+            viewHolder.imageViewTemple.setBorderColor(ContextCompat.getColor(context, R.color.colorWhite));
         }
 
         RequestOptions options = new RequestOptions()
@@ -93,7 +96,7 @@ public class YourFavouriteTemplesAdapter extends RecyclerView.Adapter<YourFavour
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public CustomTextView txtUpdates, txtTempleName;
-        public ImageView imageViewTemple;
+        public CircleImageView imageViewTemple;
         private LinearLayout relBody;
 
         ViewHolder(View itemLayoutView) {

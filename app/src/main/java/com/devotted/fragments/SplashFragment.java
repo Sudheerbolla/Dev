@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.devotted.R;
 import com.devotted.activities.MainActivity;
@@ -23,7 +24,8 @@ public class SplashFragment extends BaseFragment {
     private View rootView;
     private SplashActivity splashActivity;
     private ImageView imgLogo;
-    private CustomTextView img1, img2, img3, txtLogo;
+    private LinearLayout img1, img2, img3;
+    private CustomTextView txtLogo;
 
     public SplashFragment() {
     }

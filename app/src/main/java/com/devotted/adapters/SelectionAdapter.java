@@ -53,7 +53,7 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
         }
         String description = "";
         for (int i = 0; i < selectionModel.description.length; i++) {
-            description += "\n\n -> " + selectionModel.description[i];
+            description += "\n\n * " + selectionModel.description[i];
         }
         viewHolder.txtDescription.setText(description);
 

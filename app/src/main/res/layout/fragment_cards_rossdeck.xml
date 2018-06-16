@@ -40,7 +40,7 @@
         <RelativeLayout
             android:id="@+id/relCards"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/twohundred_fifty_dp"
+            android:layout_height="@dimen/twohundred_dp"
             android:layout_below="@id/relReload">
 
             <com.devotted.utils.views.CustomViewPager

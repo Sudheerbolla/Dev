@@ -163,6 +163,7 @@ public class VerificationCodeFragment extends BaseFragment implements View.OnCli
 
     private void navigateToHomeScreen() {
         StaticUtils.showToast(splashActivity, getString(R.string.otp_verification_successfull));
+        splashActivity.clearBackStackCompletely();
         splashActivity.replaceFragment(SelectionFragment.newInstance(false));
     }
 

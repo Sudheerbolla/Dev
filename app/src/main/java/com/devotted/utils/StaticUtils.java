@@ -35,8 +35,10 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.regex.Matcher;
@@ -56,6 +58,17 @@ public class StaticUtils {
 
     public static void showToast(Context context, String message) {
         Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+    }
+
+    private static Date previousDates(int days) {
+        final Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, days);
+        return cal.getTime();
+    }
+
+    public static String getpreviousDatesString(int days) {
+        DateFormat dateFormat = new SimpleDateFormat("EEEE, MMMM d");
+        return dateFormat.format(previousDates(days));
     }
 
     public static void getHeightAndWidth(Context context) {

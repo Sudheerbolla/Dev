@@ -30,6 +30,7 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
     private SelectionAdapter selectionAdapter;
     private ArrayList<SelectionModel> selectionModelArrayList;
     private boolean isUserType;
+    private int selectedPosition = 0;
 
     public SelectionFragment() {
     }
@@ -78,6 +79,7 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
     }
 
     private void setDummyData() {
+        selectionModelArrayList.clear();
         if (isUserType) {
             txtHeading.setText(R.string.you_are);
             SelectionModel spiritualModel = new SelectionModel(getString(R.string.devotee),
@@ -140,12 +142,25 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
 
     private void navigateToHomeScreen() {
         if (isUserType) {
-//            StaticUtils.showToast(splashActivity, "Success");
             LocalStorage.getInstance(splashActivity).putBoolean(LocalStorage.IS_LOGGED_IN_ALREADY, true);
             startActivity(new Intent(splashActivity, MainActivity.class));
             splashActivity.finishAffinity();
         } else {
-            splashActivity.replaceFragment(SelectionFragment.newInstance(true));
+            boolean isOnlySpiritual = true;
+            for (int i = 0; i < selectionModelArrayList.size(); i++) {
+                if (selectionModelArrayList.get(i).isSelected) {
+                    if (selectionModelArrayList.get(i).type.equalsIgnoreCase(getString(R.string.religious))) {
+                        isOnlySpiritual = false;
+                    }
+                }
+            }
+            if (isOnlySpiritual) {
+                LocalStorage.getInstance(splashActivity).putBoolean(LocalStorage.IS_LOGGED_IN_ALREADY, true);
+                startActivity(new Intent(splashActivity, MainActivity.class));
+                splashActivity.finishAffinity();
+            } else {
+                splashActivity.replaceFragment(SelectionFragment.newInstance(true));
+            }
         }
     }
 
@@ -153,6 +168,7 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
     public void onClick(View view, int position) {
         switch (view.getId()) {
             case R.id.txtSelect:
+                selectedPosition = position;
                 if (isUserType) {
                     for (int i = 0; i < selectionModelArrayList.size(); i++) {
                         if (i != position) {

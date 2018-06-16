@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import com.devotted.R;
 import com.devotted.listeners.IClickListener;
 import com.devotted.models.CardDataItem;
+import com.devotted.utils.StaticUtils;
 import com.devotted.utils.views.CustomTextView;
 
 import java.util.ArrayList;
@@ -40,10 +41,10 @@ public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecycler
         CardDataItem cardDataItem = itemsData.get(position);
         if (position == 0) {
             holder.txtDate.setVisibility(View.VISIBLE);
-            holder.txtDate.setText("Yesterday");
+            holder.txtDate.setText("Yesterday - " + StaticUtils.getpreviousDatesString(-1));
         } else if (position == 3) {
             holder.txtDate.setVisibility(View.VISIBLE);
-            holder.txtDate.setText("Day before yesterday");
+            holder.txtDate.setText("" + StaticUtils.getpreviousDatesString(-2));
         } else if (position == 7) {
             holder.txtDate.setVisibility(View.VISIBLE);
             holder.txtDate.setText("Older");

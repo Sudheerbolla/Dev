@@ -113,11 +113,13 @@ public class BaseActivity extends AppCompatActivity {
     public void replaceFragmentWithOutAnimation(Fragment fragment, boolean needToAddToBackStack, int containerId) {
         StaticUtils.hideSoftKeyboard(this);
         String tag = fragment.getClass().getSimpleName();
+        FragmentUtils.sDisableFragmentAnimations = true;
         final FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         if (needToAddToBackStack)
             fragmentTransaction.replace(containerId, fragment, tag).addToBackStack(tag).commitAllowingStateLoss();
         else
             fragmentTransaction.replace(containerId, fragment, tag).commitAllowingStateLoss();
+        FragmentUtils.sDisableFragmentAnimations = false;
     }
 
     public void replaceFragment(Fragment fragment, int containerId) {

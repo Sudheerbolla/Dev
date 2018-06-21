@@ -46,11 +46,7 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, @SuppressLint("RecyclerView") final int position) {
         SelectionModel selectionModel = itemsData.get(position);
         viewHolder.imgType.setImageResource(selectionModel.icon);
-        if (isUserType) {
-            viewHolder.txtSelect.setText(context.getString(R.string.i_am_a) + " " + selectionModel.type);
-        } else {
-            viewHolder.txtSelect.setText(context.getString(R.string.i_choose) + " " + selectionModel.type);
-        }
+        viewHolder.txtSelect.setText((isUserType ? context.getString(R.string.i_am_a) : context.getString(R.string.i_choose)) + " " + selectionModel.type);
         String description = "";
         for (int i = 0; i < selectionModel.description.length; i++) {
             description += "\n\n * " + selectionModel.description[i];

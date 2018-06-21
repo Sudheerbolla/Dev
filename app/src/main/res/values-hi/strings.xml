@@ -131,7 +131,7 @@
     <string name="it_is_better_to_live_your_own">अपने आप को जीना बेहतर है.</string>
     <string name="meaning_imitation_of_somebody_else_s_life_with_perfection">अर्थ: पूर्णता के साथ किसी और के जीवन की नकल</string>
     <string name="user_name">उपयोगकर्ता नाम</string>
-    <string name="lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh">Lorem ipusum vyudb bhsd vyfgbhcdsj uvgwfg gywh Lorem ipusum vyudb bhsd vyfgbhcdsj uvgwfg gywh Lorem ipusum vyudb bhsd vyfgbhcdsj uvgwfg gywh Lorem ipusum vyudb bhsd vyfgbhcdsj uvgwfg gywh Lorem ipusum vyudb bhsd vyfgbhcdsj uvgwfg gywh</string>
+    <string name="temple_dummy_text">मोनाबाद मंडल में चिलकुर में स्थित है। मेहदीपत्तनम से लगभग 23 किमी दूर।\n\n भगवान श्री वेंकटेश्वर का मंदिर भी लोकप्रिय रूप से "वीजा बालाजी" कहलाता है … !! यह नाम विदेशों में जाने की इच्छा रखने वाले बहुत से भक्तों के कारण है, उनकी इच्छा पूरी हो गई है। मंदिर (जिसे पदकशिना के नाम से जाना जाता है) को ग्यारह बार घेरना और एक विशिष्ट इच्छा के लिए भगवान से प्रार्थना करना प्रथागत है। एक बार यह इच्छा सच हो जाने के बाद, भक्त को फिर से यात्रा करना और 108 पदकनाएं करना पड़ता है। यह भारत के बहुत कम मंदिरों में से एक है जो हुंडी में मौद्रिक दान स्वीकार नहीं करता है और इसलिए हमारी सरकार के एंडॉमेंट विभाग के अधिकार के तहत नहीं आता है। मंदिर मासिक पत्रिका "वाक" फैलाता है जिसका अर्थ है भाषण (भगवान का) नाममात्र कीमत केवल 5.00 रुपये है। यह पत्रिका मंदिर-आय का एकमात्र स्रोत है।</string>
     <string name="_29_may_2018">29 मई, 2018</string>
     <string name="lord_krishna">भगवान कृष्ण</string>
     <string name="remove_review">समीक्षा हटाएं</string>
@@ -204,6 +204,8 @@
     <string name="sent_comment_successfully">सफलतापूर्वक टिप्पणी भेजा</string>
     <string name="group_details">समूह विवरण</string>
     <string name="dharma">धर्म</string>
+    <string name="health">स्वास्थ्य</string>
+    <string name="prayer">दुआ</string>
     <string name="questions">प्रशन</string>
     <string name="permission_is_mandatory">अनुमति अनिवार्य है</string>
     <string name="please_enter_otp_manually_since_you_have_denied_permission_for_reading_sms">कृपया ओटीपी मैन्युअल रूप से दर्ज करें, क्योंकि आपने एसएमएस पढ़ने के लिए अनुमति अस्वीकार कर दी है</string>
@@ -251,4 +253,41 @@
     <string name="please_enter_confirm_password">पासवर्ड की पुष्टि दर्ज करें</string>
     <string name="new_password_and_confirm_password_should_match">पासवर्ड और पासवर्ड की पुष्टि करना चाहिए</string>
     <string name="old_password_and_new_password_cannot_be_same">पुराना पासवर्ड और नया पासवर्ड समान नहीं हो सकता है</string>
+
+    <!--Spiritual content-->
+
+    <string name="spiritual_monday_mantra">खुशी, स्वामित्व, अर्जित, पहना या खपत नहीं किया जा सकता है। खुशी प्यार, कृपा और कृतज्ञता के साथ हर मिनट रहने का आध्यात्मिक अनुभव है</string>
+    <string name="spiritual_tuesday_mantra">जैसे ही एक मोमबत्ती आग के बिना जला नहीं सकती है, पुरुष आध्यात्मिक जीवन के बिना नहीं जी सकते हैं।</string>
+    <string name="spiritual_wednesday_mantra">अपने पैरों को जमीन पर रखें, लेकिन अपने दिल को जितना ऊंचा हो उतना ऊंचा कर दें। औसत होने या अपने आध्यात्मिक माहौल के ठंड को आत्मसमर्पण करने से इंकार कर दें।</string>
+    <string name="spiritual_thursday_mantra">संगीत आध्यात्मिक और कामुक जीवन के बीच मध्यस्थ है।</string>
+    <string name="spiritual_friday_mantra">आप अच्छे व्यवहार के साथ एक अच्छा दिन नहीं कर सकते, और अच्छे व्यवहार के साथ बुरे दिन नहीं कर सकते।</string>
+    <string name="spiritual_saturday_mantra">एक बुरा दिन का मतलब यह नहीं है कि आपके पास बुरा जीवन है। अपने आशीर्वादों की गणना करें, न कि आपके शाप।</string>
+    <string name="spiritual_sunday_mantra">आपने पीछे की किताब नहीं पढ़ी है, तो अपने जीवन को इस तरह क्यों जीते हैं?</string>
+
+    <!--Religious content-->
+
+    <string name="religious_monday_prayer"><b>OM NAMAH SHIVAAY</b>\nNagendra Haaraaya Trilochanaaya\nBhasmanga Raagaya Maheshwaraya\nNithyaaya Suddhaaya Dhigambaraaya\nThasmai Na Kaaraaya Namashivaya Nama Shivaaya \n\n I offer my humble salutations to Lord Mahesvara who has a garland of serpants around the neck, who has three eyes, whose body is covered with ash, who is eternal who is pure who has the entire sky as his dress and who is embodies as the first letter Na.</string>
+    <string name="religious_tuesday_prayer"><b>OM SRI HANUMATE NAMAH</b>\nYathra Yathra raghunatha keerthanam\nThathra Thathra kruthamasthakaanjaleem\nPashpavari paripurna lochanam\nMaruthim namatha rakshasanthagam\n\n Lord Maruthi, the terror to demons (Rakshasas) is present wherever praise of Sri Rama is sung, with joyous tears in His eyes and folded hands over His head. To Him we offer our salutation (Namaskarams).</string>
+    <string name="religious_wednesday_prayer"><b>OM SHRI GANESHAAY NAMAH</b>\nVakratunda Mahakaaya, Suryakoti Samaprabha\nNirvighnam Kuru Mey Deva, Sarva Kaaryeshu Sarvada\n\nLord Ganesha has a curved trunk with a powerful body. He has the brilliance of a million suns. May the Lord, remove all the problems from the actions I aim to achieve.</string>
+    <string name="religious_thursday_prayer"><b>OM NAMO NARAYANAYA</b>\nShaantaakaaram bhujagashayanam\npadmanaabham suresham\nvishvaadhaaram gaganasadrisham\nmeghavarnam shubhaangam\nlakshmeekaantam kamalanayanam\nyogihriddhyaanagamyam\nvande vishnum bhavabhayaharam\nsarvalokaikanaatham.\n\nI bow down before Vishnu, the Lord of all worlds and the remover of all causes of fear. He is of blissful form. He lies on a serpent bed. He sports a lotus on His navel. The Lord of the celestials. He supports the whole cosmos. His limbs are exquisite and His complexion is blue like that of the sky and the rain cloud. The consort of Lakshmi. He has eyes rivaling the lotus. The yogis meditate on Him in their innermost heart.</string>
+    <string name="religious_friday_prayer"><b>OM SHRI DURGAAY NAMAH</b></string>
+    <string name="religious_saturday_prayer"><b>OM SHRI SHANAISHCHARAAY NAMAH</b></string>
+    <string name="religious_sunday_prayer"><b>OM SURYAAY NAMAH</b></string>
+
+    <string name="religious_monday_dharma">When we offer Aarthi to the God, why do we sound the bell? \n\n (a) To welcome the God \n (b) When God is having Prashad \n (c) A traditional to sound along with aarthi, scented sticks, etc \n\n Your take ??</string>
+    <string name="religious_tuesday_dharma">Serpents (Snakes) appearing in the dream is good or bad? \n\n (a) Generally when we hear or talk about the snakes during the day \n (b) In our horoscope we have Rahu or Kethu enters \n (c) Lord Subramania Swamy or Lord Nagendra wants to appear to bless you \n\n Your take ??</string>
+    <string name="religious_wednesday_dharma">When you are praying the God, if a flower fall from the idle or photo of the God, can we reuse it for God?\n\n (a) It’s a God\'s message that He has blessed you with love. So, don\'t use it again, rather take it and keep with you. \n (b) You are not devotedly doing the prayer, not offered the flower carefully. \n (c) Because it was used for God only. So, we can use it again \n\n Your take ??\nLook for correct answer tomorrow.</string>
+    <string name="religious_thursday_dharma">What should we see as soon as you wake up in the morning for good luck \n\n (a) Brahmin \n (b) Cow \n (c) Yourself in the Mirror \n (d) Tulasi Tree \n (e)  Your own hands \n\n What else we can see, do you know?</string>
+    <string name="religious_friday_dharma">Who should feed "First Feed" or Anna Prasana to the baby? \n\n (a) Father \n (b) Mother \n (c) Uncle (Mother's Brother) \n (d) Grand Father (Month's father) \n\n Who else can feed first?</string>
+    <string name="religious_saturday_dharma">Lamp should be facing our side or God\'s side \n\n (a) To God side, because we are offering to God \n (b) Our side, because we need the God's grace on us \n (c) Doesn't matter \n\n What is your take?</string>
+    <string name="religious_sunday_dharma">What is the meaning and important of Akshitha? \n\n (a) Can be used in place of anything to offer to the God, ex: Cloth, etc \n (b) To bless younger and giving our energy to them \n (c) In marriage ceremony, both groom and bride exchange electromagnetic energy. \n\n What is your take?</string>
+
+    <string name="wellness_health_content_monday">भोजन के बाद चाय पीने से दीर्घकालिक नुकसान हो सकता है? \n \n5 भोजन के बाद से बचने के लिए अधिक खाद्य पदार्थ। \n \n टीया / कॉफी: \n आयुर्वेद कुछ सामान्य चीजों का वर्णन करता है जिसे किसी व्यक्ति को दोपहर का खाना या रात के खाने के बाद नहीं करना चाहिए। आज, स्वास्थ्य विज्ञान अनुसंधान और तथ्यों के साथ इसका समर्थन कर रहा है। चलो खाने के बाद तत्काल टालने के लिए क्या चीजें हैं। \n \n इन पेय पदार्थों को लाभ होता है जब मध्यम मात्रा में खपत होती है। किसी भी भोजन के बाद उन्हें कम से कम एक घंटे पीएं। \n \n <b> फल: </ b> \n आपके पेट से यात्रा करने और आंतों में पचाने के लिए किसी भी फल (केले को छोड़कर) के लिए लगभग 20 मिनट लगते हैं। भोजन के बाद एक फल खाने से भोजन के साथ अटक जाता है, इस प्रकार आंतों के समय में यात्रा नहीं होती है, और परिणामस्वरूप खराब हो जाता है, और भोजन को भी खराब कर देता है! \n \n <b> स्नान न करें </ b> \ आयुर्वेद के अनुसार, भोजन के बाद स्नान करने से रक्त और हाथों में रक्त का प्रवाह बढ़ जाता है। इस प्रकार पेट के चारों ओर रक्त की मात्रा कम हो जाएगी। यह पेट की पाचन तंत्र को कमजोर करता है। \n \n <b> नींद: </ b> \n भोजन ठीक से पचा नहीं जाएगा, जिससे गैस्ट्रिक मुद्दों का कारण बनता है। \n \n <b> तैरना न करें या भौतिक न करें अभ्यास </ b> \n भोजन खाने के बाद कम से कम 30 मिनट से अधिक समय तक इंतजार करना सबसे अच्छा है। ऐसा इसलिए होता है क्योंकि खाने के बाद आपके गैस्ट्रोइंटेस्टाइनल ट्रैक्ट में अधिक रक्त खींचा जाता है, जो मामूली ऐंठन का कारण बन सकता है। \n \n <b> अपनी बेल्ट को ढीला न करें </ b> \n असल में, लोग एक शानदार भोजन के बाद अपने बेल्ट को ढीला करते हैं। आप एक बार फिर से आरामदायक महसूस करेंगे, जिसका मतलब है कि आप अतिरक्षण जारी रख सकते हैं। बेल्ट को ढीला करना और फिर इसे फिर से कसने से आंत को मोड़ना पड़ सकता है। \n \n <b> धूम्रपान न करें </ b> \n अब, यह नियम आयुर्वेद द्वारा नहीं बल्कि आधुनिक विज्ञान द्वारा किया गया है। प्रयोग साबित करते हैं कि भोजन के ठीक बाद एक सिगरेट धूम्रपान करना 10 सिगरेट धूम्रपान करने के लिए तुलनीय है।</string>
+    <string name="wellness_health_content_tuesday">रासायनिक एयर फ्रेशर्स आपके नसों के लिए हानिकारक हो सकता है। इसके बजाय, अपने पसंदीदा आवश्यक तेलों को फ्रेशनर के रूप में उपयोग करें।</string>
+    <string name="wellness_health_content_wednesday">प्रत्येक भोजन से पहले एक कप पानी में सेब साइडर विनीगर का एक बड़ा चमचा गुर्दे के पत्थरों को भंग करने में मदद करता है।</string>
+    <string name="wellness_health_content_thursday">ठंड और गले के गले को ठीक करने के लिए शहद के एक चम्मच के साथ अदरक का रस आधा चम्मच पीएं।</string>
+    <string name="wellness_health_content_friday">खाद्य भंडारण के लिए प्लास्टिक के कंटेनर से बचें। कांच, स्टील, सिरेमिक कंटेनर का प्रयोग करें। सिरेमिक माइक्रो ओवन के लिए अच्छा है।</string>
+    <string name="wellness_health_content_saturday">रक्त दान करने के स्वास्थ्य लाभ। संतुलन लोहे, रक्त परिसंचरण में सुधार, कैलोरी को तेजी से जलता है, लीवर स्वास्थ्य में सुधार करता है, नए रक्त कोशिकाओं का गठन शुरू करता है।</string>
+    <string name="wellness_health_content_sunday">सीवीएस (कंप्यूटर विजन सिंड्रोम) के कारण क्या हैं? \n लापरवाही, लंबे समय तक कम ध्यान केंद्रित करें। तो, आप ऐसा करके \n \n कर सकते हैं\n\n<b> 20 के नियम का पालन करें </ b>। 20-सेकंड ब्रेक लें और हर 20 मिनट में 20 फीट दूर देखें \n <b> आंखों का ब्रेक लें। </ B> लंबे समय तक काम करने से बचें। अपने ब्रेक में अपनी आंखें बंद करो। एक दिन में कम से कम 3 से 5 ब्रेक लें। \n उचित उचित प्रकाश डालें। \n कंप्यूटर स्क्रीन चमक समायोजित करें। \n चमक को एनिमेट करें \n आंखों को अपनी आंखों को लुब्रिकेट करने के लिए छोड़ दें।</string>
+
 </resources>

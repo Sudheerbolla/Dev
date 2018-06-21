@@ -115,7 +115,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/five_dp"
         android:layout_marginTop="@dimen/five_dp"
-        android:text="@string/lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh"
+        android:text="@string/temple_dummy_text"
         android:textColor="@color/color_vvvDarkGrey"
         android:textSize="@dimen/fifteen_sp" />
 

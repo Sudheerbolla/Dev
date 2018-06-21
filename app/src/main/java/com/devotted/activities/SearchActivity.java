@@ -54,7 +54,7 @@ public class SearchActivity extends BaseActivity implements View.OnClickListener
         mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         setReferences();
 
-        currentFragment = MapListFragment.class.getSimpleName();
+        currentFragment = SearchListFragment.class.getSimpleName();
         replaceFragmentWithOutAnimation(new SearchListFragment(), false, R.id.searchContainer);
     }
 

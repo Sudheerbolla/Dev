@@ -131,7 +131,7 @@
     <string name="it_is_better_to_live_your_own">ఇది మీ స్వంత జీవించడానికి ఉత్తమం.</string>
     <string name="meaning_imitation_of_somebody_else_s_life_with_perfection">అర్థం: పరిపూర్ణతతో ఇతరుల జీవితం యొక్క అనుకరణ</string>
     <string name="user_name">వాడుకరి పేరు</string>
-    <string name="lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh_lorem_ipusum_vyudb_bhsd_vyfgbhcdsj_uvgwfg_gywh">Lorem ipusum vyudb bhsd vyfgbhcdsj uvgwfg gywh Lorem ipusum vyudb bhsd vyfgbhcdsj uvgwfg gywh Lorem ipusum vyudb bhsd vyfgbhcdsj uvgwfg gywh Lorem ipusum vyudb bhsd vyfgbhcdsj uvgwfg gywh Lorem ipusum vyudb bhsd vyfgbhcdsj uvgwfg gywh</string>
+    <string name="temple_dummy_text">మొయినాబాద్ మండల్లోని చిల్కురులో ఉంది. మెహితీపట్నం నుండి 23 km దూరంలో.\n\n శ్రీ వెంకటేశ్వర ఆలయం కూడా "వీసా బాలాజి" గా పిలువబడుతోంది … !! విదేశానికి వెళ్లాలని కోరుకునే భక్తులు చాలామందికి ఈ పేరు వచ్చింది, వారి కోరిక నెరవేరింది. ఇది దేవాలయాన్ని చుట్టుముట్టేది (ప్రదక్షిణ అని పిలుస్తారు) పదకొండు సార్లు మరియు ఒక నిర్దిష్ట కోరిక కోసం దేవునికి ప్రార్థించండి. ఈ కోరిక నిజం అయినప్పుడు, భక్తుడు మళ్ళీ సందర్శిస్తూ 108 ప్రాధక్షులను చేస్తాడు. ఇది హుండిలో ద్రవ్య విరాళాలను ఆమోదించని భారత ప్రభుత్వంలోని అతికొద్ది దేవాలయాలలో ఇది ఒకటి. అందువల్ల మా ప్రభుత్వం యొక్క నిధుల పరిధిలో వస్తాయి లేదు. ఆలయం ఒక నెలవారీ పత్రిక "వాక్" ను చెపుతుంది (ఇది దేవుని), నామమాత్రంగా ధర రూ. 5.00 మాత్రమే. ఈ పత్రిక ఆలయం-ఆదాయం యొక్క ఏకైక మూలం.</string>
     <string name="_29_may_2018">29 మే, 2018</string>
     <string name="lord_krishna">లార్డ్ కృష్ణుడు</string>
     <string name="remove_review">సమీక్షను తీసివేయి</string>
@@ -204,6 +204,8 @@
     <string name="sent_comment_successfully">వ్యాఖ్యను విజయవంతంగా పంపించారు</string>
     <string name="group_details">గుంపు వివరాలు</string>
     <string name="dharma">ధర్మ</string>
+    <string name="prayer">ప్రార్థన</string>
+    <string name="health">ఆరోగ్యం</string>
     <string name="questions">ప్రశ్నలు</string>
     <string name="permission_is_mandatory">అనుమతి తప్పనిసరి</string>
     <string name="please_enter_otp_manually_since_you_have_denied_permission_for_reading_sms">దయచేసి OTP ను మాన్యువల్గా నమోదు చేయండి, మీరు SMS చదవడానికి అనుమతిని తిరస్కరించినందున</string>
@@ -251,4 +253,42 @@
     <string name="please_enter_confirm_password">దయచేసి పాస్వర్డ్ని నిర్ధారించండి నమోదు చేయండి</string>
     <string name="new_password_and_confirm_password_should_match">పాస్ వర్డ్ మరియు పాస్వర్డ్ని ధృవీకరించాలి</string>
     <string name="old_password_and_new_password_cannot_be_same">పాత పాస్వర్డ్ మరియు కొత్త పాస్వర్డ్ ఒకేలా ఉండకూడదు</string>
+
+    <!--Spiritual content-->
+
+    <string name="spiritual_monday_mantra">ఆనందం ప్రయాణం, యాజమాన్యం, సంపాదించిన, ధరించే లేదా వినియోగించబడదు. ప్రేమ, దయ మరియు కృతజ్ఞతతో ప్రతి నిమిషం జీవిస్తున్న ఆధ్యాత్మిక అనుభవం ఆనందం</string>
+    <string name="spiritual_tuesday_mantra">ఒక కొవ్వొత్తి అగ్ని లేకుండా కాల్చలేనందున, పురుషులు ఒక ఆధ్యాత్మిక జీవనం లేకుండా జీవించలేరు.</string>
+    <string name="spiritual_wednesday_mantra">మీ పాదాలను నేలమీద ఉంచండి, కానీ మీ హృదయం అది ఎత్తగా ఉన్నంతగా పెరుగుతుంది. సగటు లేదా మీ ఆధ్యాత్మిక వాతావరణం చల్లబరుస్తుంది అప్పగించాలని తిరస్కరించండి.</string>
+    <string name="spiritual_thursday_mantra">సంగీతం ఆధ్యాత్మిక మరియు ఇంద్రియ జీవితం మధ్య మధ్యవర్తి.</string>
+    <string name="spiritual_friday_mantra">మీరు చెడు వైఖరితో మరియు మంచి వైఖరితో చెడు రోజుతో మంచి రోజు లేదు.</string>
+    <string name="spiritual_saturday_mantra">ఒక చెడ్డ రోజు మీకు చెడు జీవితం లేదని అర్థం కాదు. నీ ఆశీర్వాదాలను లెక్కించండి, మీ శాపాలు కాదు.</string>
+    <string name="spiritual_sunday_mantra">మీరు తిరిగి పుస్తకాన్ని వెనుకకు చదవలేరు, మీ జీవితాన్ని ఎందుకు ఆ విధంగా జీవిస్తున్నారు?</string>
+
+    <!--Religious content-->
+
+    <string name="religious_monday_prayer"><b>OM NAMAH SHIVAAY</b>\nNagendra Haaraaya Trilochanaaya\nBhasmanga Raagaya Maheshwaraya\nNithyaaya Suddhaaya Dhigambaraaya\nThasmai Na Kaaraaya Namashivaya Nama Shivaaya \n\n I offer my humble salutations to Lord Mahesvara who has a garland of serpants around the neck, who has three eyes, whose body is covered with ash, who is eternal who is pure who has the entire sky as his dress and who is embodies as the first letter Na.</string>
+    <string name="religious_tuesday_prayer"><b>OM SRI HANUMATE NAMAH</b>\nYathra Yathra raghunatha keerthanam\nThathra Thathra kruthamasthakaanjaleem\nPashpavari paripurna lochanam\nMaruthim namatha rakshasanthagam\n\n Lord Maruthi, the terror to demons (Rakshasas) is present wherever praise of Sri Rama is sung, with joyous tears in His eyes and folded hands over His head. To Him we offer our salutation (Namaskarams).</string>
+    <string name="religious_wednesday_prayer"><b>OM SHRI GANESHAAY NAMAH</b>\nVakratunda Mahakaaya, Suryakoti Samaprabha\nNirvighnam Kuru Mey Deva, Sarva Kaaryeshu Sarvada\n\nLord Ganesha has a curved trunk with a powerful body. He has the brilliance of a million suns. May the Lord, remove all the problems from the actions I aim to achieve.</string>
+    <string name="religious_thursday_prayer"><b>OM NAMO NARAYANAYA</b>\nShaantaakaaram bhujagashayanam\npadmanaabham suresham\nvishvaadhaaram gaganasadrisham\nmeghavarnam shubhaangam\nlakshmeekaantam kamalanayanam\nyogihriddhyaanagamyam\nvande vishnum bhavabhayaharam\nsarvalokaikanaatham.\n\nI bow down before Vishnu, the Lord of all worlds and the remover of all causes of fear. He is of blissful form. He lies on a serpent bed. He sports a lotus on His navel. The Lord of the celestials. He supports the whole cosmos. His limbs are exquisite and His complexion is blue like that of the sky and the rain cloud. The consort of Lakshmi. He has eyes rivaling the lotus. The yogis meditate on Him in their innermost heart.</string>
+    <string name="religious_friday_prayer"><b>OM SHRI DURGAAY NAMAH</b></string>
+    <string name="religious_saturday_prayer"><b>OM SHRI SHANAISHCHARAAY NAMAH</b></string>
+    <string name="religious_sunday_prayer"><b>OM SURYAAY NAMAH</b></string>
+
+    <string name="religious_monday_dharma">When we offer Aarthi to the God, why do we sound the bell? \n\n (a) To welcome the God \n (b) When God is having Prashad \n (c) A traditional to sound along with aarthi, scented sticks, etc \n\n Your take ??</string>
+    <string name="religious_tuesday_dharma">Serpents (Snakes) appearing in the dream is good or bad? \n\n (a) Generally when we hear or talk about the snakes during the day \n (b) In our horoscope we have Rahu or Kethu enters \n (c) Lord Subramania Swamy or Lord Nagendra wants to appear to bless you \n\n Your take ??</string>
+    <string name="religious_wednesday_dharma">When you are praying the God, if a flower fall from the idle or photo of the God, can we reuse it for God?\n\n (a) It’s a God\'s message that He has blessed you with love. So, don\'t use it again, rather take it and keep with you. \n (b) You are not devotedly doing the prayer, not offered the flower carefully. \n (c) Because it was used for God only. So, we can use it again \n\n Your take ??\nLook for correct answer tomorrow.</string>
+    <string name="religious_thursday_dharma">What should we see as soon as you wake up in the morning for good luck \n\n (a) Brahmin \n (b) Cow \n (c) Yourself in the Mirror \n (d) Tulasi Tree \n (e)  Your own hands \n\n What else we can see, do you know?</string>
+    <string name="religious_friday_dharma">Who should feed "First Feed" or Anna Prasana to the baby? \n\n (a) Father \n (b) Mother \n (c) Uncle (Mother's Brother) \n (d) Grand Father (Month's father) \n\n Who else can feed first?</string>
+    <string name="religious_saturday_dharma">Lamp should be facing our side or God\'s side \n\n (a) To God side, because we are offering to God \n (b) Our side, because we need the God's grace on us \n (c) Doesn't matter \n\n What is your take?</string>
+    <string name="religious_sunday_dharma">What is the meaning and important of Akshitha? \n\n (a) Can be used in place of anything to offer to the God, ex: Cloth, etc \n (b) To bless younger and giving our energy to them \n (c) In marriage ceremony, both groom and bride exchange electromagnetic energy. \n\n What is your take?</string>
+
+    <string name="wellness_health_content_monday">భోజనం తర్వాత టీ తాగడం దీర్ఘకాలిక హానిని కలిగించగలదు? \n \n ఆహారము తర్వాత నివారించడానికి మరింత ఎక్కువ ఆహారాలు. \n \nTea / Coffee: \n భోజనం లేదా విందు తర్వాత ఒక వ్యక్తి చేయకూడని కొన్ని సాధారణ విషయాలు అరుర్వేవా వివరిస్తుంది. నేడు, ఆరోగ్య శాస్త్రం పరిశోధన మరియు వాస్తవాలతో దానిని నిలబెట్టింది. భోజనాన్ని తీసుకున్న తర్వాత తక్షణమే నివారించడానికి విషయాలను తెలుసుకోండి. \n \n ఈ పానీయాలకి మితమైన మొత్తంలో వినియోగించినప్పుడు ప్రయోజనాలు ఉంటాయి. ఏ భోజనం తర్వాత వాటిని కనీసం ఒక గంట పానీయం చేయండి. \n \n <b> పండ్లు: </ b> \n మీ కడుపుతో ప్రయాణించి, ప్రేగులలో జీర్ణించుకోడానికి ఏవైనా పండు (అరటి మినహా) 20 నిముషాలు పడుతుంది. భోజనమైన తర్వాత ఒక పండు తినడం ఆహారంతో ఇరుక్కుపోతుంది, తద్వారా ప్రేగులకు ప్రయాణించేటప్పుడు, ఫలితంగా చెడిపోయినట్లు మరియు ఆహారాన్ని చెడిపోవడం! \n \n <b> స్నానం చేయవద్దు </ b> ఆయుర్వేదకు చెప్పిన ప్రకారం, భోజనం తర్వాత స్నానం చేయడం చేతులు మరియు కాళ్ళకు రక్తం యొక్క ప్రవాహాన్ని పెంచుతుంది. అందువలన కడుపు చుట్టూ రక్తం మొత్తం తగ్గిపోతుంది. ఇది కడుపు యొక్క జీర్ణ వ్యవస్థను బలహీనపరుస్తుంది. \n \n <b> నిద్ర: </ b> \n ఆహారం సరిగా జీర్ణం చేయబడదు, గ్యాస్ట్రిక్ సమస్యలకు దారితీస్తుంది. \n \n <b> ఈత కొట్టవద్దు లేదా భౌతికంగా చేయండి వ్యాయామం </ b> \n ఆహారం తినడం తర్వాత ఏదైనా వ్యాయామం చేయడానికి కనీసం 30 నిముషాల పాటు వేచి ఉండటం ఉత్తమం. ఎందుకంటే, చిన్న తిమ్మిరికి కారణమయ్యే తినడం తర్వాత మీ రక్తంలోని రక్తాన్ని మరింత రక్తాన్ని గీయడం జరుగుతుంది. \n \n <b> మీ బెల్ట్ను విప్పుకోవద్దు </ b> \n సాధారణంగా, ప్రజలు విలాసవంతమైన భోజనం తర్వాత తమ బెల్ట్ను విప్పుతారు. మీరు మరోసారి సుఖంగా ఉంటారు, అంటే మీరు అతిగా తినడం కొనసాగించవచ్చు. బెల్ట్ను వదిలేసి, దాన్ని మళ్లీ కత్తిరించడం ప్రేగులకు దారి తీస్తుంది. \n \n <b> పొగ త్రాగవద్దు </ b> \n ఇప్పుడు, ఈ నియమం ఆయుర్వేద ద్వారా కాదు, ఆధునిక శాస్త్రం ద్వారా కాదు. ఒక సిగరెట్ ధూమపానం 10 సిగరెట్లు ధూమపానంతో పోలిస్తే కుడివైపు ధూమపానం చేస్తుందని ప్రయోగాలు నిరూపించాయి.</string>
+    <string name="wellness_health_content_tuesday">రసాయన ఎయిర్ ఫ్రెషనర్లు మీ నరాలకు దెబ్బతీయవచ్చు. బదులుగా, మీకు ఇష్టమైన నూనెలను ఫ్రెషనర్గా ఉపయోగించుకోండి.</string>
+    <string name="wellness_health_content_wednesday">ప్రతి భోజనం ముందు ఒక కప్పు నీటిలో ఒక ఆపిల్ పళ్లరసం వినగార్ ఒకటి టేబుల్ స్పూన్ కిడ్నీ రాళ్ళను కరిగించడంలో సహాయపడుతుంది.</string>
+    <string name="wellness_health_content_thursday">చల్లని మరియు గొంతును నయం చేయడానికి తేనె ఒక టేబుల్ తో అల్లం రసం యొక్క సగం స్పూన్ పానీయం.</string>
+    <string name="wellness_health_content_friday">ఆహార నిల్వ కోసం ప్లాస్టిక్ కంటైనర్లను నివారించండి. గాజు, ఉక్కు, పింగాణీ కంటైనర్లు ఉపయోగించండి. సిరామిక్ సూక్ష్మ పొయ్యి కోసం మంచిది.</string>
+    <string name="wellness_health_content_saturday">రక్తం దానం యొక్క ఆరోగ్య ప్రయోజనాలు. ఇనుము సమతుల్యం, రక్త ప్రసరణను మెరుగుపరుస్తుంది, వేగంగా క్యాలరీలు కాల్చివేస్తుంది, మీట ఆరోగ్యాన్ని మెరుగుపరుస్తుంది, కొత్త రక్త కణాల ట్రిగ్గర్స్ ఏర్పడుతుంది.</string>
+    <string name="wellness_health_content_sunday">CVS యొక్క కారణాలు ఏమిటి (కంప్యూటర్ విజన్ సిండ్రోమ్)? \n తక్కువ మెరిసే, దీర్ఘకాలం చిన్న దృష్టి. కాబట్టి, మీరు ఇలా చేయడం ద్వారా దీనిని నివారించవచ్చు \n\n<b> 20 యొక్క నియమాన్ని పాటించండి </ b>. 20-సెకనుల విరామం తీసుకోండి మరియు ప్రతి 20 నిమిషాలకు 20 అడుగుల దూరంలో ఉండండి \n <b> కంటి విరామం తీసుకోండి. </ B> ఎక్కువ గంటలు పనిని నివారించండి. మీ విరామంలో మీ కళ్ళు మూసివేయండి. ఒక రోజులో కనీసం 3 నుండి 5 విరామాలు తీసుకోండి. \n బయట సరైన లైటింగ్ బయట. \n కంప్యూటర్ స్క్రీన్ ప్రకాశాన్ని మార్చండి. \n గ్లేర్ని కనిష్టీకరించండి \n కంటికి ద్రవపదార్ధాల కంటికి తగ్గట్టుగా ఉంటుంది.</string>
+
+
 </resources>

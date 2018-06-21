@@ -72,8 +72,9 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 //        adapter.addFrag(CardsFragment.newInstance("Dharma"), "Dharma");
 //        adapter.addFrag(CardsFragment.newInstance("Questions"), "Questions");
         adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.mantras)), getString(R.string.mantras));
+        adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.prayer)), getString(R.string.prayer));
         adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.dharma)), getString(R.string.dharma));
-        adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.questions)), getString(R.string.questions));
+        adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.health)), getString(R.string.health));
 //        adapter.addFrag(CardsRossDeckFragment.newInstance("Five"), "five");
         viewPager.setAdapter(adapter);
 

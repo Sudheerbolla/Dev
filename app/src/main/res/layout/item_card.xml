@@ -109,6 +109,7 @@
                         android:text="@string/it_is_better_to_live_your_own"
                         android:textColor="@color/color_vvvDarkGrey"
                         android:textSize="@dimen/sixteen_sp"
+                        android:visibility="gone"
                         card_view:txt_font_type="bold" />
 
                     <com.devotted.utils.views.CustomTextView

@@ -14,17 +14,18 @@ import android.widget.RelativeLayout;
 import com.devotted.R;
 import com.devotted.listeners.IClickListener;
 import com.devotted.models.CardDataItemNew;
+import com.devotted.utils.StaticUtils;
 import com.devotted.utils.views.CustomTextView;
 
 import java.util.ArrayList;
 
-public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecyclerViewAdapter.ViewHolder> {
+public class CardsRecyclerViewAdapterToday extends RecyclerView.Adapter<CardsRecyclerViewAdapterToday.ViewHolder> {
 
     private ArrayList<CardDataItemNew> itemsData;
     private Context context;
     private IClickListener iClickListener;
 
-    public CardsRecyclerViewAdapter(Context context, ArrayList<CardDataItemNew> itemsData, IClickListener iClickListener) {
+    public CardsRecyclerViewAdapterToday(Context context, ArrayList<CardDataItemNew> itemsData, IClickListener iClickListener) {
         this.itemsData = itemsData;
         this.iClickListener = iClickListener;
         this.context = context;
@@ -33,17 +34,16 @@ public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecycler
     @SuppressLint("InflateParams")
     @NonNull
     @Override
-    public CardsRecyclerViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new CardsRecyclerViewAdapter.ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_card, null));
+    public CardsRecyclerViewAdapterToday.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        @SuppressLint("InflateParams") View rootView = LayoutInflater.from(context).inflate(R.layout.item_today_card, null);
+        RelativeLayout.LayoutParams rlp = new RelativeLayout.LayoutParams(StaticUtils.screen_width - 90, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        rootView.setLayoutParams(rlp);
+        return new CardsRecyclerViewAdapterToday.ViewHolder(rootView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         CardDataItemNew cardDataItem = itemsData.get(position);
-
-        holder.txtDate.setVisibility(View.VISIBLE);
-        holder.txtDate.setText(cardDataItem.weekDay);
-
         if (cardDataItem.isRead) {
             holder.relColoredBackground.setBackground(ContextCompat.getDrawable(context, R.drawable.btn_background_grey));
             holder.txtReadLogo.setVisibility(View.VISIBLE);
@@ -51,8 +51,16 @@ public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecycler
             holder.relColoredBackground.setBackground(ContextCompat.getDrawable(context, R.drawable.btn_background_h));
             holder.txtReadLogo.setVisibility(View.GONE);
         }
+
         holder.txtDescription.setText(cardDataItem.heading);
         holder.txtQuoteMeaning.setText(cardDataItem.content);
+
+        holder.linCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (iClickListener != null) iClickListener.onClick(view, position);
+            }
+        });
     }
 
     @Override
@@ -63,7 +71,7 @@ public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecycler
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         private RelativeLayout relColoredBackground;
-        public CustomTextView txtReadLogo, txtDate, txtDescription, txtQuoteMeaning, txtQuote;
+        public CustomTextView txtReadLogo, txtDescription, txtQuoteMeaning, txtQuote;
         public LinearLayout linCard;
 
         ViewHolder(View itemLayoutView) {
@@ -71,7 +79,6 @@ public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecycler
             relColoredBackground = itemLayoutView.findViewById(R.id.relColoredBackground);
             linCard = itemLayoutView.findViewById(R.id.linCard);
             txtReadLogo = itemLayoutView.findViewById(R.id.txtReadLogo);
-            txtDate = itemLayoutView.findViewById(R.id.txtDate);
             txtDescription = itemLayoutView.findViewById(R.id.txtDescription);
             txtQuote = itemLayoutView.findViewById(R.id.txtQuote);
             txtQuoteMeaning = itemLayoutView.findViewById(R.id.txtQuoteMeaning);

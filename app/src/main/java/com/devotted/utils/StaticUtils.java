@@ -1,5 +1,6 @@
 package com.devotted.utils;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -67,8 +68,12 @@ public class StaticUtils {
     }
 
     public static String getpreviousDatesString(int days) {
-        DateFormat dateFormat = new SimpleDateFormat("EEEE, MMMM d");
+        @SuppressLint("SimpleDateFormat") DateFormat dateFormat = new SimpleDateFormat("EEEE, MMMM d");
         return dateFormat.format(previousDates(days));
+    }
+
+    public static String getTodayInWeek(String completeDate) {
+        return completeDate.split(",")[0];
     }
 
     public static void getHeightAndWidth(Context context) {

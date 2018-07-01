@@ -189,13 +189,12 @@ public class CardsRossDeckFragment extends BaseFragment implements IClickListene
     public void onClick(View view, final int position) {
         switch (view.getId()) {
             case R.id.linCard:
-                DialogUtils.showSimpleDialog(mainActivity, todayArrayList.get(position).content,
-                        new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                todayArrayList.get(position).isRead = true;
-                            }
-                        }, null, true);
+                DialogUtils.showSimpleDialog(mainActivity, todayArrayList.get(position).content, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        todayArrayList.get(position).isRead = true;
+                    }
+                }, null, true);
                 break;
         }
     }

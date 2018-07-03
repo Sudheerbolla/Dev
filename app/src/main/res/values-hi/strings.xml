@@ -187,7 +187,8 @@
     <string name="you_selected_ratings">आपने चयनित रेटिंग</string>
     <string name="sharing_temple_details">मंदिर विवरण साझा करना</string>
     <string name="read">पढ़ना</string>
-    <string name="i_choose">मैं चयन करता हूं</string>
+    <!--<string name="i_choose">मैं चयन करता हूं</string>-->
+    <string name="i_choose">मैं </string>
     <string name="details">विवरण</string>
     <string name="share_via">के माध्यम से बाँटे</string>
     <string name="hide_this_post">इस पोस्ट को छुपाएं</string>
@@ -289,5 +290,7 @@
     <string name="wellness_health_content_friday">खाद्य भंडारण के लिए प्लास्टिक के कंटेनर से बचें। कांच, स्टील, सिरेमिक कंटेनर का प्रयोग करें। सिरेमिक माइक्रो ओवन के लिए अच्छा है।</string>
     <string name="wellness_health_content_saturday">रक्त दान करने के स्वास्थ्य लाभ। संतुलन लोहे, रक्त परिसंचरण में सुधार, कैलोरी को तेजी से जलता है, लीवर स्वास्थ्य में सुधार करता है, नए रक्त कोशिकाओं का गठन शुरू करता है।</string>
     <string name="wellness_health_content_sunday">सीवीएस (कंप्यूटर विजन सिंड्रोम) के कारण क्या हैं? \n लापरवाही, लंबे समय तक कम ध्यान केंद्रित करें। तो, आप ऐसा करके \n \n कर सकते हैं\n\n<b> 20 के नियम का पालन करें </b>। 20-सेकंड ब्रेक लें और हर 20 मिनट में 20 फीट दूर देखें \n <b> आंखों का ब्रेक लें। </b> लंबे समय तक काम करने से बचें। अपने ब्रेक में अपनी आंखें बंद करो। एक दिन में कम से कम 3 से 5 ब्रेक लें। \n उचित उचित प्रकाश डालें। \n कंप्यूटर स्क्रीन चमक समायोजित करें। \n चमक को एनिमेट करें \n आंखों को अपनी आंखों को लुब्रिकेट करने के लिए छोड़ दें।</string>
+    <string name="read_more">Read More</string>
+    <string name="read_less">Read Less</string>
 
 </resources>

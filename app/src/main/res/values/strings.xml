@@ -108,7 +108,7 @@
     <string name="version_0_1_1">Version 0.1.1</string>
     <string name="reviews_5">Reviews (5)</string>
     <string name="add_new">Add New</string>
-    <string name="namaste_user">Namaste User</string>
+    <string name="namaste_user">Namasthe </string>
     <string name="share_it_via">Share it Via</string>
     <string name="others">Others</string>
     <string name="varanasi">Varanasi</string>
@@ -187,7 +187,8 @@
     <string name="you_selected_ratings">You Selected Ratings</string>
     <string name="sharing_temple_details">Sharing Temple Details</string>
     <string name="read">Read</string>
-    <string name="i_choose">I Choose</string>
+    <!--<string name="i_choose">I Choose</string>-->
+    <string name="i_choose">I am</string>
     <string name="details">Details</string>
     <string name="share_via">Share via</string>
     <string name="hide_this_post">Hide this post</string>
@@ -217,23 +218,23 @@
     <string name="user_type1_line1">Receive Temple Services</string>
     <string name="user_type1_line2">Receive Favorite temple updates</string>
     <string name="user_type1_line3">Participate in temple posts</string>
-    <string name="user_type1_line4">Serve the God</string>
+    <string name="user_type1_line4">Participate in God\'s Seva and Temple</string>
 
     <string name="user_type2_line1">Temple Administration</string>
     <string name="user_type2_line2">Provide Temple updates</string>
     <string name="user_type2_line3">Volunteer Management</string>
     <string name="user_type2_line4">Organize Religious Events</string>
 
-    <string name="interest_type1_line1">Spiritual Gurus</string>
-    <string name="interest_type1_line2">Favorite Gurus\' updates</string>
-    <string name="interest_type1_line3">Rich Spiritual Content</string>
-    <string name="interest_type1_line4">Spiritual Discussions</string>
+    <string name="interest_type1_line1">Connects with Spiritual Gurus</string>
+    <string name="interest_type1_line2">Updates from Favorite Gurus</string>
+    <string name="interest_type1_line3">Get Rich Spiritual Content</string>
+    <string name="interest_type1_line4">Involve in Spiritual Discussions</string>
 
     <string name="interest_type2_line1">Find Hindu Temples</string>
-    <string name="interest_type2_line2">Favorite Temples\' updates</string>
-    <string name="interest_type2_line3">Volunteer Service</string>
-    <string name="interest_type2_line4">Religious discussions</string>
-    <string name="interest_type2_line5">Horoscope, Dharma, Etc.,</string>
+    <string name="interest_type2_line2">Updates from Favorite Temples</string>
+    <string name="interest_type2_line3">Do Volunteer Seva</string>
+    <string name="interest_type2_line4">Involve in Religious discussions</string>
+    <string name="interest_type2_line5">Get Horoscope, Dharma, etc., info</string>
 
     <string name="devotee">Devotee</string>
     <string name="social_share_text">I found an app which will be useful</string>
@@ -289,5 +290,7 @@
     <string name="wellness_health_content_friday">Avoid plastic containers for storing FOOD. Use glass, steel, ceramic containers. Ceramic is good for Micro oven.</string>
     <string name="wellness_health_content_saturday">Health benefits of donating blood. Balances iron, improves blood circulation, burns calorie faster, improves lever health, triggers formation of new blood cells.</string>
     <string name="wellness_health_content_sunday">What are the causes of CVS (Computer Vision Syndrome)?\nLess blinking, short focus for long time. So, you can avoid this by doing so\n\n<b>Follow the rule of 20</b>. Take a 20-second break and look 20 feet away every 20 minutes\n<b>Take eye break.</b> Avoid working long hours. Close your eyes in your break. Take at least 3 to 5 breaks in a day.\nUser proper lighting outside.\nAdjust the computer screen brightness.\nMinimize Glare\nPut eye drops to lubricate your eyes.</string>
+    <string name="read_more">Read More</string>
+    <string name="read_less">Read Less</string>
 
 </resources>

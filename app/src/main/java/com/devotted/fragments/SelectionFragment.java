@@ -25,7 +25,7 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
 
     private View rootView;
     private SplashActivity splashActivity;
-    private CustomTextView txtProceed, txtHeading;
+    private CustomTextView txtProceed, txtHeading, txtUserName;
     private RecyclerView recyclerViewSelection;
     private SelectionAdapter selectionAdapter;
     private ArrayList<SelectionModel> selectionModelArrayList;
@@ -72,6 +72,7 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
     private void setReferences() {
         txtProceed = rootView.findViewById(R.id.txtProceed);
         txtHeading = rootView.findViewById(R.id.txtHeading);
+        txtUserName = rootView.findViewById(R.id.txtUserName);
         recyclerViewSelection = rootView.findViewById(R.id.recyclerViewSelection);
         setDummyData();
         checkForValidation();
@@ -79,9 +80,11 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
     }
 
     private void setDummyData() {
+        txtUserName.setText(getString(R.string.namaste_user) + " " + LocalStorage.getInstance(splashActivity).getString(LocalStorage.PREF_USER_NAME, ""));
         selectionModelArrayList.clear();
         if (isUserType) {
-            txtHeading.setText(R.string.you_are);
+//            txtHeading.setText(R.string.you_are);
+            txtHeading.setText("");
             SelectionModel spiritualModel = new SelectionModel(getString(R.string.devotee),
                     new String[]{
                             getString(R.string.user_type1_line1),
@@ -101,18 +104,20 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
             selectionModelArrayList.add(religiousModel);
         } else {
             SelectionModel spiritualModel = new SelectionModel(getString(R.string.spiritual), new String[]{
+                    "App Spiritual Features: ",
                     getString(R.string.interest_type1_line1),
                     getString(R.string.interest_type1_line2),
                     getString(R.string.interest_type1_line3),
                     getString(R.string.interest_type1_line4)
-            }, R.drawable.ic_spirtitual);
+            }, R.drawable.ic_lotus_position);
             SelectionModel religiousModel = new SelectionModel(getString(R.string.religious), new String[]{
+                    "App Religious Features: ",
                     getString(R.string.interest_type2_line1),
                     getString(R.string.interest_type2_line2),
                     getString(R.string.interest_type2_line3),
                     getString(R.string.interest_type2_line4),
                     getString(R.string.interest_type2_line5)
-            }, R.drawable.ic_religious);
+            }, R.drawable.ic_indian_tm);
             selectionModelArrayList.add(spiritualModel);
             selectionModelArrayList.add(religiousModel);
         }
@@ -132,7 +137,6 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.txtProceed:
-                LocalStorage.getInstance(splashActivity).putBoolean(LocalStorage.IS_PREFERENCE_SELECTED, true);
                 navigateToHomeScreen();
                 break;
             default:
@@ -143,6 +147,7 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
     private void navigateToHomeScreen() {
         if (isUserType) {
             LocalStorage.getInstance(splashActivity).putBoolean(LocalStorage.IS_LOGGED_IN_ALREADY, true);
+            LocalStorage.getInstance(splashActivity).putBoolean(LocalStorage.IS_PREFERENCE_SELECTED, true);
             startActivity(new Intent(splashActivity, MainActivity.class));
             splashActivity.finishAffinity();
         } else {

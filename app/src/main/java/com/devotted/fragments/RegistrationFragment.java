@@ -27,6 +27,7 @@ import com.devotted.R;
 import com.devotted.activities.SplashActivity;
 import com.devotted.utils.Constants;
 import com.devotted.utils.DialogUtils;
+import com.devotted.utils.LocalStorage;
 import com.devotted.utils.RuntimePermissionUtils;
 import com.devotted.utils.StaticUtils;
 import com.devotted.utils.views.CustomEditText;
@@ -182,6 +183,7 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
     }
 
     private void navigateToVerificationScreen() {
+        LocalStorage.getInstance(splashActivity).putString(LocalStorage.PREF_USER_NAME, edtName.getText().toString().trim());
         splashActivity.replaceFragment(VerificationCodeFragment.newInstance());
     }
 

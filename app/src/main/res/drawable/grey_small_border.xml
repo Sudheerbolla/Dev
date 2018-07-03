@@ -7,6 +7,6 @@
 
     <stroke
         android:width="0.5dp"
-        android:color="@color/color_vvDarkGrey" />
+        android:color="@color/color_vvvDarkGrey" />
 
 </shape>

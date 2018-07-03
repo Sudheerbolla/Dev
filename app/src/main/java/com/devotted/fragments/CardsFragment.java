@@ -1,3 +1,4 @@
+/*
 package com.devotted.fragments;
 
 import android.graphics.Rect;
@@ -30,7 +31,9 @@ import java.util.ArrayList;
 public class CardsFragment extends BaseFragment implements IClickListener {
 
     private CardSlidePanel.CardSwitchListener cardSwitchListener;
-    private ArrayList<CardDataItem> dataList/*, originalData*/;
+    private ArrayList<CardDataItem> dataList*/
+/*, originalData*//*
+;
     private CustomTextView txtReload;
     private View rootView;
     private RecyclerView recyclerViewPastUpdates;
@@ -222,3 +225,4 @@ public class CardsFragment extends BaseFragment implements IClickListener {
     }
 
 }
+*/

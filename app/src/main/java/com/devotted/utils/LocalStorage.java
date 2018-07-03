@@ -20,7 +20,7 @@ public class LocalStorage {
     public static final String PREF_IS_I_BELONG_HERE_DONE = "PREF_IS_I_BELONG_HERE_DONE";
 
     public static final String PREF_PASSWORD = "PREF_PASSWORD";
-//    public static final String PREF_LANGUAGE = "PREF_LANGUAGE";
+    public static final String PREF_USER_NAME = "PREF_USER_NAME";
 
     private LocalStorage(Context mContext) {
         preferences = mContext.getSharedPreferences(PREF_NAME, Activity.MODE_PRIVATE);

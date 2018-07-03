@@ -21,10 +21,11 @@
             android:padding="@dimen/thirty_dp">
 
             <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtUserName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingLeft="@dimen/twenty_dp"
+                android:paddingStart="@dimen/twenty_dp"
                 android:text="@string/namaste_user"
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/seventeen_sp" />
@@ -34,7 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:paddingLeft="@dimen/twenty_dp"
+                android:paddingStart="@dimen/twenty_dp"
                 android:paddingTop="@dimen/five_dp"
                 android:text="@string/you_just_got_verified"
                 android:textColor="@color/colorWhite"

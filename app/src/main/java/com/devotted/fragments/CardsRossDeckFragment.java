@@ -16,7 +16,6 @@ import com.devotted.adapters.CardsRecyclerViewAdapter;
 import com.devotted.adapters.CardsRecyclerViewAdapterToday;
 import com.devotted.listeners.IClickListener;
 import com.devotted.models.CardDataItemNew;
-import com.devotted.utils.DialogUtils;
 import com.devotted.utils.StaticUtils;
 import com.devotted.utils.views.CustomTextView;
 
@@ -189,12 +188,15 @@ public class CardsRossDeckFragment extends BaseFragment implements IClickListene
     public void onClick(View view, final int position) {
         switch (view.getId()) {
             case R.id.linCard:
-                DialogUtils.showSimpleDialog(mainActivity, todayArrayList.get(position).content, new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        todayArrayList.get(position).isRead = true;
-                    }
-                }, null, true);
+            case R.id.txtDescription:
+//                DialogUtils.showSimpleDialog(mainActivity, todayArrayList.get(position).content, new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        todayArrayList.get(position).isRead = true;
+//                    }
+//                }, null, true);
+                todayArrayList.get(position).isRead = true;
+                cardsRecyclerViewAdapterToday.notifyDataSetChanged();
                 break;
         }
     }

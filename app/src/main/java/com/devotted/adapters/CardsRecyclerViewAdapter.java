@@ -15,6 +15,7 @@ import com.devotted.R;
 import com.devotted.listeners.IClickListener;
 import com.devotted.models.CardDataItemNew;
 import com.devotted.utils.views.CustomTextView;
+import com.devotted.utils.views.ReadMoreTextView;
 
 import java.util.ArrayList;
 
@@ -51,8 +52,8 @@ public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecycler
             holder.relColoredBackground.setBackground(ContextCompat.getDrawable(context, R.drawable.btn_background_h));
             holder.txtReadLogo.setVisibility(View.GONE);
         }
-        holder.txtDescription.setText(cardDataItem.heading);
-        holder.txtQuoteMeaning.setText(cardDataItem.content);
+        holder.txtDescription.setText(cardDataItem.content);
+//        holder.txtQuoteMeaning.setText(cardDataItem.content);
     }
 
     @Override
@@ -63,7 +64,8 @@ public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecycler
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         private RelativeLayout relColoredBackground;
-        public CustomTextView txtReadLogo, txtDate, txtDescription, txtQuoteMeaning, txtQuote;
+        public CustomTextView txtReadLogo, txtDate;
+        public ReadMoreTextView txtDescription;
         public LinearLayout linCard;
 
         ViewHolder(View itemLayoutView) {
@@ -73,8 +75,8 @@ public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecycler
             txtReadLogo = itemLayoutView.findViewById(R.id.txtReadLogo);
             txtDate = itemLayoutView.findViewById(R.id.txtDate);
             txtDescription = itemLayoutView.findViewById(R.id.txtDescription);
-            txtQuote = itemLayoutView.findViewById(R.id.txtQuote);
-            txtQuoteMeaning = itemLayoutView.findViewById(R.id.txtQuoteMeaning);
+//            txtQuote = itemLayoutView.findViewById(R.id.txtQuote);
+//            txtQuoteMeaning = itemLayoutView.findViewById(R.id.txtQuoteMeaning);
         }
     }
 

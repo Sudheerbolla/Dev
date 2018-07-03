@@ -4,10 +4,12 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.devotted.R;
@@ -47,12 +49,18 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
         SelectionModel selectionModel = itemsData.get(position);
         viewHolder.imgType.setImageResource(selectionModel.icon);
         viewHolder.txtSelect.setText((isUserType ? context.getString(R.string.i_am_a) : context.getString(R.string.i_choose)) + " " + selectionModel.type);
-        String description = "";
-        for (int i = 0; i < selectionModel.description.length; i++) {
-            description += "\n\n * " + selectionModel.description[i];
+        viewHolder.linHolder.removeAllViews();
+        for (int i = 1; i < selectionModel.description.length; i++) {
+            CustomTextView customTextView = new CustomTextView(context);
+            customTextView.setTextSize(16);
+            customTextView.setPadding(10, 10, 10, 10);
+            customTextView.setCompoundDrawablesWithIntrinsicBounds(isUserType ? (selectionModel.type.equalsIgnoreCase(context.getString(R.string.devotee)) ? R.drawable.ic_star_d : R.drawable.ic_small_flower) :
+                    (selectionModel.type.equalsIgnoreCase(context.getString(R.string.religious)) ? R.drawable.ic_lotus : R.drawable.ic_star_s), 0, 0, 0);
+            customTextView.setGravity(Gravity.CENTER_VERTICAL);
+            customTextView.setText(selectionModel.description[i]);
+            viewHolder.linHolder.addView(customTextView);
         }
-        viewHolder.txtDescription.setText(description);
-
+        viewHolder.txtHeading.setText(selectionModel.description[0]);
         viewHolder.txtSelect.setCompoundDrawablesWithIntrinsicBounds(selectionModel.isSelected ? R.drawable.ic_tick_mark : 0, 0, 0, 0);
         viewHolder.txtSelect.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -76,16 +84,20 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public CustomTextView txtSelect, txtDescription;
+        public CustomTextView txtSelect, /*txtDescription,*/
+                txtHeading;
         public ImageView imgType;
+        private LinearLayout linHolder;
         public RelativeLayout cardBody;
 
         ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
+            linHolder = itemLayoutView.findViewById(R.id.linHolder);
             txtSelect = itemLayoutView.findViewById(R.id.txtSelect);
-            txtDescription = itemLayoutView.findViewById(R.id.txtDescription);
+//            txtDescription = itemLayoutView.findViewById(R.id.txtDescription);
             imgType = itemLayoutView.findViewById(R.id.imgType);
             cardBody = itemLayoutView.findViewById(R.id.cardBody);
+            txtHeading = itemLayoutView.findViewById(R.id.txtHeading);
         }
     }
 

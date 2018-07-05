@@ -61,44 +61,56 @@ public class SplashFragment extends BaseFragment {
     }
 
     private void animateLogos() {
-
         Animation uptodown = AnimationUtils.loadAnimation(splashActivity, R.anim.slide_down);
         imgLogo.setAnimation(uptodown);
 
         Animation downtoup = AnimationUtils.loadAnimation(splashActivity, R.anim.slide_up);
         txtLogo.setAnimation(downtoup);
 
-        final Runnable img3Runnable = new Runnable() {
-            @Override
-            public void run() {
-                fadeInXml(img3);
-                img3.setVisibility(View.VISIBLE);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        navigateToLogin();
-                    }
-                }, 1800);
-            }
-        };
-        final Runnable img2Runnable = new Runnable() {
-            @Override
-            public void run() {
-                fadeInXml(img2);
-                img2.setVisibility(View.VISIBLE);
-                new Handler().postDelayed(img3Runnable, 1000);
-            }
-        };
-        Runnable img1Runnable = new Runnable() {
-            @Override
-            public void run() {
-                fadeInXml(img1);
-                img1.setVisibility(View.VISIBLE);
-                new Handler().postDelayed(img2Runnable, 1000);
-            }
-        };
+        boolean isFirstTime = LocalStorage.getInstance(splashActivity).getBoolean(LocalStorage.IS_FIRST_TIME_LAUNCH, true);
+        if (isFirstTime) {
+            final Runnable img3Runnable = new Runnable() {
+                @Override
+                public void run() {
+                    fadeInXml(img3);
+                    img3.setVisibility(View.VISIBLE);
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            navigateToLogin();
+                        }
+                    }, 1800);
+                }
+            };
+            final Runnable img2Runnable = new Runnable() {
+                @Override
+                public void run() {
+                    fadeInXml(img2);
+                    img2.setVisibility(View.VISIBLE);
+                    new Handler().postDelayed(img3Runnable, 1000);
+                }
+            };
+            Runnable img1Runnable = new Runnable() {
+                @Override
+                public void run() {
+                    fadeInXml(img1);
+                    img1.setVisibility(View.VISIBLE);
+                    new Handler().postDelayed(img2Runnable, 1000);
+                }
+            };
 
-        new Handler().postDelayed(img1Runnable, 1000);
+            new Handler().postDelayed(img1Runnable, 1000);
+        } else {
+            img1.setVisibility(View.VISIBLE);
+            img2.setVisibility(View.VISIBLE);
+            img3.setVisibility(View.VISIBLE);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    navigateToLogin();
+                }
+            }, 2500);
+        }
     }
 
     private void fadeInXml(View yourView) {

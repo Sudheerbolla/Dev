@@ -47,7 +47,7 @@ public class UpdatesFragment extends BaseFragment implements IClickListener, Vie
     }
 
     private void setDummyData() {
-        for (int i = 1; i < 5; i++) {
+        for (int i = 1; i < 4; i++) {
             templeModelArrayList.add(new TempleModel(i));
             templePostsArrayList.add(new TempleModel(i));
         }

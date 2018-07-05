@@ -2,6 +2,7 @@ package com.devotted.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -38,7 +39,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_home, container, false);
         initComponents();
         return rootView;
@@ -69,15 +70,11 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
 //        adapter.addFrag(CardsFragment.newInstance("Mantras"), "Mantras");
-//        adapter.addFrag(CardsFragment.newInstance("Dharma"), "Dharma");
-//        adapter.addFrag(CardsFragment.newInstance("Questions"), "Questions");
         adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.mantras)), getString(R.string.mantras));
         adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.prayer)), getString(R.string.prayer));
         adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.dharma)), getString(R.string.dharma));
         adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.health)), getString(R.string.health));
-//        adapter.addFrag(CardsRossDeckFragment.newInstance("Five"), "five");
         viewPager.setAdapter(adapter);
-
 //        ViewCompat.setNestedScrollingEnabled(viewPager, true);
     }
 

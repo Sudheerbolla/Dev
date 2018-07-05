@@ -22,25 +22,8 @@
             android:id="@+id/relColoredBackground"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/gradient_horizontal"
+            android:background="@drawable/card_border"
             android:padding="@dimen/five_dp">
-
-            <com.devotted.utils.views.CustomTextView
-                android:id="@+id/txtReadLogo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
-                android:layout_margin="@dimen/four_dp"
-                android:drawablePadding="@dimen/two_dp"
-                android:drawableStart="@drawable/ic_read"
-                android:gravity="center"
-                android:padding="@dimen/five_dp"
-                android:rotation="45"
-                android:text="@string/read"
-                android:textColor="@color/colorBlack"
-                android:textSize="@dimen/thirteen_sp"
-                android:visibility="gone" />
 
             <com.devotted.utils.views.ReadMoreTextView
                 android:id="@+id/txtDescription"
@@ -48,14 +31,15 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
+                android:drawablePadding="@dimen/four_dp"
+                android:drawableStart="@drawable/ic_read_orange"
                 android:gravity="center"
                 android:padding="@dimen/eight_dp"
                 android:text="@string/daily_dose_of_updated_mantras"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/colorBlack"
                 android:textSize="@dimen/sixteen_sp"
                 app:trimMode="trimModeLines"
                 card_view:trimLines="2" />
-
 
         </RelativeLayout>
 

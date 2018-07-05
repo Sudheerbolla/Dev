@@ -3,7 +3,6 @@ package com.devotted.adapters;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +14,6 @@ import com.devotted.R;
 import com.devotted.listeners.IClickListener;
 import com.devotted.models.CardDataItemNew;
 import com.devotted.utils.StaticUtils;
-import com.devotted.utils.views.CustomTextView;
 import com.devotted.utils.views.ReadMoreTextView;
 
 import java.util.ArrayList;
@@ -46,11 +44,12 @@ public class CardsRecyclerViewAdapterToday extends RecyclerView.Adapter<CardsRec
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         CardDataItemNew cardDataItem = itemsData.get(position);
         if (cardDataItem.isRead) {
-            holder.relColoredBackground.setBackground(ContextCompat.getDrawable(context, R.drawable.btn_background_grey));
-            holder.txtReadLogo.setVisibility(View.VISIBLE);
+//            holder.relColoredBackground.setBackground(ContextCompat.getDrawable(context, R.drawable.btn_background_green));
+            holder.txtDescription.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_read_orange, 0, 0, 0);
         } else {
-            holder.relColoredBackground.setBackground(ContextCompat.getDrawable(context, R.drawable.btn_background_h));
-            holder.txtReadLogo.setVisibility(View.GONE);
+//            holder.relColoredBackground.setBackground(ContextCompat.getDrawable(context, R.drawable.btn_background_h));
+//            holder.txtReadLogo.setVisibility(View.GONE);
+            holder.txtDescription.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
         }
 
         holder.txtDescription.setText(cardDataItem.content);
@@ -72,7 +71,6 @@ public class CardsRecyclerViewAdapterToday extends RecyclerView.Adapter<CardsRec
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         private RelativeLayout relColoredBackground;
-        public CustomTextView txtReadLogo;
         public ReadMoreTextView txtDescription;
         public LinearLayout linCard;
 
@@ -80,7 +78,6 @@ public class CardsRecyclerViewAdapterToday extends RecyclerView.Adapter<CardsRec
             super(itemLayoutView);
             relColoredBackground = itemLayoutView.findViewById(R.id.relColoredBackground);
             linCard = itemLayoutView.findViewById(R.id.linCard);
-            txtReadLogo = itemLayoutView.findViewById(R.id.txtReadLogo);
             txtDescription = itemLayoutView.findViewById(R.id.txtDescription);
 //            txtQuote = itemLayoutView.findViewById(R.id.txtQuote);
 //            txtQuoteMeaning = itemLayoutView.findViewById(R.id.txtQuoteMeaning);

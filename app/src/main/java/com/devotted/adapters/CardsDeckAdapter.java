@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
 import com.devotted.R;
 import com.devotted.models.CardDataItem;
@@ -42,14 +41,14 @@ public class CardsDeckAdapter extends ArrayAdapter<Pair<String, CardDataItem>> {
         Pair item = getItem(position);
 
         RelativeLayout relColoredBackground = layout.findViewById(R.id.relColoredBackground);
-        TextView txtReadLogo = layout.findViewById(R.id.txtReadLogo);
+//        TextView txtReadLogo = layout.findViewById(R.id.txtReadLogo);
         CardDataItem cardDataItem = (CardDataItem) item.second;
         if (cardDataItem.isRead) {
             relColoredBackground.setBackground(ContextCompat.getDrawable(context, R.drawable.btn_background));
-            txtReadLogo.setVisibility(View.VISIBLE);
+//            txtReadLogo.setVisibility(View.VISIBLE);
         } else {
             relColoredBackground.setBackground(ContextCompat.getDrawable(context, R.drawable.btn_background_h));
-            txtReadLogo.setVisibility(View.GONE);
+//            txtReadLogo.setVisibility(View.GONE);
         }
         return layout;
     }

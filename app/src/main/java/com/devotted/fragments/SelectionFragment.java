@@ -92,14 +92,14 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
                             getString(R.string.user_type1_line3),
                             getString(R.string.user_type1_line4)
                     },
-                    R.drawable.ic_group_orange);
+                    R.drawable.ic_lotus_position);
             SelectionModel religiousModel = new SelectionModel(getString(R.string.temple_member),
                     new String[]{
                             getString(R.string.user_type2_line1),
                             getString(R.string.user_type2_line2),
                             getString(R.string.user_type2_line3),
                             getString(R.string.user_type2_line4)
-                    }, R.drawable.ic_temple_icon);
+                    }, R.drawable.ic_indian_tm);
             selectionModelArrayList.add(spiritualModel);
             selectionModelArrayList.add(religiousModel);
         } else {

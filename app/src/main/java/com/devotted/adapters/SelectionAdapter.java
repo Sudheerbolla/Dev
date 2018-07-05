@@ -53,14 +53,17 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
         for (int i = 1; i < selectionModel.description.length; i++) {
             CustomTextView customTextView = new CustomTextView(context);
             customTextView.setTextSize(16);
-            customTextView.setPadding(10, 10, 10, 10);
+            customTextView.setPadding(5, 5, 5, 5);
             customTextView.setCompoundDrawablesWithIntrinsicBounds(isUserType ? (selectionModel.type.equalsIgnoreCase(context.getString(R.string.devotee)) ? R.drawable.ic_star_d : R.drawable.ic_small_flower) :
                     (selectionModel.type.equalsIgnoreCase(context.getString(R.string.religious)) ? R.drawable.ic_lotus : R.drawable.ic_star_s), 0, 0, 0);
+            customTextView.setCompoundDrawablePadding(StaticUtils.pxFromDp(context, 8));
             customTextView.setGravity(Gravity.CENTER_VERTICAL);
             customTextView.setText(selectionModel.description[i]);
             viewHolder.linHolder.addView(customTextView);
         }
         viewHolder.txtHeading.setText(selectionModel.description[0]);
+        viewHolder.txtHeading.setCompoundDrawablesWithIntrinsicBounds(isUserType ? (selectionModel.type.equalsIgnoreCase(context.getString(R.string.devotee)) ? R.drawable.ic_star_d : R.drawable.ic_small_flower) :
+                (selectionModel.type.equalsIgnoreCase(context.getString(R.string.religious)) ? R.drawable.ic_lotus : R.drawable.ic_star_s), 0, 0, 0);
         viewHolder.txtSelect.setCompoundDrawablesWithIntrinsicBounds(selectionModel.isSelected ? R.drawable.ic_tick_mark : 0, 0, 0, 0);
         viewHolder.txtSelect.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
-import android.widget.TextView;
 
 import com.devotted.R;
 import com.devotted.listeners.IClickListener;
@@ -38,14 +37,14 @@ public class CardsPagerAdapter extends PagerAdapter {
         layout = (ScrollView) inflater.inflate(R.layout.item_card, collection, false);
 
         RelativeLayout relColoredBackground = layout.findViewById(R.id.relColoredBackground);
-        TextView txtReadLogo = layout.findViewById(R.id.txtReadLogo);
+//        TextView txtReadLogo = layout.findViewById(R.id.txtReadLogo);
         CardDataItem cardDataItem = resArrayList.get(position);
         if (cardDataItem.isRead) {
             relColoredBackground.setBackground(ContextCompat.getDrawable(mContext, R.drawable.btn_background));
-            txtReadLogo.setVisibility(View.VISIBLE);
+//            txtReadLogo.setVisibility(View.VISIBLE);
         } else {
             relColoredBackground.setBackground(ContextCompat.getDrawable(mContext, R.drawable.btn_background_h));
-            txtReadLogo.setVisibility(View.GONE);
+//            txtReadLogo.setVisibility(View.GONE);
         }
         layout.setOnClickListener(new View.OnClickListener() {
             @Override

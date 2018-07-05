@@ -18,7 +18,7 @@
         android:scaleType="centerCrop"
         android:src="@drawable/temple1"
         app:civ_border_color="@color/colorPrimaryDark"
-        app:civ_border_width="@dimen/one_dp" />
+        app:civ_border_width="@dimen/two_dp" />
 
     <com.devotted.utils.views.CustomTextView
         android:id="@+id/txtUpdates"

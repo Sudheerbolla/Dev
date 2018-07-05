@@ -5,20 +5,19 @@
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="@dimen/hundred_dp"
-        android:layout_height="@dimen/hundred_dp"
+        android:layout_width="@dimen/eighty_dp"
+        android:layout_height="@dimen/eighty_dp"
         android:layout_centerHorizontal="true"
         android:contentDescription="LOGO"
-        android:padding="@dimen/ten_dp"
-        android:src="@drawable/ic_logo" />
+        android:src="@drawable/ic_app_logo" />
 
     <com.devotted.utils.views.CustomTextView
         android:id="@+id/txtLogo"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/fourty_dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/imgLogo"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/ic_name"
-        android:padding="@dimen/five_dp" />
+        android:background="@drawable/ic_app_text"
+        />
 
 </RelativeLayout>

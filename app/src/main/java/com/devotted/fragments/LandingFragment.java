@@ -81,8 +81,8 @@ public class LandingFragment extends BaseFragment implements View.OnClickListene
                 splashActivity.replaceFragment(LoginFragment.newInstance(), true, R.id.splashContainer);
                 break;
             case R.id.txtRegister:
-//                splashActivity.replaceFragment(RegistrationFragment.newInstance(), true, R.id.splashContainer);
-                splashActivity.replaceFragment(SelectionFragment.newInstance(false), true, R.id.splashContainer);
+                splashActivity.replaceFragment(RegistrationFragment.newInstance(), true, R.id.splashContainer);
+//                splashActivity.replaceFragment(SelectionFragment.newInstance(false), true, R.id.splashContainer);
                 break;
             case R.id.txtGuestUser:
                 LocalStorage.getInstance(splashActivity).putBoolean(LocalStorage.IS_GUEST_USER, true);

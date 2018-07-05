@@ -29,10 +29,11 @@
                 android:layout_marginRight="@dimen/ten_dp"
                 android:layout_marginTop="@dimen/five_dp"
                 android:drawableStart="@drawable/ic_star_s"
+                android:drawablePadding="@dimen/eight_dp"
                 android:gravity="center_vertical"
                 android:padding="@dimen/ten_dp"
                 android:textColor="@color/colorBlack"
-                android:textSize="@dimen/seventeen_sp"
+                android:textSize="@dimen/eighteen_sp"
                 app:txt_font_type="bold" />
 
             <LinearLayout
@@ -41,8 +42,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtHeading"
                 android:layout_marginBottom="@dimen/five_dp"
-                android:layout_marginEnd="@dimen/twenty_dp"
-                android:layout_marginStart="@dimen/twenty_dp"
+                android:layout_marginEnd="@dimen/five_dp"
+                android:layout_marginStart="@dimen/fourty_two_dp"
                 android:layout_marginTop="@dimen/five_dp"
                 android:orientation="vertical"
                 android:padding="@dimen/five_dp">

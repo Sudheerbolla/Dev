@@ -42,6 +42,17 @@ public class TemplePostsAdapter extends RecyclerView.Adapter<TemplePostsAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder viewHolder, @SuppressLint("RecyclerView") final int position) {
+        if (position == 0) {
+            viewHolder.txtTempleName.setText("Ashtalakshmi Temple, Kothapet, Hyderabad");
+            viewHolder.txtDescription.setText(context.getString(R.string.temple1_dummy_text));
+        } else if (position == 1) {
+            viewHolder.txtTempleName.setText("Chilkur Balaji Temple,Hyderabad");
+            viewHolder.txtDescription.setText(context.getString(R.string.temple2_dummy_text));
+        } else if (position == 2) {
+            viewHolder.txtTempleName.setText("Karmanghat Hanuman temple, Hyderabad");
+            viewHolder.txtDescription.setText(context.getString(R.string.temple3_dummy_text));
+        }
+
         viewHolder.txtLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

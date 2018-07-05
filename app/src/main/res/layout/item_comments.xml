@@ -56,7 +56,7 @@
                 android:layout_marginEnd="@dimen/ten_dp"
                 android:layout_marginStart="@dimen/ten_dp"
                 android:layout_marginTop="@dimen/five_dp"
-                android:text="@string/temple_dummy_text"
+                android:text="Very Nice Temple"
                 android:textColor="@color/color_vvvDarkGrey"
                 android:textSize="@dimen/fifteen_sp" />
 

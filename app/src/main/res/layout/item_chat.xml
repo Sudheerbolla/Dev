@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtUserNameInComing"
                 android:layout_margin="@dimen/five_dp"
-                android:text="@string/temple_dummy_text"
+                android:text="I am doing great"
                 android:textColor="@color/color_vvvDarkGrey"
                 android:textSize="@dimen/fifteen_sp" />
 
@@ -127,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtUserNameOutGoing"
                 android:layout_margin="@dimen/five_dp"
-                android:text="@string/temple_dummy_text"
+                android:text="Hai. How are you doing?"
                 android:textColor="@color/color_vvvDarkGrey"
                 android:textSize="@dimen/fifteen_sp" />
 

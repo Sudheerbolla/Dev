@@ -92,18 +92,6 @@
                             android:textSize="@dimen/fifteen_sp" />
 
                         <com.devotted.utils.views.CustomTextView
-                            android:id="@+id/txtExtras"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/five_dp"
-                            android:drawablePadding="@dimen/seven_dp"
-                            android:drawableTop="@drawable/ic_like_green"
-                            android:padding="@dimen/five_dp"
-                            android:text="@string/extras"
-                            android:textColor="@color/colorWhite"
-                            android:textSize="@dimen/fifteen_sp" />
-
-                        <com.devotted.utils.views.CustomTextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:drawablePadding="@dimen/seven_dp"

@@ -111,7 +111,7 @@ public class CardsRossDeckFragment extends BaseFragment implements IClickListene
         hashMapOfCategory = new HashMap<>();
 
         switch (category) {
-            case "Mantras":
+            case "Quote":
                 hashMapOfCategory.put("Monday", getString(R.string.spiritual_monday_mantra));
                 hashMapOfCategory.put("Tuesday", getString(R.string.spiritual_tuesday_mantra));
                 hashMapOfCategory.put("Wednesday", getString(R.string.spiritual_wednesday_mantra));

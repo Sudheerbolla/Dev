@@ -43,17 +43,12 @@ public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecycler
         holder.txtDate.setVisibility(View.VISIBLE);
         holder.txtDate.setText(cardDataItem.weekDay);
 
-        if (cardDataItem.isRead) {
-//            holder.relColoredBackground.setBackground(ContextCompat.getDrawable(context, R.drawable.btn_background_grey));
-//            holder.txtReadLogo.setVisibility(View.VISIBLE);
-            holder.txtDescription.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_read, 0, 0, 0);
-        } else {
-//            holder.relColoredBackground.setBackground(ContextCompat.getDrawable(context, R.drawable.btn_background_h));
-//            holder.txtReadLogo.setVisibility(View.GONE);
-            holder.txtDescription.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-        }
+//        if (cardDataItem.isRead) {
+//            holder.txtDescription.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_read, 0);
+//        } else {
+//            holder.txtDescription.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+//        }
         holder.txtDescription.setText(cardDataItem.content);
-//        holder.txtQuoteMeaning.setText(cardDataItem.content);
     }
 
     @Override

@@ -277,8 +277,9 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
                 if (StaticUtils.isAllPermissionsGranted(grantResults)) {
                     openImagePickerDialog();
                 } else {
+//                    StaticUtils.showToast(splashActivity, getString(R.string.permission_is_mandatory));
                     StaticUtils.showToast(splashActivity, getString(R.string.permission_is_mandatory));
-                    isStoragePermissionAvailable();
+//                    isStoragePermissionAvailable();
                 }
                 break;
             case Constants.READ_SMS_CODE:

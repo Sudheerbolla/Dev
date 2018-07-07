@@ -52,8 +52,8 @@ public class ReadMoreTextView extends CustomTextView {
         this.trimCollapsedText = getResources().getString(resourceIdTrimCollapsedText);
         this.trimExpandedText = getResources().getString(resourceIdTrimExpandedText);
         this.trimLines = typedArray.getInt(R.styleable.ReadMoreTextView_trimLines, DEFAULT_TRIM_LINES);
-//        this.colorClickableText = typedArray.getColor(R.styleable.ReadMoreTextView_colorClickableText, ContextCompat.getColor(context, R.color.colorAccent));
-        this.colorClickableText = typedArray.getColor(R.styleable.ReadMoreTextView_colorClickableText, ContextCompat.getColor(context, R.color.colorBlack));
+        this.colorClickableText = typedArray.getColor(R.styleable.ReadMoreTextView_colorClickableText, ContextCompat.getColor(context, R.color.colorAccent));
+//        this.colorClickableText = typedArray.getColor(R.styleable.ReadMoreTextView_colorClickableText, ContextCompat.getColor(context, R.color.colorBlack));
         this.showTrimExpandedText = typedArray.getBoolean(R.styleable.ReadMoreTextView_showTrimExpandedText, DEFAULT_SHOW_TRIM_EXPANDED_TEXT);
         this.trimMode = typedArray.getInt(R.styleable.ReadMoreTextView_trimMode, TRIM_MODE_LINES);
         typedArray.recycle();

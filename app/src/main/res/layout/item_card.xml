@@ -31,8 +31,15 @@
             android:id="@+id/relColoredBackground"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/card_border_grey"
-            android:padding="@dimen/five_dp">
+            android:background="@drawable/card_border_grey">
+
+            <ImageView
+                android:id="@+id/imgRead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                card_view:srcCompat="@drawable/ic_read" />
 
             <com.devotted.utils.views.CustomTextView
                 android:id="@+id/txtDescription"
@@ -40,10 +47,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
-                android:drawablePadding="@dimen/four_dp"
-                android:drawableStart="@drawable/ic_read"
-                android:gravity="center"
-                android:padding="@dimen/eight_dp"
+                android:layout_toStartOf="@id/imgRead"
+                android:padding="@dimen/ten_dp"
                 android:text="@string/daily_dose_of_updated_mantras"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/fourteen_sp" />

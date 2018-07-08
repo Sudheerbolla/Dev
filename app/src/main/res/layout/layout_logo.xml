@@ -1,12 +1,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layoutContent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="@dimen/eighty_dp"
-        android:layout_height="@dimen/eighty_dp"
+        android:layout_width="@dimen/seventy_dp"
+        android:layout_height="@dimen/seventy_dp"
         android:layout_centerHorizontal="true"
         android:contentDescription="LOGO"
         android:src="@drawable/ic_app_logo" />
@@ -17,7 +17,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imgLogo"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/ic_app_text"
-        />
+        android:background="@drawable/ic_app_text" />
 
 </RelativeLayout>

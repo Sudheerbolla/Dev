@@ -8,12 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 import com.devotted.R;
 import com.devotted.listeners.IClickListener;
 import com.devotted.models.CardDataItemNew;
 import com.devotted.utils.views.CustomTextView;
+import com.devotted.utils.views.ReadMoreTextView;
 
 import java.util.ArrayList;
 
@@ -39,15 +39,8 @@ public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecycler
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         CardDataItemNew cardDataItem = itemsData.get(position);
-
         holder.txtDate.setVisibility(View.VISIBLE);
         holder.txtDate.setText(cardDataItem.weekDay);
-
-//        if (cardDataItem.isRead) {
-//            holder.txtDescription.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.ic_read, 0);
-//        } else {
-//            holder.txtDescription.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-//        }
         holder.txtDescription.setText(cardDataItem.content);
     }
 
@@ -58,20 +51,15 @@ public class CardsRecyclerViewAdapter extends RecyclerView.Adapter<CardsRecycler
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        private RelativeLayout relColoredBackground;
-        public CustomTextView /*txtReadLogo, */txtDate, txtDescription;
-        //        public ReadMoreTextView txtDescription;
+        public CustomTextView txtDate;
+        public ReadMoreTextView txtDescription;
         public LinearLayout linCard;
 
         ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
-            relColoredBackground = itemLayoutView.findViewById(R.id.relColoredBackground);
             linCard = itemLayoutView.findViewById(R.id.linCard);
-//            txtReadLogo = itemLayoutView.findViewById(R.id.txtReadLogo);
             txtDate = itemLayoutView.findViewById(R.id.txtDate);
             txtDescription = itemLayoutView.findViewById(R.id.txtDescription);
-//            txtQuote = itemLayoutView.findViewById(R.id.txtQuote);
-//            txtQuoteMeaning = itemLayoutView.findViewById(R.id.txtQuoteMeaning);
         }
     }
 

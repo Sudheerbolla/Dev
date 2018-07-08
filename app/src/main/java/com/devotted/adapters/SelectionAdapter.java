@@ -62,9 +62,11 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
             viewHolder.linHolder.addView(customTextView);
         }
         viewHolder.txtHeading.setText(selectionModel.description[0]);
-        viewHolder.txtHeading.setCompoundDrawablesWithIntrinsicBounds(isUserType ? (selectionModel.type.equalsIgnoreCase(context.getString(R.string.devotee)) ? R.drawable.ic_star_d : R.drawable.ic_small_flower) :
-                (selectionModel.type.equalsIgnoreCase(context.getString(R.string.religious)) ? R.drawable.ic_lotus : R.drawable.ic_star_s), 0, 0, 0);
+//        viewHolder.txtHeading.setCompoundDrawablesWithIntrinsicBounds(isUserType ? (selectionModel.type.equalsIgnoreCase(context.getString(R.string.devotee)) ? R.drawable.ic_star_d : R.drawable.ic_small_flower) :
+//                (selectionModel.type.equalsIgnoreCase(context.getString(R.string.religious)) ? R.drawable.ic_lotus : R.drawable.ic_star_s), 0, 0, 0);
         viewHolder.txtSelect.setCompoundDrawablesWithIntrinsicBounds(selectionModel.isSelected ? R.drawable.ic_tick_mark : 0, 0, 0, 0);
+        viewHolder.txtSelect.setBackgroundResource(selectionModel.isSelected ?
+                R.drawable.gradient_horizontal_plane : R.drawable.btn_background_grey);
         viewHolder.txtSelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -87,8 +89,7 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        public CustomTextView txtSelect, /*txtDescription,*/
-                txtHeading;
+        public CustomTextView txtSelect, txtHeading;
         public ImageView imgType;
         private LinearLayout linHolder;
         public RelativeLayout cardBody;

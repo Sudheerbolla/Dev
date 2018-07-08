@@ -13,7 +13,10 @@ import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.view.ActionMode;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -137,6 +140,40 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
             @Override
             public void afterTextChanged(Editable editable) {
 
+            }
+        });
+        edtPassword.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
+
+            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                return false;
+            }
+
+            public void onDestroyActionMode(ActionMode mode) {
+            }
+
+            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                return false;
+            }
+
+            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                return false;
+            }
+        });
+        edtConfirmPassword.setCustomSelectionActionModeCallback(new ActionMode.Callback() {
+
+            public boolean onPrepareActionMode(ActionMode mode, Menu menu) {
+                return false;
+            }
+
+            public void onDestroyActionMode(ActionMode mode) {
+            }
+
+            public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+                return false;
+            }
+
+            public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
+                return false;
             }
         });
     }
@@ -294,7 +331,12 @@ public class RegistrationFragment extends BaseFragment implements View.OnClickLi
     }
 
     private void openImagePickerDialog() {
-        DialogUtils.imagePickerDialog(splashActivity, cameraClick, galleryClick);
+        DialogUtils.imagePickerDialog(splashActivity, cameraClick, galleryClick, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imgAddProfileIcon.setImageResource(R.drawable.ic_placeholder);
+            }
+        });
     }
 
     private void openCamera() {

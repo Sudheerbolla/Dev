@@ -33,9 +33,9 @@
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
             android:name=".activities.SplashActivity"
             android:configChanges="locale"
@@ -50,30 +50,37 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".activities.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".activities.SearchActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
+
         <activity
             android:name=".activities.TempleDetailsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
+
         <activity
             android:name=".activities.SelectGodsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
+
         <activity
             android:name=".activities.NewPostActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
+
         <activity
             android:name=".activities.TempleGroupsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
+
         <activity
             android:name=".activities.SettingsActivity"
             android:screenOrientation="portrait"
@@ -82,21 +89,27 @@
         <meta-data
             android:name="com.sec.android.support.multiwindow"
             android:value="true" />
+
         <meta-data
             android:name="com.samsung.android.sdk.multiwindow.enable"
             android:value="true" />
+
         <meta-data
             android:name="com.samsung.android.sdk.multiwindow.multiinstance.enable"
             android:value="true" />
+
         <meta-data
             android:name="com.samsung.android.sdk.multiwindow.multiinstance.launchmode"
             android:value="singleTask" />
+
         <meta-data
             android:name="com.samsung.android.sdk.multiwindow.penwindow.enable"
             android:value="true" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

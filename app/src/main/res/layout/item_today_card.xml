@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/tools"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/linCard"
     android:layout_width="match_parent"
@@ -22,24 +21,28 @@
             android:id="@+id/relColoredBackground"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/card_border"
-            android:padding="@dimen/five_dp">
+            android:background="@drawable/card_border">
 
-            <com.devotted.utils.views.ReadMoreTextView
+            <ImageView
+                android:id="@+id/imgRead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="@dimen/two_dp"
+                android:visibility="gone"
+                card_view:srcCompat="@drawable/ic_read_orange" />
+
+            <com.devotted.utils.views.CustomTextView
                 android:id="@+id/txtDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
-                android:drawablePadding="@dimen/four_dp"
-                android:drawableStart="@drawable/ic_read_orange"
-                android:gravity="center"
-                android:padding="@dimen/eight_dp"
+                android:padding="@dimen/ten_dp"
                 android:text="@string/daily_dose_of_updated_mantras"
                 android:textColor="@color/colorBlack"
-                android:textSize="@dimen/sixteen_sp"
-                app:trimMode="trimModeLines"
-                card_view:trimLines="2" />
+                android:textSize="@dimen/sixteen_sp" />
 
         </RelativeLayout>
 

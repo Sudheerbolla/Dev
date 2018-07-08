@@ -1,4 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorPrimaryDark" />
+            <corners android:radius="@dimen/seven_dp" />
+        </shape>
+    </item>
+    <item android:top="@dimen/four_dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorPrimaryDark" />
+            <corners android:radius="@dimen/seven_dp" />
+        </shape>
+    </item>
+    <item
+        android:bottom="@dimen/onepointfive_dp"
+        android:left="@dimen/onepointfive_dp"
+        android:right="@dimen/onepointfive_dp"
+        android:top="@dimen/four_dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorWhite" />
+            <corners android:radius="@dimen/seven_dp" />
+        </shape>
+    </item>
+</layer-list>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>
+    <inset xmlns:android="http://schemas.android.com/apk/res/android"
+        android:insetBottom="-1dp"
+        android:insetLeft="-1dp"
+        android:insetRight="-1dp">
+
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="@dimen/three_dp"
+                android:color="@color/colorPrimaryDark" />
+            <solid android:color="@color/colorWhite" />
+            <corners android:radius="@dimen/five_dp" />
+        </shape>
+
+    </inset>--><!--
+<?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
 
     <solid android:color="@color/colorWhite" />
@@ -7,4 +48,4 @@
         android:color="@color/colorPrimaryDark" />
     <corners android:radius="@dimen/seven_dp" />
 
-</shape>
+</shape>-->

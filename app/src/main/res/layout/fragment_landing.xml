@@ -27,7 +27,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/ten_dp"
-                android:gravity="center"
                 android:orientation="vertical">
 
                 <include layout="@layout/layout_logo" />

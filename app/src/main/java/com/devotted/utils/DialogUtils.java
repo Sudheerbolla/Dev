@@ -281,9 +281,10 @@ public class DialogUtils {
         }
     }
 
-    public static void imagePickerDialog(final Context mContext, final View.OnClickListener cameraClick, final View.OnClickListener galleryClick) {
+    public static void imagePickerDialog(final Context mContext, final View.OnClickListener cameraClick,
+                                         final View.OnClickListener galleryClick, final View.OnClickListener removePic) {
         try {
-            TextView txtCamera, txtGallery, txtCancel;
+            CustomTextView txtCamera, txtGallery, txtCancel, txtRemovePic;
             final Dialog alertDialog = new Dialog(mContext, R.style.AlertDialogCustom);
             alertDialog.setCancelable(false);
             alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -291,6 +292,7 @@ public class DialogUtils {
             txtCamera = alertDialog.findViewById(R.id.txtCamera);
             txtGallery = alertDialog.findViewById(R.id.txtGallery);
             txtCancel = alertDialog.findViewById(R.id.txtCancel);
+            txtRemovePic = alertDialog.findViewById(R.id.txtRemovePic);
 
             alertDialog.getWindow().getAttributes().windowAnimations = R.style.AlertDialogCustom;
 
@@ -307,6 +309,15 @@ public class DialogUtils {
                     alertDialog.dismiss();
                     if (cameraClick != null) {
                         cameraClick.onClick(v);
+                    }
+                }
+            });
+            txtRemovePic.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    alertDialog.dismiss();
+                    if (removePic != null) {
+                        removePic.onClick(v);
                     }
                 }
             });

@@ -14,7 +14,7 @@ import com.devotted.R;
 import com.devotted.listeners.IClickListener;
 import com.devotted.models.CardDataItemNew;
 import com.devotted.utils.StaticUtils;
-import com.devotted.utils.views.ReadMoreTextView;
+import com.devotted.utils.views.CustomTextView;
 
 import java.util.ArrayList;
 
@@ -44,17 +44,12 @@ public class CardsRecyclerViewAdapterToday extends RecyclerView.Adapter<CardsRec
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         CardDataItemNew cardDataItem = itemsData.get(position);
         if (cardDataItem.isRead) {
-//            holder.relColoredBackground.setBackground(ContextCompat.getDrawable(context, R.drawable.btn_background_green));
             holder.txtDescription.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_read_orange, 0, 0, 0);
         } else {
-//            holder.relColoredBackground.setBackground(ContextCompat.getDrawable(context, R.drawable.btn_background_h));
-//            holder.txtReadLogo.setVisibility(View.GONE);
             holder.txtDescription.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
         }
 
         holder.txtDescription.setText(cardDataItem.content);
-//        holder.txtQuoteMeaning.setText(cardDataItem.content);
-//        holder.txtDescription.getIsExpandedOnce();
         holder.txtDescription.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,17 +65,13 @@ public class CardsRecyclerViewAdapterToday extends RecyclerView.Adapter<CardsRec
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
-        private RelativeLayout relColoredBackground;
-        public ReadMoreTextView txtDescription;
+        public CustomTextView txtDescription;
         public LinearLayout linCard;
 
         ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
-            relColoredBackground = itemLayoutView.findViewById(R.id.relColoredBackground);
             linCard = itemLayoutView.findViewById(R.id.linCard);
             txtDescription = itemLayoutView.findViewById(R.id.txtDescription);
-//            txtQuote = itemLayoutView.findViewById(R.id.txtQuote);
-//            txtQuoteMeaning = itemLayoutView.findViewById(R.id.txtQuoteMeaning);
         }
     }
 

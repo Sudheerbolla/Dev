@@ -83,10 +83,9 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
         txtUserName.setText(getString(R.string.namaste_user) + " " + LocalStorage.getInstance(splashActivity).getString(LocalStorage.PREF_USER_NAME, ""));
         selectionModelArrayList.clear();
         if (isUserType) {
-//            txtHeading.setText(R.string.you_are);
             txtHeading.setText("");
             SelectionModel spiritualModel = new SelectionModel(getString(R.string.devotee),
-                    new String[]{
+                    new String[]{"Services I receive",
                             getString(R.string.user_type1_line1),
                             getString(R.string.user_type1_line2),
                             getString(R.string.user_type1_line3),
@@ -94,7 +93,7 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
                     },
                     R.drawable.ic_lotus_position);
             SelectionModel religiousModel = new SelectionModel(getString(R.string.temple_member),
-                    new String[]{
+                    new String[]{"Services we provide",
                             getString(R.string.user_type2_line1),
                             getString(R.string.user_type2_line2),
                             getString(R.string.user_type2_line3),
@@ -104,14 +103,14 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
             selectionModelArrayList.add(religiousModel);
         } else {
             SelectionModel spiritualModel = new SelectionModel(getString(R.string.spiritual), new String[]{
-                    "App Spiritual Features: ",
+                    "Spiritual Features ",
                     getString(R.string.interest_type1_line1),
                     getString(R.string.interest_type1_line2),
                     getString(R.string.interest_type1_line3),
                     getString(R.string.interest_type1_line4)
             }, R.drawable.ic_spirtitual);
             SelectionModel religiousModel = new SelectionModel(getString(R.string.religious), new String[]{
-                    "App Religious Features: ",
+                    "Religious Features ",
                     getString(R.string.interest_type2_line1),
                     getString(R.string.interest_type2_line2),
                     getString(R.string.interest_type2_line3),

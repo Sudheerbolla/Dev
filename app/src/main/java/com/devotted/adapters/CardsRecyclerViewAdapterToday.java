@@ -43,12 +43,7 @@ public class CardsRecyclerViewAdapterToday extends RecyclerView.Adapter<CardsRec
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         CardDataItemNew cardDataItem = itemsData.get(position);
-        if (cardDataItem.isRead) {
-            holder.txtDescription.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_read_orange, 0, 0, 0);
-        } else {
-            holder.txtDescription.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-        }
-
+        holder.txtDescription.setCompoundDrawablesWithIntrinsicBounds(0, 0, cardDataItem.isRead ? R.drawable.ic_read_orange : 0, 0);
         holder.txtDescription.setText(cardDataItem.content);
         holder.txtDescription.setOnClickListener(new View.OnClickListener() {
             @Override

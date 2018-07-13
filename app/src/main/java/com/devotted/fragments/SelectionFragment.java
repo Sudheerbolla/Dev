@@ -84,6 +84,7 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
         selectionModelArrayList.clear();
         if (isUserType) {
             txtHeading.setText("");
+            // need to change
             SelectionModel spiritualModel = new SelectionModel(getString(R.string.devotee),
                     new String[]{"Services I receive",
                             getString(R.string.user_type1_line1),

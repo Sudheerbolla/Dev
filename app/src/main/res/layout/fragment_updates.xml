@@ -62,16 +62,38 @@
             android:orientation="horizontal"
             android:padding="@dimen/ten_dp" />
 
-        <com.devotted.utils.views.CustomTextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/colorLightGrey"
-            android:padding="@dimen/twelve_dp"
-            android:tag="sticky-nonconstant-hastransparancy"
-            android:text="@string/sree_hanuman_temple_updates"
-            android:textAllCaps="true"
-            android:textColor="@color/color_vvDarkGrey"
-            android:textSize="@dimen/seventeen_sp" />
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:tag="sticky-nonconstant-hastransparancy">
+
+            <com.devotted.utils.views.CircleImageView
+                android:id="@+id/imgSelectedTemple"
+                android:layout_width="@dimen/fifty_dp"
+                android:layout_height="@dimen/fifty_dp"
+                android:layout_marginBottom="@dimen/five_dp"
+                android:layout_marginStart="@dimen/five_dp"
+                android:layout_marginTop="@dimen/five_dp"
+                android:src="@drawable/temple1"
+                app:civ_border_color="@color/colorPrimaryDark"
+                app:civ_border_width="@dimen/one_dp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtSelectedTempleName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:padding="@dimen/ten_dp"
+                android:singleLine="true"
+                android:text="@string/sree_hanuman_temple_updates"
+                android:textAllCaps="true"
+                android:textColor="@color/color_vvDarkGrey"
+                android:textSize="@dimen/sixteen_sp" />
+
+        </LinearLayout>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerViewUpdates"

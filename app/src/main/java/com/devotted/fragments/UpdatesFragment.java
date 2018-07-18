@@ -13,10 +13,12 @@ import android.view.ViewGroup;
 import com.devotted.R;
 import com.devotted.activities.MainActivity;
 import com.devotted.activities.NewPostActivity;
-import com.devotted.adapters.TemplePostsAdapter;
+import com.devotted.adapters.FavouriteTemplePostsAdapter;
 import com.devotted.adapters.YourFavouriteTemplesAdapter;
 import com.devotted.listeners.IClickListener;
+import com.devotted.models.FavouriteTempleModel;
 import com.devotted.models.TempleModel;
+import com.devotted.utils.views.CircleImageView;
 import com.devotted.utils.views.CustomTextView;
 
 import java.util.ArrayList;
@@ -25,12 +27,13 @@ import java.util.ArrayList;
 public class UpdatesFragment extends BaseFragment implements IClickListener, View.OnClickListener {
 
     private YourFavouriteTemplesAdapter yourFavouriteTemplesAdapter;
-    private TemplePostsAdapter templePostsAdapter;
+    private FavouriteTemplePostsAdapter templePostsAdapter;
     private RecyclerView recyclerViewTemples, recyclerViewUpdates;
     private View rootView;
     private MainActivity mainActivity;
-    private CustomTextView txtWriteAnUpdate;
-    private ArrayList<TempleModel> templeModelArrayList;
+    private CustomTextView txtWriteAnUpdate, txtSelectedTempleName;
+    private CircleImageView imgSelectedTemple;
+    private ArrayList<FavouriteTempleModel> templeModelArrayList;
     private ArrayList<TempleModel> templePostsArrayList;
     private CommentsBottomSheetFragment commentsBottomSheetFragment;
 
@@ -48,7 +51,7 @@ public class UpdatesFragment extends BaseFragment implements IClickListener, Vie
 
     private void setDummyData() {
         for (int i = 1; i < 4; i++) {
-            templeModelArrayList.add(new TempleModel(i));
+            templeModelArrayList.add(new FavouriteTempleModel(i));
             templePostsArrayList.add(new TempleModel(i));
         }
     }
@@ -64,17 +67,29 @@ public class UpdatesFragment extends BaseFragment implements IClickListener, Vie
         recyclerViewTemples = rootView.findViewById(R.id.recyclerViewTemples);
         recyclerViewUpdates = rootView.findViewById(R.id.recyclerViewUpdates);
         txtWriteAnUpdate = rootView.findViewById(R.id.txtWriteAnUpdate);
+        txtSelectedTempleName = rootView.findViewById(R.id.txtSelectedTempleName);
+        imgSelectedTemple = rootView.findViewById(R.id.imgSelectedTemple);
         setDummyData();
         setTemplesYouMayKnowAdapter();
         setTemplePostsAdapter();
 //        recyclerViewUpdates.setNestedScrollingEnabled(false);
         ViewCompat.setNestedScrollingEnabled(recyclerViewUpdates, false);
         txtWriteAnUpdate.setOnClickListener(this);
+
+        templeModelArrayList.get(0).isFocused = true;
+        yourFavouriteTemplesAdapter.notifyDataSetChanged();
+
+        txtSelectedTempleName.setText(templeModelArrayList.get(0).templeName);
+        imgSelectedTemple.setImageResource(templeModelArrayList.get(0).image);
+
+        templePostsArrayList.clear();
+        templePostsAdapter.notifyDataSetChanged();
+
     }
 
     private void setTemplePostsAdapter() {
         recyclerViewUpdates.setLayoutManager(new LinearLayoutManager(mainActivity));
-        templePostsAdapter = new TemplePostsAdapter(mainActivity, templePostsArrayList, this);
+        templePostsAdapter = new FavouriteTemplePostsAdapter(mainActivity, templePostsArrayList, this);
         recyclerViewUpdates.setAdapter(templePostsAdapter);
     }
 
@@ -100,6 +115,18 @@ public class UpdatesFragment extends BaseFragment implements IClickListener, Vie
                 }
                 templeModelArrayList.get(position).isFocused = true;
                 yourFavouriteTemplesAdapter.notifyDataSetChanged();
+
+                txtSelectedTempleName.setText(templeModelArrayList.get(position).templeName);
+                imgSelectedTemple.setImageResource(templeModelArrayList.get(position).image);
+
+                templePostsArrayList.clear();
+                if (position == 1) {
+                    for (int i = 1; i < 4; i++) {
+                        templePostsArrayList.add(new TempleModel(i));
+                    }
+                }
+                templePostsAdapter.notifyDataSetChanged();
+
                 break;
             default:
                 break;

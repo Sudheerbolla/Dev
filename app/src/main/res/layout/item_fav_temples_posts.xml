@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relBody"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:padding="@dimen/ten_dp">
+
+    <RelativeLayout
+        android:id="@+id/relHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@id/imageViewTemple"
+            android:layout_toStartOf="@+id/imgMore">
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="@dimen/six_dp"
+                android:text="@string/_1_hr_ago"
+                android:textColor="@color/colorMediumGrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/txtTime"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:padding="@dimen/five_dp">
+
+                <com.devotted.utils.views.CustomTextView
+                    android:id="@+id/txtLikes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.7"
+                    android:gravity="center_vertical"
+                    android:text="@string/_45_likes"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/ten_sp" />
+
+                <com.devotted.utils.views.CustomTextView
+                    android:id="@+id/txtComments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/five_dp"
+                    android:alpha="0.7"
+                    android:gravity="center"
+                    android:padding="@dimen/four_dp"
+                    android:text="@string/_12_comments"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/ten_sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imgMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/seven_dp"
+            app:srcCompat="@drawable/ic_more" />
+
+    </RelativeLayout>
+
+    <com.devotted.utils.views.CustomTextView
+        android:id="@+id/txtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/five_dp"
+        android:layout_marginTop="@dimen/five_dp"
+        android:textColor="@color/color_vvvDarkGrey"
+        android:textSize="@dimen/fifteen_sp" />
+
+    <com.devotted.utils.views.CustomTextView
+        android:id="@+id/txtDescription1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/six_dp"
+        android:layout_marginTop="@dimen/six_dp"
+        android:padding="@dimen/five_dp"
+        android:text="@string/pooja_time_23_feb_5_30_pm_7_30_pm"
+        android:textColor="@color/color_vvvDarkGrey"
+        android:textSize="@dimen/seventeen_sp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/seperator_height_small"
+        android:background="@color/colorGrey" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/five_dp">
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/txtComment"
+            android:drawablePadding="@dimen/five_dp"
+            android:drawableStart="@drawable/ic_like"
+            android:gravity="center_vertical"
+            android:padding="@dimen/three_dp"
+            android:singleLine="true"
+            android:text="@string/like"
+            android:textColor="@color/color_vvvDarkGrey"
+            android:textSize="@dimen/thirteen_sp" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="@dimen/five_dp"
+            android:drawableStart="@drawable/ic_comment_"
+            android:gravity="center_vertical"
+            android:padding="@dimen/three_dp"
+            android:singleLine="true"
+            android:text="@string/comment"
+            android:textColor="@color/color_vvvDarkGrey"
+            android:textSize="@dimen/thirteen_sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/txtComment"
+            android:gravity="end"
+            android:padding="@dimen/three_dp">
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/five_dp"
+                android:drawableStart="@drawable/ic_share_"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/share"
+                android:textColor="@color/color_vvvDarkGrey"
+                android:textSize="@dimen/thirteen_sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/seperator_height_small"
+        android:background="@color/colorGrey" />
+
+</LinearLayout>

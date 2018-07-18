@@ -15,17 +15,21 @@
         android:padding="@dimen/twentyfive_dp"
         android:src="@drawable/ic_flower" />
 
+    <include
+        android:id="@+id/logo"
+        layout="@layout/layout_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/thirty_dp" />
+
     <LinearLayout
+        android:id="@+id/linOptions"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:gravity="center"
         android:orientation="vertical">
-
-        <include
-            android:id="@+id/logo"
-            layout="@layout/layout_logo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:id="@+id/linInnerView"

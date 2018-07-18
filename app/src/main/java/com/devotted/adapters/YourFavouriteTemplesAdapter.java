@@ -16,7 +16,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.devotted.R;
 import com.devotted.listeners.IClickListener;
-import com.devotted.models.TempleModel;
+import com.devotted.models.FavouriteTempleModel;
 import com.devotted.utils.views.CircleImageView;
 import com.devotted.utils.views.CustomTextView;
 
@@ -24,11 +24,11 @@ import java.util.ArrayList;
 
 public class YourFavouriteTemplesAdapter extends RecyclerView.Adapter<YourFavouriteTemplesAdapter.ViewHolder> {
 
-    private ArrayList<TempleModel> itemsData;
+    private ArrayList<FavouriteTempleModel> itemsData;
     private Context context;
     private IClickListener iClickListener;
 
-    public YourFavouriteTemplesAdapter(Context context, ArrayList<TempleModel> itemsData, IClickListener iClickListener) {
+    public YourFavouriteTemplesAdapter(Context context, ArrayList<FavouriteTempleModel> itemsData, IClickListener iClickListener) {
         this.itemsData = itemsData;
         this.iClickListener = iClickListener;
         this.context = context;
@@ -44,7 +44,7 @@ public class YourFavouriteTemplesAdapter extends RecyclerView.Adapter<YourFavour
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder viewHolder, @SuppressLint("RecyclerView") final int position) {
 
-        TempleModel templeModel = itemsData.get(position);
+        FavouriteTempleModel templeModel = itemsData.get(position);
         viewHolder.txtTempleName.setText(templeModel.templeName);
 
         viewHolder.txtUpdates.setText(String.format("%s %s", templeModel.distance, context.getString(R.string.updates)));

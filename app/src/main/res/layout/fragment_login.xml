@@ -49,14 +49,15 @@
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/half_circle"
                 android:gravity="center"
-                android:padding="@dimen/twentyfive_dp" />
+                android:padding="@dimen/twenty_dp" />
 
             <include
                 layout="@layout/layout_logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/relTopBar"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-20dp" />
 
         </RelativeLayout>
 

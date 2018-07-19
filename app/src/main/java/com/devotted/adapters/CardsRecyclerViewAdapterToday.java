@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
@@ -43,7 +44,7 @@ public class CardsRecyclerViewAdapterToday extends RecyclerView.Adapter<CardsRec
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         CardDataItemNew cardDataItem = itemsData.get(position);
-        holder.txtDescription.setCompoundDrawablesWithIntrinsicBounds(0, 0, cardDataItem.isRead ? R.drawable.ic_read_orange : 0, 0);
+        holder.imgRead.setVisibility(cardDataItem.isRead?View.VISIBLE:View.GONE);
         holder.txtDescription.setText(cardDataItem.content);
         holder.txtDescription.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,11 +63,13 @@ public class CardsRecyclerViewAdapterToday extends RecyclerView.Adapter<CardsRec
 
         public CustomTextView txtDescription;
         public LinearLayout linCard;
+        public ImageView imgRead;
 
         ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
             linCard = itemLayoutView.findViewById(R.id.linCard);
             txtDescription = itemLayoutView.findViewById(R.id.txtDescription);
+            imgRead= itemLayoutView.findViewById(R.id.imgRead);
         }
     }
 

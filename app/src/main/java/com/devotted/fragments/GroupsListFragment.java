@@ -51,6 +51,7 @@ public class GroupsListFragment extends BaseFragment implements IClickListener {
     @Override
     public void onResume() {
         super.onResume();
+        if (templeModelArrayList != null) templeModelArrayList.clear();
         templeGroupsActivity.setTopBarText(getString(R.string.my_temple_groups));
     }
 
@@ -66,7 +67,7 @@ public class GroupsListFragment extends BaseFragment implements IClickListener {
     }
 
     private void setDummyData() {
-        for (int i = 0; i < 2; i++) {
+        for (int i = 0; i < 3; i++) {
             templeModelArrayList.add(new TempleModel(i));
         }
     }

@@ -104,6 +104,19 @@
             android:textSize="@dimen/twenty_sp" />
 
         <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:padding="@dimen/ten_dp"
+            android:singleLine="true"
+            android:text="Logout"
+            android:textColor="@color/color_vvvDarkGrey"
+            android:textSize="@dimen/twenty_sp" />
+
+        <com.devotted.utils.views.CustomTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/fifteen_dp"

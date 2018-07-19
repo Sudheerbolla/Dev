@@ -221,7 +221,7 @@
     <string name="user_type1_line1">Receive Temple Services</string>
     <string name="user_type1_line2">Receive Favorite temple updates</string>
     <string name="user_type1_line3">Participate in temple posts</string>
-    <string name="user_type1_line4">Participate in God\'s Seva and Temple</string>
+    <string name="user_type1_line4">Participate in Temple and God\'s Seva</string>
 
     <string name="user_type2_line1">Temple Administration</string>
     <string name="user_type2_line2">Provide Temple updates</string>
@@ -237,7 +237,7 @@
     <string name="interest_type2_line2">Updates from Favorite Temples</string>
     <string name="interest_type2_line3">Do Volunteer Seva</string>
     <string name="interest_type2_line4">Involve in Religious discussions</string>
-    <string name="interest_type2_line5">Get Horoscope, Dharma, etc., info</string>
+    <string name="interest_type2_line5">Get Horoscope, Dharma, etc.,</string>
 
     <string name="devotee">Devotee</string>
     <string name="social_share_text">I found an app which will be useful</string>

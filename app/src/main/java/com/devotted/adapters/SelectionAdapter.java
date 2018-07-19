@@ -54,8 +54,6 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
             CustomTextView customTextView = new CustomTextView(context);
             customTextView.setTextSize(16);
             customTextView.setPadding(5, 5, 5, 5);
-//            customTextView.setCompoundDrawablesWithIntrinsicBounds(isUserType ? (selectionModel.type.equalsIgnoreCase(context.getString(R.string.devotee)) ? R.drawable.ic_star_d : R.drawable.ic_small_flower) :
-//                    (selectionModel.type.equalsIgnoreCase(context.getString(R.string.religious)) ? R.drawable.ic_lotus : R.drawable.ic_star_s), 0, 0, 0);
             customTextView.setCompoundDrawablesWithIntrinsicBounds(((selectionModel.type.equalsIgnoreCase(context.getString(R.string.religious)) || (selectionModel.type.equalsIgnoreCase(context.getString(R.string.devotee)))) ?
                     R.drawable.ic_lotus : R.drawable.ic_star_s), 0, 0, 0);
             customTextView.setCompoundDrawablePadding(StaticUtils.pxFromDp(context, 8));
@@ -64,17 +62,21 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
             viewHolder.linHolder.addView(customTextView);
         }
         viewHolder.txtHeading.setText(selectionModel.description[0]);
-//        viewHolder.txtHeading.setCompoundDrawablesWithIntrinsicBounds(isUserType ? (selectionModel.type.equalsIgnoreCase(context.getString(R.string.devotee)) ? R.drawable.ic_star_d : R.drawable.ic_small_flower) :
-//                (selectionModel.type.equalsIgnoreCase(context.getString(R.string.religious)) ? R.drawable.ic_lotus : R.drawable.ic_star_s), 0, 0, 0);
-        viewHolder.txtSelect.setCompoundDrawablesWithIntrinsicBounds(selectionModel.isSelected ? R.drawable.ic_tick_mark : 0, 0, 0, 0);
-        viewHolder.txtSelect.setBackgroundResource(selectionModel.isSelected ? R.drawable.gradient_horizontal_plane : R.drawable.btn_background_grey);
+        viewHolder.imgCheckBox.setVisibility(selectionModel.isSelected ? View.VISIBLE : View.INVISIBLE);
+        viewHolder.linSelect.setBackgroundResource(selectionModel.isSelected ? R.drawable.gradient_horizontal_plane : R.drawable.btn_background_grey);
+        viewHolder.linSelect.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (iClickListener != null) iClickListener.onClick(v, position);
+            }
+        });
         viewHolder.txtSelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (iClickListener != null) iClickListener.onClick(v, position);
             }
         });
-        viewHolder.txtSelect.setOnLongClickListener(new View.OnLongClickListener() {
+        viewHolder.linSelect.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
                 if (iClickListener != null) iClickListener.onLongClick(v, position);
@@ -91,16 +93,18 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
     public static class ViewHolder extends RecyclerView.ViewHolder {
 
         public CustomTextView txtSelect, txtHeading;
-        public ImageView imgType;
+        public ImageView imgType, imgCheckBox;
         private LinearLayout linHolder;
-        public RelativeLayout cardBody;
+        public RelativeLayout cardBody, linSelect;
 
         ViewHolder(View itemLayoutView) {
             super(itemLayoutView);
+            linSelect = itemLayoutView.findViewById(R.id.linSelect);
             linHolder = itemLayoutView.findViewById(R.id.linHolder);
             txtSelect = itemLayoutView.findViewById(R.id.txtSelect);
 //            txtDescription = itemLayoutView.findViewById(R.id.txtDescription);
             imgType = itemLayoutView.findViewById(R.id.imgType);
+            imgCheckBox = itemLayoutView.findViewById(R.id.imgCheckBox);
             cardBody = itemLayoutView.findViewById(R.id.cardBody);
             txtHeading = itemLayoutView.findViewById(R.id.txtHeading);
         }

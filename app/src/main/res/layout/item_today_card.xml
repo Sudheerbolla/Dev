@@ -30,7 +30,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginEnd="@dimen/two_dp"
-                android:visibility="gone"
+                android:visibility="visible"
                 card_view:srcCompat="@drawable/ic_read_orange" />
 
             <com.devotted.utils.views.CustomTextView
@@ -39,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
+                android:layout_toStartOf="@id/imgRead"
                 android:padding="@dimen/ten_dp"
                 android:text="@string/daily_dose_of_updated_mantras"
                 android:textColor="@color/colorBlack"

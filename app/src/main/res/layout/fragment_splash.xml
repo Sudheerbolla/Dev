@@ -21,7 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/thirty_dp" />
+        android:layout_marginTop="@dimen/fifty_dp" />
 
     <LinearLayout
         android:id="@+id/linOptions"
@@ -50,7 +50,7 @@
                 <ImageView
                     android:layout_width="@dimen/sixty_dp"
                     android:layout_height="@dimen/sixty_dp"
-                    android:src="@drawable/ic_spirtitual" />
+                    android:src="@drawable/ic_spiritual" />
 
                 <com.devotted.utils.views.CustomTextView
                     android:layout_width="wrap_content"

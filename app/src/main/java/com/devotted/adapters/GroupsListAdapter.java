@@ -42,6 +42,17 @@ public class GroupsListAdapter extends RecyclerView.Adapter<GroupsListAdapter.Vi
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, @SuppressLint("RecyclerView") final int position) {
         TempleModel templeModel = itemsData.get(position);
+        switch (position) {
+            case 0:
+                viewHolder.txtGroupName.setText(context.getString(R.string.swami_jaganath_temple_volunteer_group));
+                break;
+            case 1:
+                viewHolder.txtGroupName.setText("Chilukuru Balaji Temple Volunteer Group");
+                break;
+            case 2:
+                viewHolder.txtGroupName.setText("Hanuman Temple Volunteer Group");
+                break;
+        }
 
         viewHolder.cardViewGroups.setOnClickListener(new View.OnClickListener() {
             @Override

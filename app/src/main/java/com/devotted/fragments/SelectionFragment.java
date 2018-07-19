@@ -109,7 +109,7 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
                     getString(R.string.interest_type1_line2),
                     getString(R.string.interest_type1_line3),
                     getString(R.string.interest_type1_line4)
-            }, R.drawable.ic_spirtitual);
+            }, R.drawable.ic_spiritual);
             SelectionModel religiousModel = new SelectionModel(getString(R.string.religious), new String[]{
                     "Religious Features ",
                     getString(R.string.interest_type2_line1),
@@ -173,6 +173,7 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
     public void onClick(View view, int position) {
         switch (view.getId()) {
             case R.id.txtSelect:
+            case R.id.linSelect:
                 selectedPosition = position;
                 if (isUserType) {
                     for (int i = 0; i < selectionModelArrayList.size(); i++) {

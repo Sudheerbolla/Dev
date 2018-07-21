@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/relTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/gradient_horizontal_plane"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/five_dp"
+            app:srcCompat="@drawable/ic_back" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtTempleDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/imgBack"
+            android:layout_toStartOf="@+id/imgShare"
+            android:gravity="center_vertical"
+            android:hint="Horoscope"
+            android:padding="@dimen/ten_dp"
+
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="@dimen/nineteen_sp" />
+
+        <ImageView
+            android:id="@+id/imgShare"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/five_dp"
+            android:padding="@dimen/ten_dp"
+            app:srcCompat="@drawable/ic_topbar_share" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relTopBar"
+        android:background="@color/colorWhite"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:background="@drawable/orange_circle"
+                android:src="@drawable/ic_panchang" />
+
+            <com.devotted.utils.views.CgustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/five_dp"
+                android:text="Horoscope"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/nineteen_sp"
+                app:txt_font_type="bold" />
+
+            <RelativeLayout
+                android:id="@+id/relDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/ten_dp">
+
+                <ImageView
+                    android:id="@+id/imgPrevious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/ten_dp"
+                    app:srcCompat="@drawable/ic_left_orange" />
+
+                <com.devotted.utils.views.CustomTextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@id/imgPrevious"
+                    android:layout_toStartOf="@+id/imgNext"
+                    android:background="@drawable/btn_background_h"
+                    android:gravity="center"
+                    android:padding="@dimen/ten_dp"
+                    android:text="Date : 2018-07-20"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/seventeen_sp"
+                    app:txt_font_type="bold" />
+
+                <ImageView
+                    android:id="@+id/imgNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/ten_dp"
+                    app:srcCompat="@drawable/ic_right_orange" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:orientation="vertical">
+
+                <com.devotted.utils.views.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/ten_dp"
+                    android:gravity="center"
+                    android:padding="@dimen/five_dp"
+                    android:text="Aries, are you hoping to accomplish a goal that you've been working toward for a long time? Don't let delays cause you to fear that it will never happen. It could block your creative energy and cause you to lose faith in yourself. Fortunate changes are in the wind, but it's still going to take a little more effort to get where you want to be. Keep going. You'll get there !"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/eighteen_sp"
+                    app:txt_font_type="regular" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

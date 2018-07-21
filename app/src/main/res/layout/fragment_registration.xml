@@ -14,6 +14,11 @@
         android:gravity="center"
         android:orientation="vertical">
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fifteen_dp"
+            android:background="@color/colorPrimaryDark" />
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -22,8 +27,7 @@
             <RelativeLayout
                 android:id="@+id/relTopBar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/seven_dp">
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:id="@+id/imgBack"
@@ -51,15 +55,16 @@
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/half_circle"
                 android:gravity="center"
-                android:padding="@dimen/twenty_dp" />
+                android:padding="@dimen/twentyfive_dp" />
 
-            <include
-                layout="@layout/layout_logo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="@dimen/seventy_dp"
+                android:layout_height="@dimen/seventy_dp"
                 android:layout_below="@id/relTopBar"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="-20dp" />
+                android:contentDescription="LOGO"
+                android:src="@drawable/ic_app_logo" />
 
         </RelativeLayout>
 

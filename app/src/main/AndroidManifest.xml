@@ -85,6 +85,8 @@
             android:name=".activities.SettingsActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".activities.PanchangActivity" />
+        <activity android:name=".activities.HoroscopeActivity" />
 
         <meta-data
             android:name="com.sec.android.support.multiwindow"

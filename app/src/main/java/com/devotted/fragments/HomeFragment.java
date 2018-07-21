@@ -11,7 +11,9 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import com.devotted.R;
+import com.devotted.activities.HoroscopeActivity;
 import com.devotted.activities.MainActivity;
+import com.devotted.activities.PanchangActivity;
 import com.devotted.activities.SearchActivity;
 import com.devotted.activities.TempleGroupsActivity;
 import com.devotted.adapters.ViewPagerAdapter;
@@ -24,7 +26,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
     private TabLayout tabLayout;
     private CustomViewPager viewPager;
-    private CustomTextView txtSearch, txtGroups;
+    private CustomTextView txtSearch, txtGroups, txtPanchang,txtHoroscope;
     private RelativeLayout relTemple;
     private View rootView;
     private MainActivity mainActivity;
@@ -50,7 +52,8 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         txtGroups = rootView.findViewById(R.id.txtGroups);
         viewPager = rootView.findViewById(R.id.viewpager);
         relTemple = rootView.findViewById(R.id.relTemple);
-
+        txtPanchang = rootView.findViewById(R.id.txtPanchang);
+        txtHoroscope= rootView.findViewById(R.id.txtHoroscope);
         setupViewPager(viewPager);
         viewPager.setPagingEnabled(true);
         viewPager.setOffscreenPageLimit(2);
@@ -60,6 +63,8 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
         txtSearch.setOnClickListener(this);
         txtGroups.setOnClickListener(this);
+        txtPanchang.setOnClickListener(this);
+        txtHoroscope.setOnClickListener(this);
         if (LocalStorage.getInstance(mainActivity).getBoolean(LocalStorage.IS_GUEST_USER, false)) {
             relTemple.setVisibility(View.GONE);
         } else {
@@ -87,9 +92,23 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
             case R.id.txtGroups:
                 openGroupsScreen();
                 break;
+            case R.id.txtPanchang:
+                openPanchangScreen();
+                break;
+            case R.id.txtHoroscope:
+                openHoroScopeScreen();
+                break;
             default:
                 break;
         }
+    }
+
+    private void openHoroScopeScreen() {
+        startActivity(new Intent(mainActivity, HoroscopeActivity.class));
+    }
+
+    private void openPanchangScreen() {
+        startActivity(new Intent(mainActivity, PanchangActivity.class));
     }
 
     private void openGroupsScreen() {

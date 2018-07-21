@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/relTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/gradient_horizontal_plane"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/imgBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/five_dp"
+            app:srcCompat="@drawable/ic_back" />
+
+        <com.devotted.utils.views.CustomTextView
+            android:id="@+id/txtTempleDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/imgBack"
+            android:layout_toStartOf="@+id/imgShare"
+            android:gravity="center_vertical"
+            android:hint="@string/panchang"
+            android:padding="@dimen/ten_dp"
+
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="@dimen/nineteen_sp" />
+
+        <ImageView
+            android:id="@+id/imgShare"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/five_dp"
+            android:padding="@dimen/ten_dp"
+            app:srcCompat="@drawable/ic_topbar_share" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relTopBar"
+        android:background="@color/colorWhite"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/ten_dp"
+                android:background="@drawable/orange_circle"
+                android:src="@drawable/ic_panchang_new" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/five_dp"
+                android:text="@string/panchang"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/nineteen_sp"
+                app:txt_font_type="bold" />
+
+            <RelativeLayout
+                android:id="@+id/relDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/ten_dp">
+
+                <ImageView
+                    android:id="@+id/imgPrevious"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/ten_dp"
+                    app:srcCompat="@drawable/ic_left_orange" />
+
+                <com.devotted.utils.views.CustomTextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@id/imgPrevious"
+                    android:layout_toStartOf="@+id/imgNext"
+                    android:background="@drawable/btn_background_h"
+                    android:gravity="center"
+                    android:padding="@dimen/ten_dp"
+                    android:text="Date : 2018-07-20"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/seventeen_sp"
+                    app:txt_font_type="bold" />
+
+                <ImageView
+                    android:id="@+id/imgNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:padding="@dimen/ten_dp"
+                    app:srcCompat="@drawable/ic_right_orange" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:orientation="horizontal">
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Day : "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Friday "
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/eighteen_sp"
+                        app:txt_font_type="regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:orientation="horizontal">
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="Date : "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="2018-07-21 "
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/eighteen_sp"
+                        app:txt_font_type="regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:orientation="horizontal">
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="Sunrise : "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="5:56:00"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/eighteen_sp"
+                        app:txt_font_type="regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:orientation="horizontal">
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="Sunset : "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="18:33:59 "
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/eighteen_sp"
+                        app:txt_font_type="regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:orientation="horizontal">
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="Thiti : "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Ashtami -19.07.2018 13:37 to 20.07.2018 13:20 Followed By Navami "
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:orientation="horizontal">
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="Nakshatra : "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Chithirai -19.07.2018 07:54 to 20.07.2018 08:10 Followed By Swaathi "
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:orientation="horizontal">
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="Tamil Yoga : "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+                        android:text="Siddha-19.07.2018 07:54 to 20.07.2018 08:10 Followed By-Siddha"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:orientation="horizontal">
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="Rahu Kalam : "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="10:43:59 - 12:20:00"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:orientation="horizontal">
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="Gulikai Kalam : "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="7:31:59 - 9:07:59"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:orientation="horizontal">
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="Yamaganda : "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="15:31:59 - 17:07:59"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:orientation="horizontal">
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="Abhijit : "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                    <com.devotted.utils.views.CustomTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="start"
+
+                        android:text="11:36:00 - 12:24:00 "
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="@dimen/eighteen_sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

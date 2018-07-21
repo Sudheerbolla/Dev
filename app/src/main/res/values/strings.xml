@@ -293,7 +293,7 @@
     <string name="wellness_health_content_friday">Avoid plastic containers for storing FOOD. Use glass, steel, ceramic containers. Ceramic is good for Micro oven.</string>
     <string name="wellness_health_content_saturday">Health benefits of donating blood. Balances iron, improves blood circulation, burns calorie faster, improves lever health, triggers formation of new blood cells.</string>
     <string name="wellness_health_content_sunday">What are the causes of CVS (Computer Vision Syndrome)?\nLess blinking, short focus for long time. So, you can avoid this by doing so\n\n<b>Follow the rule of 20</b>. Take a 20-second break and look 20 feet away every 20 minutes\n<b>Take eye break.</b> Avoid working long hours. Close your eyes in your break. Take at least 3 to 5 breaks in a day.\nUser proper lighting outside.\nAdjust the computer screen brightness.\nMinimize Glare\nPut eye drops to lubricate your eyes.</string>
-    <string name="read_more">Read More</string>
-    <string name="read_less">Read Less</string>
+    <string name="read_more"> + Read More</string>
+    <string name="read_less"> - Read Less</string>
 
 </resources>

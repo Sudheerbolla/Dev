@@ -49,6 +49,7 @@ public class StaticUtils {
 
     private static final int IMAGE_SAMPLE_SIZE = 4;
     private static final String DISPLAY_DATE_TIME_FORMAT = "dd-MM-yyyy hh:mm a";
+    private static final String DISPLAY_DATE_FORMAT = "dd-MM-yyyy";
     public static final String storageDir = Environment.getExternalStorageDirectory().getPath() + "/" + "Devotted" + "/";
     public static int screen_height, screen_width;
 
@@ -240,6 +241,10 @@ public class StaticUtils {
         return new SimpleDateFormat(DISPLAY_DATE_TIME_FORMAT, Locale.getDefault()).format(calendar.getTime());
     }
 
+    public static String getDisplayDate(Calendar calendar) {
+        return new SimpleDateFormat(DISPLAY_DATE_FORMAT, Locale.getDefault()).format(calendar.getTime());
+    }
+
     public static void hideKeyboard(Context context, View view) {
         try {
             InputMethodManager imm = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -324,4 +329,5 @@ public class StaticUtils {
         }
         return "";
     }
+
 }

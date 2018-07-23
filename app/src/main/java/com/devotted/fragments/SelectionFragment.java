@@ -184,12 +184,11 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
                     }
                     selectionModelArrayList.get(position).isSelected = !selectionModelArrayList.get(position).isSelected;
                     selectionAdapter.notifyDataSetChanged();
-                    checkForValidation();
                 } else {
                     selectionModelArrayList.get(position).isSelected = !selectionModelArrayList.get(position).isSelected;
                     selectionAdapter.notifyItemChanged(position);
-                    checkForValidation();
                 }
+                checkForValidation();
                 break;
         }
     }

@@ -67,8 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/ten_dp"
-                android:background="@drawable/orange_circle"
-                android:src="@drawable/ic_panchang_new" />
+                android:src="@drawable/ic_swasthik" />
 
             <com.devotted.utils.views.CustomTextView
                 android:layout_width="wrap_content"

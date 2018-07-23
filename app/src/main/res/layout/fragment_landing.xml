@@ -14,19 +14,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
-            android:alpha="0.5"
-            android:padding="@dimen/twenty_dp"
+            android:alpha="0.35"
+            android:padding="@dimen/fourty_dp"
             android:src="@drawable/ic_flower" />
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/txtBottom">
+            android:layout_above="@+id/txtBottom"
+            android:layout_alignParentTop="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/ten_dp"
+                android:layout_marginTop="@dimen/fourty_dp"
                 android:orientation="vertical">
 
                 <include layout="@layout/layout_logo" />
@@ -112,7 +113,8 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom">
 
                         <com.devotted.utils.views.CustomTextView
                             android:id="@+id/txtGuestUser"

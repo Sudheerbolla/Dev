@@ -55,7 +55,7 @@
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/half_circle"
                 android:gravity="center"
-                android:padding="@dimen/twentyfive_dp" />
+                android:padding="@dimen/fifteen_dp" />
 
             <ImageView
                 android:id="@+id/imgLogo"

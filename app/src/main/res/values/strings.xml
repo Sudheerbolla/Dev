@@ -218,7 +218,7 @@
     <string name="you_are">YOU ARE</string>
     <string name="temple_member">Temple Member</string>
 
-    <string name="user_type1_line1">Receive Temple Services</string>
+    <string name="user_type1_line1">Receive Temple Services(Priest, Puja Services)</string>
     <string name="user_type1_line2">Receive Favorite temple updates</string>
     <string name="user_type1_line3">Participate in temple posts</string>
     <string name="user_type1_line4">Participate in Temple and God\'s Seva</string>
@@ -226,7 +226,7 @@
     <string name="user_type2_line1">Temple Administration</string>
     <string name="user_type2_line2">Provide Temple updates</string>
     <string name="user_type2_line3">Volunteer Management</string>
-    <string name="user_type2_line4">Organize Religious Events</string>
+    <string name="user_type2_line4">Organize Religious Events\n(Priest, Dharmakartha etc )</string>
 
     <string name="interest_type1_line1">Connects with Spiritual Gurus</string>
     <string name="interest_type1_line2">Updates from Favorite Gurus</string>
@@ -237,7 +237,7 @@
     <string name="interest_type2_line2">Updates from Favorite Temples</string>
     <string name="interest_type2_line3">Do Volunteer Seva</string>
     <string name="interest_type2_line4">Involve in Religious discussions</string>
-    <string name="interest_type2_line5">Get Horoscope, Dharma, etc.,</string>
+    <string name="interest_type2_line5">Get Panchang, Horoscope, Dharma updates.</string>
 
     <string name="devotee">Devotee</string>
     <string name="social_share_text">I found an app which will be useful</string>
@@ -295,5 +295,10 @@
     <string name="wellness_health_content_sunday">What are the causes of CVS (Computer Vision Syndrome)?\nLess blinking, short focus for long time. So, you can avoid this by doing so\n\n<b>Follow the rule of 20</b>. Take a 20-second break and look 20 feet away every 20 minutes\n<b>Take eye break.</b> Avoid working long hours. Close your eyes in your break. Take at least 3 to 5 breaks in a day.\nUser proper lighting outside.\nAdjust the computer screen brightness.\nMinimize Glare\nPut eye drops to lubricate your eyes.</string>
     <string name="read_more"> + Read More</string>
     <string name="read_less"> - Read Less</string>
+    <string name="spiritual_features">Spiritual Features</string>
+    <string name="religious_features">Religious Features</string>
+    <string name="services_i_receive">Services I receive</string>
+    <string name="services_we_provide">Services we provide</string>
+    <string name="horoscope">Horoscope</string>
 
 </resources>

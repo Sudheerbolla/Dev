@@ -86,7 +86,7 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
             txtHeading.setText("");
             // need to change
             SelectionModel spiritualModel = new SelectionModel(getString(R.string.devotee),
-                    new String[]{"Services I receive",
+                    new String[]{getString(R.string.services_i_receive),
                             getString(R.string.user_type1_line1),
                             getString(R.string.user_type1_line2),
                             getString(R.string.user_type1_line3),
@@ -94,7 +94,7 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
                     },
                     R.drawable.ic_lotus_position);
             SelectionModel religiousModel = new SelectionModel(getString(R.string.temple_member),
-                    new String[]{"Services we provide",
+                    new String[]{getString(R.string.services_we_provide),
                             getString(R.string.user_type2_line1),
                             getString(R.string.user_type2_line2),
                             getString(R.string.user_type2_line3),
@@ -104,14 +104,14 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
             selectionModelArrayList.add(religiousModel);
         } else {
             SelectionModel spiritualModel = new SelectionModel(getString(R.string.spiritual), new String[]{
-                    "Spiritual Features ",
+                    getString(R.string.spiritual_features),
                     getString(R.string.interest_type1_line1),
                     getString(R.string.interest_type1_line2),
                     getString(R.string.interest_type1_line3),
                     getString(R.string.interest_type1_line4)
             }, R.drawable.ic_spiritual);
             SelectionModel religiousModel = new SelectionModel(getString(R.string.religious), new String[]{
-                    "Religious Features ",
+                    getString(com.devotted.R.string.religious_features),
                     getString(R.string.interest_type2_line1),
                     getString(R.string.interest_type2_line2),
                     getString(R.string.interest_type2_line3),

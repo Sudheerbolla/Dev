@@ -96,8 +96,8 @@
     <string name="alphabetical">అక్షర</string>
     <string name="today">నేడు</string>
     <string name="_12_updates">12 నవీకరణలు</string>
-    <string name="groups">గుంపులు</string>
-    <string name="panchang">పంచాంగ్</string>
+    <string name="groups">సమూహాలు</string>
+    <string name="panchang">పంచాంగం</string>
     <string name="favourites">ఇష్టమైన</string>
     <string name="extras">ఎక్స్ట్రాలు</string>
     <string name="active_since_29_may_2018">29 మే, 2018 నుండి సక్రియంగా ఉంది</string>
@@ -218,7 +218,7 @@
     <string name="you_are">మీరు</string>
     <string name="temple_member">ఆలయం సభ్యుడు</string>
 
-    <string name="user_type1_line1">దేవాలయ సేవలను పొందండి</string>
+    <string name="user_type1_line1">దేవాలయ సేవలను పొందండి(పూజా కార్యక్రమాలు)</string>
     <string name="user_type1_line2">ఇష్టమైన ఆలయ నవీకరణలను పొందండి</string>
     <string name="user_type1_line3">ఆలయ విషయాల్లో పాల్గొనండి</string>
     <string name="user_type1_line4">ఆలయ, దేవుని సేవలో పాల్గొనండి</string>
@@ -226,7 +226,7 @@
     <string name="user_type2_line1">ఆలయ పరిపాలన</string>
     <string name="user_type2_line2">ఆలయ నవీకరణలను అందించండి</string>
     <string name="user_type2_line3">స్వత్చంద సేవకుల నిర్వహణ</string>
-    <string name="user_type2_line4">ధార్మిక  కార్యక్రమాలు నిర్వహించండి</string>
+    <string name="user_type2_line4">ధార్మిక  కార్యక్రమాలు నిర్వహించండి\n(పూజారి,ధర్మకర్తలు)</string>
 
     <string name="interest_type1_line1">ఆధ్యాత్మిక గురువులు</string>
     <string name="interest_type1_line2">ఇష్ట గురువుల నుండి నవీకరణలు</string>
@@ -237,7 +237,7 @@
     <string name="interest_type2_line2">ఇష్టమైన దేవాలయాల నవీకరణలు</string>
     <string name="interest_type2_line3">స్వత్చంద సేవా</string>
     <string name="interest_type2_line4">ధార్మికపరమైన చర్చలు</string>
-    <string name="interest_type2_line5">రాశిఫలాలు, ధర్మం, ఇత్యాది</string>
+    <string name="interest_type2_line5">రాశిఫలాలు, ధర్మం, పంచాంగం, ఇత్యాది</string>
 
     <string name="devotee">భక్తుడు</string>
     <string name="social_share_text">నేను ఉపయోగపడే ఒక అనువర్తనాన్ని కనుగొన్నాను</string>
@@ -300,6 +300,11 @@
     <string name="wellness_health_content_sunday">CVS యొక్క కారణాలు ఏమిటి (కంప్యూటర్ విజన్ సిండ్రోమ్)? \n తక్కువ మెరిసే, దీర్ఘకాలం చిన్న దృష్టి. కాబట్టి, మీరు ఇలా చేయడం ద్వారా దీనిని నివారించవచ్చు \n\n<b> 20 యొక్క నియమాన్ని పాటించండి </b>. 20-సెకనుల విరామం తీసుకోండి మరియు ప్రతి 20 నిమిషాలకు 20 అడుగుల దూరంలో ఉండండి \n <b> కంటి విరామం తీసుకోండి. </b> ఎక్కువ గంటలు పనిని నివారించండి. మీ విరామంలో మీ కళ్ళు మూసివేయండి. ఒక రోజులో కనీసం 3 నుండి 5 విరామాలు తీసుకోండి. \n బయట సరైన లైటింగ్ బయట. \n కంప్యూటర్ స్క్రీన్ ప్రకాశాన్ని మార్చండి. \n గ్లేర్ని కనిష్టీకరించండి \n కంటికి ద్రవపదార్ధాల కంటికి తగ్గట్టుగా ఉంటుంది.</string>
     <string name="read_more"> + Read More</string>
     <string name="read_less"> - Read Less</string>
+    <string name="spiritual_features">ఆధ్యాత్మిక విశేషణాలు</string>
+    <string name="religious_features">ధార్మిక విశేషణాలు</string>
+    <string name="services_i_receive">నేను పొందు సేవలు</string>
+    <string name="services_we_provide">మేము మీకు అందించే సేవలు</string>
+    <string name="horoscope">రాశిఫలాలు</string>
 
 
 </resources>

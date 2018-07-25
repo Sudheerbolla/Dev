@@ -77,7 +77,7 @@
                             android:drawablePadding="@dimen/seven_dp"
                             android:drawableTop="@drawable/ic_panchang_new"
                             android:padding="@dimen/five_dp"
-                            android:text="Panchang"
+                            android:text="@string/panchang"
                             android:textColor="@color/colorWhite"
                             android:textSize="@dimen/fifteen_sp" />
 
@@ -88,7 +88,7 @@
                             android:drawablePadding="@dimen/seven_dp"
                             android:drawableTop="@drawable/ic_horoscope"
                             android:padding="@dimen/five_dp"
-                            android:text="Horoscope"
+                            android:text="@string/horoscope"
                             android:textColor="@color/colorWhite"
                             android:textSize="@dimen/fifteen_sp" />
 

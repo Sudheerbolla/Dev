@@ -22,6 +22,7 @@
     <dimen name="twenty_dp">20dp</dimen>
     <dimen name="twentytwo_dp">22dp</dimen>
     <dimen name="twentyfive_dp">25dp</dimen>
+    <dimen name="twentyeight_dp">28dp</dimen>
     <dimen name="thirty_dp">30dp</dimen>
     <dimen name="thirtyfive_dp">35dp</dimen>
     <dimen name="fourty_dp">40dp</dimen>

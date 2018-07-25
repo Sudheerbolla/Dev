@@ -47,7 +47,7 @@ public class HoroscopeActivity extends BaseActivity implements View.OnClickListe
     private void setListeners() {
         imgBack.setOnClickListener(this);
         imgShare.setOnClickListener(this);
-        txtDate.setOnClickListener(this);
+//        txtDate.setOnClickListener(this);
     }
 
     @Override
@@ -59,9 +59,9 @@ public class HoroscopeActivity extends BaseActivity implements View.OnClickListe
             case R.id.imgShare:
                 ShareUtils.shareViaIntent(this, getString(R.string.temple_details), getString(R.string.sharing_temple_details));
                 break;
-            case R.id.txtDate:
-                datePickerDialog.show();
-                break;
+//            case R.id.txtDate:
+//                datePickerDialog.show();
+//                break;
             default:
                 break;
         }

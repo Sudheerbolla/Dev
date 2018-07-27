@@ -172,7 +172,7 @@ public class BaseActivity extends AppCompatActivity {
 // Checks the active language
         if (newConfig.locale == Locale.ENGLISH) {
             StaticUtils.showToast(this, getString(R.string.english));
-        } else if (newConfig.locale == new Locale("tl")) {
+        } else if (newConfig.locale == new Locale("te")) {
             StaticUtils.showToast(this, getString(R.string.telugu));
         } else if (newConfig.locale == new Locale("hi")) {
             StaticUtils.showToast(this, getString(R.string.hindi));

@@ -53,7 +53,7 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
         setListeners();
 
         switch (language) {
-            case "tl":
+            case "te":
                 rgLanguages.check(R.id.rbTelugu);
                 break;
             case "en":
@@ -85,7 +85,7 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
                         txtProceed.setText("Proceed");
                         break;
                     case R.id.rbTelugu:
-                        language = "tl";
+                        language = "te";
                         txtProceed.setText("ముందుకు");
                         break;
                     case R.id.rbHindi:

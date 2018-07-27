@@ -76,18 +76,20 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="@dimen/five_dp"
-                android:text="Aries"
+                android:text="@string/aries"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/nineteen_sp"
                 app:txt_font_type="bold" />
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/seven_dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/ten_dp"
                     android:gravity="center"
                     android:orientation="horizontal">
 
@@ -99,7 +101,7 @@
                         android:gravity="center"
                         android:padding="@dimen/five_dp"
                         android:singleLine="true"
-                        android:text="Yesterday"
+                        android:text="@string/yesterday"
                         android:textColor="@color/colorWhite"
                         android:textSize="@dimen/fifteen_sp"
                         app:txt_font_type="bold" />
@@ -126,8 +128,8 @@
                         android:layout_marginEnd="@dimen/five_dp"
                         android:background="@drawable/btn_background_h"
                         android:gravity="center"
-                        android:padding="@dimen/seven_dp"
-                        android:text="This Week"
+                        android:padding="@dimen/five_dp"
+                        android:text="@string/this_week"
                         android:textColor="@color/colorWhite"
                         android:textSize="@dimen/fifteen_sp"
                         app:txt_font_type="bold" />
@@ -139,8 +141,8 @@
                         android:layout_marginEnd="@dimen/five_dp"
                         android:background="@drawable/btn_background_h"
                         android:gravity="center"
-                        android:padding="@dimen/seven_dp"
-                        android:text="This Month"
+                        android:padding="@dimen/five_dp"
+                        android:text="@string/this_month"
                         android:textColor="@color/colorWhite"
                         android:textSize="@dimen/fifteen_sp"
                         app:txt_font_type="bold" />
@@ -160,8 +162,6 @@
                 <com.devotted.utils.views.CustomTextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/ten_dp"
-                    android:gravity="center"
                     android:padding="@dimen/five_dp"
                     android:text="Aries, are you hoping to accomplish a goal that you've been working toward for a long time? Don't let delays cause you to fear that it will never happen. It could block your creative energy and cause you to lose faith in yourself. Fortunate changes are in the wind, but it's still going to take a little more effort to get where you want to be. Keep going. You'll get there !"
                     android:textColor="@color/colorPrimaryDark"

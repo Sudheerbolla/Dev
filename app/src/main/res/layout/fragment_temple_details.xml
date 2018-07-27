@@ -236,9 +236,99 @@
 
         <include layout="@layout/layout_volunteer" />
 
-        <include layout="@layout/layout_volunteer" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/eight_dp"
+            android:layout_marginStart="@dimen/eight_dp"
+            android:background="@color/colorWhite"
+            android:padding="@dimen/eight_dp">
 
-        <include layout="@layout/layout_volunteer" />
+            <com.devotted.utils.views.CircleImageView
+                android:id="@+id/imgProfilePic"
+                android:layout_width="@dimen/fifty_dp"
+                android:layout_height="@dimen/fifty_dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_placeholder" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/imgProfilePic"
+                android:layout_toStartOf="@+id/txtRemove"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="@dimen/ten_dp"
+                android:singleLine="true"
+                android:text="Sadguru"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/fifteen_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtRemove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/ten_dp"
+                android:text="@string/remove"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorDark"
+                android:textSize="@dimen/thirteen_sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/eight_dp"
+            android:layout_marginStart="@dimen/eight_dp"
+            android:background="@color/colorWhite"
+            android:padding="@dimen/eight_dp">
+
+            <com.devotted.utils.views.CircleImageView
+                android:id="@+id/imgProfilePic1"
+                android:layout_width="@dimen/fifty_dp"
+                android:layout_height="@dimen/fifty_dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_placeholder" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/imgProfilePic1"
+                android:layout_toStartOf="@+id/txtRemove1"
+                android:ellipsize="marquee"
+                android:gravity="center_vertical"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="@dimen/ten_dp"
+                android:singleLine="true"
+                android:text="Naveen"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/fifteen_sp" />
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtRemove1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/ten_dp"
+                android:text="@string/remove"
+                android:textAllCaps="true"
+                android:textColor="@color/textColorDark"
+                android:textSize="@dimen/thirteen_sp" />
+
+        </RelativeLayout>
 
         <View
             android:layout_width="match_parent"

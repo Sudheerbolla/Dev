@@ -133,6 +133,7 @@ public class SplashFragment extends BaseFragment {
             splashActivity.finishAffinity();
         } else {
             splashActivity.replaceFragment(LandingFragment.newInstance(new Bundle()), false, R.id.splashContainer);
+//            splashActivity.replaceFragment(VerificationCodeFragment.newInstance(), false, R.id.splashContainer);
         }
     }
 

@@ -126,7 +126,7 @@
     <string name="camera">कैमरा</string>
     <string name="gallery">गेलरी</string>
     <string name="cancel">रद्द करना</string>
-    <string name="mantras">मंत्र</string>
+    <string name="quote">उद्धरण</string>
     <string name="daily_dose_of_updated_mantras">अद्यतन मंत्रों की दैनिक खुराक</string>
     <string name="it_is_better_to_live_your_own">अपने आप को जीना बेहतर है.</string>
     <string name="meaning_imitation_of_somebody_else_s_life_with_perfection">अर्थ: पूर्णता के साथ किसी और के जीवन की नकल</string>
@@ -161,6 +161,13 @@
     <string name="telugu">తెలుగు</string>
     <string name="hindi">हिंदी</string>
     <string name="monday">सोमवार</string>
+    <string name="tuesday">मंगलवार</string>
+    <string name="wednesday">बुधवार</string>
+    <string name="thursday">गुरूवार</string>
+    <string name="friday">शुक्रवार</string>
+    <string name="saturday">शनिवार</string>
+    <string name="sunday">रविवार</string>
+
     <string name="remove">हटाना</string>
 
     <string name="connecting_you_with_your_spiritual_gurus">आपको अपने आध्यात्मिक गुरु से जोड़ता है</string>
@@ -218,7 +225,7 @@
     <string name="you_are">तुम हो</string>
     <string name="temple_member">मंदिर सदस्य</string>
 
-    <string name="user_type1_line1">मंदिर सेवाएं प्राप्त करें</string>
+    <string name="user_type1_line1">मंदिर सेवाएं प्राप्त करें(पूजा कार्यक्रम ,समारोह आदि)</string>
     <string name="user_type1_line2">पसंदीदा मंदिर जानकारी प्राप्त करें</string>
     <string name="user_type1_line3">मंदिर पदों में भाग लें</string>
     <string name="user_type1_line4">मंदिर, भगवान की सेवा करो</string>
@@ -226,7 +233,8 @@
     <string name="user_type2_line1">मंदिर प्रशासन</string>
     <string name="user_type2_line2">मंदिर अद्यतन प्रदान करें</string>
     <string name="user_type2_line3">स्वयंसेवी प्रबंधन</string>
-    <string name="user_type2_line4">धार्मिक कार्यक्रमों को व्यवस्थित करें</string>
+    <string name="user_type2_line4">धार्मिक कार्यक्रमों को व्यवस्थित करें \n </string>
+    <string name="user_type2_line5">सेवा प्रदाता: धर्मकर्ता, पुजारी </string>
 
     <string name="interest_type1_line1">आध्यात्मिक गुरु</string>
     <string name="interest_type1_line2">पसंदीदा गुरुवो से जानकारी</string>
@@ -237,7 +245,7 @@
     <string name="interest_type2_line2">पसंदीदा मंदिरों के जानकारी</string>
     <string name="interest_type2_line3">स्वयंसेवी सेवा</string>
     <string name="interest_type2_line4">धार्मिक चर्चाएं</string>
-    <string name="interest_type2_line5">राशिफल, धर्म, आदि</string>
+    <string name="interest_type2_line5">राशिफल, धर्म, पंचांग, आदि</string>
 
     <string name="devotee">भक्त</string>
     <string name="social_share_text">मुझे एक ऐप मिला जो उपयोगी होगा</string>
@@ -260,13 +268,13 @@
 
     <!--Spiritual content-->
 
-    <string name="spiritual_monday_mantra">खुशी, स्वामित्व, अर्जित, पहना या खपत नहीं किया जा सकता है। खुशी प्यार, कृपा और कृतज्ञता के साथ हर मिनट रहने का आध्यात्मिक अनुभव है</string>
-    <string name="spiritual_tuesday_mantra">जैसे ही एक मोमबत्ती आग के बिना जला नहीं सकती है, पुरुष आध्यात्मिक जीवन के बिना नहीं जी सकते हैं।</string>
-    <string name="spiritual_wednesday_mantra">अपने पैरों को जमीन पर रखें, लेकिन अपने दिल को जितना ऊंचा हो उतना ऊंचा कर दें। औसत होने या अपने आध्यात्मिक माहौल के ठंड को आत्मसमर्पण करने से इंकार कर दें।</string>
-    <string name="spiritual_thursday_mantra">संगीत आध्यात्मिक और कामुक जीवन के बीच मध्यस्थ है।</string>
-    <string name="spiritual_friday_mantra">आप अच्छे व्यवहार के साथ एक अच्छा दिन नहीं कर सकते, और अच्छे व्यवहार के साथ बुरे दिन नहीं कर सकते।</string>
-    <string name="spiritual_saturday_mantra">एक बुरा दिन का मतलब यह नहीं है कि आपके पास बुरा जीवन है। अपने आशीर्वादों की गणना करें, न कि आपके शाप।</string>
-    <string name="spiritual_sunday_mantra">आपने पीछे की किताब नहीं पढ़ी है, तो अपने जीवन को इस तरह क्यों जीते हैं?</string>
+    <string name="spiritual_monday_quote">खुशी, स्वामित्व, अर्जित, पहना या खपत नहीं किया जा सकता है। खुशी प्यार, कृपा और कृतज्ञता के साथ हर मिनट रहने का आध्यात्मिक अनुभव है</string>
+    <string name="spiritual_tuesday_quote">जैसे ही एक मोमबत्ती आग के बिना जला नहीं सकती है, पुरुष आध्यात्मिक जीवन के बिना नहीं जी सकते हैं।</string>
+    <string name="spiritual_wednesday_quote">अपने पैरों को जमीन पर रखें, लेकिन अपने दिल को जितना ऊंचा हो उतना ऊंचा कर दें। औसत होने या अपने आध्यात्मिक माहौल के ठंड को आत्मसमर्पण करने से इंकार कर दें।</string>
+    <string name="spiritual_thursday_quote">संगीत आध्यात्मिक और कामुक जीवन के बीच मध्यस्थ है।</string>
+    <string name="spiritual_friday_quote">आप अच्छे व्यवहार के साथ एक अच्छा दिन नहीं कर सकते, और अच्छे व्यवहार के साथ बुरे दिन नहीं कर सकते।</string>
+    <string name="spiritual_saturday_quote">एक बुरा दिन का मतलब यह नहीं है कि आपके पास बुरा जीवन है। अपने आशीर्वादों की गणना करें, न कि आपके शाप।</string>
+    <string name="spiritual_sunday_quote">आपने पीछे की किताब नहीं पढ़ी है, तो अपने जीवन को इस तरह क्यों जीते हैं?</string>
 
     <!--Religious content-->
 
@@ -293,12 +301,16 @@
     <string name="wellness_health_content_friday">खाद्य भंडारण के लिए प्लास्टिक के कंटेनर से बचें। कांच, स्टील, सिरेमिक कंटेनर का प्रयोग करें। सिरेमिक माइक्रो ओवन के लिए अच्छा है।</string>
     <string name="wellness_health_content_saturday">रक्त दान करने के स्वास्थ्य लाभ। संतुलन लोहे, रक्त परिसंचरण में सुधार, कैलोरी को तेजी से जलता है, लीवर स्वास्थ्य में सुधार करता है, नए रक्त कोशिकाओं का गठन शुरू करता है।</string>
     <string name="wellness_health_content_sunday">सीवीएस (कंप्यूटर विजन सिंड्रोम) के कारण क्या हैं? \n लापरवाही, लंबे समय तक कम ध्यान केंद्रित करें। तो, आप ऐसा करके \n \n कर सकते हैं\n\n<b> 20 के नियम का पालन करें </b>। 20-सेकंड ब्रेक लें और हर 20 मिनट में 20 फीट दूर देखें \n <b> आंखों का ब्रेक लें। </b> लंबे समय तक काम करने से बचें। अपने ब्रेक में अपनी आंखें बंद करो। एक दिन में कम से कम 3 से 5 ब्रेक लें। \n उचित उचित प्रकाश डालें। \n कंप्यूटर स्क्रीन चमक समायोजित करें। \n चमक को एनिमेट करें \n आंखों को अपनी आंखों को लुब्रिकेट करने के लिए छोड़ दें।</string>
-    <string name="read_more"> + Read More</string>
-    <string name="read_less"> - Read Less</string>
-    <string name="spiritual_features">Spiritual Features</string>
-    <string name="religious_features">Religious Features</string>
-    <string name="services_i_receive">Services I receive</string>
-    <string name="services_we_provide">Services we provide</string>
-    <string name="horoscope">Horoscope</string>
+    <string name="read_more"> + और पढो</string>
+    <string name="read_less"> - कम पढ़ें</string>
+    <string name="spiritual_features">आध्यात्मिक विशेषताएं</string>
+    <string name="religious_features">धार्मिक विशेषताएं</string>
+    <string name="services_i_receive">मुझे मिलने वाले सेवाएं</string>
+    <string name="services_we_provide">सेवाएं हम प्रदान करते हैं</string>
+    <string name="horoscope">कुंडली</string>
+    <string name="aries">मेष राशी</string>
+    <string name="yesterday">कल</string>
+    <string name="this_week">इस सप्ताह</string>
+    <string name="this_month">इस महीने का</string>
 
 </resources>

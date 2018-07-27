@@ -126,7 +126,7 @@
     <string name="camera">Camera</string>
     <string name="gallery">Gallery</string>
     <string name="cancel">Cancel</string>
-    <string name="mantras">Quote</string>
+    <string name="quote">Quote</string>
     <string name="daily_dose_of_updated_mantras">Daily dose of updated mantras</string>
     <string name="it_is_better_to_live_your_own">It is better to live your own.</string>
     <string name="meaning_imitation_of_somebody_else_s_life_with_perfection">Meaning: Imitation of somebody else\'s life with perfection</string>
@@ -161,6 +161,13 @@
     <string name="telugu">తెలుగు</string>
     <string name="hindi">हिंदी</string>
     <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+
     <string name="remove">remove</string>
 
     <string name="connecting_you_with_your_spiritual_gurus">Connects you with your spiritual gurus</string>
@@ -218,15 +225,16 @@
     <string name="you_are">YOU ARE</string>
     <string name="temple_member">Temple Member</string>
 
-    <string name="user_type1_line1">Receive Temple Services(Priest, Puja Services)</string>
-    <string name="user_type1_line2">Receive Favorite temple updates</string>
+    <string name="user_type1_line1">Temple Services(Priest, Puja Services)</string>
+    <string name="user_type1_line2">Favorite temple updates</string>
     <string name="user_type1_line3">Participate in temple posts</string>
     <string name="user_type1_line4">Participate in Temple and God\'s Seva</string>
 
     <string name="user_type2_line1">Temple Administration</string>
     <string name="user_type2_line2">Provide Temple updates</string>
     <string name="user_type2_line3">Volunteer Management</string>
-    <string name="user_type2_line4">Organize Religious Events\n(Priest, Dharmakartha etc )</string>
+    <string name="user_type2_line4">Organize Religious Events \n</string>
+    <string name="user_type2_line5">Service Providers: Dharmakartha, Priest etc </string>
 
     <string name="interest_type1_line1">Connects with Spiritual Gurus</string>
     <string name="interest_type1_line2">Updates from Favorite Gurus</string>
@@ -260,13 +268,13 @@
 
     <!--Spiritual content-->
 
-    <string name="spiritual_monday_mantra">Happiness cannot be traveled to, owned, earned, worn or consumed. Happiness is the spiritual experience of living every minute with love, grace, and gratitude</string>
-    <string name="spiritual_tuesday_mantra">Just as a candle cannot burn without fire, men cannot live without a spiritual life.</string>
-    <string name="spiritual_wednesday_mantra">Keep your feet on the ground, but let your heart soar as high as it will. Refuse to be average or to surrender to the chill of your spiritual environment.</string>
-    <string name="spiritual_thursday_mantra">Music is the mediator between the spiritual and the sensual life.</string>
-    <string name="spiritual_friday_mantra">You can\'t have a good day with bad attitude, and bad day with good attitude.</string>
-    <string name="spiritual_saturday_mantra">One bad day doesn\'t mean you have a bad life. Count your blessings, not your curses.</string>
-    <string name="spiritual_sunday_mantra">You don\'t read a book backwards, so why live your life that way?</string>
+    <string name="spiritual_monday_quote">Happiness cannot be traveled to, owned, earned, worn or consumed. Happiness is the spiritual experience of living every minute with love, grace, and gratitude</string>
+    <string name="spiritual_tuesday_quote">Just as a candle cannot burn without fire, men cannot live without a spiritual life.</string>
+    <string name="spiritual_wednesday_quote">Keep your feet on the ground, but let your heart soar as high as it will. Refuse to be average or to surrender to the chill of your spiritual environment.</string>
+    <string name="spiritual_thursday_quote">Music is the mediator between the spiritual and the sensual life.</string>
+    <string name="spiritual_friday_quote">You can\'t have a good day with bad attitude, and bad day with good attitude.</string>
+    <string name="spiritual_saturday_quote">One bad day doesn\'t mean you have a bad life. Count your blessings, not your curses.</string>
+    <string name="spiritual_sunday_quote">You don\'t read a book backwards, so why live your life that way?</string>
 
     <!--Religious content-->
 
@@ -300,5 +308,9 @@
     <string name="services_i_receive">Services I receive</string>
     <string name="services_we_provide">Services we provide</string>
     <string name="horoscope">Horoscope</string>
+    <string name="aries">Aries</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="this_week">This Week</string>
+    <string name="this_month">This Month</string>
 
 </resources>

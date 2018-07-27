@@ -97,9 +97,9 @@ public class CardsRossDeckFragment extends BaseFragment implements IClickListene
 //                break;
 //            case "Friday":
 //                break;
-//            case "Saturday":
+//            case getString(R.string.saturday):
 //                break;
-//            case "Sunday":
+//            case getString(R.string.sunday):
 //                break;
 //        }
 
@@ -112,40 +112,48 @@ public class CardsRossDeckFragment extends BaseFragment implements IClickListene
 
         switch (category) {
             case "Quote":
-                hashMapOfCategory.put("Monday", getString(R.string.spiritual_monday_mantra));
-                hashMapOfCategory.put("Tuesday", getString(R.string.spiritual_tuesday_mantra));
-                hashMapOfCategory.put("Wednesday", getString(R.string.spiritual_wednesday_mantra));
-                hashMapOfCategory.put("Thursday", getString(R.string.spiritual_thursday_mantra));
-                hashMapOfCategory.put("Friday", getString(R.string.spiritual_friday_mantra));
-                hashMapOfCategory.put("Saturday", getString(R.string.spiritual_saturday_mantra));
-                hashMapOfCategory.put("Sunday", getString(R.string.spiritual_sunday_mantra));
+            case "కోట్":
+            case "उद्धरण":
+                hashMapOfCategory.put(getString(R.string.monday), getString(R.string.spiritual_monday_quote));
+                hashMapOfCategory.put(getString(R.string.tuesday), getString(R.string.spiritual_tuesday_quote));
+                hashMapOfCategory.put(getString(R.string.wednesday), getString(R.string.spiritual_wednesday_quote));
+                hashMapOfCategory.put(getString(R.string.thursday), getString(R.string.spiritual_thursday_quote));
+                hashMapOfCategory.put(getString(R.string.friday), getString(R.string.spiritual_friday_quote));
+                hashMapOfCategory.put(getString(R.string.saturday), getString(R.string.spiritual_saturday_quote));
+                hashMapOfCategory.put(getString(R.string.sunday), getString(R.string.spiritual_sunday_quote));
                 break;
             case "Prayer":
-                hashMapOfCategory.put("Monday", getString(R.string.religious_monday_prayer));
-                hashMapOfCategory.put("Tuesday", getString(R.string.religious_tuesday_prayer));
-                hashMapOfCategory.put("Wednesday", getString(R.string.religious_wednesday_prayer));
-                hashMapOfCategory.put("Thursday", getString(R.string.religious_thursday_prayer));
-                hashMapOfCategory.put("Friday", getString(R.string.religious_friday_prayer));
-                hashMapOfCategory.put("Saturday", getString(R.string.religious_saturday_prayer));
-                hashMapOfCategory.put("Sunday", getString(R.string.religious_sunday_prayer));
+            case "ప్రార్థన":
+            case "दुआ":
+                hashMapOfCategory.put(getString(R.string.monday), getString(R.string.religious_monday_prayer));
+                hashMapOfCategory.put(getString(R.string.tuesday), getString(R.string.religious_tuesday_prayer));
+                hashMapOfCategory.put(getString(R.string.wednesday), getString(R.string.religious_wednesday_prayer));
+                hashMapOfCategory.put(getString(R.string.thursday), getString(R.string.religious_thursday_prayer));
+                hashMapOfCategory.put(getString(R.string.friday), getString(R.string.religious_friday_prayer));
+                hashMapOfCategory.put(getString(R.string.saturday), getString(R.string.religious_saturday_prayer));
+                hashMapOfCategory.put(getString(R.string.sunday), getString(R.string.religious_sunday_prayer));
                 break;
             case "Dharma":
-                hashMapOfCategory.put("Monday", getString(R.string.religious_monday_dharma));
-                hashMapOfCategory.put("Tuesday", getString(R.string.religious_tuesday_dharma));
-                hashMapOfCategory.put("Wednesday", getString(R.string.religious_wednesday_dharma));
-                hashMapOfCategory.put("Thursday", getString(R.string.religious_thursday_dharma));
-                hashMapOfCategory.put("Friday", getString(R.string.religious_friday_dharma));
-                hashMapOfCategory.put("Saturday", getString(R.string.religious_saturday_dharma));
-                hashMapOfCategory.put("Sunday", getString(R.string.religious_sunday_dharma));
+            case "ధర్మ":
+            case "धर्म":
+                hashMapOfCategory.put(getString(R.string.monday), getString(R.string.religious_monday_dharma));
+                hashMapOfCategory.put(getString(R.string.tuesday), getString(R.string.religious_tuesday_dharma));
+                hashMapOfCategory.put(getString(R.string.wednesday), getString(R.string.religious_wednesday_dharma));
+                hashMapOfCategory.put(getString(R.string.thursday), getString(R.string.religious_thursday_dharma));
+                hashMapOfCategory.put(getString(R.string.friday), getString(R.string.religious_friday_dharma));
+                hashMapOfCategory.put(getString(R.string.saturday), getString(R.string.religious_saturday_dharma));
+                hashMapOfCategory.put(getString(R.string.sunday), getString(R.string.religious_sunday_dharma));
                 break;
             case "Health":
-                hashMapOfCategory.put("Monday", getString(R.string.wellness_health_content_monday));
-                hashMapOfCategory.put("Tuesday", getString(R.string.wellness_health_content_tuesday));
-                hashMapOfCategory.put("Wednesday", getString(R.string.wellness_health_content_wednesday));
-                hashMapOfCategory.put("Thursday", getString(R.string.wellness_health_content_thursday));
-                hashMapOfCategory.put("Friday", getString(R.string.wellness_health_content_friday));
-                hashMapOfCategory.put("Saturday", getString(R.string.wellness_health_content_saturday));
-                hashMapOfCategory.put("Sunday", getString(R.string.wellness_health_content_sunday));
+            case "ఆరోగ్యం":
+            case "स्वास्थ्य":
+                hashMapOfCategory.put(getString(R.string.monday), getString(R.string.wellness_health_content_monday));
+                hashMapOfCategory.put(getString(R.string.tuesday), getString(R.string.wellness_health_content_tuesday));
+                hashMapOfCategory.put(getString(R.string.wednesday), getString(R.string.wellness_health_content_wednesday));
+                hashMapOfCategory.put(getString(R.string.thursday), getString(R.string.wellness_health_content_thursday));
+                hashMapOfCategory.put(getString(R.string.friday), getString(R.string.wellness_health_content_friday));
+                hashMapOfCategory.put(getString(R.string.saturday), getString(R.string.wellness_health_content_saturday));
+                hashMapOfCategory.put(getString(R.string.sunday), getString(R.string.wellness_health_content_sunday));
                 break;
         }
 

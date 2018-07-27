@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginEnd="@dimen/eight_dp"
+    android:layout_marginStart="@dimen/eight_dp"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/three_dp">
+
+    <com.devotted.utils.views.CircleImageView
+        android:id="@+id/imgStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/four_dp"
+        android:src="@drawable/ic_lotus" />
+
+    <com.devotted.utils.views.CustomTextView
+        android:id="@+id/txtLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toEndOf="@id/imgStar"
+        android:padding="@dimen/three_dp"
+        android:text="@string/connecting_you_with_your_spiritual_gurus"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/fifteen_sp" />
+
+</RelativeLayout>

@@ -34,19 +34,27 @@
                 android:textSize="@dimen/eighteen_sp"
                 app:txt_font_type="bold" />
 
-            <LinearLayout
-                android:id="@+id/linHolder"
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txtHeading"
-                android:layout_marginBottom="@dimen/five_dp"
-                android:layout_marginEnd="@dimen/ten_dp"
-                android:layout_marginStart="@dimen/ten_dp"
-                android:layout_marginTop="@dimen/five_dp"
-                android:orientation="vertical"
-                android:padding="@dimen/five_dp">
+                android:overScrollMode="never"
+                android:scrollbars="none">
 
-            </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linHolder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/five_dp"
+                    android:layout_marginEnd="@dimen/five_dp"
+                    android:layout_marginStart="@dimen/ten_dp"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:orientation="vertical"
+                    android:padding="@dimen/five_dp">
+
+                </LinearLayout>
+
+            </ScrollView>
 
             <RelativeLayout
                 android:id="@+id/linSelect"

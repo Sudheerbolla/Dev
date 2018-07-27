@@ -16,19 +16,20 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/onehundred_seventy_dp"
+            android:layout_height="@dimen/twohundred_dp"
             android:background="@drawable/gradient_linear">
 
             <RelativeLayout
                 android:id="@+id/relTopBar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:padding="@dimen/five_dp">
 
                 <com.devotted.utils.views.CustomTextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:padding="@dimen/ten_dp"
+                    android:padding="@dimen/seven_dp"
                     android:text="@string/verification_code"
                     android:textColor="@color/colorWhite"
                     android:textSize="@dimen/twentytwo_sp" />
@@ -43,12 +44,14 @@
                 android:gravity="center"
                 android:padding="@dimen/twentyfive_dp" />
 
-            <include
-                layout="@layout/layout_logo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <ImageView
+                android:id="@+id/imgLogo"
+                android:layout_width="@dimen/seventy_dp"
+                android:layout_height="@dimen/seventy_dp"
                 android:layout_below="@id/relTopBar"
-                android:layout_centerHorizontal="true" />
+                android:layout_centerHorizontal="true"
+                android:contentDescription="LOGO"
+                android:src="@drawable/ic_app_logo" />
 
         </RelativeLayout>
 

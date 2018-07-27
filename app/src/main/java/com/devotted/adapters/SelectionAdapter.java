@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,8 +25,10 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
     private Context context;
     private IClickListener iClickListener;
     private boolean isUserType;
+    private LayoutInflater linf;
 
     public SelectionAdapter(Context context, ArrayList<SelectionModel> itemsData, IClickListener iClickListener, boolean isUserType) {
+        linf = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.itemsData = itemsData;
         this.iClickListener = iClickListener;
         this.context = context;
@@ -37,7 +38,7 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        @SuppressLint("InflateParams") View rootView = LayoutInflater.from(context).inflate(R.layout.item_selection, null);
+        @SuppressLint("InflateParams") View rootView = linf.inflate(R.layout.item_selection, null);
         RelativeLayout.LayoutParams rlp = new RelativeLayout.LayoutParams(StaticUtils.screen_width - 250, RelativeLayout.LayoutParams.MATCH_PARENT);
         rootView.setLayoutParams(rlp);
         return new ViewHolder(rootView);
@@ -51,15 +52,20 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
         viewHolder.txtSelect.setText((isUserType ? context.getString(R.string.i_am_a) : context.getString(R.string.i_choose)) + " " + selectionModel.type);
         viewHolder.linHolder.removeAllViews();
         for (int i = 1; i < selectionModel.description.length; i++) {
-            CustomTextView customTextView = new CustomTextView(context);
-            customTextView.setTextSize(16);
-            customTextView.setPadding(5, 5, 5, 5);
-            customTextView.setCompoundDrawablesWithIntrinsicBounds(((selectionModel.type.equalsIgnoreCase(context.getString(R.string.religious)) || (selectionModel.type.equalsIgnoreCase(context.getString(R.string.devotee)))) ?
-                    R.drawable.ic_lotus : R.drawable.ic_star_s), 0, 0, 0);
-            customTextView.setCompoundDrawablePadding(StaticUtils.pxFromDp(context, 8));
-            customTextView.setGravity(Gravity.CENTER_VERTICAL);
+            View inflatedLayout = linf.inflate(R.layout.layout_selection_lines, null, false);
+            ImageView imageView = inflatedLayout.findViewById(R.id.imgStar);
+            CustomTextView customTextView = inflatedLayout.findViewById(R.id.txtLine);
+            if (selectionModel.description[i].equalsIgnoreCase(context.getString(R.string.user_type2_line5))) {
+                imageView.setVisibility(View.GONE);
+                customTextView.setTextSize(17);
+            } else {
+                imageView.setVisibility(View.VISIBLE);
+                imageView.setImageResource(((selectionModel.type.equalsIgnoreCase(context.getString(R.string.religious)) || (selectionModel.type.equalsIgnoreCase(context.getString(R.string.devotee)))) ?
+                        R.drawable.ic_lotus : R.drawable.ic_star_s));
+                customTextView.setTextSize(16);
+            }
             customTextView.setText(selectionModel.description[i]);
-            viewHolder.linHolder.addView(customTextView);
+            viewHolder.linHolder.addView(inflatedLayout);
         }
         viewHolder.txtHeading.setText(selectionModel.description[0]);
         viewHolder.imgCheckBox.setVisibility(selectionModel.isSelected ? View.VISIBLE : View.INVISIBLE);

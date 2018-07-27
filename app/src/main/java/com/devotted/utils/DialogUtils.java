@@ -423,7 +423,7 @@ public class DialogUtils {
                         txtProceed.setText("Proceed");
                         txtSelectLanguage.setText("Please Select Language");
                     } else if (i == 1) {
-                        language = "tl";
+                        language = "te";
                         txtLanguageChangeHint.setText("మీరు ఎప్పుడైనా మీ భాష ఎంపికను సెట్టింగ్ల్లో మార్చవచ్చు.");
                         txtProceed.setText("ముందుకు");
                         txtSelectLanguage.setText("దయచేసి భాషను ఎంచుకోండి");
@@ -564,7 +564,7 @@ public class DialogUtils {
                             txtSelectLanguage.setText("You have selected English");
                             break;
                         case R.id.rbTelugu:
-                            language = "tl";
+                            language = "te";
                             txtLanguageChangeHint.setText("మీరు ఎప్పుడైనా మెను / సెట్టింగులలో మీ భాష ఎంపికను మార్చుకోవచ్చు.");
                             txtProceed.setText("ముందుకు");
                             txtSelectLanguage.setText("మీరు తెలుగు ఎంచుకున్నారు");

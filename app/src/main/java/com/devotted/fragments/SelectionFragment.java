@@ -98,7 +98,8 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
                             getString(R.string.user_type2_line1),
                             getString(R.string.user_type2_line2),
                             getString(R.string.user_type2_line3),
-                            getString(R.string.user_type2_line4)
+                            getString(R.string.user_type2_line4),
+                            getString(R.string.user_type2_line5)
                     }, R.drawable.ic_indian_tm);
             selectionModelArrayList.add(spiritualModel);
             selectionModelArrayList.add(religiousModel);
@@ -111,7 +112,7 @@ public class SelectionFragment extends BaseFragment implements View.OnClickListe
                     getString(R.string.interest_type1_line4)
             }, R.drawable.ic_spiritual);
             SelectionModel religiousModel = new SelectionModel(getString(R.string.religious), new String[]{
-                    getString(com.devotted.R.string.religious_features),
+                    getString(R.string.religious_features),
                     getString(R.string.interest_type2_line1),
                     getString(R.string.interest_type2_line2),
                     getString(R.string.interest_type2_line3),

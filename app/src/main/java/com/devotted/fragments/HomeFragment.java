@@ -26,7 +26,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
     private TabLayout tabLayout;
     private CustomViewPager viewPager;
-    private CustomTextView txtSearch, txtGroups, txtPanchang,txtHoroscope;
+    private CustomTextView txtSearch, txtGroups, txtPanchang, txtHoroscope;
     private RelativeLayout relTemple;
     private View rootView;
     private MainActivity mainActivity;
@@ -53,7 +53,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
         viewPager = rootView.findViewById(R.id.viewpager);
         relTemple = rootView.findViewById(R.id.relTemple);
         txtPanchang = rootView.findViewById(R.id.txtPanchang);
-        txtHoroscope= rootView.findViewById(R.id.txtHoroscope);
+        txtHoroscope = rootView.findViewById(R.id.txtHoroscope);
         setupViewPager(viewPager);
         viewPager.setPagingEnabled(true);
         viewPager.setOffscreenPageLimit(2);
@@ -74,13 +74,11 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getChildFragmentManager());
-//        adapter.addFrag(CardsFragment.newInstance("Mantras"), "Mantras");
-        adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.mantras)), getString(R.string.mantras));
+        adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.quote)), getString(R.string.quote));
         adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.prayer)), getString(R.string.prayer));
         adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.dharma)), getString(R.string.dharma));
         adapter.addFrag(CardsRossDeckFragment.newInstance(getString(R.string.health)), getString(R.string.health));
         viewPager.setAdapter(adapter);
-//        ViewCompat.setNestedScrollingEnabled(viewPager, true);
     }
 
     @Override

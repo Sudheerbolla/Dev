@@ -126,8 +126,8 @@
     <string name="camera">కెమెరా</string>
     <string name="gallery">గ్యాలరీ</string>
     <string name="cancel">రద్దు</string>
-    <string name="mantras">మంత్రాలు</string>
-    <string name="daily_dose_of_updated_mantras">నవీకరించబడిన మంత్రాల యొక్క రోజువారీ మోతాదు</string>
+    <string name="quote">కోట్</string>
+    <string name="daily_dose_of_updated_mantras">నవీకరించబడిన కోట్ యొక్క రోజువారీ మోతాదు</string>
     <string name="it_is_better_to_live_your_own">ఇది మీ స్వంత జీవించడానికి ఉత్తమం.</string>
     <string name="meaning_imitation_of_somebody_else_s_life_with_perfection">అర్థం: పరిపూర్ణతతో ఇతరుల జీవితం యొక్క అనుకరణ</string>
     <string name="user_name">వాడుకరి పేరు</string>
@@ -160,7 +160,15 @@
     <string name="english">English</string>
     <string name="telugu">తెలుగు</string>
     <string name="hindi">हिंदी</string>
+
     <string name="monday">సోమవారం</string>
+    <string name="tuesday">మంగళవారం</string>
+    <string name="wednesday">బుధవారం</string>
+    <string name="thursday">గురువారం</string>
+    <string name="friday">శుక్రవారం</string>
+    <string name="saturday">శనివారం</string>
+    <string name="sunday">ఆదివారం</string>
+
     <string name="remove">తొలగించడానికి</string>
 
     <string name="connecting_you_with_your_spiritual_gurus">మీ ఆధ్యాత్మిక గురువులతో మిమ్మల్ని కలుపుతుంది</string>
@@ -218,15 +226,16 @@
     <string name="you_are">మీరు</string>
     <string name="temple_member">ఆలయం సభ్యుడు</string>
 
-    <string name="user_type1_line1">దేవాలయ సేవలను పొందండి(పూజా కార్యక్రమాలు)</string>
-    <string name="user_type1_line2">ఇష్టమైన ఆలయ నవీకరణలను పొందండి</string>
+    <string name="user_type1_line1">దేవాలయ సేవలు(పూజా కార్యక్రమాలు)</string>
+    <string name="user_type1_line2">ఇష్టమైన ఆలయ నవీకరణలు</string>
     <string name="user_type1_line3">ఆలయ విషయాల్లో పాల్గొనండి</string>
     <string name="user_type1_line4">ఆలయ, దేవుని సేవలో పాల్గొనండి</string>
 
     <string name="user_type2_line1">ఆలయ పరిపాలన</string>
     <string name="user_type2_line2">ఆలయ నవీకరణలను అందించండి</string>
     <string name="user_type2_line3">స్వత్చంద సేవకుల నిర్వహణ</string>
-    <string name="user_type2_line4">ధార్మిక  కార్యక్రమాలు నిర్వహించండి\n(పూజారి,ధర్మకర్తలు)</string>
+    <string name="user_type2_line4">ధార్మిక  కార్యక్రమాలు నిర్వహించండి \n </string>
+    <string name="user_type2_line5">సర్వీస్ ప్రొవైడర్స్: ధర్మకర్తలు, పూజారి</string>
 
     <string name="interest_type1_line1">ఆధ్యాత్మిక గురువులు</string>
     <string name="interest_type1_line2">ఇష్ట గురువుల నుండి నవీకరణలు</string>
@@ -260,31 +269,91 @@
 
     <!--Spiritual content-->
 
-    <string name="spiritual_monday_mantra">ఆనందం ప్రయాణం, యాజమాన్యం, సంపాదించిన, ధరించే లేదా వినియోగించబడదు. ప్రేమ, దయ మరియు కృతజ్ఞతతో ప్రతి నిమిషం జీవిస్తున్న ఆధ్యాత్మిక అనుభవం ఆనందం</string>
-    <string name="spiritual_tuesday_mantra">ఒక కొవ్వొత్తి అగ్ని లేకుండా కాల్చలేనందున, పురుషులు ఒక ఆధ్యాత్మిక జీవనం లేకుండా జీవించలేరు.</string>
-    <string name="spiritual_wednesday_mantra">మీ పాదాలను నేలమీద ఉంచండి, కానీ మీ హృదయం అది ఎత్తగా ఉన్నంతగా పెరుగుతుంది. సగటు లేదా మీ ఆధ్యాత్మిక వాతావరణం చల్లబరుస్తుంది అప్పగించాలని తిరస్కరించండి.</string>
-    <string name="spiritual_thursday_mantra">సంగీతం ఆధ్యాత్మిక మరియు ఇంద్రియ జీవితం మధ్య మధ్యవర్తి.</string>
-    <string name="spiritual_friday_mantra">మీరు చెడు వైఖరితో మరియు మంచి వైఖరితో చెడు రోజుతో మంచి రోజు లేదు.</string>
-    <string name="spiritual_saturday_mantra">ఒక చెడ్డ రోజు మీకు చెడు జీవితం లేదని అర్థం కాదు. నీ ఆశీర్వాదాలను లెక్కించండి, మీ శాపాలు కాదు.</string>
-    <string name="spiritual_sunday_mantra">మీరు తిరిగి పుస్తకాన్ని వెనుకకు చదవలేరు, మీ జీవితాన్ని ఎందుకు ఆ విధంగా జీవిస్తున్నారు?</string>
+    <string name="spiritual_monday_quote">ఆనందం ప్రయాణం, యాజమాన్యం, సంపాదించిన, ధరించే లేదా వినియోగించబడదు. ప్రేమ, దయ మరియు కృతజ్ఞతతో ప్రతి నిమిషం జీవిస్తున్న ఆధ్యాత్మిక అనుభవం ఆనందం</string>
+    <string name="spiritual_tuesday_quote">ఒక కొవ్వొత్తి అగ్ని లేకుండా కాల్చలేనందున, పురుషులు ఒక ఆధ్యాత్మిక జీవనం లేకుండా జీవించలేరు.</string>
+    <string name="spiritual_wednesday_quote">మీ పాదాలను నేలమీద ఉంచండి, కానీ మీ హృదయం అది ఎత్తగా ఉన్నంతగా పెరుగుతుంది. సగటు లేదా మీ ఆధ్యాత్మిక వాతావరణం చల్లబరుస్తుంది అప్పగించాలని తిరస్కరించండి.</string>
+    <string name="spiritual_thursday_quote">సంగీతం ఆధ్యాత్మిక మరియు ఇంద్రియ జీవితం మధ్య మధ్యవర్తి.</string>
+    <string name="spiritual_friday_quote">మీరు చెడు వైఖరితో మరియు మంచి వైఖరితో చెడు రోజుతో మంచి రోజు లేదు.</string>
+    <string name="spiritual_saturday_quote">ఒక చెడ్డ రోజు మీకు చెడు జీవితం లేదని అర్థం కాదు. నీ ఆశీర్వాదాలను లెక్కించండి, మీ శాపాలు కాదు.</string>
+    <string name="spiritual_sunday_quote">మీరు తిరిగి పుస్తకాన్ని వెనుకకు చదవలేరు, మీ జీవితాన్ని ఎందుకు ఆ విధంగా జీవిస్తున్నారు?</string>
 
     <!--Religious content-->
 
-    <string name="religious_monday_prayer"><b>OM NAMAH SHIVAAY</b>\nNagendra Haaraaya Trilochanaaya\nBhasmanga Raagaya Maheshwaraya\nNithyaaya Suddhaaya Dhigambaraaya\nThasmai Na Kaaraaya Namashivaya Nama Shivaaya \n\n I offer my humble salutations to Lord Mahesvara who has a garland of serpants around the neck, who has three eyes, whose body is covered with ash, who is eternal who is pure who has the entire sky as his dress and who is embodies as the first letter Na.</string>
-    <string name="religious_tuesday_prayer"><b>OM SRI HANUMATE NAMAH</b>\nYathra Yathra raghunatha keerthanam\nThathra Thathra kruthamasthakaanjaleem\nPashpavari paripurna lochanam\nMaruthim namatha rakshasanthagam\n\n Lord Maruthi, the terror to demons (Rakshasas) is present wherever praise of Sri Rama is sung, with joyous tears in His eyes and folded hands over His head. To Him we offer our salutation (Namaskarams).</string>
-    <string name="religious_wednesday_prayer"><b>OM SHRI GANESHAAY NAMAH</b>\nVakratunda Mahakaaya, Suryakoti Samaprabha\nNirvighnam Kuru Mey Deva, Sarva Kaaryeshu Sarvada\n\nLord Ganesha has a curved trunk with a powerful body. He has the brilliance of a million suns. May the Lord, remove all the problems from the actions I aim to achieve.</string>
-    <string name="religious_thursday_prayer"><b>OM NAMO NARAYANAYA</b>\nShaantaakaaram bhujagashayanam\npadmanaabham suresham\nvishvaadhaaram gaganasadrisham\nmeghavarnam shubhaangam\nlakshmeekaantam kamalanayanam\nyogihriddhyaanagamyam\nvande vishnum bhavabhayaharam\nsarvalokaikanaatham.\n\nI bow down before Vishnu, the Lord of all worlds and the remover of all causes of fear. He is of blissful form. He lies on a serpent bed. He sports a lotus on His navel. The Lord of the celestials. He supports the whole cosmos. His limbs are exquisite and His complexion is blue like that of the sky and the rain cloud. The consort of Lakshmi. He has eyes rivaling the lotus. The yogis meditate on Him in their innermost heart.</string>
-    <string name="religious_friday_prayer"><b>OM SHRI DURGAAY NAMAH</b></string>
-    <string name="religious_saturday_prayer"><b>OM SHRI SHANAISHCHARAAY NAMAH</b></string>
-    <string name="religious_sunday_prayer"><b>OM SURYAAY NAMAH</b></string>
+    <string name="religious_monday_prayer">
+        "నాగేంద్ర హరయ త్రిలోచనయ
+భాస్కాన్ రాగా మహేశ్వరయ్య
+శాశ్వత ఊపందుకుంటున్నది
+తాస్మా యొక్క కరమ నమశివ్యా నామ్ శివాయ
+        అర్థం :  నేను మెదడు చుట్టూ పాములను ఒక హారము కలిగి ఉన్న లార్డ్ మహేశ్వరానికి నా వినయపూర్వకమైన వందనాలు ఇస్తాను, వీరి శరీరమంతా బూడిదతో కప్పబడి ఉంటుంది, వీరి శరీరమంతా బూడిదతో కప్పబడి ఉంటుంది. మొదటి అక్షరం నా."</string>
+    <string name="religious_tuesday_prayer">"ఓం శ్రీ హనుమంతే మహః
+యాత్ర యాత్ర రఘునాథ కీరత్యం
+థత్రా త్రత క్రుధమస్హాఖాన్జలేమ్
+దీనికి క్షమించండి
+మరీతిమ్ నమఠా రాశసంబంధం       అర్థం : లార్డ్ మారుతి, శ్రీ రాముడు ప్రశంసలు చోటు చేసుకుంటూ, అతని తలపై ఆనందకరమైన కన్నీరుతో పాడగా రాక్షసులు (రాక్షసులు) భయపడతారు. ఆయనకి మేము వందనాలు (నమస్కారాలు) అందిస్తాము."</string>
+    <string name="religious_wednesday_prayer">"ఓం శ్రీ గణేశై నమః
+వక్రతుండ మహాకాయ, సూర్యకోటి సమార్ ప్రభు
+నిర్వ్వమ్నం కరు మై దేవ, సర్వవేదే సర్వాడ.                                cగణేశుడు ఒక శక్తివంతమైన శరీరంతో ఒక వక్రత ట్రంక్ కలిగి ఉంటాడు. అతను ఒక మిలియన్ సన్స్ యొక్క ప్రకాశం ఉంది. లార్డ్, నేను సాధించడానికి గురి చర్యలు నుండి అన్ని సమస్యలను తొలగించండి."</string>
+    <string name="religious_thursday_prayer">"శంతకర్ భుజ్గశాయన్ పద్మనాభన్ సురేష్
+విశ్వద్దార్ గగన్ విశేష్ మఘ్వర్ణ శుభాగం
+లక్ష్మీకాండం కామజననన్ యోగివర్ధయధన్గంమం
+వందే విష్ణు భావ్భాయేర్ సర్వోకకనంథం                                           అర్థం : నేను విష్ణు ముందు, అన్ని ప్రపంచాల లార్డ్ మరియు భయం యొక్క అన్ని కారణాల తొలగింపు ముందు డౌన్ నమస్కరిస్తాను. అతను ఆనందకరమైన రూపం. అతను ఒక సర్ప మంచంపై పడుకున్నాడు. అతను అతని నాభి మీద ఒక లోటస్ ను స్పోర్ట్ చేస్తాడు. పరలోక ప్రభువు. అతను మొత్తం కాస్మోస్కు మద్దతు ఇస్తాడు. అతని అవయవాలు సున్నితమైనవి మరియు అతని రంగు స్వరూపం ఆకాశం మరియు వర్షం మేఘం వంటి నీలం. లక్ష్మి భార్య. కమల కన్నా కళ్ళు కళ్ళున్నాయి. యోగులు అతని అంతర్గత హృదయంలో ఆయనను ధ్యానం చేస్తారు."</string>
+    <string name="religious_friday_prayer"><b>ఓం శ్రీ దుర్గయ్ నమా</b></string>
+    <string name="religious_saturday_prayer"><b>ఓం శ్రీ శనైశ్చరాయ నమః</b></string>
+    <string name="religious_sunday_prayer"><b>సూర్యాయ నమః</b></string>
 
-    <string name="religious_monday_dharma">When we offer Aarthi to the God, why do we sound the bell? \n\n (a) To welcome the God \n (b) When God is having Prashad \n (c) A traditional to sound along with aarthi, scented sticks, etc \n\n Your take ??</string>
-    <string name="religious_tuesday_dharma">Serpents (Snakes) appearing in the dream is good or bad? \n\n (a) Generally when we hear or talk about the snakes during the day \n (b) In our horoscope we have Rahu or Kethu enters \n (c) Lord Subramania Swamy or Lord Nagendra wants to appear to bless you \n\n Your take ??</string>
-    <string name="religious_wednesday_dharma">When you are praying the God, if a flower fall from the idle or photo of the God, can we reuse it for God?\n\n (a) It’s a God\'s message that He has blessed you with love. So, don\'t use it again, rather take it and keep with you. \n (b) You are not devotedly doing the prayer, not offered the flower carefully. \n (c) Because it was used for God only. So, we can use it again \n\n Your take ??\nLook for correct answer tomorrow.</string>
-    <string name="religious_thursday_dharma">What should we see as soon as you wake up in the morning for good luck \n\n (a) Brahmin \n (b) Cow \n (c) Yourself in the Mirror \n (d) Tulasi Tree \n (e)  Your own hands \n\n What else we can see, do you know?</string>
-    <string name="religious_friday_dharma">Who should feed "First Feed" or Anna Prasana to the baby? \n\n (a) Father \n (b) Mother \n (c) Uncle (Mother's Brother) \n (d) Grand Father (Month's father) \n\n Who else can feed first?</string>
-    <string name="religious_saturday_dharma">Lamp should be facing our side or God\'s side \n\n (a) To God side, because we are offering to God \n (b) Our side, because we need the God's grace on us \n (c) Doesn't matter \n\n What is your take?</string>
-    <string name="religious_sunday_dharma">What is the meaning and important of Akshitha? \n\n (a) Can be used in place of anything to offer to the God, ex: Cloth, etc \n (b) To bless younger and giving our energy to them \n (c) In marriage ceremony, both groom and bride exchange electromagnetic energy. \n\n What is your take?</string>
+    <string name="religious_monday_dharma">
+        "మేము దేవునికి ఆర్తిని ఇచ్చినప్పుడు, మనం మనం శబ్దం ఎందుకు చెపుతున్నాం?
+
+(a) దేవుణ్ణి ఆహ్వానించడానికి
+(బి) దేవుడు ప్రసాద్తో ఉన్నప్పుడు
+(సి) ఆత్రుత, సేన్టేడ్ స్టిక్స్, మొదలైనవి శబ్దంతో సంప్రదాయంగా ఉంటాయి
+
+మీ టేక్ ??"</string>
+    <string name="religious_tuesday_dharma">"ఈ కలలో కనిపిస్తున్న సర్పాలు (పాములు) మంచివి లేదా చెడుగా ఉందా?
+
+(ఎ) సాధారణంగా రోజులో పాములు గురించి వినడం లేదా మాట్లాడడం(బి) మన జాతకంలో రాహు లేదా కేతు ప్రవేశించాము
+(సి) లార్డ్ సుబ్రమణ్య స్వామి లేదా లార్డ్ నాగేంద్ర మిమ్మల్ని ఆశీర్వదించటానికి కనిపిస్తాడు
+
+మీ టేక్ ??"</string>
+    <string name="religious_wednesday_dharma">"మీరు దేవుణ్ణి ప్రార్థిస్తున్నప్పుడు, దేవుని యొక్క అసమంజసమైన లేదా ఫోటో నుండి పువ్వు పడినట్లయితే, మేము దానిని దేవుని కొరకు పునరుజ్జీవపరచగలము?
+
+(ఎ) ఇది ఆయన ప్రేమతో మిమ్మల్ని ఆశీర్వదించిన దేవుని సందేశం. కాబట్టి, దాన్ని మళ్లీ ఉపయోగించవద్దు, బదులుగా తీసుకోండి మరియు మీతో ఉంచుకోవాలి.
+(బి) నీవు ప్రార్థన చేయనివ్వలేదు, పువ్వులు జాగ్రత్తగా ఇవ్వలేదు.
+(సి) ఇది దేవునికి మాత్రమే ఉపయోగించబడింది. కాబట్టి, దాన్ని మళ్ళీ ఉపయోగించుకోవచ్చు
+
+మీ టేక్ ??
+రేపు సరైన సమాధానం కోసం చూడండి."</string>
+    <string name="religious_thursday_dharma">"అదృష్టం కోసం ఉదయాన్నే మీరు మేల్కొన్న వెంటనే మేము ఏమి చూడాలి
+
+(ఎ) బ్రహ్మణ్
+(బి) ఆవు
+(సి) యువర్సెల్ఫ్ ఇన్ ది మిర్రర్
+(డి) తులసి వృక్షం
+(ఇ) మీ చేతులు
+
+మనం చూడగలిగినది ఏమిటి, మీకు తెలుసా?"</string>
+    <string name="religious_friday_dharma">"శిశువుకు ఎవరు ""ఫస్ట్ ఫీడ్"" లేదా అన్నా ప్రసాన్ తిండి ఉండాలి?
+
+(a) తండ్రి
+(బి) తల్లి
+(సి) అంకుల్ (తల్లి సోదరుడు)
+(డి) గ్రాండ్ ఫాదర్ (నెల తండ్రి)
+
+ఎవరు మొదట ఫీడ్ చేయగలరు?"</string>
+    <string name="religious_saturday_dharma">"దీపం మా వైపు లేదా దేవుని వైపు ఎదుర్కోవాలి
+
+(a) దేవుని వైపు, మేము దేవునికి అర్పించుచున్నాము
+(బి) మా వైపు, ఎందుకంటే మాకు దేవుని దయ అవసరం
+(సి) పట్టింపు లేదు
+
+మీ తీరిక ఏమిటి?"</string>
+    <string name="religious_sunday_dharma">"అక్షతలు యొక్క అర్థం మరియు ముఖ్యమైనది ఏమిటి?
+
+(ఎ) దేవునికి అర్పించడానికి ఏదైనా స్థానంలో వాడవచ్చు, ఉదా: బట్ట, మొదలైనవి
+(బి) యువకులను ఆశీర్వదిస్తూ, మన శక్తిని వారికి ఇవ్వాలి
+(సి) వివాహ వేడుకలో, వరుడు మరియు వధువు మార్పిడి విద్యుదయస్కాంత శక్తి.
+
+మీ తీరిక ఏమిటి?"</string>
 
     <string name="wellness_health_content_monday">భోజనం తర్వాత టీ తాగడం దీర్ఘకాలిక హానిని కలిగించగలదు? \n \n ఆహారము తర్వాత నివారించడానికి మరింత ఎక్కువ ఆహారాలు. \n \nTea / Coffee:
         \n భోజనం లేదా విందు తర్వాత ఒక వ్యక్తి చేయకూడని కొన్ని సాధారణ విషయాలు అరుర్వేవా వివరిస్తుంది. నేడు, ఆరోగ్య శాస్త్రం పరిశోధన మరియు వాస్తవాలతో దానిని నిలబెట్టింది. భోజనాన్ని తీసుకున్న తర్వాత తక్షణమే నివారించడానికి విషయాలను తెలుసుకోండి.
@@ -298,13 +367,17 @@
     <string name="wellness_health_content_friday">ఆహార నిల్వ కోసం ప్లాస్టిక్ కంటైనర్లను నివారించండి. గాజు, ఉక్కు, పింగాణీ కంటైనర్లు ఉపయోగించండి. సిరామిక్ సూక్ష్మ పొయ్యి కోసం మంచిది.</string>
     <string name="wellness_health_content_saturday">రక్తం దానం యొక్క ఆరోగ్య ప్రయోజనాలు. ఇనుము సమతుల్యం, రక్త ప్రసరణను మెరుగుపరుస్తుంది, వేగంగా క్యాలరీలు కాల్చివేస్తుంది, మీట ఆరోగ్యాన్ని మెరుగుపరుస్తుంది, కొత్త రక్త కణాల ట్రిగ్గర్స్ ఏర్పడుతుంది.</string>
     <string name="wellness_health_content_sunday">CVS యొక్క కారణాలు ఏమిటి (కంప్యూటర్ విజన్ సిండ్రోమ్)? \n తక్కువ మెరిసే, దీర్ఘకాలం చిన్న దృష్టి. కాబట్టి, మీరు ఇలా చేయడం ద్వారా దీనిని నివారించవచ్చు \n\n<b> 20 యొక్క నియమాన్ని పాటించండి </b>. 20-సెకనుల విరామం తీసుకోండి మరియు ప్రతి 20 నిమిషాలకు 20 అడుగుల దూరంలో ఉండండి \n <b> కంటి విరామం తీసుకోండి. </b> ఎక్కువ గంటలు పనిని నివారించండి. మీ విరామంలో మీ కళ్ళు మూసివేయండి. ఒక రోజులో కనీసం 3 నుండి 5 విరామాలు తీసుకోండి. \n బయట సరైన లైటింగ్ బయట. \n కంప్యూటర్ స్క్రీన్ ప్రకాశాన్ని మార్చండి. \n గ్లేర్ని కనిష్టీకరించండి \n కంటికి ద్రవపదార్ధాల కంటికి తగ్గట్టుగా ఉంటుంది.</string>
-    <string name="read_more"> + Read More</string>
-    <string name="read_less"> - Read Less</string>
+    <string name="read_more"> + ఇంకా చదవండి</string>
+    <string name="read_less"> - తక్కువ చదువు</string>
     <string name="spiritual_features">ఆధ్యాత్మిక విశేషణాలు</string>
     <string name="religious_features">ధార్మిక విశేషణాలు</string>
     <string name="services_i_receive">నేను పొందు సేవలు</string>
     <string name="services_we_provide">మేము మీకు అందించే సేవలు</string>
     <string name="horoscope">రాశిఫలాలు</string>
+    <string name="aries">మేషం</string>
+    <string name="yesterday">నిన్నటిది </string>
+    <string name="this_week">ఈ వారం</string>
+    <string name="this_month">ఈ నెలది </string>
 
 
 </resources>

@@ -188,7 +188,7 @@
                 android:marqueeRepeatLimit="marquee_forever"
                 android:padding="@dimen/ten_dp"
                 android:singleLine="true"
-                android:text="Sadguru"
+                android:text="@string/sadguru"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/fifteen_sp" />
 
@@ -235,7 +235,7 @@
                 android:marqueeRepeatLimit="marquee_forever"
                 android:padding="@dimen/ten_dp"
                 android:singleLine="true"
-                android:text="Naveen"
+                android:text="@string/naveen"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/fifteen_sp" />
 

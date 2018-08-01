@@ -1,5 +1,7 @@
 package com.devotted.models;
 
+import android.content.Context;
+
 import com.devotted.R;
 
 public class TempleModel {
@@ -8,9 +10,9 @@ public class TempleModel {
     public Integer addressId, image;
     public String templeName, mPincode, city, line1, line2, longitude, latitude, rating, distance;
 
-    public TempleModel(int count) {
+    public TempleModel(Context context, int count) {
         if (count == 1) {
-            templeName = "Sai Baba Temple";
+            templeName = context.getString(R.string.sai_baba_temple);
             addressId = count;
             mPincode = "500081";
             city = "Hyderabad";
@@ -22,7 +24,7 @@ public class TempleModel {
             rating = "3";
             distance = "1";
         } else if (count == 2) {
-            templeName = "Sri Venkateswara Swamy Temple";
+            templeName = context.getString(R.string.sri_venkateswara_swamy_temple);
             addressId = count;
             mPincode = "500081";
             city = "Hyderabad";
@@ -34,7 +36,7 @@ public class TempleModel {
             rating = "3";
             distance = "2";
         } else if (count == 3) {
-            templeName = "Sri krishna Bagavan Swamy Temple";
+            templeName = context.getString(R.string.sri_krishna_bagavan_swamy_temple);
             addressId = count;
             mPincode = "500081";
             city = "Hyderabad";
@@ -46,7 +48,7 @@ public class TempleModel {
             rating = "2";
             distance = "12";
         } else if (count == 4) {
-            templeName = "Lord Shiva Temple";
+            templeName = context.getString(R.string.lord_shiva_temple);
             addressId = count;
             mPincode = "500081";
             city = "Hyderabad";

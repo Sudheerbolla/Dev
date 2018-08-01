@@ -59,7 +59,7 @@
             <RelativeLayout
                 android:id="@+id/linSelect"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/sixty_dp"
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/gradient_horizontal_plane">
 
@@ -70,20 +70,18 @@
                     android:layout_alignParentStart="true"
                     android:padding="@dimen/fifteen_dp"
                     android:src="@drawable/ic_tick_mark"
+                    android:layout_centerInParent="true"
                     android:visibility="invisible" />
 
                 <com.devotted.utils.views.CustomTextView
                     android:id="@+id/txtSelect"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:paddingBottom="@dimen/fifteen_dp"
-                    android:paddingEnd="@dimen/fifteen_dp"
-                    android:paddingStart="@dimen/fifteen_dp"
-                    android:paddingTop="@dimen/fifteen_dp"
-                    android:singleLine="true"
+                    android:layout_toEndOf="@id/imgCheckBox"
+                    android:gravity="start|center"
                     android:textColor="@color/colorWhite"
-                    android:textSize="@dimen/nineteen_sp" />
+                    android:textSize="@dimen/eighteen_sp" />
 
             </RelativeLayout>
 

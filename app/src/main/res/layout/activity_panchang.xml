@@ -30,7 +30,6 @@
             android:gravity="center_vertical"
             android:hint="@string/panchang"
             android:padding="@dimen/ten_dp"
-
             android:textColor="@color/colorWhite"
             android:textColorHint="@color/colorWhite"
             android:textSize="@dimen/nineteen_sp" />
@@ -109,7 +108,6 @@
                         android:layout_centerInParent="true"
                         android:gravity="center"
                         android:padding="@dimen/ten_dp"
-                        android:text="Date : 2018-07-20"
                         android:textColor="@color/colorWhite"
                         android:textSize="@dimen/seventeen_sp"
                         app:txt_font_type="bold" />
@@ -156,7 +154,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-                        android:text="Day : "
+                        android:text="@string/day"
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/eighteen_sp" />
 
@@ -165,7 +163,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-                        android:text="Friday "
+                        android:text="@string/friday"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/eighteen_sp"
                         app:txt_font_type="regular" />
@@ -183,8 +181,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
-                        android:text="Date : "
+                        android:text="@string/date"
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/eighteen_sp" />
 
@@ -193,7 +190,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
                         android:text="2018-07-21 "
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/eighteen_sp"
@@ -212,8 +208,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
-                        android:text="Sunrise : "
+                        android:text="@string/sunrise"
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/eighteen_sp" />
 
@@ -222,7 +217,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
                         android:text="5:56:00"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/eighteen_sp"
@@ -241,8 +235,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
-                        android:text="Sunset : "
+                        android:text="@string/sunset"
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/eighteen_sp" />
 
@@ -251,7 +244,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
                         android:text="18:33:59 "
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/eighteen_sp"
@@ -270,8 +262,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
-                        android:text="Thiti : "
+                        android:text="@string/thiti"
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/eighteen_sp" />
 
@@ -280,7 +271,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-                        android:text="Ashtami -19.07.2018 13:37 to 20.07.2018 13:20 Followed By Navami "
+                        android:text="@string/ashtami_19_07_2018_13_37_to_20_07_2018_13_20_followed_by_navami"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/eighteen_sp" />
 
@@ -297,8 +288,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
-                        android:text="Nakshatra : "
+                        android:text="@string/nakshatra"
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/eighteen_sp" />
 
@@ -307,7 +297,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-                        android:text="Chithirai -19.07.2018 07:54 to 20.07.2018 08:10 Followed By Swaathi "
+                        android:text="@string/chithirai_19_07_2018_07_54_to_20_07_2018_08_10_followed_by_swaathi"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/eighteen_sp" />
 
@@ -324,8 +314,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
-                        android:text="Tamil Yoga : "
+                        android:text="@string/tamil_yoga"
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/eighteen_sp" />
 
@@ -334,7 +323,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-                        android:text="Siddha-19.07.2018 07:54 to 20.07.2018 08:10 Followed By-Siddha"
+                        android:text="@string/siddha_19_07_2018_07_54_to_20_07_2018_08_10_followed_by_siddha"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/eighteen_sp" />
 
@@ -351,8 +340,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
-                        android:text="Rahu Kalam : "
+                        android:text="@string/rahu_kalam"
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/eighteen_sp" />
 
@@ -361,7 +349,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
                         android:text="10:43:59 - 12:20:00"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/eighteen_sp" />
@@ -379,8 +366,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
-                        android:text="Gulikai Kalam : "
+                        android:text="@string/gulikai_kalam"
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/eighteen_sp" />
 
@@ -389,7 +375,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
                         android:text="7:31:59 - 9:07:59"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/eighteen_sp" />
@@ -407,8 +392,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
-                        android:text="Yamaganda : "
+                        android:text="@string/yamaganda"
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/eighteen_sp" />
 
@@ -417,7 +401,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
                         android:text="15:31:59 - 17:07:59"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/eighteen_sp" />
@@ -435,8 +418,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
-                        android:text="Abhijit : "
+                        android:text="@string/abhijit"
                         android:textColor="@color/colorBlack"
                         android:textSize="@dimen/eighteen_sp" />
 
@@ -445,7 +427,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="start"
-
                         android:text="11:36:00 - 12:24:00 "
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="@dimen/eighteen_sp" />

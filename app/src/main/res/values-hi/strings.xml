@@ -148,6 +148,10 @@
     <string name="how_do_you_belong_here">आप यहाँ कैसे हैं?</string>
     <string name="what_is_your_role">आपकी भूमिका क्या है ?</string>
     <string name="i_am_a">मैं एक</string>
+    <string name="i_follow_spiritual">मैं आध्यात्मिक</string>
+    <string name="i_follow_religious">मैं धार्मिक</string>
+    <string name="i_am_devotee">मैं एक भक्त</string>
+    <string name="i_am_temple_member">मैं एक मंदिर सदस्य</string>
     <string name="people_who_are_already_linked_to_this_temple">जो लोग पहले से ही इस मंदिर से जुड़े हुए हैं</string>
     <string name="rama_swamy">राम स्वामी</string>
     <string name="pedda_pujari">पेड्डा पुजारी</string>
@@ -312,5 +316,31 @@
     <string name="yesterday">कल</string>
     <string name="this_week">इस सप्ताह</string>
     <string name="this_month">इस महीने का</string>
+    <string name="chilukuru_balaji_temple_volunteer_group">चिलकुर बालाजी मंदिर स्वयंसेवी समूह</string>
+    <string name="hanuman_temple_volunteer_group">हनुमान मंदिर स्वयंसेवी समूह</string>
+    <string name="ashtalakshmi_temple"><![CDATA[अष्टलाक्ष्मी मंदिर, कोठापेट, हैदराबाद]]></string>
+    <string name="chilkur_balaji_temple"><![CDATA[चिलकुर बालाजी मंदिर, हैदराबाद]]></string>
+    <string name="karmanghat_hanuman_temple">कर्मंगघा हनुमान मंदिर, हैदराबाद</string>
+    <string name="sai_baba_temple">साईं बाबा मंदिर</string>
+    <string name="sri_venkateswara_swamy_temple">श्री वेंकटेश्वर स्वामी मंदिर</string>
+    <string name="sri_krishna_bagavan_swamy_temple">श्री कृष्णा भगवान स्वामी मंदिर</string>
+    <string name="lord_shiva_temple">भगवान शिव मंदिर</string>
+    <string name="aries_horoscope_content">तनाव आपको मामूली बीमारी का कारण बन सकता है। आराम करने के लिए दोस्तों और परिवार के बीच बैठ जाओ। यदि आप पर्यावरण में निवेश करते हैं, तो आपको लाभ मिलेगा। दूरस्थ रिश्तेदारों से अप्रत्याशित अच्छी खबर पूरे परिवार में खुश क्षण लाती है। आज रोमांस एक महान उत्साह है, जिस व्यक्ति को आप सबसे अधिक पसंद करते हैं उससे संपर्क करें और दिन को सर्वश्रेष्ठ बनाएं। दोस्तों महत्वपूर्ण हैं। लेकिन इस दिन अपनी स्थिति को "व्यस्त" रखें। क्योंकि आज आपको कार्यालय में एक मजेदार नौकरी मिलनी है। गुप्त दुश्मन आप और आपके अभियानों और अफवाहों के खिलाफ अभियान करने के लिए उत्सुक हैं। आज आपके वैवाहिक जीवन के सबसे महान दिनों में से एक है।</string>
+    <string name="naveen">नवीन</string>
+    <string name="sadguru">समीर</string>
+    <string name="day">दिन :</string>
+    <string name="date">तारीख :</string>
+    <string name="sunrise">सूर्योदय :</string>
+    <string name="sunset">सूर्यास्त :</string>
+    <string name="thiti">एफएफ :</string>
+    <string name="ashtami_19_07_2018_13_37_to_20_07_2018_13_20_followed_by_navami">भजन 10:22 पढ़िए</string>
+    <string name="nakshatra">सितारा :</string>
+    <string name="chithirai_19_07_2018_07_54_to_20_07_2018_08_10_followed_by_swaathi">Chithirai -19.07.2018 07:54 to 20.07.2018 08:10 Followed By Swaathi</string>
+    <string name="tamil_yoga">योग :</string>
+    <string name="siddha_19_07_2018_07_54_to_20_07_2018_08_10_followed_by_siddha">ठीक है 14:45</string>
+    <string name="rahu_kalam">राहु कलम :</string>
+    <string name="abhijit">अभिजीत मुहूर्तम :</string>
+    <string name="gulikai_kalam">अमृता अवधि :</string>
+    <string name="yamaganda">Yamaganda :</string>
 
 </resources>

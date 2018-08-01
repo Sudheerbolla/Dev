@@ -47,10 +47,10 @@ public class GroupsListAdapter extends RecyclerView.Adapter<GroupsListAdapter.Vi
                 viewHolder.txtGroupName.setText(context.getString(R.string.swami_jaganath_temple_volunteer_group));
                 break;
             case 1:
-                viewHolder.txtGroupName.setText("Chilukuru Balaji Temple Volunteer Group");
+                viewHolder.txtGroupName.setText(R.string.chilukuru_balaji_temple_volunteer_group);
                 break;
             case 2:
-                viewHolder.txtGroupName.setText("Hanuman Temple Volunteer Group");
+                viewHolder.txtGroupName.setText(R.string.hanuman_temple_volunteer_group);
                 break;
         }
 

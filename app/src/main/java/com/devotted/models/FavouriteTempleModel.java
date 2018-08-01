@@ -1,6 +1,7 @@
 package com.devotted.models;
 
 import com.devotted.R;
+import com.devotted.activities.MainActivity;
 
 public class FavouriteTempleModel {
 
@@ -8,9 +9,9 @@ public class FavouriteTempleModel {
     public Integer addressId, image;
     public String templeName, mPincode, city, line1, line2, longitude, latitude, rating, distance;
 
-    public FavouriteTempleModel(int count) {
+    public FavouriteTempleModel(MainActivity mainActivity, int count) {
         if (count == 1) {
-            templeName = "Ashtalakshmi Temple, Kothapet, Hyderabad";
+            templeName = mainActivity.getString(R.string.ashtalakshmi_temple);
             addressId = count;
             mPincode = "500081";
             city = "Hyderabad";
@@ -22,7 +23,7 @@ public class FavouriteTempleModel {
             rating = "3";
             distance = "0";
         } else if (count == 2) {
-            templeName = "Chilkur Balaji Temple, Hyderabad";
+            templeName = mainActivity.getString(R.string.chilkur_balaji_temple);
             addressId = count;
             mPincode = "500081";
             city = "Chilkuru";
@@ -34,7 +35,7 @@ public class FavouriteTempleModel {
             rating = "3";
             distance = "3";
         } else if (count == 3) {
-            templeName = "Karmanghat Hanuman temple, Hyderabad";
+            templeName = mainActivity.getString(R.string.karmanghat_hanuman_temple);
             addressId = count;
             mPincode = "500081";
             city = "Hyderabad";

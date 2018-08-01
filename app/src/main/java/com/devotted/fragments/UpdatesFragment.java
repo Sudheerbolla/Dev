@@ -51,8 +51,8 @@ public class UpdatesFragment extends BaseFragment implements IClickListener, Vie
 
     private void setDummyData() {
         for (int i = 1; i < 4; i++) {
-            templeModelArrayList.add(new FavouriteTempleModel(i));
-            templePostsArrayList.add(new TempleModel(i));
+            templeModelArrayList.add(new FavouriteTempleModel(mainActivity, i));
+            templePostsArrayList.add(new TempleModel(mainActivity, i));
         }
     }
 
@@ -122,7 +122,7 @@ public class UpdatesFragment extends BaseFragment implements IClickListener, Vie
                 templePostsArrayList.clear();
                 if (position == 1) {
                     for (int i = 1; i < 4; i++) {
-                        templePostsArrayList.add(new TempleModel(i));
+                        templePostsArrayList.add(new TempleModel(mainActivity, i));
                     }
                 }
                 templePostsAdapter.notifyDataSetChanged();

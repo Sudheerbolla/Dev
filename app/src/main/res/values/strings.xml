@@ -312,5 +312,35 @@
     <string name="yesterday">Yesterday</string>
     <string name="this_week">This Week</string>
     <string name="this_month">This Month</string>
+    <string name="i_follow_spiritual">I am Spiritual</string>
+    <string name="i_follow_religious">I am Religious</string>
+    <string name="i_am_devotee">I am a Devotee</string>
+    <string name="i_am_temple_member">I am a Temple Member</string>
+    <string name="chilukuru_balaji_temple_volunteer_group">Chilukuru Balaji Temple Volunteer Group</string>
+    <string name="hanuman_temple_volunteer_group">Hanuman Temple Volunteer Group</string>
+    <string name="ashtalakshmi_temple"><![CDATA[Ashtalakshmi Temple, Kothapet, Hyderabad]]></string>
+    <string name="chilkur_balaji_temple"><![CDATA[Chilkur Balaji Temple, Hyderabad]]></string>
+    <string name="karmanghat_hanuman_temple">Karmanghat Hanuman temple, Hyderabad</string>
+    <string name="sai_baba_temple">Sai Baba Temple</string>
+    <string name="sri_venkateswara_swamy_temple">Sri Venkateswara Swamy Temple</string>
+    <string name="sri_krishna_bagavan_swamy_temple">Sri krishna Bagavan Swamy Temple</string>
+    <string name="lord_shiva_temple">Lord Shiva Temple</string>
+    <string name="aries_horoscope_content">Aries, are you hoping to accomplish a goal that you\'ve been working toward for a long time? Don\'t let delays cause you to fear that it will never happen. It could block your creative energy and cause you to lose faith in yourself. Fortunate changes are in the wind, but it\'s still going to take a little more effort to get where you want to be. Keep going. You\'ll get there !</string>
+    <string name="naveen">Naveen</string>
+    <string name="sadguru">Sadguru</string>
+    <string name="day">Day :</string>
+    <string name="date">Date :</string>
+    <string name="sunrise">Sunrise :</string>
+    <string name="sunset">Sunset :</string>
+    <string name="thiti">Thiti :</string>
+    <string name="ashtami_19_07_2018_13_37_to_20_07_2018_13_20_followed_by_navami">Ashtami -19.07.2018 13:37 to 20.07.2018 13:20 Followed By Navami</string>
+    <string name="nakshatra">Nakshatra :</string>
+    <string name="chithirai_19_07_2018_07_54_to_20_07_2018_08_10_followed_by_swaathi">Chithirai -19.07.2018 07:54 to 20.07.2018 08:10 Followed By Swaathi</string>
+    <string name="tamil_yoga">Tamil Yoga :</string>
+    <string name="siddha_19_07_2018_07_54_to_20_07_2018_08_10_followed_by_siddha">Siddha-19.07.2018 07:54 to 20.07.2018 08:10 Followed By-Siddha</string>
+    <string name="rahu_kalam">Rahu Kalam :</string>
+    <string name="abhijit">Abhijit :</string>
+    <string name="gulikai_kalam">Gulikai Kalam :</string>
+    <string name="yamaganda">Yamaganda :</string>
 
 </resources>

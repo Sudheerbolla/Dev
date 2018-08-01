@@ -92,7 +92,7 @@ public class CardsRossDeckFragmentBc extends BaseFragment implements FlingChiefL
 
     private void setDummyData() {
         for (int i = 0; i < 10; i++) {
-            templePostsArrayList.add(new TempleModel(1));
+            templePostsArrayList.add(new TempleModel(mainActivity,1));
         }
     }
 

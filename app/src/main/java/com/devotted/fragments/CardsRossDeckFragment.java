@@ -75,7 +75,7 @@ public class CardsRossDeckFragment extends BaseFragment implements IClickListene
         recyclerViewPastUpdates = rootView.findViewById(R.id.recyclerViewPastUpdates);
         txtToday = rootView.findViewById(R.id.txtToday);
         String today = StaticUtils.getpreviousDatesString(0);
-        txtToday.setText("Today: " + today);
+        txtToday.setText(getString(R.string.today) + ": " + today);
         dayOfTheWeek = StaticUtils.getTodayInWeek(today);
         setDummyData();
         setTemplePostsAdapter();

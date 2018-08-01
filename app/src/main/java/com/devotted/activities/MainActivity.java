@@ -14,6 +14,7 @@ import com.devotted.fragments.HomeFragment;
 import com.devotted.fragments.MenuFragment;
 import com.devotted.fragments.ShareFragment;
 import com.devotted.fragments.UpdatesFragment;
+import com.devotted.utils.StaticUtils;
 import com.devotted.utils.views.CustomTextView;
 
 import java.util.ArrayList;
@@ -23,6 +24,7 @@ public class MainActivity extends BaseActivity implements CommentsBottomSheetFra
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
+    private long backPressedTime = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,5 +107,16 @@ public class MainActivity extends BaseActivity implements CommentsBottomSheetFra
 
     }
 
+    @Override
+    public void onBackPressed() {
+//        if(viewPager.getCurrentItem()==0&&viewPager.getChildCount()==1){}
+        long t = System.currentTimeMillis();
+        if (t - backPressedTime > 2200) {
+            backPressedTime = t;
+            StaticUtils.showToast(this, "Press back again to exit");
+        } else {
+            super.onBackPressed();
+        }
+    }
 
 }

@@ -70,7 +70,7 @@ public class GroupsListFragment extends BaseFragment implements IClickListener {
 
     private void setDummyData() {
         for (int i = 0; i < 3; i++) {
-            templeModelArrayList.add(new TempleModel(i));
+            templeModelArrayList.add(new TempleModel(templeGroupsActivity,i));
         }
         if (groupsListAdapter != null) groupsListAdapter.notifyDataSetChanged();
     }

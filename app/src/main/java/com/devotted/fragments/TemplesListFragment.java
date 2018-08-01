@@ -63,7 +63,7 @@ public class TemplesListFragment extends BaseFragment implements IClickListener 
 
     private void setDummyData() {
         for (int i = 1; i < 5; i++) {
-            templeModelArrayList.add(new TempleModel(i));
+            templeModelArrayList.add(new TempleModel(searchActivity,i));
         }
     }
 

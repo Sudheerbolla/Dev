@@ -49,7 +49,21 @@ public class SelectionAdapter extends RecyclerView.Adapter<SelectionAdapter.View
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, @SuppressLint("RecyclerView") final int position) {
         SelectionModel selectionModel = itemsData.get(position);
         viewHolder.imgType.setImageResource(selectionModel.icon);
-        viewHolder.txtSelect.setText((isUserType ? context.getString(R.string.i_am_a) : context.getString(R.string.i_choose)) + " " + selectionModel.type);
+        String typeLine = "";
+        if (selectionModel.type.equalsIgnoreCase(context.getString(R.string.spiritual))) {
+            typeLine = context.getString(R.string.i_follow_spiritual);
+//            viewHolder.txtSelect.setLines(2);
+        } else if (selectionModel.type.equalsIgnoreCase(context.getString(R.string.religious))) {
+            typeLine = context.getString(R.string.i_follow_religious);
+//            viewHolder.txtSelect.setLines(2);
+        } else if (selectionModel.type.equalsIgnoreCase(context.getString(R.string.devotee))) {
+            typeLine = context.getString(R.string.i_am_devotee);
+//            viewHolder.txtSelect.setLines(1);
+        } else if (selectionModel.type.equalsIgnoreCase(context.getString(R.string.temple_member))) {
+            typeLine = context.getString(R.string.i_am_temple_member);
+//            viewHolder.txtSelect.setLines(1);
+        }
+        viewHolder.txtSelect.setText(typeLine);
         viewHolder.linHolder.removeAllViews();
         for (int i = 1; i < selectionModel.description.length; i++) {
             View inflatedLayout = linf.inflate(R.layout.layout_selection_lines, null, false);

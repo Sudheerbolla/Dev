@@ -40,7 +40,7 @@ public class PostsFragment extends BaseFragment implements IClickListener {
 
     private void setDummyData() {
         for (int i = 0; i < 3; i++) {
-            templePostsArrayList.add(new TempleModel(1));
+            templePostsArrayList.add(new TempleModel(searchActivity,1));
         }
     }
 

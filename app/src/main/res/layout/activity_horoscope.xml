@@ -163,7 +163,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:padding="@dimen/five_dp"
-                    android:text="Aries, are you hoping to accomplish a goal that you've been working toward for a long time? Don't let delays cause you to fear that it will never happen. It could block your creative energy and cause you to lose faith in yourself. Fortunate changes are in the wind, but it's still going to take a little more effort to get where you want to be. Keep going. You'll get there !"
+                    android:text="@string/aries_horoscope_content"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/eighteen_sp"
                     app:txt_font_type="regular" />

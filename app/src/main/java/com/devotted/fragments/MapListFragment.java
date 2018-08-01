@@ -188,7 +188,7 @@ public class MapListFragment extends BaseFragment implements GoogleMap.OnMarkerC
         myDealsList = new ArrayList<>();
 
         for (int i = 1; i < 5; i++) {
-            myDealsList.add(new TempleModel(i));
+            myDealsList.add(new TempleModel(searchActivity,i));
         }
 
         mAdapter = new MapAdapter(getChildFragmentManager(), myDealsList, searchActivity);

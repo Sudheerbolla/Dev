@@ -1,3 +1,4 @@
+/*
 package com.devotted.fragments;
 
 import android.os.Bundle;
@@ -167,3 +168,4 @@ public class CardsRossDeckFragmentBc extends BaseFragment implements FlingChiefL
     }
 
 }
+*/

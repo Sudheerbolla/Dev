@@ -1,5 +1,4 @@
 <com.devotted.utils.views.StickyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:derdidaz="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
@@ -37,21 +36,23 @@
 
         </RelativeLayout>
 
-        <com.db.rossdeckview.RossDeckView
-            android:id="@+id/decklayout"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/threehundred_dp"
-            android:layout_below="@id/relReload"
-            android:paddingEnd="@dimen/twentytwo_dp"
-            android:paddingStart="@dimen/twentytwo_dp"
-            derdidaz:stack_padding="@dimen/seven_dp"
-            derdidaz:stack_scale=".1" />
+        <!--<com.db.rossdeckview.RossDeckView-->
+        <!--android:id="@+id/decklayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/threehundred_dp"-->
+        <!--android:layout_below="@id/relReload"-->
+        <!--android:paddingEnd="@dimen/twentytwo_dp"-->
+        <!--android:paddingStart="@dimen/twentytwo_dp"-->
+        <!--derdidaz:stack_padding="@dimen/seven_dp"-->
+        <!--derdidaz:stack_scale=".1" />-->
+
+        <!--            android:layout_below="@id/decklayout"
+        -->
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerViewPastUpdates"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/decklayout"
             android:overScrollMode="never"
             android:scrollbars="none" />
 

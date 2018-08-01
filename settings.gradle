@@ -1,1 +1,1 @@
-include ':app'/*,':ResideMenu'*/,':cardslibrary',':rossdeckview'
+include ':app'/*,':ResideMenu',':cardslibrary',':rossdeckview'*/

@@ -67,8 +67,8 @@
     <string name="change">परिवर्तन</string>
     <string name="your_location">आपकी स्थिति</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="you_have_decided_to_spread_the_app_to_your_friends_amp_family"><![CDATA[आपने ऐप को अपने दोस्तों और परिवार में फैलाने का फैसला किया है.!]]></string>
-    <string name="thanks_for_your_trust_in_us_and_we_will_ensure_better_services_in_coming_furture">हमारे विश्वास के लिए धन्यवाद और हम आने वाले भविष्य में बेहतर सेवाएं सुनिश्चित करेंगे</string>
+    <string name="share_text_1"><![CDATA[आपने ऐप को अपने दोस्तों और परिवार में फैलाने का फैसला किया है.!]]></string>
+    <string name="share_text_2">हमारे विश्वास के लिए धन्यवाद और हम आने वाले भविष्य में बेहतर सेवाएं सुनिश्चित करेंगे</string>
     <string name="post">पद</string>
     <string name="post_an_update">एक अद्यतन पोस्ट करें</string>
     <string name="sree_venkateshwara_temple">श्री वेंकटेश्वर मंदिर</string>

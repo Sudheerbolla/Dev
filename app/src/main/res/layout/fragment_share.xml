@@ -1,85 +1,143 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
 
-    <com.devotted.utils.views.CustomTextView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="@dimen/twentyfive_dp"
-        android:text="@string/you_have_decided_to_spread_the_app_to_your_friends_amp_family"
-        android:textColor="@color/colorBlack"
-        android:textSize="@dimen/twentytwo_sp" />
-
-    <com.devotted.utils.views.CustomTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="@dimen/twentyfive_dp"
-        android:text="@string/thanks_for_your_trust_in_us_and_we_will_ensure_better_services_in_coming_furture"
-        android:textColor="@color/colorBlack"
-        android:textSize="@dimen/twenty_sp" />
-
-    <com.devotted.utils.views.CustomTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="@dimen/ten_dp"
-        android:text="@string/share_it_via"
-        android:textColor="@color/color_vvvDarkGrey"
-        android:textSize="@dimen/twenty_sp"
-        app:txt_font_type="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:padding="@dimen/ten_dp">
+        android:background="@color/colorWhite">
 
         <ImageView
-            android:id="@+id/imgWhatsapp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/five_dp"
-            app:srcCompat="@drawable/ic_whatsapp" />
+            android:id="@+id/imgRightFlower"
+            android:layout_width="@dimen/sixty_dp"
+            android:layout_height="@dimen/one_twentyfive_dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/fifteen_dp"
+            android:rotation="180"
+            android:src="@drawable/ic_flower_orange"
+            android:tint="@color/colorPrimaryDark" />
 
         <ImageView
-            android:id="@+id/imgEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/five_dp"
-            app:srcCompat="@drawable/ic_email" />
+            android:id="@+id/imgLeftFlower"
+            android:layout_width="@dimen/sixty_dp"
+            android:layout_height="@dimen/one_twentyfive_dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/thirty_dp"
+            android:src="@drawable/ic_flower_orange"
+            android:tint="@color/colorPrimaryDark" />
 
         <ImageView
-            android:id="@+id/imgTwitter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/five_dp"
-            app:srcCompat="@drawable/ic_twitter" />
+            android:id="@+id/imgCenterFlower"
+            android:layout_width="@dimen/onehundred_seventy_dp"
+            android:layout_height="@dimen/onehundred_seventy_dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_flower"
+            android:tint="@color/colorPrimaryDark" />
 
-        <ImageView
-            android:id="@+id/imgFb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/five_dp"
-            app:srcCompat="@drawable/ic_fb" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <com.devotted.utils.views.CustomTextView
-            android:id="@+id/txtOthers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:drawableLeft="@drawable/ic_share"
-            android:drawablePadding="@dimen/seven_dp"
-            android:gravity="center"
-            android:padding="@dimen/five_dp"
-            android:text="@string/others"
-            android:textColor="@color/colorBlack"
-            android:textSize="@dimen/eighteen_sp" />
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:layout_marginTop="@dimen/fifty_dp"
+                android:gravity="start"
+                android:padding="@dimen/twenty_dp"
+                android:text="@string/share_text_1"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/twentytwo_sp" />
 
-    </LinearLayout>
+            <com.devotted.utils.views.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/linShare"
+                android:layout_marginEnd="@dimen/fifteen_dp"
+                android:layout_marginStart="@dimen/fifteen_dp"
+                android:gravity="start"
+                android:padding="@dimen/twenty_dp"
+                android:layout_marginBottom="@dimen/thirty_dp"
+                android:text="@string/share_text_2"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/twentytwo_sp" />
 
-</LinearLayout>
+            <!--android:layout_above="@+id/txtShareHeading"-->
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtShareHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/linShare"
+                android:gravity="center"
+                android:padding="@dimen/ten_dp"
+                android:text="@string/share_it_via"
+                android:textColor="@color/color_vvvDarkGrey"
+                android:textSize="@dimen/twenty_sp"
+                android:visibility="gone"
+                app:txt_font_type="bold" />
+
+            <LinearLayout
+                android:id="@+id/linShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/txtOthers"
+                android:gravity="center"
+                android:padding="@dimen/ten_dp">
+
+                <ImageView
+                    android:id="@+id/imgWhatsapp"
+                    android:layout_width="@dimen/sixty_dp"
+                    android:layout_height="@dimen/sixty_dp"
+                    android:padding="@dimen/five_dp"
+                    app:srcCompat="@drawable/ic_whatsapp" />
+
+                <ImageView
+                    android:id="@+id/imgEmail"
+                    android:layout_width="@dimen/sixty_dp"
+                    android:layout_height="@dimen/sixty_dp"
+                    android:padding="@dimen/five_dp"
+                    app:srcCompat="@drawable/ic_email" />
+
+                <ImageView
+                    android:id="@+id/imgTwitter"
+                    android:layout_width="@dimen/sixty_dp"
+                    android:layout_height="@dimen/sixty_dp"
+                    android:padding="@dimen/five_dp"
+                    app:srcCompat="@drawable/ic_twitter" />
+
+                <ImageView
+                    android:id="@+id/imgFb"
+                    android:layout_width="@dimen/sixty_dp"
+                    android:layout_height="@dimen/sixty_dp"
+                    android:padding="@dimen/five_dp"
+                    app:srcCompat="@drawable/ic_fb" />
+
+            </LinearLayout>
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:drawablePadding="@dimen/seven_dp"
+                android:drawableStart="@drawable/ic_share"
+                android:gravity="center"
+                android:padding="@dimen/seven_dp"
+                android:text="@string/others"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/eighteen_sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

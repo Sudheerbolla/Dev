@@ -1,6 +1,9 @@
 package com.devotted.fragments;
 
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,14 +31,24 @@ public class ShareFragment extends BaseFragment implements View.OnClickListener 
         mainActivity = (MainActivity) getActivity();
     }
 
+    private void changeColorOfImage() {
+        ImageView yourButton = rootView.findViewById(R.id.imgRightFlower);
+
+        Drawable drawable = getResources().getDrawable(R.drawable.ic_flower_orange).mutate();
+        drawable.setColorFilter(getResources().getColor(R.color.colorPrimary), PorterDuff.Mode.SRC_ATOP);
+
+        yourButton.setImageDrawable(drawable);
+    }
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_share, container, false);
         initComponents();
         return rootView;
     }
 
     private void initComponents() {
+        changeColorOfImage();
         txtOthers = rootView.findViewById(R.id.txtOthers);
         imgEmail = rootView.findViewById(R.id.imgEmail);
         imgWhatsapp = rootView.findViewById(R.id.imgWhatsapp);

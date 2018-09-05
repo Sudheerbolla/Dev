@@ -1,88 +1,123 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:fitsSystemWindows="true"
-    android:overScrollMode="never"
-    android:scrollbars="none">
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorWhite">
+    <ImageView
+        android:id="@+id/imgRightFlower"
+        android:layout_width="@dimen/sixty_dp"
+        android:layout_height="@dimen/one_twentyfive_dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/fifteen_dp"
+        android:rotation="180"
+        android:src="@drawable/ic_flower_orange"
+        android:tint="@color/colorPrimaryDark" />
 
-        <ImageView
-            android:id="@+id/imgRightFlower"
-            android:layout_width="@dimen/sixty_dp"
-            android:layout_height="@dimen/one_twentyfive_dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="@dimen/fifteen_dp"
-            android:rotation="180"
-            android:src="@drawable/ic_flower_orange"
-            android:tint="@color/colorPrimaryDark" />
+    <ImageView
+        android:id="@+id/imgLeftFlower"
+        android:layout_width="@dimen/sixty_dp"
+        android:layout_height="@dimen/one_twentyfive_dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/thirty_dp"
+        android:src="@drawable/ic_flower_orange"
+        android:tint="@color/colorPrimaryDark" />
 
-        <ImageView
-            android:id="@+id/imgLeftFlower"
-            android:layout_width="@dimen/sixty_dp"
-            android:layout_height="@dimen/one_twentyfive_dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/thirty_dp"
-            android:src="@drawable/ic_flower_orange"
-            android:tint="@color/colorPrimaryDark" />
+    <ImageView
+        android:id="@+id/imgCenterFlower"
+        android:layout_width="@dimen/onehundred_seventy_dp"
+        android:layout_height="@dimen/onehundred_seventy_dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_flower"
+        android:tint="@color/colorPrimaryDark" />
 
-        <ImageView
-            android:id="@+id/imgCenterFlower"
-            android:layout_width="@dimen/onehundred_seventy_dp"
-            android:layout_height="@dimen/onehundred_seventy_dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_flower"
-            android:tint="@color/colorPrimaryDark" />
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.devotted.utils.views.CustomTextView
+            <LinearLayout
+                android:id="@+id/linInnerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fifteen_dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.devotted.utils.views.CustomTextView
+                    android:id="@+id/img1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/five_dp"
+                    android:drawablePadding="@dimen/five_dp"
+                    android:drawableTop="@drawable/ic_spiritual_coloured"
+                    android:gravity="center"
+                    android:padding="@dimen/five_dp"
+                    android:text="@string/spiritual"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/eighteen_sp" />
+
+                <com.devotted.utils.views.CustomTextView
+                    android:id="@+id/img2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/five_dp"
+                    android:drawablePadding="@dimen/five_dp"
+                    android:drawableTop="@drawable/ic_religious_orange"
+                    android:gravity="center"
+                    android:padding="@dimen/five_dp"
+                    android:text="@string/religious"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/eighteen_sp" />
+
+                <com.devotted.utils.views.CustomTextView
+                    android:id="@+id/img3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/five_dp"
+                    android:drawablePadding="@dimen/five_dp"
+                    android:drawableTop="@drawable/ic_wellness_coloured"
+                    android:gravity="center"
+                    android:padding="@dimen/five_dp"
+                    android:text="@string/wellness"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/eighteen_sp" />
+
+            </LinearLayout>
+
+            <com.devotted.utils.views.CustomTextView
+                android:id="@+id/txtHeading1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linInnerView"
                 android:layout_marginEnd="@dimen/fifteen_dp"
                 android:layout_marginStart="@dimen/fifteen_dp"
-                android:layout_marginTop="@dimen/fifty_dp"
+                android:layout_marginTop="@dimen/twenty_dp"
                 android:gravity="start"
-                android:padding="@dimen/twenty_dp"
+                android:padding="@dimen/thirteen_dp"
                 android:text="@string/share_text_1"
                 android:textColor="@color/colorBlack"
-                android:textSize="@dimen/twentytwo_sp" />
+                android:textSize="@dimen/eighteen_sp" />
 
             <com.devotted.utils.views.CustomTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_above="@+id/linShare"
+                android:layout_below="@+id/txtHeading1"
+                android:layout_marginBottom="@dimen/ten_dp"
                 android:layout_marginEnd="@dimen/fifteen_dp"
                 android:layout_marginStart="@dimen/fifteen_dp"
                 android:gravity="start"
-                android:padding="@dimen/twenty_dp"
-                android:layout_marginBottom="@dimen/thirty_dp"
+                android:padding="@dimen/thirteen_dp"
                 android:text="@string/share_text_2"
                 android:textColor="@color/colorBlack"
-                android:textSize="@dimen/twentytwo_sp" />
-
-            <!--android:layout_above="@+id/txtShareHeading"-->
-
-            <com.devotted.utils.views.CustomTextView
-                android:id="@+id/txtShareHeading"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/linShare"
-                android:gravity="center"
-                android:padding="@dimen/ten_dp"
-                android:text="@string/share_it_via"
-                android:textColor="@color/color_vvvDarkGrey"
-                android:textSize="@dimen/twenty_sp"
-                android:visibility="gone"
-                app:txt_font_type="bold" />
+                android:textSize="@dimen/eighteen_sp" />
 
             <LinearLayout
                 android:id="@+id/linShare"
@@ -138,6 +173,6 @@
 
         </RelativeLayout>
 
-    </RelativeLayout>
+    </ScrollView>
 
-</ScrollView>
+</RelativeLayout>
